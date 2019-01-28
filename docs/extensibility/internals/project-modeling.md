@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: c8db8fdb-88c1-4b12-86fe-f3c30a18f9ee
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d835ee2062a6feec2fbb13991cc448b0b0b7b7a1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: da49deb7d4cf73ab3f70f5b55e1ceeef005c9f03
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968379"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927360"
 ---
 # <a name="project-modeling"></a>プロジェクトのモデリング
 プロジェクトは、標準的なプロジェクト オブジェクトを実装するは、オートメーションを提供するために、次の手順:<xref:EnvDTE.Projects>と`ProjectItems`コレクション、`Project`と<xref:EnvDTE.ProjectItem>オブジェクトと、実装に固有の残りのオブジェクト。 これらの標準的なオブジェクトは、Dteinternal.h ファイルで定義されます。 BscPrj サンプルでは、標準のオブジェクトの実装が提供されます。 サイド バイ サイドを強調する、独自の標準的なプロジェクト オブジェクトを作成するモデルとしてこれらのクラスを使用するその他のプロジェクトの種類のプロジェクトのオブジェクトとします。  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0879d18922e730d9cd737bdefde52576b6b03638
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b09dc2d578ade421d35bb17dfbdf01e93313bbdb
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53948564"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54926867"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>型のビジュアライザーとカスタム ビューアー
 型のビジュアライザーは、特定の形式でデータの一部を表示するコンポーネントです。 形式が完全には、ビジュアライザーを実装するまでは、エンドユーザーまたはビジュアライザーのサード パーティ サプライヤーです。  

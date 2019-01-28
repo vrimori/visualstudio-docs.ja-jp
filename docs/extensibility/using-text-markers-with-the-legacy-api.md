@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 937a0b19-1216-45d5-a7ad-4fe1d6f73097
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d76c440c3c763b93c14ad03d9f48e6c977e9e5fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 270cdaac1f58aefaf13535218613f50bbf645b59
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867002"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54981304"
 ---
 # <a name="using-text-markers-with-the-legacy-api"></a>レガシ API を使用したテキスト マーカーの使用
 テキスト マーカーは、さまざまな浮動表示に影響を与えるバッファー内のテキストとテキストの範囲の動作です。 マーカーには、ブレークポイント、ブックマーク、波線の下線、および読み取り専用のリージョンが含まれます。 テキスト マーカーは、構文の色分け表示と基本的に異なります。 構文の色分けは、テキストの範囲に関連付けられている言語の構文を通信する簡単な方法を示します。 構文の色分け表示が要求されるの Windows の速度が重要な場合に、画面を再描画と一般にします。 構文の色分けは、テキストの色のみを変更します。 テキスト マーカーには、その他の多くのテキスト プロパティを変更できます。 テキスト マーカー「フローティング」して特別な動作を適用し、色分け表示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "53867002"
   
 ## <a name="related-topics"></a>関連トピック  
   
-| Title | 説明 |
+| タイトル | 説明 |
 | - | - |
 | [方法: 標準のテキスト マーカーを追加します。](../extensibility/how-to-add-standard-text-markers.md) | によって提供される標準のテキスト マーカーの種類を追加する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト ビューにコア エディター。 |
 | [方法: エラーのマーカーを実装します。](../extensibility/how-to-implement-error-markers.md) | インスタンスを実装する方法について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]赤い波線を使用してエラーを示すために使用されるマーカー。 |

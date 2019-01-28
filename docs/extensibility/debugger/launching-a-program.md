@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb403e9df8b159162d5160e3927acb40cc775ff3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0671a8f0d926cb90419470278f65eedf07486da7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53862154"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54945880"
 ---
 # <a name="launch-a-program"></a>プログラムを起動します。
 プログラムをデバッグする必要のあるユーザーがキーを押して**F5** IDE からデバッガーを実行します。 これには、一連の最終的に接続されている、または接続されているプログラムに次のようにさらにデバッグ エンジン (DE) への接続を IDE のイベントが開始されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "53862154"
   
 2. デが指定されている場合、DE、プログラムを起動するオペレーティング システムを呼び出します。 プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 たとえば、プログラムが MSIL で書き込まれた場合、プログラムを実行する共通言語ランタイムが呼び出されます。  
   
-    または  
+    - または -  
   
     デが指定されていない場合、ポートは、これにより、プログラムの実行時の環境を読み込むと、プログラムを起動するオペレーティング システムを呼び出します。  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c7a8fe97-2abc-4cee-8aef-64f1daa93b5c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9fcd04e32d5b586271cc1dfaa66d96c974abeb8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a656a82df9d53db8b56e09bcca2bb0665a43e6c3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853984"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54978556"
 ---
 # <a name="ienumcodepaths2next"></a>IEnumCodePaths2::Next
 列挙体から次の要素のセットを返します。  
@@ -51,7 +51,7 @@ int Next(
  [out]実際に返される要素の数を返します`rgelt`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`返される可能性があります、要求された要素数よりも少ない場合、それ以外の場合、エラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`返される可能性があります、要求された要素数よりも少ない場合、それ以外の場合、エラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)   

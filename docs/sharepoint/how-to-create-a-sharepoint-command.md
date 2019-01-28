@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio], creating
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7f83447bcceb010f5a479d61c250e703daa1aab1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: da1b31b7cc1436c90437a9e2b5ef66adfee825b1
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894851"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54867898"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>方法: SharePoint コマンドを作成します。
   SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出します。 SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことがアセンブリに定義します。  
@@ -30,7 +30,7 @@ ms.locfileid: "53894851"
   
     -   .NET Framework 3.5 を対象とします。 ターゲット フレームワークの選択の詳細については、次を参照してください。[方法.NET Framework のターゲット バージョンを指定する](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
   
-    -   X64、AnyCPU の対象プラットフォーム。 既定では、クラス ライブラリ プロジェクトのターゲット プラットフォームには AnyCPU です。 ターゲット プラットフォームを選択する方法についての詳細については、次を参照してください。[方法。プロジェクトのターゲット プラットフォームを構成](../ide/how-to-configure-projects-to-target-platforms.md)します。  
+    -   X64、AnyCPU の対象プラットフォーム。 既定では、クラス ライブラリ プロジェクトのターゲット プラットフォームには AnyCPU です。 ターゲット プラットフォームを選択する方法についての詳細については、次を参照してください。[方法。プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md)  
   
     > [!NOTE]  
     >  SharePoint コマンドは、.NET Framework 3.5 および SharePoint ツール拡張機能のターゲットをターゲットするため、SharePoint ツールの拡張機能を定義するのと同じプロジェクト内 SharePoint コマンドを実装することはできません、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]します。 別のプロジェクトで、拡張機能によって使用される任意の SharePoint コマンドを定義する必要があります。 詳細については、次を参照してください。 [Visual Studio の SharePoint ツールの拡張機能を展開](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)します。  

@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - Outlook folders [Office development in Visual Studio], searching
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1427f0ab69cab2c23a0eeb7638bbc6e21778c55a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d9a08451b186cdc3ca1526441e906cf3c9e5d4c9
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915495"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866845"
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>方法: プログラムによって特定のフォルダー内を検索します。
   このコード例では、`Find`と`FindNext`内にある電子メール メッセージの件名フィールド内のテキストを検索する方法、**受信トレイ**します。 このメソッドでは、文字列のフィルターを使用して、t の開始文字確認、`Subject`テキスト。  

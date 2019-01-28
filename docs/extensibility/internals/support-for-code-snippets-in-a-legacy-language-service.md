@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5437f511eda582f2de7b28cc35716b0148df254
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c6fb944ce92613a4352d7b69c0975d39791be2cb
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852954"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54948987"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 スニペット自体とは、一連のフィールドの XML ベースのテンプレートです。 これらのフィールドには、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますが強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  

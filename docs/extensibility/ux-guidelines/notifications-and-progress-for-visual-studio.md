@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c0241a16caec1fd25b3ccd177042af3be90a6b9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ecc47391c3ab80b0c8752de840c6accfb66f0212
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942672"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54936698"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知と Visual Studio の進行状況
 ##  <a name="BKMK_NotificationSystems"></a> 通知システム  
@@ -482,7 +482,7 @@ public interface IVsInfoBarUIEvents
   
  ![フィールドのラベルが"Required"検証](../../extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905 02_FieldValidationRequired")  
   
- コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット] ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
+ コントロールの状態が判断できる*に入力された無効なコンテンツ*別のコントロールにフォーカスを移動するときか、または、ユーザーが [OK] のコミット ボタンをクリックしたときまたはユーザーがドキュメントまたはフォームを保存するときにします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内部または同様の横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのポインターを合わせると、エラーを説明するツールヒントが表示されます。 さらに、1 ピクセルの枠線が無効な状態を作成しているコントロールの周囲に表示されます。  
   

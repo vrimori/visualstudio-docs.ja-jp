@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55b6e8d450a298b6d35079998863a9394ec7d70d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f9dde7935750c7ff7b3e9d41ce940b9df8ab0942
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53949733"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55035436"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録します。
 アプリケーションとファイル名拡張子の関連付けは、通常、ユーザーがファイルをダブルクリックしたときに発生する推奨アクションを持っています。 これは、アクションは、動詞、たとえばオープン操作に対応するにリンクさせます (推奨)。  

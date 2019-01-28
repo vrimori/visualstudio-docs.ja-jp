@@ -12,17 +12,17 @@ helpviewer_keywords:
 - XML [Office development in Visual Studio], Ribbon
 - Ribbon [Office development in Visual Studio], customizing
 - Custom tab [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dda5c2721d9932afd20c0b02f4a82bbbde7116ae
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5b92c3ff12ab284ac208b012f3e03975b4eddd7c
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955228"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871989"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>チュートリアル: リボン XML を使用してカスタム タブを作成します。
   このチュートリアルを使用してカスタム リボン タブを作成する方法について説明、**リボン (XML)** 項目。  

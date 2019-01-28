@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - controls [Office development in Visual Studio], resizing
 - ListObject control, resizing
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e655305400915f1ac97a042ac1cca26e52a05ec5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 98b37c91ff2d36832345f3c0ee93a98de0372060
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909685"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869581"
 ---
 # <a name="how-to-resize-listobject-controls"></a>方法: ListObject コントロールをサイズ変更します。
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールのサイズは Microsoft Office Excel ブックにコントロールを追加するときに設定しますが、後でサイズを変更することもできます。 たとえば、2 列のリストを 3 列のリストに変更できます。  

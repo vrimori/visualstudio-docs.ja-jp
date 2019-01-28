@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: ca540b8ada32eac3afb6fcc4cb8d8da7204052b4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f6c325e4ab99413e04cc35bd05babbe6a3dd0c1e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915427"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55002324"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 拡張機能内でのテキスト変換の呼び出し
 メニュー コマンドなどの Visual Studio 拡張機能を記述しているかどうかまたは[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。

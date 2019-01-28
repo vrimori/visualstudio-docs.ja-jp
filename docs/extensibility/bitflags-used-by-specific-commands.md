@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 403b9649feb24ca06cb24762f1b0cf484bed0612
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d0a5df2026672f415df688ebc3389ff57606c815
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53875421"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55003263"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 1 つの値で 1 つ以上のビットを設定して、さまざまなソース管理プラグイン API の関数の動作を変更できます。 これらの値は、ビットフラグと呼ばれます。 ソース管理プラグイン API によって使用されるビットフラグのさまざまな詳細についてはここでは、それらを使用する関数によってグループ化します。  
@@ -101,9 +101,9 @@ ms.locfileid: "53875421"
 |`SCC_OPT_EQ_DISABLE`|0x00L|イベント キューのアクティビティを中断します。|`SCC_OPT_EVENTQUEUE`|  
 |`SCC_OPT_EQ_ENABLE`|0x01L|イベント キューのログ記録を有効にします。|`SCC_OPT_EVENTQUEUE`|  
 |`SCC_OPT_HCM_NO`|0L|(既定値)[キャンセル] モードがありません。プラグインする必要があります指定が必要な場合。|`SCC_OPT_HASCANCELMODE`|  
-|`SCC_OPT_HCM_YES`|1 L|IDE では、キャンセルを処理します。|`SCC_OPT_HASCANCELMODE`|  
+|`SCC_OPT_HCM_YES`|1L|IDE では、キャンセルを処理します。|`SCC_OPT_HASCANCELMODE`|  
 |`SCC_OPT_SCO_NO`|0L|(既定値)プラグイン UI からチェック アウトするには、[ok]作業ディレクトリが設定されます。|`SCC_OPT_SCCCHECKOUTONLY`|  
-|`SCC_OPT_SCO_YES`|1 L|ないプラグイン UI チェック アウト、作業ディレクトリがありません。|`SCC_OPT_SCCCHECKOUTONLY`|  
+|`SCC_OPT_SCO_YES`|1L|ないプラグイン UI チェック アウト、作業ディレクトリがありません。|`SCC_OPT_SCCCHECKOUTONLY`|  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)

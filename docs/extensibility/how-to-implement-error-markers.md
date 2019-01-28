@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: e8e78514-5720-4fc2-aa43-00b6af482e38
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e074a5e293d5b76f19abd97354b10becd603c5b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 93fe45a6d286ab2acdf486e31c6d360af82e79ff
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53931503"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54974842"
 ---
 # <a name="how-to-implement-error-markers"></a>方法: エラーのマーカーを実装します。
 エラーのマーカー (または赤色の波下線) は、テキスト エディターのカスタマイズを実装するが最も難しいです。 ただし、VSPackage のユーザーに提供する利点は、提供するコストを上回るまでことができます。 エラーのマーカーは、微妙、言語のパーサーが波線または波状の赤い線で正しくないと判断されるテキストをマークします。 このインジケーターには、不適切なコードを視覚的に表示することでプログラマが役立ちます。  

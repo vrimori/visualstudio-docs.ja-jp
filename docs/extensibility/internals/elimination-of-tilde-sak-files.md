@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37d2d8fbbd98e75b398caec9e4c2f36a5853ba4a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 701bb929bae7b5103e274810cf0ad3a222118781
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53862815"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54951275"
 ---
 # <a name="elimination-of-sak-files"></a>排除 ~ SAK ファイル
 ソース管理プラグイン API 1.2 では、 *~ SAK*ファイル機能フラグによって置き換えられ、ソースかどうかを検出する新しい関数は、プラグインのサポートを制御、 *MSSCCPRJ*ファイルと共有チェック アウトします。  

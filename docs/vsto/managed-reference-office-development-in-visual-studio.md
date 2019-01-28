@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - reference [Office development in Visual Studio], 2007 Microsoft Office system
 - Office development in Visual Studio, reference
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 96737b2c5ad7196df873f38b87a6cdd6f11dc10b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aba08ad315c9e3165728b01c552c888f53c94a62
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865233"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871612"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>マネージ参照 (Visual Studio での Office 開発)
   このセクションには、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とする Office プロジェクトで使用される名前空間と型についての API リファレンス ドキュメントが含まれています。 名前空間と、.NET Framework 3.5 を対象とする Office プロジェクトで使用されている型に関する API リファレンス ドキュメントについて、Visual Studio ドキュメントのリファレンス セクションを参照してください: [ http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)します。  

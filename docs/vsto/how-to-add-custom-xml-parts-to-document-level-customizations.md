@@ -14,15 +14,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], custom XML parts
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80d8b809464cd9209b8125595fef8793fc052943
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eb87650156f5ed0060170b0b9f809924d2326fce
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53846387"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54868028"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加します。
   ドキュメント レベルのカスタマイズにカスタム XML 部分を作成すると、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納できます。 詳細については、次を参照してください。[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)します。  
@@ -39,7 +39,7 @@ ms.locfileid: "53846387"
      [!code-csharp[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.cs#1)]
      [!code-vb[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.vb#1)]  
   
-2.  Excel のドキュメント レベルのプロジェクト内の `ThisWorkbook` クラスに `AddCustomXmlPartToWorkbook` メソッドを追加します。  
+2.  Excel のドキュメント レベルのプロジェクト内の `AddCustomXmlPartToWorkbook` クラスに `ThisWorkbook` メソッドを追加します。  
   
 3.  プロジェクトの他のコードからメソッドを呼び出します。 たとえば、ユーザーがブックを開いたときにカスタム XML 部分を作成するには、このメソッドを `ThisWorkbook_Startup` イベント ハンドラーから呼び出します。  
   

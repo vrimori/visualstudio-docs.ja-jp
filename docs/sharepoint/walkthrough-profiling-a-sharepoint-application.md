@@ -10,17 +10,17 @@ helpviewer_keywords:
 - performance testing [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, performance testing
 - profiling [SharePoint development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1e5fb918761cc8e8d68aaaaa5e6a420bb6758a1e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4cb4e2ac95a17adc918be50fa351a35174f128b1
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913818"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54867521"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションをプロファイリングします。
   このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーを使用するとも呼ばれるプロジェクトの最も負荷の高い (実行する最も遅い) 部分を排除を見つけて、*ホット パス*します。  

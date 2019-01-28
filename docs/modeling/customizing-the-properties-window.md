@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Domain-Specific Language, Properties window
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 42f1f99cd8d5d8bc214b3a7ccde571d2a45a7d4a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c02bdb890ed6e65db4916efa9899e967a1ce897c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987341"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54936295"
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 Visual Studio で、ドメイン固有言語 (DSL) では、[プロパティ] ウィンドウの動作と外観をカスタマイズできます。 DSL 定義では、各ドメイン クラスのドメインのプロパティを定義します。 既定では、図またはモデル エクスプ ローラーで、クラスのインスタンスを選択するとすべてのドメイン プロパティが [プロパティ] ウィンドウに表示されます。 これにより、ドメイン プロパティの値を編集するダイアグラムで図形のフィールドにマップするがいない場合でもできます。

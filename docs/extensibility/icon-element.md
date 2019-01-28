@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 73c58fe3-d53c-4f4e-b025-29567c6cbb7c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 475bca35ca1bdc1879301912c7ddd271f369a6ef
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ad2a273f533136fa75b0b064f2328b5b59d6d161
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53870009"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54974527"
 ---
 # <a name="icon-element"></a>Icon 要素
 アイコンのタグの guid 属性は、定義されているビットマップの guid です。 `id`属性は、ビットマップ ストリップでスロットを選択します。 この要素は省略可能です。 この要素がない場合の値が含まれている**guidOfficeIcon:msotcidNoIcon**暗黙的に指定されます。  

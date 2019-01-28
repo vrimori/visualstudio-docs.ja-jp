@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bedde155fdfa37ea1616e2f79e5dba54a449dd74
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1230d4ed6caf7d44c7cef384bcbffc59103f84dc
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53988434"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54998327"
 ---
 # <a name="get-a-port"></a>ポートを取得します。
 ポートは、プロセスが実行されているマシンへの接続を表します。 そのマシンは、ローカル コンピューターまたはリモート コンピューターの可能性があります (これ場合によって実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  

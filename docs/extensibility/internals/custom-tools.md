@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d669f154-9b23-48b6-b9f6-7419c8dd61a6
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce8b18ee5c1c84b8e6480ffa9f91f739796f0991
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c192128ff4995a551b50df9347981405e321b703
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53834413"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54933231"
 ---
 # <a name="custom-tools"></a>カスタム ツール
 *カスタム ツール*ツールをプロジェクト内の項目に関連付けるし、ファイルを保存するたびに、そのツールを実行することができます。 特定のカスタム ツールとも呼ば*単一ファイル ジェネレーター*、データから、またはその逆にコードを生成する翻訳者を実装するために頻繁に使用されます。 たとえば、単一ファイル ジェネレーターの作成[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]ソース コードのうち、 *.settings*と *.resx*ファイル。 生成されたソース コード内のデータに厳密に型指定されたアクセスを提供する、 *.settings*と *.resx*ファイル。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]; のカスタム ツールをサポートするプロジェクトの種類[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクトの種類はありません。 独自のプロジェクトの種類には、カスタム ツールもサポートできます。  

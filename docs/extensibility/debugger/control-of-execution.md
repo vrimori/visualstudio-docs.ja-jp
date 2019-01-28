@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5617849b1dbd8e3857818fb762f562502b89386
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a0fdaa3154dda0dd96f229eace4b82370dfad59a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947427"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55029009"
 ---
 # <a name="control-of-execution"></a>実行の制御
 デバッグ エンジン (DE) では、最後のスタートアップ イベントとして、次のイベントのいずれかの通常送信します。  
@@ -39,11 +39,11 @@ ms.locfileid: "53947427"
   
 5. 場合は、ステップ イン、するか、または、関数から IDE を呼び出して、プログラムのデバッグ セッション`Step`メソッド。 IDE は、次の手順 (命令、ステートメント、または行) と (ステップ イン、または、関数からステップするかどうか) のステップの種類の単位を渡します。 ステップが完了したら、デは stopping イベントが、デバッグ セッションに手順の完了イベントを送信します。  
   
-    または  
+    - または -  
   
     IDE を呼び出して、プログラムのデバッグ セッションを求める場合は、現在の命令ポインターから実行を継続することにした場合、ユーザー、 **Execute**メソッド。 プログラムは、[次へ] の停止条件を検出するまで実行を再開します。  
   
-    または  
+    - または -  
   
     デバッグ セッションが、プログラムを呼び出して、デバッグ セッションを停止してから特定のイベントを無視する場合、**続行**メソッド。 プログラムが、停止条件が発生したときに、または関数からステップ実行している場合、は、ステップが続行します。  
   

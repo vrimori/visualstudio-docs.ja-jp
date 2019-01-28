@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_RESOLUTION_INFO |Microsoft Docs
+title: BP_ERROR_RESOLUTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a6b83242-5728-4716-80f3-840c96d59c6c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8b866681df793e54293268e42e6e172126102aa
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 29a50ef9afa3afccc2d1ef466ac3be9fc93cee0d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906697"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55025268"
 ---
 # <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
 場所、プログラム、およびスレッドなど、エラー ブレークポイントの解決方法について説明します。  

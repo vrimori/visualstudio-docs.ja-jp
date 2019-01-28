@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4de9446afcc7528ba5c27160b4e00ad911b657e9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 39d3385b56e35018093ceaaf26472d425847b100
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958742"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54947412"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: ビューの表示要素、コマンド、および設定 (ガイド) を作成します。
 コマンドとビューの効果を Visual Studio のテキストまたはコード エディターを拡張することができます。 この記事では、人気のある拡張機能、列ガイドを使用する方法を示します。 列ガイドは、特定の列の幅にコードを管理するために、テキスト エディターのビューに描画される視覚的にライトの線です。 具体的には、書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについてがあります。

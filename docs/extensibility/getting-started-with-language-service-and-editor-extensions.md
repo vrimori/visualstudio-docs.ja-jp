@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 6b151891-c06d-40b1-9867-42298caa8492
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c971f753656ad876ba3a2401ddd2033f02cbac0a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 54b4d1b3b1dca44acc092cb3a9a639c196ce8e50
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53831759"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010065"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>言語サービスとエディターの拡張機能を概要します。
 エディター拡張機能を使用して、独自のプログラミング言語または任意のコンテンツ タイプをアウトライン表示、かっこの照合、IntelliSense、および電球などの言語サービスの機能を追加することができます。 テキストの色指定、余白、表示要素、および他のビジュアル要素など、Visual Studio エディターの動作と外観をカスタマイズすることもできます。 また、独自の種類のコンテンツを定義して、コンテンツが表示されるテキスト ビューの動作と外観を指定できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "53831759"
 ## <a name="run-extensions-in-the-experimental-instance"></a>実験用インスタンスで拡張機能を実行します。  
  (Windows Vista および Windows 7) の次の実験的なフォルダーに展開し、拡張機能を開発する際に、Visual Studio の作業バージョンを隔離できます。  
   
- *{%LOCALAPPDATA%}\VisualStudio\10.0Exp\Extensions\\{会社}\\{ExtensionID}*  
+ *{%LOCALAPPDATA%}\VisualStudio\10.0Exp\Extensions\\{Company}\\{ExtensionID}*  
   
  場所 *%localappdata%* 、ログオン ユーザーの名前を指定*会社*、拡張機能を所有している会社の名前を指定し、 *ExtensionID*拡張機能の ID です。  
   

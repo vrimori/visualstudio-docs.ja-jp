@@ -9,24 +9,24 @@ helpviewer_keywords:
 - certificates [Office development in Visual Studio], Office solutions
 - security [Office development in Visual Studio], signing Office solutions
 - signing manifests [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3aafdf24a6a2c5c5484291fb30b70a4ef1b7aa7e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 25c5388c1b1d14efad9e76b2494f8da423d28979
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53829048"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871664"
 ---
 # <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションに署名します。
   ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用して追加のセキュリティ ポリシーの更新プログラムのないすべてのソリューションが信頼されます。
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- および配置が、マニフェストの生成および編集ツールを使用してマニフェストにアプリケーションを手動で編集する場合 (*mage.exe*と*mageui.exe*) を使用する前にマニフェストに再署名する必要があります。 詳細については、「[方法 :アプリケーション マニフェストと配置マニフェストに再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)します。
+ および配置が、マニフェストの生成および編集ツールを使用してマニフェストにアプリケーションを手動で編集する場合 (*mage.exe*と*mageui.exe*) を使用する前にマニフェストに再署名する必要があります。 詳細については、「[方法 :アプリケーション マニフェストと配置マニフェストの再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)」を参照してください。
 
 ## <a name="sign-by-using-a-certificate"></a>証明書を使用してサインインします。
  証明書は、一意のキーとソリューション発行者の id を含むファイルです。 証明書機関から証明書を購入または独自の証明書を作成し、署名証明書の権限を持つできます。

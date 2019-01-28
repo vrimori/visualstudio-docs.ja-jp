@@ -12,16 +12,16 @@ helpviewer_keywords:
 - text templates, generating code for your application
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 8e2ba4e158b6c012c05d29c988e9611d25f58e63
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 59c9513514b6e7ccb47e68168396593dc23b6b2f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53861982"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55012990"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートでは、Visual Studio プロジェクトでプログラム コードやその他のファイルを生成できます。通常、*モデル*のデータに従って生成されるコードが異なるようにテンプレートを記述します。モデルは、アプリケーションの要件に関する重要な情報を含むファイルまたはデータベースです。

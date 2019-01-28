@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 55adde38-1622-4b51-83cb-ce1b04c1ca7a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a90f1fa098cfb60e6a3939332095dca5e52e3eb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e71fb57a4890c29652473338391a0f7181d19ac0
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852102"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010416"
 ---
 # <a name="execution-control-and-state-evaluation"></a>実行の制御と状態の評価
 アプリケーションをデバッグするには、関数にステップ イン、ブレークポイント、停止、および実行を継続としてこのような実行管理機能を実装する必要があります。 Visual Studio ベースのデバッグ イベントの場合は、その実行コントロールは、デバッガーのコンポーネント間で送信されます。  

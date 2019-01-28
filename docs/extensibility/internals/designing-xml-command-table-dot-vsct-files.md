@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eacbe69488d605d9cde2fb219a8adbca1419361b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 68647dbcbeaedd8ce3a6a493b685142434eec2c2
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53904297"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54923095"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>XML コマンド テーブル (.vsct) ファイルを設計します。
 XML コマンド テーブル (*.vsct*) ファイルは、VSPackage のコマンドの項目の外観とレイアウトについて説明します。 コマンドの項目には、ボタン、コンボ ボックス、メニューのツールバー、およびコマンドのアイテムのグループが含まれます。 この記事では、XML コマンド テーブルのファイル、コマンドの項目、メニューの影響、およびそれらを作成する方法について説明します。
@@ -117,7 +117,7 @@ XML コマンド テーブル (*.vsct*) ファイルは、VSPackage のコマン
 
  開発時に、複数の VSPackage プロジェクトが作成され、IDE での混乱を招くの煩雑さにつながる可能性がある実験用のレジストリ ハイブに登録されている可能性があります。 これを解決するには、登録されているすべての Vspackage と ide が行った変更を削除する既定の設定に、実験用ハイブをリセットできます。 実験用ハイブをリセットするには、Visual Studio SDK に付属する CreateExpInstance.exe ツールを使用してください。 あることにあります。
 
- *% %PROGRAMFILES (x86) %\Visual Studio\\\<バージョン > SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
+ *%PROGRAMFILES(x86)%\Visual Studio\\\<version> SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
 
  コマンドを使用してツールを実行**CreateExpInstance/Reset**します。 実験用ハイブから削除しますこのツールが、通常にインストールされているすべての登録されている Vspackage を使用することに注意してください。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。
 

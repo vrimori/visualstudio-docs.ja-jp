@@ -6,16 +6,16 @@ helpviewer_keywords:
 - tests and requirements
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 01aee6de65f1ddc0db16b0ebe527fb3d4d5480ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 25ee3bbe5ba4e3891fcf6454f42f2a5d5ed561fe
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958814"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55042453"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。

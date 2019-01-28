@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 8265f31c-c45b-4858-882c-6d9f1e3b9083
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01756778c7937654339fe0fc41b752ed02659d3c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 243202b116af63a7d14672cd33d30030e8e987b0
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53828525"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54959084"
 ---
 # <a name="inside-the-core-editor"></a>コア エディター
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディターは変更し、テキスト情報のクエリを実行できるいくつかのコンポーネントのセットです。 従来の API を使用して、コア エディターをカスタマイズしている場合は、エディター アダプター経由でルーティングされますが、これらのカスタマイズを使用する続行することがあります。 お勧め、ただし、API の新しいエディターに、カスタマイズを調整することです。  

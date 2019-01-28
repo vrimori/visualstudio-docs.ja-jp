@@ -10,16 +10,16 @@ helpviewer_keywords:
 - tokens [SharePoint development in Visual Studio]
 - replaceable parameters [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, replaceable parameters
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload: office
-ms.openlocfilehash: 762ef5ca27fade9a8ec58f6e0b7f5b60e4baaccb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 792c7faf9ed704dd01226c750e9898965111c414
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53989166"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871950"
 ---
 # <a name="replaceable-parameters"></a>置き換え可能パラメーター
   置き換え可能パラメーター、または*トークン*、実際の値は、デザイン時にわかっていない SharePoint のソリューション項目の値を指定するプロジェクト ファイル内で使用できます。 標準の関数と似ています[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](../ide/template-parameters.md)します。  
@@ -65,8 +65,8 @@ ms.locfileid: "53989166"
 |$SharePoint.Feature.DeploymentPath$|パッケージの機能を含むフォルダーの名前。 このトークンは、フィーチャーのデザイナーで「展開パス」プロパティに相当します。 例の値は、"Project1_Feature1 です"。|  
 |$SharePoint.Feature.Id$|含まれている機能の SharePoint ID。 このトークンは、ようにすべての機能レベルのトークンでは、機能を使用してパッケージに含まれるファイルでのみ使用できましていないに直接追加機能の外部のパッケージ。|  
 |$SharePoint.ProjectItem.Name$|取得した (そのファイル名ではなく)、プロジェクト項目の名前**ISharePointProjectItem.Name**します。|  
-|$SharePoint.Type します。\<GUID >。AssemblyQualifiedName $|一致する型のアセンブリ修飾名、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]のトークン。 形式、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]は小文字と Guid.ToString("D") 形式に対応しています (つまり、xxxxxxxx xxxx-xxxx-。)。|  
-|$SharePoint.Type します。\<GUID >。FullName $|トークン内の GUID と一致する型の完全名。 GUID の形式は、小文字と Guid.ToString("D") 形式に対応しています (つまり、xxxxxxxx xxxx-xxxx-。)。|  
+|$SharePoint.Type.\<GUID>.AssemblyQualifiedName$|一致する型のアセンブリ修飾名、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]のトークン。 形式、[!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)]は小文字と Guid.ToString("D") 形式に対応しています (つまり、xxxxxxxx xxxx-xxxx-。)。|  
+|$SharePoint.Type.\<GUID>.FullName$|トークン内の GUID と一致する型の完全名。 GUID の形式は、小文字と Guid.ToString("D") 形式に対応しています (つまり、xxxxxxxx xxxx-xxxx-。)。|  
   
 ## <a name="add-extensions-to-the-token-replacement-file-extensions-list"></a>トークンの置換後のファイル拡張子の一覧に拡張機能を追加します。
  理論的には既定では、パッケージ内に、項目に含まれる SharePoint プロジェクトに属しているすべてのファイルでのトークンを使用できますが[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]パッケージ ファイル、マニフェスト ファイルは、次の拡張子を持つファイルでのみトークンを検索します。  

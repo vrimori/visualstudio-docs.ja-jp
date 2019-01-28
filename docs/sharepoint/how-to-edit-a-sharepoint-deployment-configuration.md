@@ -9,17 +9,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 73b59e709ba75d5624f28cf80c9a5fdfdf8ee835
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 98cdc452663fd32508496c1fc52a49033a0b4381
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843594"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54870062"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>方法: SharePoint の配置構成を編集します。
   配置構成を作成または既存の展開構成を変更できます。 たとえば、1 つの手順を実行したり、展開プロセスの手順の順序を変更します。 作成または組み込みおよびプログラムで追加の構成を変更できないために、展開の構成を変更することがあります。  

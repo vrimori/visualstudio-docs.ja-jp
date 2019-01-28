@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 8d04f8db-eda7-4b3e-b6eb-c06df104502a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e1d8bac8f682017166c3e625aa0578c90515209
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 63aaf4aaac4608af007f9ddab9465658ef9a9de6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837331"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54950547"
 ---
 # <a name="extend-the-editor-and-language-services"></a>エディターと言語サービスを拡張します。
 独自のエディターに (IntelliSense) などの言語サービスの機能を追加し、Visual Studio コード エディターのほとんどの機能を拡張できます。  拡張することができますの完全な一覧を参照してください。[言語サービスとエディターの拡張機能ポイント](../extensibility/language-service-and-editor-extension-points.md)します。  
@@ -28,7 +28,7 @@ ms.locfileid: "53837331"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|説明|  
 |-----------|-----------------|  
 |[言語サービスとエディターの拡張機能を概要します。](../extensibility/getting-started-with-language-service-and-editor-extensions.md)|エディターの拡張機能を作成する方法について説明します。|  
 |[エディター内で](../extensibility/inside-the-editor.md)|エディターの一般的な構造を説明し、その機能の一部を示します。|  

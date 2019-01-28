@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 99f6cd06-4076-45ee-b2ae-fa2ad627fd18
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2a17c5c9f4121725ebfb9ca5a01f6209408c9a1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cdb218bb7b982d145d2c296edb68a00dff144349
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879797"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031227"
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
 このインターフェイスは、ポートで実行中のプロセスを表します。 ポートが、ローカル ポートの場合`IDebugProcess2`通常ローカル コンピューター上の物理的なプロセスを表します。  

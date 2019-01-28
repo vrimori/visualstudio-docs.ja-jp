@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ed12330a2acce09a5fb8a9aabc3b434b4c42fd8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a0156012f116a3189441b47d17e5c75014cf8ac0
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956011"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54931905"
 ---
 # <a name="configuration-options-overview"></a>構成オプションの概要
 プロジェクトで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]構築できますが、デバッグ、実行、および配置された複数の構成をサポートすることができます。 構成とは、ビルドの種類のコンパイラ スイッチおよびファイルの場所では通常、プロパティの名前付きセットを使用して記述します。 既定では、新しいソリューションは、2 つの構成を含めることが*デバッグ*と*リリース*します。 既定の設定を使用するか、特定のソリューションやプロジェクトの要件を満たすように変更は、これらの構成を適用できます。 一部のパッケージは、2 つの方法でビルドできます。 またはインプレース コンポーネントとして ActiveX エディターとして。 ただし、複数の構成をサポートするためには、プロジェクトは必要はありません。 1 つのみの構成が使用可能な場合、その構成は、すべてのソリューション構成にマップされます。  

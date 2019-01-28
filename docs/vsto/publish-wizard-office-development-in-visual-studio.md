@@ -13,17 +13,17 @@ helpviewer_keywords:
 - deploying applications [Office development in Visual Studio], Publish Wizard
 - Office applications [Office development in Visual Studio], Publish Wizard
 - Publish Wizard, Office solutions
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1a76a333b8a692a8d7dc0a2c0f093e2eaf586c33
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d0ba0e629ba04ec3df6b3be950f59fb34da46364
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53965922"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871937"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>発行ウィザード (Visual Studio での Office 開発)
   使用して、**発行ウィザード**ソリューション ファイルを指定した場所にコピーするマニフェスト ファイルを作成し、セットアップ プログラムを作成します。  

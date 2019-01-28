@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 59d9a77f-ee80-474b-a14f-90f477ab717b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca842c185f4e9b50afffc20e14af70e93776116f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 22aa4c86cc00b57e7c290d8b5a5655713ee05052
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53932799"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54955363"
 ---
 # <a name="wizards"></a>ウィザード
 通常、ウィザードを作成した後に追加する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]他のユーザーが使用できるように開発環境 (IDE) を統合します。 追加のウィザードは、表示されます、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックス。 表示する、**新しいプロジェクトの追加**または**新しい項目の追加** ダイアログ ボックスで開いているソリューションを右クリックして**ソリューション エクスプ ローラー**、 をポイント**追加**とクリックして**新しいプロジェクト**または**新しい項目の**します。  

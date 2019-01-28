@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bcffd954-3c67-4867-96f3-041ddb3e34d4
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3e38dcb9943bff6a2d4dd073f5b06d6b731aadf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 180fee2d7e5839e23d86e0f9389864ae9ad14f52
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53937119"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55009623"
 ---
 # <a name="ienumdebugthreads2next"></a>IEnumDebugThreads2::Next
 列挙体から次の要素のセットを返します。  
@@ -51,7 +51,7 @@ int Next(
  [out]実際に返される要素の数を返します`rgelt`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`返される可能性があります、要求された要素数よりも少ない場合、それ以外の場合、エラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`返される可能性があります、要求された要素数よりも少ない場合、それ以外の場合、エラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)   

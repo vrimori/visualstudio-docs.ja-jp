@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 212a0504-cf6c-4e50-96b0-f2c1c575c0ff
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93ff8f6cd9423212a64404b55b38751d095b260f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 30c234994fae5799bbb44369edadf9d2f3b82d26
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913387"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54991139"
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>Vspackage のセキュリティのためのベスト プラクティス
 インストールする、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]する、コンピューターには、管理者の資格情報のコンテキストで実行する必要があります。 セキュリティおよび配置の基本単位、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]アプリケーションは、 [VSPackage](../../extensibility/internals/vspackages.md)します。 使用して VSPackage を登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、資格情報を管理する必要があります。  

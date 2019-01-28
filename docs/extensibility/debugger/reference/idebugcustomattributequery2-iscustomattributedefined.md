@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined |Microsoft Docs
+title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e5340f3a8bacdb8ac9c3cdd8be21c09aa1274ac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 67da86fd82020ef811484cb91dcd46f5f2b850da
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841448"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54942780"
 ---
 # <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
 名前でカスタム属性が存在するかどうかを判断します。  

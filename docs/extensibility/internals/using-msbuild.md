@@ -1,5 +1,5 @@
 ---
-title: MSBuild の使用 |Microsoft Docs
+title: MSBuild の使用 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: de9ab4a6a6591c4a45755b0a9f3682ac5e40c676
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7fc28f539f6240ad8b5f2da5c356fcc244ac6f61
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836768"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55042271"
 ---
 # <a name="using-msbuild"></a>MSBuild の使用
 MSBuild では、ビルド、ビルド タスク、および構成をビルドするプロジェクト アイテムを完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張性の高い XML 形式を提供します。  

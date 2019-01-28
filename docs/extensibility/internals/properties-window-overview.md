@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3994c46d2786b86c01b75ee2d89a4e202a13847d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 38579bcfee3aa390d9135006b8fc57f7b4b06b0f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841060"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54993304"
 ---
 # <a name="properties-window-overview"></a>プロパティ ウィンドウの概要
 **プロパティ**で利用可能な期間の 2 つの主な型で選択したオブジェクトのプロパティを表示するウィンドウが使用される、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 これら 2 つの種類のウィンドウは次のとおりです。  

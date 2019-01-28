@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 17cf5337-d251-4422-bc96-93fe7d48f2ae
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64e894fe2ce1eaf6f74ed01d2e76f7ce3d33f9fb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8dba45116c956c1edc1a8ffb691397375345c661
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53949642"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54967207"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize 関数
 この関数は、すべての割り当てと以前の呼び出しによって作成されたオープン接続クリーンアップ、 [SccInitialize](../extensibility/sccinitialize-function.md)ソース管理プラグインをシャット ダウンを準備します。  

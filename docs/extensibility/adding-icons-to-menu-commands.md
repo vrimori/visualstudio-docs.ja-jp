@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 362a0c7e-5729-4297-a83f-1aba1a37fd44
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73e49c3ac9586f5287e21e63e4560b7009927f46
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7856015fff4f62fb1f95ba791be34295717c439f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827638"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55003059"
 ---
 # <a name="add-icons-to-menu-commands"></a>メニュー コマンドにアイコンを追加します。
 コマンドは、メニューおよびツールバーの両方に表示できます。 ツールバーでは、通常、アイコンとテキストの両方で、コマンドが表示されますだけをアイコンで (スペースを節約) 中にメニューに表示されるコマンドの一般的です。  

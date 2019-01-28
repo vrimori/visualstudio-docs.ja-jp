@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office development in Visual Studio, creating your first project
 - Excel [Office development in Visual Studio], creating your first project
 - document-level customizations [Office development in Visual Studio], creating your first project
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 70e82a8b126f5292cd8efe1420c59af90ca59c3d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eaf5fe98e5c5a9c54245307f50e71345d0e2d477
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955319"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871248"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: 最初の Excel 用ドキュメント レベルのカスタマイズを作成します。
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  

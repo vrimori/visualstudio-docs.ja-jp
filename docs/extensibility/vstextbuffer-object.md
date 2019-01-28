@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c5f94b45-7249-4e1f-a53d-1d2a1c61e0ef
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00405642ea1a14ae703a2d5fc992c98c4c59ea03
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7d526156a07ba66d01ca86fb39daaaedf73d3bf2
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955371"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54990018"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer オブジェクト
 テキスト バッファー オブジェクトは、Unicode テキストは、一般には、ファイルのストリームを表します。 A<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ように、ウィザードのコア エディターのコンテキスト外にあるオブジェクトを使用できます。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38b0544d58362a37113b0e193324a2ef5b8cdb49
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2ee02bbe830c8ef3eab5766cd97a4c04837dc585
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860989"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55014011"
 ---
 # <a name="nesting-projects"></a>入れ子になったプロジェクト
 VS パッケージを使用するエンタープライズ アプリケーション開発者が類似した種類のプロジェクトでまとめてを便利にグループ[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して*プロジェクトの入れ子*します。 たとえば、エンタープライズ テンプレート プロジェクトは、カテゴリにプロジェクトをグループ化の入れ子になったプロジェクトを使用します。 ビジネス ファサード プロジェクトや Web UI プロジェクトの場合は、1 つのカテゴリにグループ化。  

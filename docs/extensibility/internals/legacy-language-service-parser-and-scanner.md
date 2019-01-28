@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: daca7b7d49bcd9aa817f26ad485ec35394f50aff
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1c4cc6728600fc4bf605c0600014897025cc27ae
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53941850"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54988039"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>従来の言語サービスのパーサーとスキャナー
 パーサーは、言語サービスの中核です。 マネージ パッケージ フレームワーク (MPF) 言語のクラスには、表示されているコードに関する情報を選択する言語のパーサーが必要です。 パーサーは、テキストを構文トークンに分割し、し、それらのトークンの種類と機能を識別します。  
@@ -44,7 +44,7 @@ namespace MyNamespace
 |名前空間、クラス、パブリック、void、int|keyword|  
 |=|operator|  
 |{ } ( ) ;|区切り記号|  
-|MyNamespace、MyClass、MyFunction、arg1、var1|identifier|  
+|MyNamespace, MyClass, MyFunction, arg1, var1|identifier|  
 |MyNamespace|namespace|  
 |MyClass|class|  
 |MyFunction|メソッド|  

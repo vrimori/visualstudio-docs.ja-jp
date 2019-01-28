@@ -12,17 +12,17 @@ helpviewer_keywords:
 - projects [Office development in Visual Studio], PowerPoint
 - PowerPoint [Office development in Visual Studio]
 - Office projects [Office development in Visual Studio], PowerPoint
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f264cd7382ea16a7c4cfa5896241f4359b0cd67
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 26e1da711ebe3b0359a73894d729f79124e88aaf
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53906047"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875018"
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint ソリューション
   Visual Studio には、Microsoft Office PowerPoint の VSTO アドインを作成するために使用できるプロジェクト テンプレートが用意されています。 VSTO アドインを使用すると、PowerPoint の自動化、PowerPoint 機能の拡張、PowerPoint ユーザー インターフェイス (UI) のカスタマイズが可能です。  

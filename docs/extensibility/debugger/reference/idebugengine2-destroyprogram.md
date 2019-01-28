@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b026155fb6aa514621dd2da0f9a037ded066e808
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e02cd777e3ff363ef17234367be401cf39ea9952
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967668"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031709"
 ---
 # <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
 指定されたプログラムが正しく終了になっていると、DE、プログラムに対するすべての参照をクリーンアップするデバッグ エンジン (DE) を通知し、送信プログラムは、イベントを破棄します。  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 99311a93-d642-4344-bbf9-ff6e7fa5bf7f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 178cd43486a9553f70853c9df0e106ac3ece78f1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 81deac9f46c03cac997f555f817bba5831409bca
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908437"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54968701"
 ---
 # <a name="implement-custom-categories-and-display-items"></a>カスタム カテゴリを実装し、アイテムを表示
 VSPackage は、そのテキストの色とフォントの制御を提供できます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) でカスタム カテゴリとアイテムを表示します。
@@ -113,7 +113,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
 
      IDE は次のユーザーの変更の適切なメソッドを呼び出し、**フォントおよび色**ページ。 たとえば、呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents.OnFontChanged%2A>メソッドが新しいフォントが選択されている場合。
 
-     または
+     - または -
 
 -   IDE の変更をポーリングします。
 

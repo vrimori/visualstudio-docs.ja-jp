@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2d472a24-3813-4f5f-9783-b491ad8a71ad
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc6161c7568760947dcc0fc43c409cd9e947630b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a9213440d0c3c3dbaa7c95e45bbf61386b60ff46
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908880"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55016188"
 ---
 # <a name="feedback-to-the-user"></a>ユーザーへのフィードバック
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE)、視覚的なフィードバック関連の使用可能な機能は、ユーザーの現在の選択と選択のグローバル コンテキストに基づきます。 次の表では、別の選択のコンテキストで使用できる機能を示します。  

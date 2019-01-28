@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Domain-Specific Language, custom attrributes
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 5b9a96f70febc6a33d80557a09cc8bc8e1adf2f4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 54b4340fe72552f3287a5c6ebec55c9c9d326ac1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53938083"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54932273"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>方法: 要素の CLR 属性を設定する
 カスタム属性は、ドメイン要素、図形、コネクタ、およびダイアグラムを追加できる特別な属性です。 継承する任意の属性を追加することができます、`System.Attribute`クラス。
@@ -40,7 +40,7 @@ ms.locfileid: "53938083"
 
      **カスタム属性**プロパティは、次の形式で属性を表示するようになりました。
 
-     `[` *AttributeName* `(` *ParameterName* `=` *型* `)]`
+     `[` *AttributeName* `(` *ParameterName* `=` *Type* `)]`
 
 ## <a name="see-also"></a>関連項目
 

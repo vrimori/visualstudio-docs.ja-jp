@@ -15,15 +15,15 @@ helpviewer_keywords:
 - HasVstoObject method
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a93923525ce1a3c1a3396963f05b2f0335a8f635
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8c3527070c1934c723b6038c93347f1a78ac948a
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909192"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54864879"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-runtime"></a>Word 文書や実行時に VSTO のアドインの Excel ブックを拡張します。
   VSTO アドインを利用すれば、Word 文書と Excel ブックを次のようにカスタマイズできます。  
@@ -116,7 +116,7 @@ ms.locfileid: "53909192"
 ##  <a name="HasVstoObject"></a> Office オブジェクトが拡張されているかどうかを判断します。  
  特定のネイティブ Office オブジェクトに対して拡張オブジェクトが既に生成されているかどうかを確認するには、`HasVstoObject` メソッドを使用します。 このメソッドが戻る**true**拡張オブジェクトが既に生成されている場合。  
   
- `Globals.Factory.HasVstoMethod` メソッドを使用します。 拡張オブジェクトに対してテストするネイティブの Word または Excel オブジェクト (<xref:Microsoft.Office.Interop.Word.Document> や <xref:Microsoft.Office.Interop.Excel.Worksheet> など) を渡します。  
+ `Globals.Factory.HasVstoMethod` メソッドを使用します。 拡張オブジェクトに対してテストするネイティブの Word または Excel オブジェクト ( <xref:Microsoft.Office.Interop.Word.Document> や <xref:Microsoft.Office.Interop.Excel.Worksheet>など) を渡します。  
   
  `HasVstoObject` メソッドは、指定した Office オブジェクトに拡張オブジェクトがある場合にのみ、コードの実行で便利です。 処理する Word VSTO アドインがある場合など、<xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave>イベントが保存されるまで、マネージ コントロールをドキュメントから削除を使用して、`HasVstoObject`文書が拡張されているかどうかを判断するメソッド。 文書が拡張されていない場合は、コントロール、管理があることはできませんし、イベント ハンドラーがドキュメント上のコントロールをクリーンアップしようとしないで返すことができます。  
   

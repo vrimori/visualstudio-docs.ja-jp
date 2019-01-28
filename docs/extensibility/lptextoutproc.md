@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2025c969-e3c7-4cf4-a5c5-099d342895ea
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3bef9a76c12b44345c000a3133fb3edcfed1352
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 55c65b7344169f14679d8eb9493cec2e4569af65
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956843"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010000"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 ユーザーは、統合開発環境 (IDE) 内からソース管理操作を実行するとき、ソース管理プラグインは、操作に関連するエラーまたは状態のメッセージを伝達するためにする可能性があります。 プラグインはできますこの目的の表示の独自のメッセージ ボックス。 ただし、詳細のシームレスな統合をプラグインできる文字列に渡す、IDE では、状態情報を表示することをネイティブで表示されます。 このメカニズムは、`LPTEXTOUTPROC`関数ポインター。 IDE では、エラーと状態を表示するため (詳細については、以下で説明) この関数を実装します。  

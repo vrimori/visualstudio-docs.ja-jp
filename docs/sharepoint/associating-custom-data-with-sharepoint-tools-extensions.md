@@ -11,17 +11,17 @@ helpviewer_keywords:
 - SharePoint project items, associating custom data
 - SharePoint projects, associating custom data
 - SharePoint development in Visual Studio, extensibility features
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c4e3cba7d4b05de4d32f31bd39c0e462174695fe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 754f5f92dcaf6d19a226f4d1f69ebcbdd8f7d5aa
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53951041"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875499"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能とカスタム データを関連付ける
   カスタム データは、SharePoint ツール拡張機能の特定のオブジェクトを追加することができます。 これは、機能は、データが、拡張機能の他のコードから、後でアクセスする、拡張機能の 1 つの部分である場合に便利です。 データを格納し、アクセス、カスタマイズした方法を実装するには、代わりには、オブジェクトと、拡張機能で、データを関連付けるし、後で、同じオブジェクトからデータを取得します。  

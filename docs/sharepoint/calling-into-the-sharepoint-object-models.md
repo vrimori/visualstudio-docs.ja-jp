@@ -10,17 +10,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, server object model
 - SharePoint commands [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, extensibility features
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: df55347ea08bfcb243f37aaee111066106da49ff
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cd6e8d1bbd2f880a3e3c4c7fab4b292a2c7bd6d0
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914528"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875668"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>SharePoint オブジェクト モデルを呼び出す
   Visual Studio での SharePoint ツールの拡張機能を作成するときに、特定のタスクを実行する SharePoint Api を呼び出す必要があります。 たとえば、SharePoint プロジェクトのカスタム配置手順を作成する場合はいくつかのソリューションを展開するタスクを実行する SharePoint Api を呼び出す必要があります。  

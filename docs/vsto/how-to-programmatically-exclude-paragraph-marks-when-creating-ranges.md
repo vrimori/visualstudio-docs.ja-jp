@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ranges, excluding paragraph marks in Word
 - documents [Office development in Visual Studio], paragraph marks
 - paragraphs, controlling structure
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ab8dc8e41983e6dd4bef8b3f7ba550853e32addd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 20227318063a2b9a2c7b64384d7c31b7fb956946
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847094"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54872067"
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>方法: プログラムから除外する段落記号の範囲を作成するときに
   段落に基づいて <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを作成する場合、段落記号などの印刷されない文字はすべて範囲に含まれています。 出力先の段落に、元の段落からテキストを挿入したい場合があります。 出力先の段落を複数の段落に分割したくない場合、元の段落から段落記号を最初に削除する必要があります。 また、段落の書式設定情報は段落記号に格納されるので、範囲を既存の段落に挿入するとき、この情報を含めないようにすることもできます。  
@@ -63,7 +63,7 @@ ms.locfileid: "53847094"
      [!code-vb[Trin_VstcoreWordAutomation#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#31)]
      [!code-csharp[Trin_VstcoreWordAutomation#31](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#31)]  
   
-6.  `secondRange` のテキストを置換して、段落記号を含めます。  
+6.  `secondRange`のテキストを置換して、段落記号を含めます。  
   
      [!code-vb[Trin_VstcoreWordAutomation#32](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#32)]
      [!code-csharp[Trin_VstcoreWordAutomation#32](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#32)]  
@@ -87,7 +87,7 @@ ms.locfileid: "53847094"
      [!code-vb[Trin_VstcoreWordAutomation#35](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#35)]
      [!code-csharp[Trin_VstcoreWordAutomation#35](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#35)]  
   
-10. `firstRange` に元の段落テキストを復元します。  
+10. `firstRange`に元の段落テキストを復元します。  
   
      [!code-vb[Trin_VstcoreWordAutomation#36](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#36)]
      [!code-csharp[Trin_VstcoreWordAutomation#36](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#36)]  

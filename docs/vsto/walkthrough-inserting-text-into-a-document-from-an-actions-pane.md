@@ -10,17 +10,17 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], adding controls
 - actions panes [Office development in Visual Studio], creating in Word
 - actions panes [Office development in Visual Studio], adding controls
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4e868f8639aa8803e1ba9631bf46929bc917be3f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 49a570a68d2ce301ff103c3587e3246a725a1f42
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943091"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866277"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>チュートリアル: 操作ウィンドウから文書にテキストを挿入します。
   このチュートリアルでは、Microsoft Office Word ドキュメントで、[操作] ウィンドウを作成する方法を示します。 [操作] ウィンドウには、入力を収集し、文書にテキストを送信する 2 つのコントロールが含まれています。  
@@ -111,7 +111,7 @@ ms.locfileid: "53943091"
   
     |プロパティ|[値]|  
     |--------------|-----------|  
-    |**Name**|**GetName**|  
+    |**Name**|**getName**|  
     |**Size**|**130, 20**|  
   
 5.  1 秒あたりの追加**ラベル**操作ウィンドウ コントロールを制御し、変更、**テキスト**プロパティを**アドレス**します。  
@@ -120,7 +120,7 @@ ms.locfileid: "53943091"
   
     |プロパティ|[値]|  
     |--------------|-----------|  
-    |**Name**|**GetAddress**|  
+    |**Name**|**getAddress**|  
     |**戻り値を受け入れます**|**True**|  
     |**Multiline**|**True**|  
     |**Size**|**130, 40**|  

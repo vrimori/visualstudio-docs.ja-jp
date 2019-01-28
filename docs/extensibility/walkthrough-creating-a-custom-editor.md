@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d090abb6-d99f-4083-a3db-cd16bf81ce7d
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8656f14f3a6c9cd52b73ac0fdd3573d008c7aa0e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 75b5dc56ce2277c94ddae26d2bbdda89f12c9571
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847155"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55005983"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>チュートリアル: カスタム エディターを作成する
 VSPackage プロジェクト テンプレートは、C++ では、単純なカスタム エディターを作成できます。 VSPackage プロジェクト テンプレートは、c# または Visual Basic のプロジェクトをサポートしていません。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  

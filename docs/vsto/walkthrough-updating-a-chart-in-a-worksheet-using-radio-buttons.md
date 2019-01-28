@@ -9,17 +9,17 @@ helpviewer_keywords:
 - worksheets, updating using managed controls
 - controls [Office development in Visual Studio], updating worksheets
 - worksheets, using radio buttons
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e165fc0a02f3185c74f4a3eb4b0fe9536f71fb66
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ae451b42642cd3c124b3fe9d5df627c2306a2020
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891941"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873874"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>チュートリアル: オプション ボタンを使用してワークシートのグラフを更新する方法
   このチュートリアルでは、Microsoft Office Excel ワークシートでラジオ ボタンを使用して、オプションですばやく切り替える方法をユーザーに提供の基本を説明します。 この場合、オプションは、グラフのスタイルを変更します。  
@@ -136,7 +136,7 @@ ms.locfileid: "53891941"
    | プロパティ | [値] |
    |----------|------------------|
    | **Name** | **付いた円柱グラフ** |
-   | **[テキスト]** | **縦棒グラフ** |
+   | **Text** | **縦棒グラフ** |
 
 
 3. ユーザー コントロールに 2 番目のラジオ ボタンを追加し、次のプロパティを変更します。  
@@ -145,7 +145,7 @@ ms.locfileid: "53891941"
    | プロパティ | [値] |
    |----------|---------------|
    | **Name** | **barChart** |
-   | **[テキスト]** | **横棒グラフ** |
+   | **Text** | **横棒グラフ** |
 
 
 4. 3 番目のラジオ ボタンをユーザー コントロールに追加し、次のプロパティを変更します。  
@@ -154,7 +154,7 @@ ms.locfileid: "53891941"
    | プロパティ | [値] |
    |----------|----------------|
    | **Name** | **です折れ線グラフ** |
-   | **[テキスト]** | **折れ線グラフ** |
+   | **Text** | **折れ線グラフ** |
 
 
 5. 4 番目のラジオ ボタンをユーザー コントロールに追加し、次のプロパティを変更します。  
@@ -162,7 +162,7 @@ ms.locfileid: "53891941"
    |プロパティ|[値]|  
    |--------------|-----------|  
    |**Name**|**areaBlockChart**|  
-   |**[テキスト]**|**領域ブロックのグラフ**|  
+   |**Text**|**領域ブロックのグラフ**|  
 
    次に、オプション ボタンがクリックされたときにグラフを更新するコードを記述します。  
 

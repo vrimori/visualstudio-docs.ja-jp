@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5a691e77-cf91-430d-90ea-361d9031ef83
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54ad66452151142b3ad18a97591a5cf774896a14
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0559f003ec09b6f3b0a12fd8f429f5dc83e6322d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852350"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54993563"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX マニフェスト デザイナー
 VSIX パッケージ マニフェスト ファイルを Visual Studio 拡張機能のインストールの動作の設定を変更します。  

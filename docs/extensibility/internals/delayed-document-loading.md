@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27edc56516293ff6502f0708a02faa7bae1e3719
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 973ea13ca7f175515e0e730cacdf7b1bdd75355b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53940363"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54922978"
 ---
 # <a name="delayed-document-loading"></a>ドキュメントの読み込みの遅延
 ユーザーは、Visual Studio ソリューションを再度開き、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントが実行されているドキュメント テーブル (RDT) に配置されます。  

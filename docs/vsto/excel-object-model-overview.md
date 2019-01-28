@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Office object models
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45ac85d47ace9c4ce1d954dff51ca4545d2cab35
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4dc2f62a80865fa441a18fc80d0c8e4bd792e8db
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821770"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54872093"
 ---
 # <a name="excel-object-model-overview"></a>Excel オブジェクト モデルの概要
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
@@ -92,7 +92,7 @@ ms.locfileid: "53821770"
   
  Excel は、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトのプロパティとして <xref:Microsoft.Office.Interop.Excel.Sheets> コレクションを提供します。 <xref:Microsoft.Office.Interop.Excel.Sheets> コレクションの各メンバーは、<xref:Microsoft.Office.Interop.Excel.Worksheet> または <xref:Microsoft.Office.Interop.Excel.Chart> オブジェクトのどちらかです。  
   
- Visual Studio の Office 開発ツールは、<xref:Microsoft.Office.Tools.Excel.Worksheet> 型を提供することにより、<xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトを拡張します。 この型は <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトのすべての機能にアクセスできるだけでなく、マネージド コントロールをホストし、新しいイベントを処理する機能などの新機能にもアクセスできます。 詳細については、次を参照してください。 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)します。  
+ Visual Studio の Office 開発ツールには、 <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトを拡張する <xref:Microsoft.Office.Tools.Excel.Worksheet> 型が用意されています。 この型は <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトのすべての機能にアクセスできるだけでなく、マネージド コントロールをホストし、新しいイベントを処理する機能などの新機能にもアクセスできます。 詳細については、次を参照してください。 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)します。  
   
 ### <a name="range-object"></a>Range オブジェクト  
  <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトは、Excel アプリケーション内で特に使用されるオブジェクトです。 Excel 内で任意の領域を操作するには、その領域を <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトとして表し、その範囲のメソッドとプロパティを作業する必要があります。 <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトは、セル、行、列、セルの 1 つ以上のブロックを含むセルの選択を表します。連続する場合もしない場合もあり、セルのグループが複数のシートにわたっている場合もあります。  

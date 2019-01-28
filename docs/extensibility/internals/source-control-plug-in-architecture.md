@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff2b19407ec63ea1227aba2affdad77f302dc129
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b5ca684540c43ac6628a21c95493180f8f22cf46
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53868655"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55043753"
 ---
 # <a name="source-control-plug-in-architecture"></a>アーキテクチャのソース管理プラグイン
 ソース管理サポートを追加することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) を実装し、ソース管理プラグインをアタッチします。 IDE は、明確に定義されたソース管理プラグイン API を使用してプラグインのソース管理に接続します。 IDE では、ツールバーとメニュー コマンドで構成されるユーザー インターフェイス (UI) を提供することで、ソース管理システムのバージョン管理機能を公開します。 ソース管理プラグインは、ソース管理の機能を実装します。  

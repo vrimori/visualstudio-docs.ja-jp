@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - SharePoint development in Visual Studio, project and project item templates
 - SharePoint development in Visual Studio, templates
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71590e2cd5ece2a025b2aef3dfa0baf612fb2808
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3f2479d58dfb8e1e28a2de230c0838ef8c8f3768
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936296"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54872199"
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint プロジェクトとプロジェクト項目テンプレート
   以下のセクションでは、SharePoint プロジェクトとプロジェクト項目の使用可能なテンプレート、およびそれらの使用方法について説明します。 
@@ -76,7 +76,7 @@ ms.locfileid: "53936296"
 ### <a name="business-data-connectivity-model-farm-solution-only"></a>ビジネス データ接続モデル (ファーム ソリューションのみ)
  A**ビジネス データ接続モデル (ファーム ソリューションのみ)** 項目により、ビジネス データの統合を SharePoint にします。 [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)]、Siebel、Service Advertising Protocol (SAP) などのバック エンドのサーバー アプリケーションからのデータを使用できます。 ビジネス データ接続モデル (ファーム ソリューションのみ) は、ファーム ソリューションでのみ使用できます。 このプロジェクト項目はファーム ソリューションにしか追加できません。 詳細については、「[方法 :BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)、[方法。ローカライズされた名前、プロパティ、およびアクセス許可を指定するリソース ファイルを使用して](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)、および[はの新機能。Business Connectivity Services](http://go.microsoft.com/fwlink/?LinkId=179411)します。  
   
-### <a name="content-type"></a>コンテンツの種類
+### <a name="content-type"></a>コンテンツ タイプ
  *コンテンツの種類*項目では、ドキュメント、お知らせ、タスクなど既存の (基本) コンテンツ タイプに基づいて、カスタム コンテンツ タイプを作成できます。 カスタム コンテンツ タイプでは、独自に定義したサイト列 (フィールド) に加えて、ベース コンテンツ タイプと同じ属性およびフィールドを使用できます。 たとえば、SharePoint に付属している基本の Contact コンテンツ タイプを基にしてカスタムの Contact コンテンツ タイプを作成できます。 コンテンツ タイプのカスタマイズでは、基本コンテンツ タイプの既存のサイト列を変更したり、別のサイト列を追加したりできます。  
   
 > [!NOTE]  

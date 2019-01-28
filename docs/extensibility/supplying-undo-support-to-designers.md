@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 43eb1f14-b129-404a-8806-5bf9b099b67b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eef024c14dfcab515d0205f7e1298020dbd3bd91
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 62cbce66521ecdadca948f6fbb20fc20e60714c2
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836297"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54947661"
 ---
 # <a name="supplying-undo-support-to-designers"></a>デザイナー向けの元に戻す操作のサポート提供
 通常、デザイナー、エディターなどは、コード要素を変更するときに、ユーザーは、最近の変更を取り消すことができるように、元に戻す操作をサポートする必要があります。  

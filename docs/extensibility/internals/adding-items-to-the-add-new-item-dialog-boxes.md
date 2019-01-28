@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d447090585a2314899bb2d6246c6fb450a9e767d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ef91cc3d3bcec479fd6619662d40fbfeffb82131
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956050"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54989953"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>新しい項目の追加 ダイアログ ボックスに項目の追加
 項目を追加するプロセス、**新しい項目の追加**レジストリ キー ダイアログ ボックスを起動します。 次のレジストリ エントリのように、 **AddItemTemplates**セクションには、どの項目で利用できるように、ディレクトリの名前とパスが含まれています、**新しい項目の追加** ダイアログ ボックスが配置されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "53956050"
 
  **\\{C061DB26-5833-11D2-96F5-000000000000}\\AddItemTemplates\\TemplatesDir\\{ACEF4EB2-57CF-11D2-96F4-000000000000}\\1**
 
- **@** 6 = 
+ **@** = #6 
 
  **TemplatesDir** = \\&lt;Visual Studio SDK インストール パス&gt;\\VSIntegration\\&lt;SomeFolder&gt; \\&lt;SomePackage&gt;\\&lt;SomeProject&gt;\\&lt;SomeProjectItems&gt;
 
@@ -38,7 +38,7 @@ ms.locfileid: "53956050"
 
 | 名前 | 型 | データ (から *.rgs*ファイル) | 説明 |
 |------------------|-----------| - | - |
-| @ (既定値) | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY % | リソース ID を**項目の追加**テンプレート。 |
+| @ (既定値) | REG_SZ | #%IDS_ADDITEM_TEMPLATES_ENTRY% | リソース ID を**項目の追加**テンプレート。 |
 | Val TemplatesDir | REG_SZ | %Template_path\\&lt;SomeProjectItems&gt; | ダイアログ ボックスに表示されるプロジェクト項目のパス、**新しい項目の追加**ウィザード。 |
 | Val SortPriority | REG_DWORD | 100 ([!INCLUDE[vcprx64](../../extensibility/internals/includes/vcprx64_md.md)]) | ツリー ノードに表示されるファイルの並べ替え順序を決定、**新しい項目の追加** ダイアログ ボックス。 |
 

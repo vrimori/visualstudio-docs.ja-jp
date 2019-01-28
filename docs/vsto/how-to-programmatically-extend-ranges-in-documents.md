@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - ranges, extending
 - documents [Office development in Visual Studio], extending ranges
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f6bfb4979285753a5dd15dd4fe4dabfab013309
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ed2df2d844383ab0cfc26d67104d03644e1db671
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53919665"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54868863"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>方法: プログラムによってドキュメント内の範囲を拡張します。
   Microsoft Office Word ドキュメントで <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義した後、その始点と終点を <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> メソッドを使用して変更します。 <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A>と<xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A>メソッドが同じ 2 つの引数を受け取ります*単位*と*カウント*します。 *カウント*引数は、移動するユニットの数と*単位*引数は、次のいずれかを指定できます<xref:Microsoft.Office.Interop.Word.WdUnits>値。  

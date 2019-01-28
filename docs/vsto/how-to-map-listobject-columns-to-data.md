@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ListObject control, mapping data
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 508a0fa8df58e70eb216f722ee96395c7a9c21ad
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 276b606bbd4f87898916a6e7ca1dbf57ce3d6716
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899984"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873783"
 ---
 # <a name="how-to-map-listobject-columns-to-data"></a>方法: データに ListObject 列をマップします。
   <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを <xref:System.Data.DataTable>にバインドするとき、リストの中のすべての列を表示しなくてもよい場合や、データにバインドされていない特定の列が含まれている場合があります。 <xref:Microsoft.Office.Tools.Excel.ListObject> メソッドを呼び出すと、 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> に表示する列をマップできます。  

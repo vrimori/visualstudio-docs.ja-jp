@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, solution templates
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 9682e774533d9aa350d52b777ec783ea2abe9463
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ca1cb693977a5197bdf6adfe399ed269e0211a00
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53896085"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55071073"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>ドメイン固有言語ソリューション テンプレートの選択
 ドメイン固有言語ソリューションを作成するには、ドメイン固有言語デザイナー ウィザードで利用できるソリューション テンプレートのいずれかを選択します。 作成し言語に最も近いテンプレートを選択して、ソリューションを開始する必要がある変更を最小限に抑えることができます。

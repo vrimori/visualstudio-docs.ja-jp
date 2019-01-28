@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 523c7de972958eff9224896d3a59543163eb7b9e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9219ffe7289da1a8d6477d17cb4212ff876510c5
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936816"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54945165"
 ---
 # <a name="supporting-source-control"></a>ソース管理のサポート
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ファイルのチェック アウト、チェックイン、およびプロジェクトまたはエディターの他のソース管理操作をサポートしています。 ソース管理クライアントでは、として[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]はソース管理パッケージでは、対話するように設計[!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]、アーカイブ、バージョン管理、および、動的に定義された一連のファイルの制御機能を提供します。  

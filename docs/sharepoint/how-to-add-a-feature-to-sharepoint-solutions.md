@@ -7,17 +7,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, features
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b62c29da1d567567bd2788f6f0b497a4628797c1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 50011181a14e5895d19157e279854d5daf8308dd
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53907697"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54864771"
 ---
 # <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>方法: SharePoint ソリューションに機能を追加します。
   SharePoint ソリューションを作成するときに、1 つの機能と 1 つのパッケージがソリューションに追加されます。 異なる種類の SharePoint ファイルを整理する他の機能のアイテムを追加できます。  

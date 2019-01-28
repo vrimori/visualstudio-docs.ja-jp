@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MSBuild, validating code
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: ac75be41d547905b122284fa09a654be368d73e7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fd4e3681ad30dc54d9240fff94e1bf60bf5e88cf
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53907827"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55033948"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係図を使用したコードの検証
 
@@ -163,7 +163,7 @@ Web サイト、Office ドキュメント、プレーン テキスト ファイ�
 
 これらのタスクを使用して、検証エラーを管理する、**エラー一覧**ウィンドウ。
 
-|**目的**|**次の手順します。**|
+|**To**|**次の手順します。**|
 |-|-|
 |検証中に選択したエラーを抑制する|1 つまたは複数選択したエラーを右クリックし、[**検証エラーの管理**、] をクリックし、**エラーの抑制**します。<br /><br /> 抑制されたエラーは、取り消し線付きで表示されます。 次回検証を実行したとき、これらのエラーは表示されません。<br /><br /> 抑制されたエラーは、対応する依存関係図ファイルの .suppressions ファイルで追跡されます。|
 |選択したエラーの抑制を停止する|選択した抑制されたエラーまたはエラーを右クリックし、 をポイント**検証エラーの管理**、 をクリックし、**エラーの抑制の停止**。<br /><br /> 次回検証を実行したとき、抑制されたエラーのうち選択したものが表示されます。|

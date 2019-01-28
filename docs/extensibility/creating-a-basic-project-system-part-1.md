@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43ba49107c1f3b2ab72db024b8dbfd01d8eab857
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cc2cfc74b192be01b9b5ce258d2686dda1b8ccc7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832555"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54930005"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>基本的なプロジェクト システム、第 1 部を作成します。
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**します。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードをデプロイおよび Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
@@ -261,7 +261,7 @@ Templates
   
     4.  次のアセンブリへの参照を追加します。  
   
-        -   `Microsoft.VisualStudio.Designer.Interfaces` (で *\<VSSDK インストール > \VisualStudioIntegration\Common\Assemblies\v2.0*)  
+        -   `Microsoft.VisualStudio.Designer.Interfaces` (in *\<VSSDK install>\VisualStudioIntegration\Common\Assemblies\v2.0*)  
   
         -   `WindowsBase`  
   

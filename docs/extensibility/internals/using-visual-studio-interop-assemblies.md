@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b525602e5f328fefde5e552c9c99a845f369a81a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c7a4d4224d96cbd886fa0447e1160484596e2641
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53869903"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54984341"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio 相互運用機能アセンブリの使用
 Visual Studio 相互運用機能アセンブリは、マネージ アプリケーションを Visual Studio 拡張機能を提供する COM インターフェイスへのアクセスを許可します。 直線の COM インターフェイスとその相互運用機能のバージョンとの間には、いくつか違いがあります。 たとえば、Hresult は、通常、整数値として表されます、例外と同じ方法で処理する必要があり、(特に out パラメーター) のパラメーターが異なる方法で扱われます。  

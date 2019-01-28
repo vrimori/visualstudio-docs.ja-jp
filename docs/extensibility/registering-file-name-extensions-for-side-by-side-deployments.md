@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 9ab046a2-147d-4167-aa14-7d661b1eaaa5
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c6d867d1ab28cd2cfe3d8c01fe6818d13c6dc74
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7a21c4f330d78d35735cb8463af62802d1fa21a4
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53907736"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54961664"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>サイド バイ サイドで配置のファイル名拡張子を登録します。
 サイド バイ サイドで環境にデプロイされている Vspackage に、ファイルを関連付ける適切なバージョンのファイル名拡張子を登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 登録により、ユーザーが、プロジェクトを開き、プロジェクト項目ファイルの適切なバージョンをバージョン固有のファイル名拡張子を使用する場合を除き、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  

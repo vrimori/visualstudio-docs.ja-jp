@@ -7,13 +7,13 @@ helpviewer_keywords:
 - command buttons, creating and placing
 - menus, creating commands
 ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
-manager: douge
-ms.openlocfilehash: 3b33d84f62db9cfe1371ffc540830f63d93e67d1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 0923b179c3a2237c6923a7f889c802239d824fb1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926240"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54935710"
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand とOleMenuCommand
 メニュー コマンドを作成するにはいずれかから派生することによって<xref:System.ComponentModel.Design.MenuCommand>またはから<xref:Microsoft.VisualStudio.Shell.OleMenuCommand>オブジェクト、および適切なイベント ハンドラーを実装します。 ほとんどのケースでは、VSPackage プロジェクト テンプレートの場合と同様に <xref:System.ComponentModel.Design.MenuCommand>を使用できますが、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>を使用することが必要になることもあります。  
@@ -135,7 +135,7 @@ ms.locfileid: "53926240"
   
      [!code-csharp[ButtonGroup#22](../extensibility/codesnippet/CSharp/menucommands-vs-olemenucommands_6.cs)]  
   
-     Visual Studio パッケージ テンプレートには、コマンドの GUID と ID を保持するために `GuidList` と `PkgCmdIDList` という 2 つのコレクションが用意されています。 これらは、テンプレートで追加するコマンドに対して自動的に設定されます。手動で追加するコマンドについては、 `PkgCmdIdList` クラスに ID エントリを追加する必要があります。  
+     Visual Studio パッケージ テンプレートには、コマンドの GUID と ID を保持するために `GuidList` と `PkgCmdIDList`という 2 つのコレクションが用意されています。 これらは、テンプレートで追加するコマンドに対して自動的に設定されます。手動で追加するコマンドについては、 `PkgCmdIdList` クラスに ID エントリを追加する必要があります。  
   
      また、GUID の生の文字列値と ID の整数値を使用して、 <xref:System.ComponentModel.Design.CommandID> オブジェクトを設定することもできます。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "53926240"
   
      <xref:System.ComponentModel.Design.MenuCommand> は、静的コマンドに適しています。 動的メニュー項目を表示するには、QueryStatus イベント ハンドラーが必要です。 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> は、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> イベント (コマンドのホスト メニューを開くと発生します) と、その他のプロパティ ( <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>など) を追加します。  
   
-     パッケージ テンプレートで作成したコマンドは、既定ではパッケージ クラスの `Initialize()` メソッドの <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトに渡されます。  
+     パッケージ テンプレートで作成したコマンドは、既定ではパッケージ クラスの <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> メソッドの `Initialize()` オブジェクトに渡されます。  
   
 4.  <xref:System.ComponentModel.Design.MenuCommand> は、静的コマンドに適しています。 動的メニュー項目を表示するには、QueryStatus イベント ハンドラーが必要です。 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> は、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> イベント (コマンドのホスト メニューを開くと発生します) と、その他のプロパティ ( <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>など) を追加します。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53926240"
   
 1. 有効なコマンドの <xref:Microsoft.VisualStudio.VSConstants.S_OK> を返します。  
   
-2. `prgCmds` パラメーターの `cmdf` 要素を設定します。  
+2. `cmdf` パラメーターの `prgCmds` 要素を設定します。  
   
     `cmdf` 要素の値は、論理 OR ( <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> ) 演算子を使用して結合された、`|`列挙型からの値の論理的な和集合です。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "53926240"
   
       `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXTMENU`  
   
-   - コマンドが `TEXTCHANGES` フラグを使用している場合は、`pCmdText` パラメーターの `rgwz` 要素をコマンドの新しいテキストに設定し、`pCmdText` パラメーターの `cwActual` 要素をコマンド文字列のサイズに設定します。  
+   - コマンドが `TEXTCHANGES` フラグを使用している場合は、 `rgwz` パラメーターの `pCmdText` 要素をコマンドの新しいテキストに設定し、 `cwActual` パラメーターの `pCmdText` 要素をコマンド文字列のサイズに設定します。  
   
      エラー条件の場合、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> メソッドで次のエラー ケースを処理する必要があります。  
   

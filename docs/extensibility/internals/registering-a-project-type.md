@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: dfc0e231-6b4e-447d-9d64-0e66dea3394a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e3c5aa9dd5784f6d987a433b0f402547e8f7d8b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9b1413acafd4358d4b29435a0cd62edd5a8ce22e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53826388"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54940831"
 ---
 # <a name="registering-a-project-type"></a>プロジェクト タイプの登録
 新しいプロジェクトの種類を作成するときに、有効にするレジストリ エントリを作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を認識し、プロジェクトの種類を使用します。 通常、これらのレジストリ エントリは、レジストリ スクリプト (.rgs) ファイルを使用して作成します。  
@@ -260,7 +260,7 @@ ms.locfileid: "53826388"
   
  たとえば、Enterprise Frameworks のプロジェクト テンプレートは、次のレジストリ エントリを追加します。  
   
- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir C:\Program files \microsoft Visual Studio\EnterpriseFrameworks\ を =  
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\  
   
  かどうか、PROJECT_TYPE が含まれます。 つまり、.vsz ファイルの前に指定した ProductDir ディレクトリに環境の検索の .vsz ファイルの EF のエントリを =。  
   

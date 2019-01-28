@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50abcfcc68ee881a7977224ba2354701e735d2bc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 72660ab5a3c3aedd888f22bdf7db1ef635d5bc34
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53843295"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55069552"
 ---
 # <a name="project-configuration-for-output"></a>出力のためのプロジェクト構成
 すべての構成には、一連の実行可能ファイルまたはリソース ファイルなどの出力項目を生成するビルド プロセスをサポートできます。 これらの出力項目は、ユーザーにプライベートであり実行可能ファイル (.exe、.dll、.lib) とソース ファイル (.idl、.h ファイル) のような出力の関連する型のリンクのグループに配置することができます。  

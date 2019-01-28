@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: d1d9a058-df7e-48f5-a2e7-3caeeba7eaa6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b62da812773795ff89e1beb87af6364c8baee14
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e1df2b68729304068d308fe9ab7dcfe32c72bccd
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915047"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929737"
 ---
 # <a name="receiveandsendreply-template-designer"></a>ReceiveAndSendReply テンプレート デザイナー
 
@@ -50,7 +50,7 @@ ms.locfileid: "53915047"
 | <xref:System.ServiceModel.Activities.SendReply.Request%2A> | True | この <xref:System.ServiceModel.Activities.Receive> アクティビティと関連付けられる <xref:System.ServiceModel.Activities.SendReply> アクティビティへの参照。 このプロパティがある必要がありますいない**null**します。 <xref:System.ServiceModel.Activities.Receive> アクティビティと <xref:System.ServiceModel.Activities.SendReply> アクティビティは、要求/応答メッセージ パターンをモデル化するためにサーバーで一緒に使用されます。 このプロパティでは、関連付ける <xref:System.ServiceModel.Activities.Send> アクティビティを指定します。 自動的にバインドされているため、デザイナーでこのプロパティを編集することはできません、<xref:System.ServiceModel.Activities.Send>作成元のアクティビティ、<xref:System.ServiceModel.Activities.SendReply>アクティビティ。 |
 | <xref:System.ServiceModel.Activities.SendReply.Content%2A> | False | 受信するメッセージまたはパラメーターの内容を指定します。 <xref:System.ServiceModel.Activities.ReceiveMessageContent> アクティビティまたは <xref:System.ServiceModel.Activities.ReceiveParametersContent> アクティビティを指定できます。 このプロパティの横にある省略記号ボタンをクリックして編集、**コンテンツ**プロパティ グリッドで、またはをクリックして、フィールド、**を定義する**横に、**コンテンツ**上のラベル**受信**アクティビティ デザイナー画面。 両方を表示、**コンテンツ定義**ダイアログ。 このボックスを使用する方法の詳細については、次を参照してください。、[コンテンツ定義 ダイアログ ボックス](../workflow-designer/content-definition-dialog-box.md)トピック。 |
 | <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> | False | ワークフロー内のこの <xref:System.ServiceModel.Activities.CorrelationInitializer> アクティビティを構成する複数の <xref:System.ServiceModel.Activities.CorrelationHandle> オブジェクトを初期化する <xref:System.ServiceModel.Activities.Receive> オブジェクトのコレクションを指定します。 横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A>プロパティを開く [プロパティ] グリッドで、 **[関連付け初期化子**] ダイアログ ボックス。 詳細については、このボックスを使用して、次を参照してください。、[関連付け初期化子の追加 ダイアログ ボックス](../workflow-designer/add-correlationinitializers-dialog-box.md)トピック。 |
-| <xref:System.ServiceModel.Activities.SendReply.Action%2A> | False | メッセージのアクション ヘッダーを指定します。 明示的に設定されている場合にその値の既定値します。<br /><br /> <strong>https://tempuri.org/{service コントラクトの名前空間}/{サービス コントラクト名}/操作 {name}</strong> |
+| <xref:System.ServiceModel.Activities.SendReply.Action%2A> | False | メッセージのアクション ヘッダーを指定します。 明示的に設定されている場合にその値の既定値します。<br /><br /> <strong>https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}</strong> |
 | <xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A> | False | 応答メッセージを送信する前にワークフロー サービス インスタンスを永続化するかどうかを指定します。 既定値は **false** です。 |
 
 ## <a name="see-also"></a>関連項目

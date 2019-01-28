@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f1affa200527e770dc87c51c4bb6f7b8a088fcc0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 286ec5b71691777af601c00e26c2db5772bd5f1a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53959374"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54993976"
 ---
 # <a name="manifest-from-resources"></a>リソースからのマニフェスト
 リソースのツールから、マニフェストとは、イメージ リソース (.png または .xaml ファイル) の一覧を受け取り、Visual Studio イメージのサービスで使用するそれらのイメージを許可する .imagemanifest ファイルを生成するコンソール アプリケーションです。 さらに、このツールを使用して、既存の .imagemanifest にイメージを追加することができます。 このツールは、イメージを Visual Studio 拡張機能の高 DPI とテーマのサポートを追加するのに役立ちます。 生成された .imagemanifest ファイルに含まれ、Visual Studio 拡張機能 (.vsix) の一部として配置する必要があります。  
@@ -43,9 +43,9 @@ ms.locfileid: "53959374"
   
  **例**  
   
--   ManifestFromResources/resources:D:\Images/assembly:My.Assembly.Name/isNative  
+-   ManifestFromResources /resources:D:\Images                       /assembly:My.Assembly.Name                       /isNative  
   
--   ManifestFromResources/resources:D:\Images\Image1.png;D:\Images\Image1.xaml/assembly:My.Assembly.Name/manifest:MyImageManifest.imagemanifest  
+-   ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml                       /assembly:My.Assembly.Name                       /manifest:MyImageManifest.imagemanifest  
   
 -   ManifestFromResources/resources:D:\Images\Image1.png;D:\Images\Image1.xaml/assembly:My.Assembly.Name/guidName:MyImages/newGuids/newIds  
   

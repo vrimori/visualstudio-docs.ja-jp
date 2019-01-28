@@ -9,17 +9,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, features
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a820f506154a72b797963996b39e7ec225fac31
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 876c6a6a328c5a617a6773b76cdb9bb2c6d8f546
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964018"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54874238"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: 項目を SharePoint の機能を追加および削除
   SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 、展開前に追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除することができます。  

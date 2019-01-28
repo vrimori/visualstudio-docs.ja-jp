@@ -11,15 +11,15 @@ helpviewer_keywords:
 - comments, worksheets
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cb243498585677d6df79139bae570a9eec6270d9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 23b14cf662da3440aae2c7fc2d05e2ead5eabaa8
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968619"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869685"
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>方法: プログラムで追加し、ワークシートのコメントの削除
   Microsoft Office Excel ワークシート内のコメントは、プログラムを使用して追加、削除できます。 コメントは、1 つのセルにのみ追加でき、複数のセル範囲には追加できません。  

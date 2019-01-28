@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: afec3008-b1e0-4803-ad24-195dbfb6497e
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81f17bf830a9d7566ad00b062d81edcd7e1a242a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6a2c3cf1a1a5ee17a3ecdb6ed6b097b3ff4dde18
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913121"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54976707"
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
 [逆アセンブル] ストリームの指定した位置の基準とした命令数が特定の読み取りポインターを移動します。  
@@ -56,7 +56,7 @@ int Seek( 
  [in]指定された位置を基準に移動する命令数`dwSeekStart`します。 この値は、後方に移動する負の値であることができます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返します`S_OK`します。 返します`S_FALSE`シーク位置が使用可能な命令の一覧より後ろにあった場合。 それ以外の場合はエラー コードを返します。  
+ 正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`シーク位置が使用可能な命令の一覧より後ろにあった場合。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="remarks"></a>Remarks  
  リストの先頭の前に、シークであった場合は、読み取り位置が、一覧の最初の命令に設定されます。 参照してくださいがあった場合の位置に、リストの末尾の後に、読み取り位置が設定最後の命令の一覧で。  

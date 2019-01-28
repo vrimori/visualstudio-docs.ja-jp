@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 635a02daf6f6501679cc2a38cd252b1e1ebec7a1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e848b3e54d1e3beb6b9681112cd55b74caa6a482
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990030"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54949861"
 ---
 # <a name="how-to-get-a-service"></a>方法: サービスを取得します。
 多くの場合、さまざまな機能にアクセスする Visual Studio サービスを取得する必要があります。 一般に、Visual Studio service は、使用できる 1 つまたは複数のインターフェイスを提供します。 ほとんどのサービスは、VSPackage から取得できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "53990030"
   
    ```  
   
-    このコードは、SVsActivityLog サービスを取得しにキャスト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスで、アクティビティ ログに書き込むことができます。 例については、次を参照してください。[方法。アクティビティ ログを使用して、](../extensibility/how-to-use-the-activity-log.md)します。  
+    このコードは、SVsActivityLog サービスを取得しにキャスト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスで、アクティビティ ログに書き込むことができます。 例については、「[方法: アクティビティ ログを使用して、](../extensibility/how-to-use-the-activity-log.md)します。  
   
 4. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   

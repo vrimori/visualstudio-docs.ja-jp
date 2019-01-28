@@ -12,15 +12,15 @@ helpviewer_keywords:
 - granting trust [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a60470d43842384103462fe69c4beba72bdc452d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aba47e277b1c109bf4b0d03efb5694733f45760c
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912355"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54871885"
 ---
 # <a name="grant-trust-to-documents"></a>ドキュメントに信頼を付与
   ドキュメント レベルのプロジェクトでは、証明書を使用したマニフェストへの署名や、信頼プロンプトのクリックなど、アプリケーション レベルのプロジェクトと同じセキュリティ要件が適用されます。 また、ドキュメントまたはブックは、信頼できる場所として指定されたディレクトリに置く必要があります。  

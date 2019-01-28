@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7de78a60dd7de129eb2626e414ce6ec44bb20ce3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1ec5c409e13838c68656a35a92dab3688a5ce326
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827524"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54948077"
 ---
 # <a name="walkthrough-outlining"></a>チュートリアル: アウトライン
 アウトラインの展開または折りたたみをするテキスト領域の種類を定義することでなどの言語ベースの機能を設定します。 言語サービスのコンテキストで領域を定義して独自ファイル名拡張子とコンテンツ タイプを定義し、または領域の定義をその型だけに適用するか、または領域の定義を ("text") などの既存のコンテンツ タイプに適用できます。 このチュートリアルでは、定義のアウトライン領域を表示する方法を示します。  

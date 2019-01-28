@@ -13,15 +13,15 @@ helpviewer_keywords:
 - user controls [Office development in Visual Studio], actions panes
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: de9e6a7f148612716cee55b5a21a26f1bcf04d9b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 947b5730ce459751ec281749d369a9770c074df3
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821128"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875954"
 ---
 # <a name="actions-pane-overview"></a>操作ウィンドウの概要
   操作ウィンドウは、カスタマイズ可能な**ドキュメント アクション**特定の Microsoft Office Word ドキュメントまたは Microsoft Office Excel ブックに関連付けられている作業ウィンドウ。 [操作] ウィンドウがなどの他の組み込み作業ウィンドウと Office 作業ウィンドウ内でホストされる、 **XML ソース**Excel での作業ウィンドウ、または**スタイルと書式**Word 作業ウィンドウ。 操作ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールまたは WPF コントロールを使用してデザインできます。

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 096d273d-4fe9-4f24-9b00-470bfbdf4bdf
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d3c6895f23b6d2ffe1f4ff8e311140b1e5d5a51
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f31563418e3a72599ea441c41f2b76910f94c870
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837200"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927867"
 ---
 # <a name="extend-projects"></a>プロジェクトを拡張します。
 プロジェクトおよびソリューションは、Visual Studio コードとリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細については見つかります[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)します。  

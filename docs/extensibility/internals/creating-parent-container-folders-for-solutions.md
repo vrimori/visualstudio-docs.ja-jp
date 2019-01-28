@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49c07cbb4ea87c33b0b22ed7db323018be2f2b11
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 531e1cbf3e8489fd68d2bbd94c9a66af3c817a00
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53889099"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929940"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>親コンテナーのフォルダーのソリューションを作成します。
 ソース管理プラグイン API バージョン 1.2、ユーザーは、ソリューション内のすべての web プロジェクトの 1 つのルートのソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (サー) が呼び出されます。  
@@ -56,8 +56,8 @@ ms.locfileid: "53889099"
   
 |ソリューションが含まれています|ディスク上の場所に|データベースの既定の構造|  
 |-----------------------|-----------------------|--------------------------------|  
-|*sln1.sln*<br /><br /> Web1<br /><br /> Web2|*C:\Solutions\sln1*<br /><br /> *C:\Inetpub\wwwroot\Web1*<br /><br /> \\\server\wwwroot$\Web2|$/< user_choice >/sln1<br /><br /> $/< user_choice > C/Web1<br /><br /> $/< user_choice >/Web2|  
-|*sln1.sln*<br /><br /> Web1<br /><br /> Win1|*C:\Solutions\sln1*<br /><br /> *D:\Inetpub\wwwroot\Web1*<br /><br /> *C:\solutions\sln1\Win1*|$/< user_choice >/sln1<br /><br /> $/< user_choice >/D web1<br /><br /> $/< user_choice >/sln1 win1|  
+|*sln1.sln*<br /><br /> Web1<br /><br /> Web2|*C:\Solutions\sln1*<br /><br /> *C:\Inetpub\wwwroot\Web1*<br /><br /> \\\server\wwwroot$\Web2|$/<user_choice>/sln1<br /><br /> $/< user_choice > C/Web1<br /><br /> $/< user_choice >/Web2|  
+|*sln1.sln*<br /><br /> Web1<br /><br /> Win1|*C:\Solutions\sln1*<br /><br /> *D:\Inetpub\wwwroot\Web1*<br /><br /> *C:\solutions\sln1\Win1*|$/<user_choice>/sln1<br /><br /> $/< user_choice >/D web1<br /><br /> $/<user_choice>/sln1/win1|  
   
  操作がキャンセルはまたはエラーのため失敗したかどうかに関係なく、サー フォルダーとサブフォルダーが作成されます。 キャンセルまたはエラー状態で自動的に削除されません。  
   

@@ -22,17 +22,17 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], Windows Forms controls
 - Windows Forms controls [Office development in Visual Studio], about Windows Forms controls
 - Office applications [Office development in Visual Studio], Windows Forms
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 48778074587e5cf6e4a51ff2386a437e9c3922d7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: fbadf9f2e431cfe441b2cd3ef3694f38e019de49
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53902494"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54872340"
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office ドキュメントの概要での Windows フォーム コントロール
   Windows フォーム コントロールは、データを入力または操作するときにユーザーが取り扱うオブジェクトです。 Microsoft Office Excel および Microsoft Office Word のドキュメント レベルのプロジェクトで、プロジェクトで、デザイン時にドキュメントまたはブックに Windows フォーム コントロールを追加できますかプログラムで、実行時にこれらのコントロールを追加することができます。 プログラムで、任意の開いているドキュメントまたは VSTO アドインで実行時にワークシートに、Excel または Word のこれらのコントロールを追加することができます。  

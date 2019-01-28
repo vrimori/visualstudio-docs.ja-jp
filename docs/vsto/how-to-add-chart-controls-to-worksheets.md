@@ -10,15 +10,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 577c0531e73ad5586386c478611e57daa7e651d5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 89da5b9c960c3df426a4ae96c99e2628540fc6ae
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967467"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54873796"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>方法: ワークシートに Chart コントロールを追加します。
   追加することができます<xref:Microsoft.Office.Tools.Excel.Chart>およびドキュメント レベルのカスタマイズで実行時のデザイン時に、Microsoft Office Excel ワークシートにコントロール。 追加することも<xref:Microsoft.Office.Tools.Excel.Chart>VSTO アドインにおける実行時にコントロール。  

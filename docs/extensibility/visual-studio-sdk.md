@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26ac42cbcc70c34b221f1146bb0ba5314ca104dc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6f8b5d7cd33f4466071b836d3438d6973f83fd8a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947743"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54969078"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK は Visual Studio の機能を拡張することや、Visual Studio に新しい機能を追加するのに役立ちます。 Visual Studio Marketplace では、あなたが作成した拡張機能を他のユーザーへ配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  

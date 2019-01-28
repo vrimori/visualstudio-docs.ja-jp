@@ -8,16 +8,16 @@ helpviewer_keywords:
 - walkthroughs [Domain-Specific Language Tools]
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 21899be482e47152e8ca60d78535f49613f52ede
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aab69aee545d3be3c946c6b4f118bc0eeb0c9c34
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53946043"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54923613"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義に追跡プロパティを追加する
 

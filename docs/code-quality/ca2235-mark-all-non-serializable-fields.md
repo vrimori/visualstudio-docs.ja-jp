@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 599ad877-3a15-426c-bf17-5de15427365f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 484755feac873be04648cfef936b2faa701bba2c
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: 40a4326924d83d4604f512f41f85e7adb8d21bb6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154151"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54975050"
 ---
 # <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235:すべてのシリアル化不可能なフィールドを設定します
 
@@ -39,7 +39,7 @@ ms.locfileid: "54154151"
 
 ## <a name="rule-description"></a>規則の説明
  シリアル化可能な型は、いずれかでマークされている、<xref:System.SerializableAttribute?displayProperty=fullName>属性。 型がシリアル化されるとき、<xref:System.Runtime.Serialization.SerializationException?displayProperty=fullName>型にシリアル化可能でない型のインスタンス フィールドが含まれている場合、例外がスローされます。
- 
+
  この例外は、型を使用してカスタムのシリアル化を使用して、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス。 このインターフェイスを実装する型が、独自のシリアル化ロジックを提供し、このような型のシリアル化不可能なインスタンス フィールドで CA2235 は適用されませんのでします。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
@@ -55,15 +55,15 @@ ms.locfileid: "54154151"
  [!code-vb[FxCop.Usage.MarkNonSerializable#1](../code-quality/codesnippet/VisualBasic/ca2235-mark-all-non-serializable-fields_1.vb)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA 2236:ISerializable 型の基本クラス メソッドを呼び出す](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
+ [CA2236:ISerializable 型の基本クラス メソッドを呼び出す](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2240:ISerializable を正しく実装します。](../code-quality/ca2240-implement-iserializable-correctly.md)
 
  [CA2229: シリアル化コンストラクターを実装します](../code-quality/ca2229-implement-serialization-constructors.md)
 
- [CA 2238:シリアル化メソッドを正しく実装します。](../code-quality/ca2238-implement-serialization-methods-correctly.md)
+ [CA2238:シリアル化メソッドを正しく実装します。](../code-quality/ca2238-implement-serialization-methods-correctly.md)
 
- [CA 2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
+ [CA2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
  [CA2239:オプションのフィールドに逆シリアル化メソッドを提供します。](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
 

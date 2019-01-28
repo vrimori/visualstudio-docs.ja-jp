@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee628d56094026b588c76451c143158000636a5c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2c1f058e1da1e4d425dc3748f20ec14ecd363855
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53962611"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54993898"
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスと実装のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクト モデル。 VSPackage を開発するには、プロジェクト モデルを取得するでは、設計上の決定に従っているし、IDE によって提供されるグローバルの機能と連携するオブジェクトを作成します。 プロジェクト項目を保存する方法を制御する、たとえば、制御できない通知ファイルを維持する必要があります。 ユーザーが開いているプロジェクト項目にフォーカスが移るし、選択**保存**上、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類コードする必要があります、IDE からコマンドをインターセプト、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  

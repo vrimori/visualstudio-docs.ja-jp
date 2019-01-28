@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9e3b0d74-a2dd-4eaa-bd95-21b2f9c79409
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e844c37ba7e9b396c0a0216b624b446916ff639
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 70dc659fa1e3db2d4db797f3be82ba0239368f47
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53913354"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55069435"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
 人間が判読できるエラー メッセージの構築できるようにする情報を返します。  

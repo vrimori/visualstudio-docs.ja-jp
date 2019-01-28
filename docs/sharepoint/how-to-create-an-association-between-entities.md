@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], relate entities
 - BDC [SharePoint development in Visual Studio], relate entities
 - BDC [SharePoint development in Visual Studio], associate external content types
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eaaa3f86cc0751b0b80d61555a69aa6bfecda2f0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1870d8965947c1ee8adce5b7839c732d2d590daa
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53878248"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54867967"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>方法: エンティティ間のアソシエーションを作成します。
   関連付けを作成して、ビジネス データ接続 (BDC) モデルのエンティティ間のリレーションシップを定義することができます。 Visual Studio では、各関連付けについての情報をモデルのコンシューマーに提供するメソッドを生成します。 これらのメソッドは、SharePoint web パーツ、リスト、またはユーザー インターフェイス (UI) でデータ間の関係を表示するカスタム アプリケーションで使用できます。  

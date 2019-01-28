@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79ecbd971315c004a9be40221a6950afb5856823
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2369348552ca8eaaceed92e4373fa3d934d383d0
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847205"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031030"
 ---
 # <a name="legacy-language-service-essentials"></a>従来の言語サービスの基本情報
 Visual Studio のプログラミング言語に統合する言語サービスを提供する必要があります。 このトピックでは、従来の言語サービスで使用できる機能について説明します。  

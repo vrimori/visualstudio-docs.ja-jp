@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27c12228de5a49d0b61cc61e5c1233343430b686
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 393cc1ea5835b66c18a9f4ca46b9f2ac0a88860a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934058"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031826"
 ---
 # <a name="localize-menu-commands"></a>メニュー コマンドをローカライズします。
 ローカライズされたを作成してメニューやツールバーのローカライズされたテキストを行うことができます *.vsct*ファイルし、ローカライズ *.resx*に組み込むこと、VSPackage とし、プロジェクト ファイルの更新ファイル、変更します。  
@@ -46,7 +46,7 @@ ms.locfileid: "53934058"
   
       次の例では、コマンドのファミリ ツリー エクスプ ローラー ツール ウィンドウを開きを英語とスペイン語のボタンのテキストを示します。  
   
-      [*FamilyTree.en US.vsct*]  
+      [*FamilyTree.en-US.vsct*]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -59,7 +59,7 @@ ms.locfileid: "53934058"
    </Button>  
    ```  
   
-    [*FamilyTree.es ES.vsct*]  
+    [*FamilyTree.es-ES.vsct*]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -90,7 +90,7 @@ ms.locfileid: "53934058"
   
 5.  各を開きます。 *.resx*の特定の言語およびカルチャに適切な値は文字列を変更するファイル。 次の例では、ツール ウィンドウのタイトル バーのローカライズされたリソースの定義を示します。  
   
-     [*各カルチャ用 US.resx*]  
+     [*Resources.en-US.resx*]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -98,7 +98,7 @@ ms.locfileid: "53934058"
     </data>  
     ```  
   
-     [*Resources.es ES.resx*]  
+     [*Resources.es-ES.resx*]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  

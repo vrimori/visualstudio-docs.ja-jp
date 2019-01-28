@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c281aa989abc32e4287e49d05af03b198adc013
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 52ced7e134efd0de9d2f61b039e5c851ba1387a6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832636"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54931597"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio のコモン コントロール パターン
 ##  <a name="BKMK_CommonControls"></a> コモン コントロール  
@@ -291,7 +291,7 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 ##### <a name="sizing-and-spacing"></a>サイズ変更との間隔  
 ![ボタンの [参照...] をサイズ変更: 標準のバージョンは 75 x 23 ピクセル、短いバージョンは 26 x 23 ピクセル](../../extensibility/ux-guidelines/media/070703-06_browsesizing.png "070703 06_BrowseSizing")<br />サイズ変更の [参照...] ボタン
   
-![間隔 [参照...] ボタン: 関連するコントロールと短い参照間の間隔 ボタンを関連するコントロールと標準の参照ボタン 7 ピクセルの間の間隔を 5 ピクセル](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703 07_BrowseSpacing")<br />行間の [参照...] ボタン
+![間隔 [参照...] ボタン: 関連するコントロールと短い参照間の間隔ボタンを関連するコントロールと標準の参照ボタン 7 ピクセルの間の間隔を 5 ピクセル](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703 07_BrowseSpacing")<br />行間の [参照...] ボタン
   
 #### <a name="graphical-buttons"></a>グラフィカルなボタン  
 いくつかのボタンを常にグラフィカル イメージを使用し、領域を節約し、ローカライズの問題を回避するテキストを含めることはありません。 フィールドの選択およびその他の並べ替え可能なリストでよく使用されます。  
