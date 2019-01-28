@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b888875720ae08ec4c8dffdc65031877f31ca924
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f35ae28a1a231721d5ee5616a3b075737c24e629
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926097"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54982235"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 このコールバックが渡される、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE でファイルまたはディレクトリの一覧を更新するソース管理プラグインが使用されます (に渡されることも、`SccPopulateList`関数)。  
@@ -43,7 +43,7 @@ typedef BOOL (*POPLISTFUNC) (
  fAddRemove  
  場合`TRUE`、`lpFileName`ファイル、ファイルの一覧に追加する必要があります。 場合`FALSE`、`lpFileName`ファイル、ファイルの一覧から削除する必要があります。  
   
- 送ら  
+ nStatus  
  ステータス`lpFileName`(の組み合わせ、`SCC_STATUS`ビット; を参照してください[ファイルの状態コード](../extensibility/file-status-code-enumerator.md)詳細については)。  
   
  lpFileName  

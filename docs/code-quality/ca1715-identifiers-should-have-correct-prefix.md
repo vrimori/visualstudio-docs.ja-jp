@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: cf45f8df-6855-4cb6-a4e2-7cfed714cf2f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - CPP
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c7abdaa2356bdf622f0892e9b027047fc021096
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7c1e50c814c22ccddb43e90b41752f3f0bc5797e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912926"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54986958"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715:識別子は正しいプレフィックスを含んでいなければなりません
 
@@ -38,7 +38,7 @@ ms.locfileid: "53912926"
 ## <a name="cause"></a>原因
  外部から参照できるインターフェイスの名前の先頭が大文字の 'I' でありません。
 
- または
+ - または -
 
  外部から参照できる型またはメソッドのジェネリック型パラメーターの名前値で始まらない大文字 ' T '。
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c95ee48f-f23a-45f0-ac9e-a3c1ecfabdea
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dd351368ddb66cb389eee12b23dcff91b0653ce
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 06d56b2d3ae58a3cb24042c4bd4befdd2b92bae3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912270"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55037214"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720:識別子には型名を含めないでください
 
@@ -34,7 +34,7 @@ ms.locfileid: "53912270"
 ## <a name="cause"></a>原因
  外部から参照できるメンバーのパラメーターの名前には、データ型の名前が含まれています。
 
- または
+ - または -
 
  外部から参照できるメンバーの名前には、言語固有のデータ型の名前が含まれています。
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: dda5e8e1-6878-4aa9-9ee4-e7d0dcc11210
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9fb03186d623c63fd4c3ff950140918244397115
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8273a8111eb087202a1b97ec042e8d1bd21f637a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53945757"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54992829"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 各パスの検索の結果と同様にシンボルを検索するパスの一覧を取得します。  
@@ -56,7 +56,7 @@ int GetSymbolInfo(
 ## <a name="remarks"></a>Remarks  
  場合、`bstrVerboseSearchInfo`のフィールド、`MODULE_SYMBOL_SEARCH_INFO`構造体が空ではありませんし、検索するパスと検索結果の一覧が含まれています。 一覧には、後ろに省略記号 (「...」)、結果の後に、パスが表示されます。 1 つ以上のパスの結果のペアがある場合は、各ペアは"\r\n"(復帰と改行) のペアによって区切られます。 パターンのようになります。  
   
- \<パス >.\<結果 > \r\n\<パス >.\<結果 > \r\n\<パス >.\<結果 >  
+ \<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>  
   
  最後のエントリに \r\n シーケンスがないことに注意してください。  
   
@@ -82,9 +82,9 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
 }  
 ```  
   
- **c:\symbols\user32.pdb.ファイルが見つかりませんでした。**  
-**c:\winnt\symbols\user32.pdb.バージョンが一致しません。**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb.シンボルが読み込まれます。**   
+ **c:\symbols\user32.pdb...ファイルが見つかりませんでした。**  
+**c:\winnt\symbols\user32.pdb...バージョンが一致しません。**  
+**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb...シンボルが読み込まれます。**   
 ## <a name="see-also"></a>関連項目  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   

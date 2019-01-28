@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f7513ae0ac5094d51d4de2c7c4e0a49295110c2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b293830dd4ba454e131f016d82d5b5cdfcf78371
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867476"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54985121"
 ---
 # <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
 [逆アセンブル] フィールドの詳細を取得するには、どのような情報を指定します。  

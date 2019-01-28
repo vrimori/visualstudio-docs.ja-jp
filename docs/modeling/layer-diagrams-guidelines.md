@@ -9,16 +9,16 @@ helpviewer_keywords:
 - constraints, architectural
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: f4a044481b1e359b2021b16da1f0b2b5aba8a872
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 13ffde9d399e0535f7cf6790f199ba4924156636
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53924424"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55012184"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 
@@ -31,7 +31,7 @@ ms.locfileid: "53924424"
 
 ## <a name="what-is-a-dependency-diagram"></a>依存関係図とは何ですか。
 
-従来のアーキテクチャ図のようには、依存関係図は、主要なコンポーネントや機能ユニットの設計とその依存関係を識別します。 ダイアグラムで、各ノードと呼ばれる、*レイヤー*、名前空間、プロジェクト、または他の成果物の論理グループを表します。 設計に必要な依存関係を描画できます。 従来のアーキテクチャ図とは異なり、ソース コード内の実際の依存関係が意図したとおりのものであることを検証できます。 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] で定期的なビルドの検証パーツを作成すると、今後変更が繰り返されても、プログラム コードがシステムのアーキテクチャに準拠している状態を維持できます。 参照してください[依存関係図。参照](../modeling/layer-diagrams-reference.md)します。
+従来のアーキテクチャ図のようには、依存関係図は、主要なコンポーネントや機能ユニットの設計とその依存関係を識別します。 ダイアグラムで、各ノードと呼ばれる、*レイヤー*、名前空間、プロジェクト、または他の成果物の論理グループを表します。 設計に必要な依存関係を描画できます。 従来のアーキテクチャ図とは異なり、ソース コード内の実際の依存関係が意図したとおりのものであることを検証できます。 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] で定期的なビルドの検証パーツを作成すると、今後変更が繰り返されても、プログラム コードがシステムのアーキテクチャに準拠している状態を維持できます。 参照してください[依存関係図。Reference](../modeling/layer-diagrams-reference.md)」(UML クラス図: リファレンス) を参照してください。
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>設計または依存関係図を使用したアプリを更新する方法
 
@@ -103,7 +103,7 @@ ms.locfileid: "53924424"
 
 システムまたは必要とされるアーキテクチャをするのに予定の変更を記述するのにには、依存関係図を編集するのに、次の手順を使用します。 また、リファクタリングの変更を行い、コードを拡張する前に構造を改良することもできます。 参照してください[、コードの構造を改良](#Improving)します。
 
-|**目的**|**これらの手順に従います**|
+|**To**|**これらの手順に従います**|
 |-|-|
 |不要な依存関係を削除する|依存関係をクリックし、キーを押します**削除**します。|
 |依存関係の方向を変更または制限する|設定の**方向**プロパティ。|

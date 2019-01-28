@@ -8,15 +8,15 @@ f1_keywords:
 ms.assetid: 5d3923d7-cf40-4512-bc5c-0db0e0d6e25a
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff92d7ed697db2f692ed17426bdb5dad38164cf8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 08a7c4d6d7c71954869311b402eed65492391432
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954566"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55043078"
 ---
 # <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143:透過的メソッドは、セキュリティ確認要求を使用してはならない
 
@@ -45,4 +45,4 @@ ms.locfileid: "53954566"
  [!code-csharp[FxCop.Security.CA2143.TransparentMethodsShouldNotDemand#1](../code-quality/codesnippet/CSharp/ca2143-transparent-methods-should-not-use-security-demands_1.cs)]
 
 ## <a name="see-also"></a>関連項目
- [CA 2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)
+ [CA2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)

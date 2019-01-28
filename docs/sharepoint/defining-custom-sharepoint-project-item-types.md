@@ -9,17 +9,17 @@ helpviewer_keywords:
 - SharePoint project items, defining your own types
 - project items [SharePoint development in Visual Studio], defining your own types
 - SharePoint development in Visual Studio, defining new project item types
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e4b678d0a4a148bbd8a7414c8a7585b50fbc9c01
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 52d1940b38fbf2cbe24e1e35bc56fb7372f50c89
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53855167"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54865906"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>カスタム SharePoint プロジェクト項目の種類を定義します。
   新しい SharePoint プロジェクト項目の種類を作成する場合は、新しい SharePoint プロジェクト項目の種類を定義します。 たとえば、Visual Studio では、追加のフィールドまたは SharePoint サイトにカスタム アクションの SharePoint プロジェクト アイテムは含まれません。 フィールド、カスタム動作、またはその他の種類の SharePoint コンポーネントを作成するための SharePoint プロジェクト アイテムの独自の型を定義することができます。  

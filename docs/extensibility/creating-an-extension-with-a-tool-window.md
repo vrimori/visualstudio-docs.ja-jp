@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 585b0a3a-f85b-4f92-81bb-9ca499bb8a89
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e21c49971660f32abef3a47e436d01e5af05543
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d1450a7a7e254f9045b0f29cda4359e1e0676c65
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53838993"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55034728"
 ---
 # <a name="create-an-extension-with-a-tool-window"></a>ツール ウィンドウでの拡張機能を作成します。
 この手順で、VSIX プロジェクト テンプレートを使用する方法について説明しますと、**カスタム ツール ウィンドウ**ツール ウィンドウで、拡張機能を作成する項目テンプレート。  

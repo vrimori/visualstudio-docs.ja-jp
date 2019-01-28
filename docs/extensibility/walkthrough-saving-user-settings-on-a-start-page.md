@@ -5,20 +5,20 @@ ms.topic: conceptual
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 563c9206e72788cc26eccdfab7d0e0993d14d1a8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c385c7abda5ccf45914cf990770704156dd701a4
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53948772"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55000810"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>チュートリアル: [スタート] ページのユーザー設定を保存します。
 スタート ページのユーザー設定を永続化することができます。 このチュートリアルでは、ユーザーが、ボタンをクリックするし、開始ページが読み込まれるたびに、その設定を取得し、設定をレジストリに保存するコントロールを作成できます。 スタート ページ プロジェクト テンプレートには、カスタマイズ可能なユーザー コントロールが含まれています。 既定のスタート ページの XAML は、そのコントロールを呼び出すため、スタート ページ自体を変更する必要はありません。  
   
- このチュートリアルでインスタンス化される設定ストアのインスタンスである、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore>インターフェイスでは、読み取りし、が呼び出されると、次のレジストリの場所に書き込み。**HKCU\Software\Microsoft\VisualStudio\14.0\\\<CollectionName >**  
+ このチュートリアルでインスタンス化される設定ストアのインスタンスである、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore>インターフェイスでは、読み取りし、が呼び出されると、次のレジストリの場所に書き込み。**HKCU\Software\Microsoft\VisualStudio\14.0\\\<CollectionName>**  
   
  設定ストアが読み取りし、書き込みに Visual Studio の実験用インスタンスで実行されている、 **HKCU\Software\Microsoft\VisualStudio\14.0Exp\\\<CollectionName >。**  
   

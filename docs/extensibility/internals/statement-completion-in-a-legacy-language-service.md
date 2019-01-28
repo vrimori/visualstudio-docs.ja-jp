@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 617439dc-3f0e-4e5f-b346-3e4e7fcf3c1b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cea1348dd78197333aa41c6c51aba320e5d762b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0310f515a444d0ff68fe971463602c484763848b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53991150"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54965680"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>従来の言語サービスでのステートメント入力補完
 ステートメント入力候補は、言語サービスにより、ユーザーの言語のキーワードやコア エディターでの入力が開始要素を完了するプロセスです。 このトピックでは、ステートメント入力候補のしくみと、言語サービスで実装する方法について説明します。  

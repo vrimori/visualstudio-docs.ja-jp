@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8e04d5fe-dfad-445a-972e-0648324fac45
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2228f25c344e7471c0ee8ff252d88a5454345999
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 518a5d4f76d1c26893ae88f45bc74586654ee15c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53840305"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54951977"
 ---
 # <a name="ca2229-implement-serialization-constructors"></a>CA2229:シリアル化コンストラクターを実装します
 
@@ -55,7 +55,7 @@ ms.locfileid: "53840305"
  [!code-csharp[FxCop.Usage.ISerializableCtor#1](../code-quality/codesnippet/CSharp/ca2229-implement-serialization-constructors_1.cs)]
 
 ## <a name="related-rules"></a>関連するルール
- [CA 2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
+ [CA2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>関連項目
 

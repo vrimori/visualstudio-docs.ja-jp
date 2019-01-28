@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a60a050f6403abec471b02e44696081f07c347a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3da94ae10da4632eafda48f145d9bb099d4c3207
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53954806"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54965134"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225:演算子オーバーロードには名前付けされた代替が存在します
 
@@ -50,13 +50,13 @@ ms.locfileid: "53954806"
 |--|N/A|--|Decrement|
 |/|/|/|除算|
 |/=|/=|/=|除算|
-|==|=|==|次の値に等しい|
+|==|=|==|Equals|
 |^|Xor|^|Xor|
 |^=|Xor =|^=|Xor|
 |>|>|>|比較|
 |>=|>=|>=|比較|
 |++|N/A|++|インクリメント|
-|<>|!=|次の値に等しい|
+|<>|!=|Equals|
 |<<|<<|<<|プロパティ|
 |<<=|<<=|<<=|プロパティ|
 |<|<|<|比較|

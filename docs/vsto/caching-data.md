@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 66113dae824397f46829a539a016f452cedc0383
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4bdd98dfc9437fb9090ce813f7d8458747b20196
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967256"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866741"
 ---
 # <a name="cache-data"></a>キャッシュ データ
   データは、オフライン、または Microsoft Office Word または Microsoft Office Excel を開くことがなくアクセスできるように、ドキュメント レベル カスタマイズ内のデータ オブジェクトをキャッシュできます。 オブジェクトをキャッシュするには、オブジェクトのデータ型を特定の要件を満たす必要があります。 .NET Framework の多くの一般的なデータ型など、これらの要件を満たしている<xref:System.String>、 <xref:System.Data.DataSet>、および<xref:System.Data.DataTable>します。  

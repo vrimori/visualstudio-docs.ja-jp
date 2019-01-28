@@ -20,15 +20,15 @@ helpviewer_keywords:
 - helper methods [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be96a6967657a79d1e3bed9336ebb530accba2a0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9dc71ba33180fa466b8d457d084faad05c61ec40
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53842789"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869188"
 ---
 # <a name="add-controls-to-office-documents-at-runtime"></a>実行時に Office ドキュメントにコントロールを追加します。
   コントロールは、Microsoft Office Word 文書と実行時に Microsoft Office Excel ブックを追加することができます。 実行時にも削除できます。 コントロールを追加または削除時に呼び出される*ダイナミック コントロール*します。  
@@ -110,7 +110,7 @@ ms.locfileid: "53842789"
 
 - Excel では、 <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> オブジェクトの <xref:Microsoft.Office.Tools.Excel.ControlCollection> メソッドの 1 つを使用します。  
 
-- Word では、<xref:Microsoft.Office.Tools.Word.ControlCollection> オブジェクトの <xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A> メソッドの 1 つを使用します。  
+- Word では、 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A> オブジェクトの <xref:Microsoft.Office.Tools.Word.ControlCollection> メソッドの 1 つを使用します。  
 
   コントロールを追加するには、<xref:System.Windows.Forms.Control>、コントロールの場所、およびコントロールを一意に識別する名前を `AddControl` メソッドに渡します。 `AddControl` メソッドは、コントロールがワークシートまたはドキュメントとどのようにやり取りするかを定義するオブジェクトを返します。 `AddControl`メソッドを返します。 を<xref:Microsoft.Office.Tools.Excel.ControlSite>(for Excel) または<xref:Microsoft.Office.Tools.Word.ControlSite>(Word) のオブジェクト。  
 
@@ -122,17 +122,17 @@ ms.locfileid: "53842789"
 ### <a name="use-members-of-custom-controls"></a>カスタム コントロールのメンバーを使用します。  
  `AddControl` メソッドの 1 つを使用してワークシートまたは文書にコントロールを追加すると、次の 2 つの異なるコントロール オブジェクトが存在するようになります。  
 
-- カスタム コントロールを表す <xref:System.Windows.Forms.Control>。  
+- カスタム コントロールを表す <xref:System.Windows.Forms.Control> 。  
 
 - ワークシートまたは文書に追加された後のコントロールを表す `ControlSite`、`OLEObject`、または `OLEControl` オブジェクト。  
 
   これらのコントロールには、共有されているプロパティやメソッドが多数あります。 これらのメンバーには、適切なコントロールを介してアクセスすることが重要です。  
 
-- カスタム コントロールのみに属するメンバーにアクセスするには、<xref:System.Windows.Forms.Control> を使用します。  
+- カスタム コントロールのみに属するメンバーにアクセスするには、 <xref:System.Windows.Forms.Control>を使用します。  
 
 - 複数のコントロールで共有されているメンバーにアクセスするには、`ControlSite`、`OLEObject`、または `OLEControl` オブジェクトを使用します。  
 
-  共有されているメンバーに <xref:System.Windows.Forms.Control> からアクセスすると、警告や通知なしに失敗したり、無効な結果が生成されたりすることがあります。 通常は `ControlSite`、`OLEObject`、または `OLEControl` オブジェクトのメソッドまたはプロパティを使用し、必要なメソッドやプロパティを使用できない場合に限って <xref:System.Windows.Forms.Control> を参照してください。  
+  共有されているメンバーに <xref:System.Windows.Forms.Control>からアクセスすると、警告や通知なしに失敗したり、無効な結果が生成されたりすることがあります。 通常は `ControlSite`、`OLEObject`、または `OLEControl` オブジェクトのメソッドまたはプロパティを使用し、必要なメソッドやプロパティを使用できない場合に限って <xref:System.Windows.Forms.Control> を参照してください。  
 
   たとえば、`Top` プロパティは、<xref:Microsoft.Office.Tools.Excel.ControlSite> クラスと <xref:System.Windows.Forms.Control> クラスの両方に存在します。 コントロールの上端からドキュメントの先頭までの間の距離を取得または設定するには、 <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> の <xref:Microsoft.Office.Tools.Excel.ControlSite>プロパティではなく、 <xref:System.Windows.Forms.Control.Top%2A> の <xref:System.Windows.Forms.Control>プロパティを使用してください。  
 

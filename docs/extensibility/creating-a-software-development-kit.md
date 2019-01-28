@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea506479226ed8585296208064bd3533cf0a5783
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9a7abb030ab98976a6e55a5d297cf510f01842e8
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53922843"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929128"
 ---
 # <a name="create-a-software-development-kit"></a>ソフトウェア開発キットを作成します。
 ソフトウェア開発キット (SDK) は、Visual Studio での 1 つの項目として参照できる Api のコレクションです。 **参照マネージャー**  ダイアログ ボックスに、プロジェクトに関連するすべての Sdk が一覧表示されます。 SDK をプロジェクトに追加するときに、Api は Visual Studio で使用できます。  
@@ -57,7 +57,7 @@ ms.locfileid: "53922843"
 | *デザイン時*フォルダー | 事前実行/デバッグ時にのみ必要なファイルが含まれています。 XML ドキュメント、ライブラリ、ヘッダー、ツールボックスのデザイン時のバイナリ、MSBuild の成果物などが該当<br /><br /> XML ドキュメントを配置する場合は、理想的には、 *\DesignTime*フォルダーでは XML ドキュメントの参照では引き続き Visual Studio での参照ファイルと一緒に配置します。 XML ドキュメントなどの参照を<em>\References\\[config]\\[arch]\sample.dll</em>なります*\References\\[config]\\[arch]\sample.xml*、そのドキュメントのローカライズ版であり*\References\\[config]\\[arch]\\[locale]\sample.xml*します。 |
 | *構成*フォルダー | のみの 3 つのフォルダーがあります。*デバッグ*、*小売*と*CommonConfiguration*します。 SDK の作成者は、の下にファイルを配置できる*CommonConfiguration*かどうか同じ SDK ファイルのセットが使用されることを SDK コンシューマーが対象とする構成に関係なく。 |
 | *アーキテクチャ*フォルダー | サポートされている任意*アーキテクチャ*フォルダーが存在することができます。 Visual Studio には、次のアーキテクチャがサポートされています。 x86、x64、ARM、および neutral です。 メモ:Win32 は、x86 にマップされ、AnyCPU がニュートラルにマップされます。<br /><br /> 次の MSBuild のみ*\CommonConfiguration\neutral*プラットフォーム Sdk の場合。 |
-| *SDKManifest.xml* | このファイルは、Visual Studio が SDK を使用する方法について説明します。 SDK のマニフェストを見て[!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **表示名:** オブジェクト ブラウザーが、参照リストに表示される値。<br /><br /> **PlatformIdentity:** この属性の存在では、Visual Studio および MSBuild SDK、platform SDK、およびそこから追加された参照をコピーすることはできませんをローカルにように指示します。<br /><br /> **TargetFramework:** この属性は、これの値で指定されている同じフレームワークを対象のプロジェクトのみを確実に Visual Studio によって使用されます属性は、SDK を使用できます。<br /><br /> **MinVSVersion:** この属性は、それに適用する Sdk のみを使用する Visual Studio によって使用されます。<br /><br /> **参照:** この属性は、コントロールを含む参照のみを指定する必要があります。 参照がコントロールを格納するかどうかを指定する方法については、以下を参照してください。 |
+| *SDKManifest.xml* | このファイルは、Visual Studio が SDK を使用する方法について説明します。 SDK のマニフェストを見て[!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** オブジェクト ブラウザーが、参照リストに表示される値。<br /><br /> **PlatformIdentity:** この属性の存在では、Visual Studio および MSBuild SDK、platform SDK、およびそこから追加された参照をコピーすることはできませんをローカルにように指示します。<br /><br /> **TargetFramework:** この属性は、これの値で指定されている同じフレームワークを対象のプロジェクトのみを確実に Visual Studio によって使用されます属性は、SDK を使用できます。<br /><br /> **MinVSVersion:** この属性は、それに適用する Sdk のみを使用する Visual Studio によって使用されます。<br /><br /> **参照:** この属性は、コントロールを含む参照のみを指定する必要があります。 参照がコントロールを格納するかどうかを指定する方法については、以下を参照してください。 |
 
 ##  <a name="ExtensionSDKs"></a> 拡張機能 Sdk  
  次のセクションでは、拡張機能 SDK を展開するために必要がありますについて説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "53922843"
 ### <a name="installation"></a>インストール  
  拡張機能 Sdk は、レジストリ キーを指定せず、特定のユーザーまたはすべてのユーザーに対してインストールできます。 すべてのユーザー用の SDK をインストールするには、次のパスを使用します。  
 
- *% プログラム Files%\Microsoft Sdk\<ターゲット プラットフォーム > \v<platform version number>\ExtensionSDKs*  
+ *%Program Files%\Microsoft SDKs\<target platform>\v<platform version number>\ExtensionSDKs*  
 
  ユーザー固有のインストールでは、次のパスを使用します。  
 
@@ -75,7 +75,7 @@ ms.locfileid: "53922843"
 
 1.  レジストリ キーで指定します。  
 
-     **Hklm \software\microsoft\microsoft Sdk\<ターゲット プラットフォーム > \v<platform version number>\ExtensionSDKs\<SDKName >\<SDKVersion >**\  
+     **HKLM\Software\Microsoft\Microsoft SDKs\<target platform>\v<platform version number>\ExtensionSDKs\<SDKName>\<SDKVersion>**\  
 
      値を持つ (既定値) のサブキーを追加および`<path to SDK><SDKName><SDKVersion>`します。  
 

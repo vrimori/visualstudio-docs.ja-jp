@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e119224ac628f26f2f1b23eb5c4d65db13b73b2c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 19cb88a24a616a2a39bdcd7f292108493859a8b7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873497"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54919045"
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
 停止状態からこのプログラムの実行が続行されます。 (ステップ) など、以前の実行状態がオフになって、され、プログラムでは、もう一度実行が開始されます。  
   
 > [!NOTE]
->  このメソッドが非推奨とされます。 使用して、 [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)メソッド代わりにします。  
+>  このメソッドは非推奨です。 使用して、 [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   

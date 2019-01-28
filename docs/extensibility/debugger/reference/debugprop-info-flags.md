@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS |Microsoft Docs
+title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1c7fe777-615e-4929-9ed4-970d9fe0eb81
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9046ab771ab4b0c2734c125f2ba17b86f57a09f5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aa229c88ff62d96ee1e91e503dcbdd7c35c1cfc1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53987467"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54944593"
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
 デバッグ プロパティ オブジェクトを取得するには、どのような情報を指定します。  
@@ -83,7 +83,7 @@ public enum enum_DEBUGPROP_INFO_FLAGS { 
  DEBUGPROP_INFO_ATTRIB  
  初期化/使用、`dwAttrib`フィールド。  
   
- DEBUGPROP_INFO_PROP、  
+ DEBUGPROP_INFO_PROP,  
  初期化/使用、`pProperty`フィールドを含む、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイス。  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  

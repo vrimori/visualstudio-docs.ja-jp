@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd4ed2783ba3b56004037338452722f3ea0f8ddc
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 80013faf174900c4e94bf452f6f19c0ac9bfbeba
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909896"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54956494"
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types] .xml ファイルの構造
 VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は、パッケージをインストールする [Content_Types] .xml ファイルを使用しますが、ファイル自体はインストールされません。  
@@ -74,7 +74,7 @@ VSIX パッケージ内のコンテンツの種類についてを説明します
 |rtf|アプリケーション/rtf|  
 |pdf|アプリケーション/pdf|  
 |gif|gif イメージ/|  
-|jpg または jpeg|jpg イメージ/|  
+|jpg または jpeg|image/jpg|  
 |Tiff|tiff イメージ/|  
 |vsix|アプリケーションまたは zip|  
 |zip|アプリケーションまたは zip|  

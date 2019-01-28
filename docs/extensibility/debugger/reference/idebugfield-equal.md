@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 75369fe6-ddd3-497d-80d1-2488e6100e9f
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0157a09390bd6e8380e97cef8e4c4158c75ac3ab
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7fdfc2abd407c586c949ade4e8085e282fb465a8
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53918824"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54984354"
 ---
 # <a name="idebugfieldequal"></a>IDebugField::Equal
 このメソッドは、このフィールドに等しいかどうかを指定したフィールドを比較します。  

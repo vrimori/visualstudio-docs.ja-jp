@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Office development in Visual Studio, security
 - Office applications [Office development in Visual Studio], security
 - ClickOnce deployment [Office development in Visual Studio], security
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 40428d36648e159bd8fa90c2680b660b2112ef5f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a334b9eab9fb9b859d45eda4419cdfdcde4b44fc
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827928"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875642"
 ---
 # <a name="secure-deployment"></a>デプロイのセキュリティ保護します。
   Office ソリューションを作成するときに実行するプロジェクトでコードを許可する、開発用コンピューターが自動的に更新されます。 ただし、ソリューションを配置するときに、ソリューションに証明書で署名するかを使用して、信頼の決定の基になる証拠を提供する必要があります、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプト キー。 詳細については、次を参照してください。 [Office ソリューションに信頼を付与](../vsto/granting-trust-to-office-solutions.md)します。  
@@ -34,7 +34,7 @@ ms.locfileid: "53827928"
   
 - **HKEY_CURRENT_USER\Software\Microsoft\VSTO**  
   
-- **この**  
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\VSTO**  
   
   Office ソリューションのコードの実行を防ぐために作成、`Disabled`一方または両方のこれらのレジストリ キーの下のエントリの値を次のデータ型のいずれかを指定して`Disabled`:  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bcc1485834209133897c776fcb52ed5c600d9ca
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5b37d8d123ff45d563c165a6833151692582ebe6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837408"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54961560"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>方法: プロジェクト テンプレートにウィザードの使用
 
@@ -226,19 +226,19 @@ Visual Studio SDK の一部では、プロジェクト テンプレート プロ
   
 9. 検索、 *sn.exe*署名ツール。 たとえば、Windows 10 64 ビットのオペレーティング システムで一般的なパス、次のようになります  
   
-     *C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools*  
+     *C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools*  
   
      ツールが見つからない場合は実行してみてください **/R します。 sn.exe**コマンド ウィンドウにします。 パスをメモしてをおきます。  
   
 10. 公開キーを抽出、 *key.snk*ファイル。 コマンド ウィンドウで次のように入力します。  
   
-     **\<sn.exe の場所 > \sn.exe-p key.snk outfile.key します。**  
+     **\<location of sn.exe>\sn.exe -p key.snk outfile.key.**  
   
      パスを囲むことを忘れないでください*sn.exe*引用符をディレクトリ名にスペースがある場合。  
   
 11. 出力ファイルから公開キー トークンを取得します。  
   
-     **\<sn.exe の場所 > \sn.exe-t outfile.key します。**  
+     **\<location of sn.exe>\sn.exe -t outfile.key.**  
   
      引用符をもう一度、忘れないでください。 このような出力に行が表示されます。  
   

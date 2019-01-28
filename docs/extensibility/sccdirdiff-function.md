@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b335feeeb1f2b67bb36fb31b0f6966e8a4c3ea93
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 86169e52a4965fae785fcda224f91318a02920b5
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956856"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55005606"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 関数
 この関数は、クライアントのディスク上の現在のローカル ディレクトリとソース管理下にある対応するプロジェクトの違いを表示します。  
@@ -45,7 +45,7 @@ SCCRTN SccDirDiff(
  [in]視覚的な違いを表示するか、ローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- [in]コマンドのフラグ (「解説」を参照してください] セクション)。  
+ [in]コマンドのフラグ (「解説」を参照してください セクション)。  
   
  pvOptions  
  [in]ソース管理プラグインに固有のオプション。  

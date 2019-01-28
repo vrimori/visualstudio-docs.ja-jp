@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e014ac3a-02e6-46d9-942c-3491dd63782f
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e9fca1eedc94aeb327191f44469945f69584500
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1000009e243906daf32fd68b22b5c49a07b21595
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53868587"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54947531"
 ---
 # <a name="performance-warnings"></a>パフォーマンスに関する警告
 パフォーマンスの警告は、高パフォーマンスのライブラリとアプリケーションをサポートします。
@@ -41,7 +41,7 @@ ms.locfileid: "53868587"
 | [CA1812:インスタンス化されていない内部クラスを回避します。](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md) | アセンブリ レベルの型のインスタンスが、アセンブリ内のコードから作成されません。 |
 | [CA1813:シールされていない属性します。](../code-quality/ca1813-avoid-unsealed-attributes.md) | .NET Framework クラス ライブラリでは、カスタム属性を取得するメソッドを提供します。 既定では、これらのメソッドで属性の継承階層が検索されます。 属性をシールすると、継承階層の全体が検索されなくなるため、パフォーマンスが向上します。 |
 | [CA1814:多次元よりジャグ配列を優先します。](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md) | ジャグ配列とは、その要素も配列である配列です。 配列の要素を構成するには、さまざまなサイズは、いくつかのデータに対して無駄な小さい領域で発生することができますを指定できます。 |
-| [CA1815:Equals をオーバーライドし、演算子 equals を値型](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md) | 値型の場合、Equals を継承した実装が Reflection ライブラリを使用して、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 |
+| [CA1815:equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。 | 値型の場合、Equals を継承した実装が Reflection ライブラリを使用して、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 |
 | [CA 1816:GC を呼び出します。SuppressFinalize 正しく](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md) | Dispose の実装であるメソッドでは、GC は呼び出されません。SuppressFinalize、または Dispose の実装ではないメソッドは、GC を呼び出します。SuppressFinalize、またはメソッドは、GC を呼び出します。SuppressFinalize し、これ以外の何かを渡します (Me [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。 |
 | [CA 1819:プロパティは、配列を返す必要がありますいません。](../code-quality/ca1819-properties-should-not-return-arrays.md) | プロパティによって返される配列は、プロパティが読み取り専用の場合でも書き込み保護されていません。 配列の改ざんを防ぐには、プロパティで配列のコピーを返す必要があります。 一般に、このようなプロパティを呼び出すときのパフォーマンス低下は理解されません。 |
 | [CA1820:文字列の長さを使用して空の文字列をテスト](../code-quality/ca1820-test-for-empty-strings-using-string-length.md) | String.Length プロパティまたは String.IsNullOrEmpty メソッドを使用して文字列を比較する方法は、Equals を使用する場合よりもはるかに高速です。 |

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4394d101ffb158392d8c8e3ed1c9365b6c68ef7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d8204f7c6716acaad0183d63b487a8191c5a1dd1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53930909"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54964250"
 ---
 # <a name="support-for-user-settings"></a>ユーザー設定のサポート
 VSPackage は、ユーザーが選択したときに永続化状態変数のグループが 1 つまたは複数の設定カテゴリを定義できます、**設定のインポート/エクスポート**コマンドを**ツール**メニュー。 この永続化を有効にするには、Api の設定を使用するには[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]します。  
@@ -38,9 +38,9 @@ VSPackage は、ユーザーが選択したときに永続化状態変数のグ�
 
  レジストリ エントリの構造は、次に示します。  
 
- Hklm \software\microsoft\visualstudio\\*\<バージョン >* \UserSettings\  
+ HKLM\Software\Microsoft\VisualStudio\\*\<Version>* \UserSettings\  
 
- `<CSPName`> = '#12345' s  
+ `<CSPName`>= s '#12345'  
 
  パッケージ ' {XXXXXX XXXX XXXX XXXX XXXXXXXXX}' を =  
 

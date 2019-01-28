@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c89f38c98047a8fab57317c491c051474995f472
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8315626f346a96d907686e009af006e2170e072c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963658"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929559"
 ---
 # <a name="add-project-and-project-item-templates"></a>プロジェクトとプロジェクト項目テンプレートを追加します。
 独自のプロジェクトの種類を作成するときに標準を使用して新しいプロジェクトとプロジェクト アイテムを追加するためのサポートを提供する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) ダイアログ ボックス。 次のトピックでは、プロジェクトとプロジェクト アイテムを追加するためのさまざまな手法について説明します。  

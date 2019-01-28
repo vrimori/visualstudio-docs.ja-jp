@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: fa1ce513-eb7d-42bc-b6e8-cb2433d051d5
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2f2da0e351f8444ef9966b00551b941830dda3a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 320f394aa08a3be7f1dfc571b3aa80aaecadead6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986441"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54983901"
 ---
 # <a name="document-lock-holder-management"></a>ドキュメント ロック ホルダーの管理
 実行中の document テーブル (RDT) は、開いているドキュメントと、編集のロックがあるのカウントを保持します。 バック グラウンドで、ユーザーがドキュメント ウィンドウで、開いているドキュメントが表示される編集がプログラムを使用する際に、RDT のドキュメントで、編集のロックを配置できます。 この機能をグラフィカル ユーザー インターフェイスから複数のファイルを変更する、デザイナーによって使用されます。

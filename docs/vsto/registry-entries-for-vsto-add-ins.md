@@ -11,17 +11,17 @@ helpviewer_keywords:
 - registry keys [Office development in Visual Studio]
 - application-level add-ins [Office development in Visual Studio], registry entries
 - registry entries [Office development in Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3436ddcdcb8c521985487738d4045e1e1bbd830a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8360194e9efc59634162781fd3b4e0787c1c3260
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53909113"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54870166"
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO アドインのレジストリ エントリ
   Visual Studio で作成した VSTO アドインを配置するときには、一連のレジストリ エントリを作成する必要があります。 それらのレジストリ エントリで指定する情報によって、Microsoft Office アプリケーションは VSTO アドインを検出し、読み込むことができます。  
@@ -66,8 +66,8 @@ ms.locfileid: "53909113"
   
 |Office のバージョン|構成パス|  
 |--------------------|------------------------|  
-|32 ビット|*ルート*\Software\Microsoft\Visio\Addins\\*アドイン ID*|  
-|64 ビット|*ルート*\Software\Wow6432Node\Visio\Addins\\*アドイン ID*|  
+|32 ビット|*Root*\Software\Microsoft\Visio\Addins\\*add-in ID*|  
+|64 ビット|*Root*\Software\Wow6432Node\Visio\Addins\\*add-in ID*|  
   
  このレジストリ キーの下にあるエントリを次の表に示します。  
   

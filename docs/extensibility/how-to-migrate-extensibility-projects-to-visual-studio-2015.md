@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 22491cdc-8f04-4e1c-8eb4-ff33798ec792
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 456661c06934063041f06c36c20eee72d52c5b4a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a0939fd9499f9699d5672fe5bb7ef580ffe75489
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53915336"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55021482"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>方法: 機能拡張プロジェクトを Visual Studio 2015 に移行します。
 次に、拡張機能をアップグレードする方法を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "53915336"
   
 2.  アップグレードの完了後の新しいバージョンに、外部プログラムのパスを変更する*devenv.exe*します。 プロジェクト ノードを右クリックし、**ソリューション エクスプ ローラー**を選択し、**プロパティ**します。 **デバッグ** タブで、検索によって、テキスト ボックス**外部プログラムの開始**のパスを変更および*devenv.exe* Visual Studio 2015 のパスにするようになりますこの。  
   
-     *%ProgramFiles%\Microsoft visual Studio 14.0\Common7\IDE\devenv.exe*  
+     *%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe*  
   
 3.  参照を追加*Microsoft.VisualStudio.Shell.14.0.dll*します。 (でプロジェクト ノードを右クリックし、**ソリューション エクスプ ローラー**選び、**追加** > **参照**します。 選択、**拡張** タブをクリックして確認**Microsoft.VisualStudio.Shell.14.0**)。  
   

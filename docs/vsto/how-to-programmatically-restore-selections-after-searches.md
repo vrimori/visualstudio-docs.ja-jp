@@ -9,17 +9,17 @@ helpviewer_keywords:
 - searches, restoring selection after
 - documents [Office development in Visual Studio], restoring selections
 - selections, restoring after a search
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ae27f4e24ac367741bcdf2dfa2bae8598c6c7d99
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 684c373204c5cfadd3cfcd705993aaa7a40bce5f
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865610"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54875213"
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>方法: プログラムによって検索後に選択内容を復元します。
   検索および、ドキュメント内のテキストを置換する場合、検索が完了した後に、ユーザーの元の選択を復元する場合があります。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 648625164d58dca8449196bc80373a0fbfa96d9d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a0e99623e84bcd5342f1d0b080d2dd00095b6262
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53825410"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54956923"
 ---
 # <a name="security-warnings"></a>セキュリティの警告
 
@@ -66,7 +66,7 @@ ms.locfileid: "53825410"
 |[CA 2139:透過的メソッドは、HandleProcessCorruptingExceptions 属性を使用可能性があります。](../code-quality/ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md)|この規則は、透過的であり、プロセスは、HandleProcessCorruptedStateExceptionsAttribute 属性を使用して、破損状態例外を処理しようとしています。 メソッドに適用されます。 プロセス破損状態例外は例外の CLR バージョン 4.0 例外分類がなど<xref:System.AccessViolationException>します。 HandleProcessCorruptedStateExceptionsAttribute 属性はセキュリティ クリティカルなメソッドでのみ使用できる属性で、透過的メソッドに適用された場合は無視されます。|
 |[CA 2140:透過的なコードは、セキュリティ上重要な項目を参照する必要があります。](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md)|SecurityTransparentAttribute でマークされたメソッドが、SecurityCritical とマークされたパブリックでないメンバーを呼び出しています。 このルールは、すべてのメソッドと SecurityTreatAsSafe がマークされていない非パブリックの critical コードを transparent コードから呼び出しフラグを設定は、transparent と critical、混在のアセンブリ内の型を分析します。|
 |[CA2141: 透過的メソッドは、LinkDemand を満たしてはならない](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md)|透過的メソッドは、AllowPartiallyTrustedCallersAttribute (APTCA) 属性が適用されていないアセンブリ内のメソッドを呼び出します。また、透過的セキュリティ メソッドは、データ型またはメソッドに対する LinkDemand の要件を満たします。|
-|[CA 2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)|この規則は、アクセスするために LinkDemands を要求する透過的メソッドに対して適用されます。 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。|
+|[CA2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md)|この規則は、アクセスするために LinkDemands を要求する透過的メソッドに対して適用されます。 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。|
 |[CA 2143:透過的メソッドは、セキュリティ要求を使用しないでください。](../code-quality/ca2143-transparent-methods-should-not-use-security-demands.md)|透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 透過的セキュリティ コードは、フル アクセス要求を使用して、セキュリティ上の決定を行う必要があります。セーフ クリティカルなコードでは、透過的なコードを使用してフル アクセス要求を行うことはできません。|
 |[CA 2144:透過的なコードは、バイト配列からアセンブリを読み込めません](../code-quality/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md)|透過的なコードはセキュリティ上重要な操作を実行できないため、透過的なコードのセキュリティ レビューは、クリティカル コードのセキュリティ レビューほど完全ではありません。 バイト配列から読み込まれるアセンブリは透過的なコード内で認識されない場合がありますが、監査を必要とする、クリティカルなコード、またはさらに重要であるセーフ クリティカルなコードがそのバイト配列に含まれる可能性があります。|
 |[CA2145:透過的なメソッドが、SuppressUnmanagedCodeSecurityAttribute で修飾されていない必要があります。](../code-quality/ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md)|SuppressUnmanagedCodeSecurityAttribute 属性で修飾されたメソッドには、それを呼び出すメソッドに対して適用される暗黙的な LinkDemand があります。 この LinkDemand では、呼び出し元のコードがセキュリティ クリティカルなコードである必要があります。 SuppressUnmanagedCodeSecurity を使用するメソッドに SecurityCriticalAttribute 属性を設定すると、メソッドの呼び出し元に対してこの要件がより明確になります。|

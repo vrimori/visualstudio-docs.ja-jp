@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 392e3063-f0a0-4130-9583-23bd2aa3fa36
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43a7799c1c2b6d3fed965f6039aa01b7fd29e937
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9759acc597d9a13ed084bdb8111cdd268a80bbc1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926253"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54965654"
 ---
 # <a name="combo-element"></a>Combo 要素
 コンボ ボックスに表示されるコマンドを定義します。 次のコンボ ボックスに、次の 4 種類があります。DropDownCombo、DynamicCombo、IndexCombo、および MRUCombo します。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - inclusion lists [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: douge
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 026cdef278f87ec4367dd88a8530a35425452b75
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6c8ea1c94254bc37edc15e0c267592e921003426
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53895578"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54868681"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>方法: 信頼のリストのセキュリティを構成します。
   管理者のアクセス許可があればを構成できます、[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]信頼プロンプトのコントロールにエンドユーザーが信頼のリストに、信頼の決定を保存することによって、Office ソリューションをインストールするオプションを指定されたかどうか。 信頼のリストについては、次を参照してください。[リストによる Office のセキュリティ ソリューション](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)します。  
@@ -40,7 +40,7 @@ ms.locfileid: "53895578"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 **regedt32.exe**、順にクリックします**OK**します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53895578"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 **regedt32.exe**、順にクリックします**OK**します。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "53895578"
   
 1.  レジストリ エディターを開きます。  
   
-    1.  をクリックして**開始**、 をクリックし、**実行**します。  
+    1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
   
     2.  **オープン**ボックスに「 **regedt32.exe**、順にクリックします**OK**します。  
   

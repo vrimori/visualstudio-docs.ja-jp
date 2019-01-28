@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07a2e38f38ca5e9414f5ab6b416eb0ca888131f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5b373fd51087526c30243391b6b0b32ad27e15ab
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53866908"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55027426"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio の複合パターン
 複合パターンでは、個別の構成での相互作用やデザインの要素を結合します。 Visual Studio での一貫性に関して最も重要な複合パターンのいくつか挙げます。  
@@ -74,7 +74,7 @@ ms.locfileid: "53866908"
 |見本|16 進数|RGB|  
 |------------|---------|---------|  
 |![見本 71B252](../../extensibility/ux-guidelines/media/0711_71b252.png "0711_71B252")|# 71B252|113,178,82|  
-|![見本bf3f00](../../extensibility/ux-guidelines/media/0711_bf3f00.png "0711_BF3F00")|# BF3F00|191,63,0|  
+|![見本bf3f00](../../extensibility/ux-guidelines/media/0711_bf3f00.png "0711_BF3F00")|#BF3F00|191,63,0|  
 |![見本 FCB714](../../extensibility/ux-guidelines/media/0711_fcb714.png "0711_FCB714")|# FCB714|252,183,20|  
 |![見本 903F8B](../../extensibility/ux-guidelines/media/0711_903f8b.png "0711_903F8B")|# 903F8B|144,63,139|  
 |![見本 117AD1](../../extensibility/ux-guidelines/media/0711_117ad1.png "0711_117AD1")|# 117AD1|17,122,209|  
@@ -137,7 +137,7 @@ ms.locfileid: "53866908"
 
     -   インライン  
 
-2.  コンテンツの種類  
+2.  コンテンツ タイプ  
 
     -   静的または動的になる可能性がある情報: データ  
 
@@ -188,7 +188,7 @@ ms.locfileid: "53866908"
 
     -   **回避**をかなりを参照するか、コンテンツを操作する時間をかけたくはユーザーが予想される場合は、発表者を浮動表示します。  
 
-#### <a name="content-type"></a>コンテンツの種類  
+#### <a name="content-type"></a>コンテンツ タイプ  
  3 つの主な種類の任意のオブジェクトの UI コンテナー内で表示できるコンテンツがあります。 これらの種類の情報の任意の組み合わせを表示できます。 次の 3 つの種類があります。  
 
 1.  **情報:** ほとんどオブジェクトの UI コンテナーはある種の情報コンテンツを表示します。 コンテンツは、環境の現在の状態に関する情報を表すことができます、または環境内の潜在的な将来の状態に関する情報を表す可能性があります。 たとえば、既存のコードで、リファクタリングなどの特定のコマンドの結果を表示する使用可能性があります。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6655b96ed51cd7cce5e94ce96cedf97517f1872a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6455e4999f5115aee50fa1605103c4dadcc165dc
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942412"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54951733"
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 これらの関数と宣言は、C++ でのデバッグ エンジン、式エバリュエーターでは、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
@@ -399,13 +399,13 @@ HRESULT EnumMetricSections(
   
  *[例外の種類]*\  
   
- *[例外]*\  
+ *[exception]*\  
   
  *[メトリック] = [メトリックの値]*  
   
  *[メトリック] = [メトリックの値]*  
   
- *[例外]*\  
+ *[exception]*\  
   
  *[メトリック] = [メトリックの値]*  
   
@@ -415,14 +415,14 @@ HRESULT EnumMetricSections(
 |-----------------|-----------------|  
 |*[デバッグ エンジンの guid]*|例外をサポートするデバッグ エンジンの GUID です。|  
 |*[例外の種類]*|処理できる例外のクラスを識別するサブキーの一般的なタイトルです。 一般的な名前は**C++ 例外**、 **Win32 例外**、 **Common Language Runtime Exceptions**、および**ネイティブ ランタイム チェック**します。 これらの名前は、ユーザーに例外の特定のクラスを識別するためにも使用されます。|  
-|*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**します。 これらの名前は、ユーザーに特定の例外を識別するためにも使用されます。|  
+|*[exception]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**します。 これらの名前は、ユーザーに特定の例外を識別するためにも使用されます。|  
   
 ## <a name="requirements"></a>必要条件  
  これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]* \Program Files\Microsoft Visual Studio 2010 SDK\\)。  
   
  ヘッダー: includes\dbgmetric.h  
   
- ライブラリ: libs\ad2de.lib、libs\dbgmetric.lib  
+ Library: libs\ad2de.lib, libs\dbgmetric.lib  
   
 ## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

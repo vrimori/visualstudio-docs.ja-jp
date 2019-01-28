@@ -6,16 +6,16 @@ helpviewer_keywords:
 - text templates, transformation process
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 1f4cadbbf9de2f9f02a8bc95a4f436f399e2052b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 91e698f5b033629b688bb1aa82de019fb9fbf199
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908658"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54966414"
 ---
 # <a name="the-text-template-transformation-process"></a>テキスト テンプレート変換プロセス
 テキスト テンプレート変換プロセスは、入力としてのテキスト テンプレート ファイルを受け取り、出力として新しいテキスト ファイルを生成します。 たとえば、Visual Basic または c# のコードを生成するテキスト テンプレートを使用することができます。 または html 形式のレポートを生成することができます。

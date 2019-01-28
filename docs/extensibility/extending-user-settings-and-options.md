@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d59fa13d65f04631c41681fdb82c18624f7d69a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b93d09b29b961d0a7659d6be742bcf66d5560ce5
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53883121"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54983067"
 ---
 # <a name="extend-user-settings-and-options"></a>ユーザー設定とオプションを拡張します。
 Visual Studio で、ユーザーの設定を管理する 2 つの主な方法があります。 **ツール** > **オプション**ページには、さまざまな種類の設定、[全般]、言語固有の独自の値を設定するユーザーができるようにします。 ユーザー設定は、一般的な Visual Studio の構成プロパティを指定できます。 [オプション] ページの詳細については、次を参照してください。[オプションとオプション ページ](../extensibility/internals/options-and-options-pages.md)します。 ユーザー設定の詳細については、次を参照してください。[ユーザー設定のサポート](../extensibility/internals/support-for-user-settings.md)します。  

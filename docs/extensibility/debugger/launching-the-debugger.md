@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f24da1a1-f923-48b4-989f-18a22b581d1b
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d1c1ba42d1d05217eff6e8ff7a0b6f1209a05db
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ddf0eb95e298d15a2f3e44769f3202f9e5cdf7fa
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990884"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54966869"
 ---
 # <a name="launch-the-debugger"></a>デバッガーを起動します。
 デバッガーを起動するには、メソッドおよびイベントの適切な属性の適切なシーケンスを送信する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "53990884"
   
      場合`S_FALSE`、仮想マシンを処理中に読み込まれるデバッグ エンジン (DE) を返します。  
   
-     または  
+     - または -  
   
      場合`S_OK`DE の読み込みが戻る、SDM のプロセスにします。 SDM には、次のタスクを実行します。  
   

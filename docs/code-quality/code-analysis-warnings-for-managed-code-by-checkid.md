@@ -256,15 +256,15 @@ f1_keywords:
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba3d5d157cebe48212128a6eeb0312f9f67c2f3b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 55a4f53915e50275df0876d50564b3f30add1d5f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935997"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010325"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Checkid 別のマネージ コードに対するコード分析の警告
 
@@ -401,7 +401,7 @@ ms.locfileid: "53935997"
 | CA1812 | [CA1812:インスタンス化されていない内部クラスを回避します。](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md) | アセンブリ レベルの型のインスタンスが、アセンブリ内のコードから作成されません。 |
 | CA1813 | [CA1813:シールされていない属性します。](../code-quality/ca1813-avoid-unsealed-attributes.md) | .NET Framework クラス ライブラリでは、カスタム属性を取得するメソッドを提供します。 既定では、これらのメソッドで属性の継承階層が検索されます。 属性をシールすると、継承階層の全体が検索されなくなるため、パフォーマンスが向上します。 |
 | CA1814 | [CA1814:多次元よりジャグ配列を優先します。](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md) | ジャグ配列とは、その要素も配列である配列です。 要素を構成する配列のサイズは異なってもよいため、データ セットによっては無駄な空間が少なくなります。 |
-| CA1815 | [CA1815:Equals をオーバーライドし、演算子 equals を値型](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md) | 値型の場合、Equals を継承した実装が Reflection ライブラリを使用して、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 |
+| CA1815 | [CA1815:equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。 | 値型の場合、Equals を継承した実装が Reflection ライブラリを使用して、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 |
 | CA1816 | [CA 1816:GC を呼び出します。SuppressFinalize 正しく](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md) | Dispose の実装であるメソッドでは、GC は呼び出されません。SuppressFinalize;または、Dispose の実装ではないメソッドは、GC を呼び出します。SuppressFinalize;または、GC のメソッド呼び出し。SuppressFinalize およびこの (Visual Basic で Me) 以外は何かのパス。 |
 | CA1819 | [CA 1819:プロパティは、配列を返す必要がありますいません。](../code-quality/ca1819-properties-should-not-return-arrays.md) | プロパティが読み取り専用であっても、プロパティで返される配列は書き込みから保護されません。 配列の改ざんを防ぐには、プロパティで配列のコピーを返す必要があります。 一般に、このようなプロパティを呼び出すときのパフォーマンス低下は理解されません。 |
 | CA1820 | [CA1820:文字列の長さを使用して空の文字列をテスト](../code-quality/ca1820-test-for-empty-strings-using-string-length.md) | String.Length プロパティまたは String.IsNullOrEmpty メソッドを使用して文字列を比較する方法は、Equals を使用する場合よりもはるかに高速です。 |
@@ -457,7 +457,7 @@ ms.locfileid: "53935997"
 | CA2139 | [CA 2139:透過的メソッドは、HandleProcessCorruptingExceptions 属性を使用可能性があります。](../code-quality/ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute.md) | この規則は、HandleProcessCorruptedStateExceptionsAttribute 属性を使用してプロセス破損状態例外を処理しようとする、すべての透過的メソッドに対して適用されます。 プロセス破損状態例外は、CLR バージョン 4.0 に分類される例外です (AccessViolationException など)。 HandleProcessCorruptedStateExceptionsAttribute 属性はセキュリティ クリティカルなメソッドでのみ使用できる属性で、透過的メソッドに適用された場合は無視されます。 |
 | CA2140 | [CA 2140:透過的なコードは、セキュリティ上重要な項目を参照する必要があります。](../code-quality/ca2140-transparent-code-must-not-reference-security-critical-items.md) | SecurityCriticalAttribute 属性でマークされたコード要素は、セキュリティ上重要になります。 透過的なメソッドでセキュリティ上重要な要素を使用することはできません。 透過データ型でセキュリティ上重要な型を使用しようとすると、TypeAccessException、MethodAccessException、FieldAccessException のいずれかの例外が発生します。 |
 | CA2141 |[CA2141: 透過的メソッドは、LinkDemand を満たしてはならない](../code-quality/ca2141-transparent-methods-must-not-satisfy-linkdemands.md) | 透過的セキュリティ メソッドは、APTCA でマークされていないアセンブリ内のメソッドを呼び出します。また、透過的セキュリティ メソッドは、データ型またはメソッドに対する LinkDemand の要件を満たします。 |
-| CA2142 | [CA 2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md) | この規則は、アクセスするために LinkDemands を要求する透過的メソッドに対して適用されます。 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 |
+| CA2142 | [CA2142:LinkDemands を透過的なコードを保護する必要がありません。](../code-quality/ca2142-transparent-code-should-not-be-protected-with-linkdemands.md) | この規則は、アクセスするために LinkDemands を要求する透過的メソッドに対して適用されます。 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 |
 | CA2143 | [CA 2143:透過的メソッドは、セキュリティ要求を使用しないでください。](../code-quality/ca2143-transparent-methods-should-not-use-security-demands.md) | 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 透過的セキュリティ コードは、フル アクセス要求を使用して、セキュリティ上の決定を行う必要があります。セーフ クリティカルなコードでは、透過的なコードを使用してフル アクセス要求を行うことはできません。 |
 | CA2144 | [CA 2144:透過的なコードは、バイト配列からアセンブリを読み込めません](../code-quality/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays.md) | 透過的なコードはセキュリティ上重要な操作を実行できないため、透過的なコードのセキュリティ レビューは、クリティカル コードのセキュリティ レビューほど完全ではありません。 バイト配列から読み込まれるアセンブリは透過的なコード内で認識されない場合がありますが、監査を必要とする、クリティカルなコード、またはさらに重要であるセーフ クリティカルなコードがそのバイト配列に含まれる可能性があります。 |
 | CA2145 | [CA2145:透過的なメソッドが、SuppressUnmanagedCodeSecurityAttribute で修飾されていない必要があります。](../code-quality/ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute.md) | SuppressUnmanagedCodeSecurityAttribute 属性で修飾されたメソッドには、それを呼び出すメソッドに対して適用される暗黙的な LinkDemand があります。 この LinkDemand では、呼び出し元のコードがセキュリティ クリティカルなコードである必要があります。 SuppressUnmanagedCodeSecurity を使用するメソッドに SecurityCriticalAttribute 属性を設定すると、メソッドの呼び出し元に対してこの要件がより明確になります。 |
@@ -466,11 +466,11 @@ ms.locfileid: "53935997"
 | CA2149 | [CA2149:透過的メソッドはネイティブ コードを呼び出す必要がありますいません。](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md) | この規則は、P/Invoke などを使用してネイティブ コードを直接呼び出すすべての透過的メソッドに対して適用されます。 この規則に違反すると、レベル 2 の透過性モデルで MethodAccessException が発生し、レベル 1 の透過性モデルで UnmanagedCode に対するフル アクセス要求が発生します。 |
 | CA2151 |[CA 2151:重要な型のフィールドはセキュリティ クリティカルなをする必要があります。](../code-quality/ca2151-fields-with-critical-types-should-be-security-critical.md) | セキュリティ クリティカルな型を使用するには、型を参照するコードがセキュリティ クリティカルであるか、セキュリティ セーフ クリティカルである必要があります。 これは、参照が間接的である場合にも当てはまります。 そのため、透過的セキュリティまたはセキュリティ セーフ クリティカルなフィールドが存在すると、透過的なコードはこのフィールドにアクセスできないので、紛らわしくなります。 |
 | CA2200 | [CA 2200:スタックの詳細を保持するために再スローします。](../code-quality/ca2200-rethrow-to-preserve-stack-details.md) | 例外が再スローされ、その例外が throw ステートメントで明示的に指定されています。 throw ステートメントで例外を指定して例外が再スローされると、例外をスローした元のメソッドと現在のメソッドの間で呼び出されたメソッドの一覧は失われます。 |
-| CA2201 | [CA 2201:予約された例外の種類を発生させません](../code-quality/ca2201-do-not-raise-reserved-exception-types.md) | これにより、元のエラーの検出およびデバッグが困難になります。 |
+| CA2201 | [CA2201:予約された例外の種類を発生させません](../code-quality/ca2201-do-not-raise-reserved-exception-types.md) | これにより、元のエラーの検出およびデバッグが困難になります。 |
 | CA2202 | [CA 2202:オブジェクトを複数回破棄しません](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md) |メソッドの実装に、同じオブジェクトに対して System.IDisposable.Dispose または Dispose と同等の操作 (たとえば、一部の型に対する Close() メソッドなど) を複数回呼び出すコード パスが含まれています。 |
 | CA2204 | [CA2204:リテラルは正しく入力されなければなりません](../code-quality/ca2204-literals-should-be-spelled-correctly.md) | メソッド本体に含まれるリテラル文字列内に Microsoft スペル チェック ライブラリで認識されない語が 1 つ以上あります。 |
 | CA2205 | [CA2205:Win32 API に相当するマネージドの使用します。](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md) | オペレーティング システム呼び出しメソッドが定義されているし、同等の機能を持つメソッドですが、.NET Framework クラス ライブラリに記載されています。 |
-| CA2207 | [CA 2207:値型の静的フィールドのインラインを初期化します](../code-quality/ca2207-initialize-value-type-static-fields-inline.md) | 値型で明示的な静的コンストラクターを宣言しています。 この規則違反を修正するには、静的データが宣言されたとき、および静的コンストラクターを削除するときに、静的データをすべて初期化します。 |
+| CA2207 | [CA2207:値型の静的フィールドのインラインを初期化します](../code-quality/ca2207-initialize-value-type-static-fields-inline.md) | 値型で明示的な静的コンストラクターを宣言しています。 この規則違反を修正するには、静的データが宣言されたとき、および静的コンストラクターを削除するときに、静的データをすべて初期化します。 |
 | CA2208 |[CA2208:引数の例外を正しくインスタンス化します。](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md) | ArgumentException またはそのクラスから派生した例外の種類の既定 (パラメーターなし) のコンストラクターに対して呼び出しが行われたか、ArgumentException またはそのクラスから派生した例外の種類のパラメーター付きのコンストラクターに不適切な文字列型の引数が渡されました。 |
 | CA2210 |[CA 2210:アセンブリが有効な厳密な名前](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md) | 厳密な名前によって、改ざんされたアセンブリを、クライアントが無意識のうちに読み込む問題を防ぐことができます。 厳密な名前のないアセンブリが配置される状況は、限定されます。 適切に署名されていないアセンブリを共有または配布すると、アセンブリが改ざんされる場合、共通言語ランタイムでアセンブリを読み込むことができない場合、またはユーザーのコンピューターで検証を無効にする必要がある場合などの問題が考えられます。 |
 | CA2211 |[CA 2211:非定数フィールドを表示することはできません。](../code-quality/ca2211-non-constant-fields-should-not-be-visible.md) | 定数でも読み取り専用でもない静的フィールドは、スレッド セーフではありません。 このようなフィールドへのアクセスは、慎重に制御してください。また、クラス オブジェクトへのアクセスを同期するには、高度なプログラミング技術が必要です。 |
@@ -483,27 +483,27 @@ ms.locfileid: "53935997"
 | CA2218 |[CA2218:Equals をオーバーライドの GetHashCode をオーバーライドします。](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md) | GetHashCode は、現在のインスタンスに基づいて、ハッシュ アルゴリズムとデータ構造 (ハッシュ テーブルなど) に適した値を返します。 同じ型で等値の 2 つのオブジェクトによって同じハッシュ コードが返される必要があります。 |
 | CA2219 | [CA2219:Exception 句に例外を発生させません](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md) | finally 句または fault 句で例外が発生すると、アクティブな例外が新しい例外によって隠されます。 filter 句で例外が発生すると、ランタイムがその例外を暗黙的にキャッチします。 これにより、元のエラーの検出およびデバッグが困難になります。 |
 | CA2220 | [CA 2220:ファイナライザーは基本クラスのファイナライザーを呼び出す必要があります。](../code-quality/ca2220-finalizers-should-call-base-class-finalizer.md) | 終了処理は、継承の階層構造を使用して反映する必要があります。 これを確実に行うには、型が型の Finalize メソッドで基本クラスの Finalize メソッドを呼び出す必要があります。 |
-| CA2221 |[CA 2221:ファイナライザーは保護する必要があります。](../code-quality/ca2221-finalizers-should-be-protected.md) | ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。 |
-| CA2222 | [CA 2222:継承されたメンバーの可視性を縮小しません](../code-quality/ca2222-do-not-decrease-inherited-member-visibility.md) |継承メンバーのアクセス修飾子は変更しないでください。 継承メンバーをプライベートに変更しても、呼び出し元はメソッドの基本クラスの実装にアクセスできます。 |
+| CA2221 |[CA2221:ファイナライザーは保護する必要があります。](../code-quality/ca2221-finalizers-should-be-protected.md) | ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。 |
+| CA2222 | [CA2222:継承されたメンバーの可視性を縮小しません](../code-quality/ca2222-do-not-decrease-inherited-member-visibility.md) |継承メンバーのアクセス修飾子は変更しないでください。 継承メンバーをプライベートに変更しても、呼び出し元はメソッドの基本クラスの実装にアクセスできます。 |
 | CA2223 | [CA2223:メンバーが複数の戻り値の型が異なる必要があります。](../code-quality/ca2223-members-should-differ-by-more-than-return-type.md) | 共通言語ランタイムでは、戻り値の型以外は同じであるメンバーの区別に戻り値の型を使用することが許可されていますが、この機能は共通言語仕様ではなく、.NET プログラミング言語の共通機能でもありません。 |
 | CA2224 | [CA2224:オーバー ロードする演算子 equals で equals をオーバーライド](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md) | パブリック型で等値演算子が実装されていますが、Object.Equals がオーバーライドされていません。 |
 | CA2225 | [CA2225:演算子のオーバー ロード名前付けされた代替](../code-quality/ca2225-operator-overloads-have-named-alternates.md) |演算子のオーバーロードが検出され、予想される名前の代替メソッドが検出されませんでした。 名前付きの代替メンバーによって、演算子と同じ機能へアクセスできるようになります。また、演算子のオーバーロードをサポートしていない言語でプログラミングする場合でも、その代替メンバーを使用できます。 |
 | CA2226 | [CA2226:演算子は対称型オーバー ロードである必要があります。](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md) | 型で等値演算子または非等値演算子を実装し、逆の働きをする演算子を実装していません。 |
 | CA2227 |[CA2227:コレクションのプロパティは読み取り専用にします。](../code-quality/ca2227-collection-properties-should-be-read-only.md) |書き込み可能なコレクション プロパティにより、ユーザーはコレクションを異なるコレクションで置換できます。 読み取り専用プロパティは、コレクションを置換できないようにしますが、個別のメンバーが設定されることは回避できません。 |
-| CA2228 | [CA 2228:未公開のリソース形式を出荷しません](../code-quality/ca2228-do-not-ship-unreleased-resource-formats.md) | .NET Framework のプレリリース バージョンを使用してビルドされたリソース ファイルは、サポートされているバージョンの .NET Framework で使用できるしない場合があります。 |
+| CA2228 | [CA2228:未公開のリソース形式を出荷しません](../code-quality/ca2228-do-not-ship-unreleased-resource-formats.md) | .NET Framework のプレリリース バージョンを使用してビルドされたリソース ファイルは、サポートされているバージョンの .NET Framework で使用できるしない場合があります。 |
 | CA2229 | [CA2229: シリアル化コンストラクターを実装します](../code-quality/ca2229-implement-serialization-constructors.md) | この規則違反を修正するには、シリアル化コンストラクターを実装します。 シールされたクラスの場合、コンストラクターをプライベートにするか、プロテクトにします。 |
 | CA2230 | [CA2230:可変個の引数に対して param を使用します。](../code-quality/ca2230-use-params-for-variable-arguments.md) | パブリック型またはプロテクト型に、params キーワードではなく VarArgs 呼び出し規則を使用するパブリック メソッドまたはプロテクト メソッドが含まれています。 |
 | CA2231 | [CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md) | 値型は、Object.Equals をオーバーライドしていますが、等値演算子を実装していません。 |
-| CA2232 | [CA 2232:Mark の Windows フォームのエントリ ポイントを stathread に設定します](../code-quality/ca2232-mark-windows-forms-entry-points-with-stathread.md) | STAThreadAttribute は、アプリケーションの COM スレッド処理モデルがシングルスレッド アパートメントであることを示します。 この属性は、Windows フォームを使用するすべてのアプリケーションのエントリ ポイントに指定する必要があります。省略すると、Windows コンポーネントが正常に機能しないことがあります。 |
-| CA2233 |[CA 2233:操作はオーバーフローできません。](../code-quality/ca2233-operations-should-not-overflow.md) | 算術演算を実行する前にオペランドを検証してください。 これにより、演算結果が関連するデータ型で使用できる値の範囲を超えないことを確認できます。 |
-| CA2234 | [CA 2234:文字列の代わりに System.Uri オブジェクトを渡します](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md) | "uri"、"URI"、"urn"、"URN"、"url"、または "URL" という名前を持つ文字列パラメーターが指定されているメソッドに対して、呼び出しが行われました。 そのメソッドの型宣言に対応するメソッドのオーバーロードが存在し、それに対して System.Uri パラメーターが指定されています。 |
+| CA2232 | [CA2232:Mark の Windows フォームのエントリ ポイントを stathread に設定します](../code-quality/ca2232-mark-windows-forms-entry-points-with-stathread.md) | STAThreadAttribute は、アプリケーションの COM スレッド処理モデルがシングルスレッド アパートメントであることを示します。 この属性は、Windows フォームを使用するすべてのアプリケーションのエントリ ポイントに指定する必要があります。省略すると、Windows コンポーネントが正常に機能しないことがあります。 |
+| CA2233 |[CA2233:操作はオーバーフローできません。](../code-quality/ca2233-operations-should-not-overflow.md) | 算術演算を実行する前にオペランドを検証してください。 これにより、演算結果が関連するデータ型で使用できる値の範囲を超えないことを確認できます。 |
+| CA2234 | [CA2234:文字列の代わりに System.Uri オブジェクトを渡します](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md) | "uri"、"URI"、"urn"、"URN"、"url"、または "URL" という名前を持つ文字列パラメーターが指定されているメソッドに対して、呼び出しが行われました。 そのメソッドの型宣言に対応するメソッドのオーバーロードが存在し、それに対して System.Uri パラメーターが指定されています。 |
 | CA2235 | [CA2235:すべてのシリアル化不可能なフィールドをマークします。](../code-quality/ca2235-mark-all-non-serializable-fields.md) | シリアル化できない型のインスタンス フィールドが、シリアル化できる型で宣言されています。 |
-| CA2236 | [CA 2236:ISerializable 型の基本クラス メソッドを呼び出す](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md) | この規則違反を修正するには、基本型の GetObjectData メソッドまたはシリアル化コンストラクターを、対応する派生型のメソッドまたはコンストラクターから呼び出します。 |
-| CA2237 | [CA 2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md) | 型が共通言語ランタイムでシリアル化できると認識されるようにするには、型を SerializableAttribute 属性でマークする必要があります。型が ISerializable インターフェイスの実装を通じてカスタムのシリアル化ルーチンを使用している場合でも、マークする必要があります。 |
-| CA2238 |[CA 2238:シリアル化メソッドを正しく実装します。](../code-quality/ca2238-implement-serialization-methods-correctly.md) | シリアル化イベントを処理するメソッドに、適切なシグネチャ、戻り値の型、または参照範囲がありません。 |
+| CA2236 | [CA2236:ISerializable 型の基本クラス メソッドを呼び出す](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md) | この規則違反を修正するには、基本型の GetObjectData メソッドまたはシリアル化コンストラクターを、対応する派生型のメソッドまたはコンストラクターから呼び出します。 |
+| CA2237 | [CA2237:ISerializable 型を serializableattribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md) | 型が共通言語ランタイムでシリアル化できると認識されるようにするには、型を SerializableAttribute 属性でマークする必要があります。型が ISerializable インターフェイスの実装を通じてカスタムのシリアル化ルーチンを使用している場合でも、マークする必要があります。 |
+| CA2238 |[CA2238:シリアル化メソッドを正しく実装します。](../code-quality/ca2238-implement-serialization-methods-correctly.md) | シリアル化イベントを処理するメソッドに、適切なシグネチャ、戻り値の型、または参照範囲がありません。 |
 | CA2239 | [CA2239:オプションのフィールドに逆シリアル化メソッドを提供します。](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md) | 型に System.Runtime.Serialization.OptionalFieldAttribute 属性でマークされているフィールドがあり、その型に逆シリアル化のイベント処理メソッドがありません。 |
 | CA2240 | [CA2240:ISerializable を正しく実装します。](../code-quality/ca2240-implement-iserializable-correctly.md) | この規則違反を修正するには、GetObjectData メソッドを外部から参照できるようにし、オーバーライドできるようにします。また、すべてのインスタンス フィールドをシリアル化プロセスに含めるか、NonSerializedAttribute 属性で明示的にマークします。 |
 | CA2241 | [CA2241:書式指定メソッドに正しい引数を指定します。](../code-quality/ca2241-provide-correct-arguments-to-formatting-methods.md) | System.String.Format に渡される引数 format に、各オブジェクトの引数に対応する書式指定項目が含まれていません (その逆も考えられます)。 |
 | CA2242 |[CA2242:NaN に対して正しくテストします](../code-quality/ca2242-test-for-nan-correctly.md) | この式が Single.Nan または Double.Nan に対して値をテストしています。 値をテストするには、Single.IsNan(Single) または Double.IsNan(Double) を使用します。 |
-| CA2243 |[CA 2243:属性文字列リテラルは、正しく解析する必要があります。](../code-quality/ca2243-attribute-string-literals-should-parse-correctly.md) | 属性のリテラル文字列パラメーターが URL、GUID、またはバージョンとして正しく解析されません。 |
+| CA2243 |[CA2243:属性文字列リテラルは、正しく解析する必要があります。](../code-quality/ca2243-attribute-string-literals-should-parse-correctly.md) | 属性のリテラル文字列パラメーターが URL、GUID、またはバージョンとして正しく解析されません。 |
 | CA5122 | [CA5122 P/Invoke 宣言をセーフ クリティカルにしないでください](../code-quality/ca5122-p-invoke-declarations-should-not-be-safe-critical.md) | メソッドは、セキュリティに対する配慮が必要な操作を行うときは SecuritySafeCritical としてマークされますが、透過的なコードによって使用される場合も安全です。 透過的なコードは、P/Invoke を通じてネイティブ コードを直接呼び出すことはありません。 そのため、P/Invoke をセキュリティ セーフ クリティカルとしてマークしても、透過的なコードはそれを呼び出すことができず、セキュリティ分析の際に紛らわしくなります。 |

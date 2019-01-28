@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 189f524ff96c8ad353425820e9f3931364951774
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9e02c7e7ff030d2fd2bb9de86dfd1e7211f8de1f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990270"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54946712"
 ---
 # <a name="implement-and-register-a-port-supplier"></a>実装し、ポートのサプライヤーの登録
 ポート サプライヤーの役割は、追跡し、さらにプロセスの管理のポートを指定することです。 ポートを作成する場合、ポート サプライヤーは、(セッション デバッグ マネージャー [SDM] が選択されているユーザーまたはポート サプライヤーは、プロジェクト システムで指定されているポート サプライヤーで使用されます) のポート サプライヤーの GUID を持つ CoCreate を使用してインスタンス化されます。 SDM を呼び出して[CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)を任意のポートを追加できるかどうかを参照してください。 呼び出すことによって、新しいポートが要求されたポートを追加できる場合[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)を渡す、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)ポートをについて説明します。 `AddPort` によって表される新しいポートを返します、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイス。  

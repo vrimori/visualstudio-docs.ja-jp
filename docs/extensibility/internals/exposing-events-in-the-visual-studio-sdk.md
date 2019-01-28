@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 70bbc258-c221-44f8-b0d7-94087d83b8fe
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d2eeb155212f7e065febb68b58b31879b5d5a7c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c08af11ce08cf86948655d01dc5468a3d70ae2fa
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853097"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54924307"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK でイベントを公開します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] により、オートメーションを使用してイベントをソースします。 プロジェクトおよびプロジェクト項目のイベントをソースにすることをお勧めします。  
@@ -46,7 +46,7 @@ ms.locfileid: "53853097"
 ## <a name="registry-entries-from-the-basic-project-sample"></a>基本的なプロジェクト サンプルからのレジストリ エントリ  
  このセクションでは、オートメーション イベントの値をレジストリに追加する場所を示します。  
   
- **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\< PkgGUID\>\AutomationEvents]**
+ **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID\>\AutomationEvents]**
   
  **AutomationProjectEvents** = 返します、`AutomationProjectEvents`オブジェクト。  
   

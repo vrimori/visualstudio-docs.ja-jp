@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: aee48fc6-a15f-4fd5-8420-7f18824de220
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d54e8833389d110efdcefd8d437645ef5824d8f6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5fb99c1b07fd2627f9dab6baed12bce60c79dd9a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967775"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54988286"
 ---
 # <a name="create-a-basic-project-system-part-2"></a>基本的なプロジェクト システム、第 2 部を作成します。
 このシリーズでは、最初のチュートリアル[基本的なプロジェクト システム、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示しています。 このチュートリアルでは、Visual Studio テンプレート、プロパティ ページでは、その他の機能を追加して、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
@@ -184,7 +184,7 @@ ZipProjects:
   
 1. Visual Studio SDK 実験用インスタンスをリセットします。  
   
-     [!INCLUDE[win7](../debugger/includes/win7_md.md)]:**開始**] メニューの [検索、 **Microsoft Visual Studio または Microsoft Visual Studio SDK/Tools**フォルダー、および選択**MicrosoftVisualStudio実験用インスタンスのリセット**.  
+    [!INCLUDE[win7](../debugger/includes/win7_md.md)]:**開始** メニューの 検索、 **Microsoft Visual Studio または Microsoft Visual Studio SDK/Tools**フォルダー、および選択**MicrosoftVisualStudio実験用インスタンスのリセット**.  
   
     以降のバージョンの Windows では。**開始**画面で「 **Microsoft Visual Studio をリセット\<バージョン > 実験用インスタンス**します。  
   
@@ -285,13 +285,13 @@ ZipProjects:
   
 1.  *SimpleProjectNode.cs*ファイルで、削除、`AddFileFromTemplate`メソッド。  
   
-2.   *\\Templates\Projects\ConsoleApp\SimpleProject.myproj*を探し、ファイル、 \<RootNamespace > プロパティ $safeprojectname$ にその値を変更します。  
+2.  *\\Templates\Projects\ConsoleApp\SimpleProject.myproj*を探し、ファイル、 \<RootNamespace > プロパティ $safeprojectname$ にその値を変更します。  
   
     ```  
     <RootNamespace>$safeprojectname$</RootNamespace>  
     ```  
   
-3.   *\\Templates\Projects\SimpleProject\Program.cs*ファイルで、ファイルの内容を次のコードに置き換えます。  
+3.  *\\Templates\Projects\SimpleProject\Program.cs*ファイルで、ファイルの内容を次のコードに置き換えます。  
   
     ```  
     using System;  
@@ -339,7 +339,7 @@ ZipProjects:
     }  
     ```  
   
-## <a name="creatr-a-project-property-page"></a>Creatr プロジェクトのプロパティ ページ  
+## <a name="create-a-project-property-page"></a>プロジェクト プロパティ ページを作成します。  
  種類のプロジェクト プロパティ ページを作成するには、ユーザーを表示し、テンプレートに基づくプロジェクトのプロパティを変更することができます。 このセクションでは、構成に依存しないプロパティ ページを作成する方法を示します。 この基本的なプロパティ ページでは、プロパティ グリッドを使用して、プロパティ ページ クラスで公開されるパブリック プロパティを表示します。  
   
  プロパティ ページ クラスを派生、`SettingsPage`基本クラス。 によって提供されるプロパティ グリッド、`SettingsPage`クラスはほとんどのプリミティブ データ型を認識し、それらを表示する方法を認識します。  さらに、`SettingsPage`クラスは、プロジェクト ファイルにプロパティ値を保持する方法を認識します。  

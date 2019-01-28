@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4cb40d12-2e92-4f09-83f4-689928bd65b3
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e805b11168dd1936b116a8873d61e333bee37f1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 754d2037f734b4f142c4a7209a5208b958fc913f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853399"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54988117"
 ---
 # <a name="adprocessid"></a>AD_PROCESS_ID
 システム ID または GUID 可能性のあるプロセス ID を指定します。  
@@ -87,7 +87,7 @@ public struct AD_PROCESS_ID {
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)   
  [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)   
  [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)   
- [含ま](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)   
+ [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)   
  [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

@@ -7,15 +7,15 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0eccf13f38799c1d35b7fe4226fa02ec1a291b0c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 499e3776e81fcde3e89eb3436e3938f2feafb137
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986987"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55013705"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
@@ -41,7 +41,7 @@ ms.locfileid: "53986987"
 
    これは、必要があります形式 major.minor[.build[.revision の有効なバージョン文字列、]。
 
-   次に例を示します。1.0、10.0.0.0
+   次に例を示します。1.0, 10.0.0.0
 
 - `$(Platform)`
 
@@ -482,7 +482,7 @@ CPS は、コンテキストの種類の他の値をサポートしています�
 |------------| - |
 | `generic` | すべてのプロパティがカテゴリの見出しの下の 1 つのページに表示されます。<br/>ルールが表示されていることができます`Project`と`PropertySheet`、コンテキストがない`File`します。<br/><br/> 例:`$(VCTargetsPath)`\\*1033*\\*general.xml* |
 | `tool` | カテゴリは、サブページとして表示されます。<br/>このルールはすべてのコンテキストで表示できます: `Project`、`PropertySheet`と`File`します。<br/>プロジェクトに項目がある場合にのみ、ルールがプロジェクトのプロパティに表示される、`ItemType`で定義されている`Rule.DataSource`にルールの名前が含まれていなければ、`ProjectTools`項目グループ。<br/><br/>例:`$(VCTargetsPath)`\\*1033*\\*clang.xml* |
-| `debugger` | [デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例:`$(VCTargetsPath)`\\*1033*\\*デバッガー\_ローカル\_windows.xml* |
+| `debugger` | [デバッグ] ページの一部として、ページが表示されます。<br/>カテゴリは現在は無視されます。<br/>ルールの名前はデバッグ ランチャー MEF オブジェクトの一致する必要があります`ExportDebugger`属性。<br/><br/>例:`$(VCTargetsPath)`\\*1033*\\*debugger\_local\_windows.xml* |
 | *custom* | カスタム テンプレートです。 テンプレートの名前に一致する必要があります、`ExportPropertyPageUIFactoryProvider`の属性、 `PropertyPageUIFactoryProvider` MEF オブジェクト。 参照してください**Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**します。<br/><br/> 例:`$(VCTargetsPath)`\\*1033*\\*userMacros.xml* |
 
 ルールは、プロパティ グリッド ベースのテンプレートのいずれかを使用している場合は、そのプロパティのこれらの拡張ポイントを使用できます。

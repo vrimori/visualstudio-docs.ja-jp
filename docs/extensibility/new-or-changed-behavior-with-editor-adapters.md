@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 5555b116-cfdb-4773-ba62-af80fda64abd
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d32cad965c4165a8f81e9b880121bb54ab1738b7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 15e6e2a1258c698aeb10da95719034f705d0b685
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53901611"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54987325"
 ---
 # <a name="new-or-changed-behavior-with-editor-adapters"></a>エディターのアダプターを搭載した新規または変更された動作
 以前のバージョンの Visual Studio コア エディターと照らして記述されたコードを更新する、新しい API を使用するのではなく、エディターのアダプター (または shim) を使用する場合は、エディターのアダプターの動作に次の相違点の注意する必要があります。に関しては、前のコア エディター。  

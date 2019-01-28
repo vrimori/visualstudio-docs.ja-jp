@@ -5,15 +5,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5c1c81abbbc2f252744c465adf1cb99b3396d54
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ba6fe7ff9df93c2f8e1b482d903199a01ed56094
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53873772"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54960985"
 ---
 # <a name="xml-editor"></a>XML エディター
 
@@ -57,4 +57,4 @@ XML エディターがなどのよく知られているファイル拡張子で�
 
 - [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)テキスト エディターに関する情報を提供します。
 - [XML 標準のリファレンス](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)XML、ドキュメント型定義 (DTD)、XML スキーマ定義言語 (XSD)、および XSLT などの XML テクノロジに関する情報を提供します。
-- [Visual Studio での XML ツール](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

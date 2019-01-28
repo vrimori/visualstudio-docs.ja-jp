@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9623ec6fd2fed89dbe541d6088f7366d38bc0636
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d15e6872a418cfc2a3cf5dded5b873429075d276
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879148"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54977188"
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ:アドインを VSPackage 拡張機能に変換します。
 現在、アドインは非推奨とされます。 新しい Visual Studio 拡張機能をするためには、VSIX 拡張機能を作成する必要があります。 VSIX 拡張機能に Visual Studio アドインを変換する方法についてよく寄せられる質問に対する回答を示します。  

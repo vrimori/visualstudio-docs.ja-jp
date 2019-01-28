@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Domain-Specific Language, events
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: ace1873c45ba8437ba929ec10ef75db3d0d50bf2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f7ea3068d4dc82e7b53d0f9adc87f08e072ff120
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905203"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54971339"
 ---
 # <a name="responding-to-and-propagating-changes"></a>変更内容への対応および変更内容の反映
 要素は、作成または削除、更新、ときに、モデルの他の部分やファイル、データベース、またはその他のコンポーネントなどの外部のリソースへの変更を反映するコードを記述できます。

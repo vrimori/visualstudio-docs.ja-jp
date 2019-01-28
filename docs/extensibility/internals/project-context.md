@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d1803f4a-24eb-44b0-b5d2-cb40c15534be
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92a0f875e51b0cb9ff968bf93b8a0877b14149c8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cd9d4c93ac69c73f81adc3111b0aeb4e141ab39f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990150"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54990330"
 ---
 # <a name="project-context"></a>プロジェクトのコンテキスト
 ユーザーを追加またはプロジェクトとプロジェクト項目では、ときに、IDE、プロジェクトのコンテキストの概念を使用して、さまざまな操作を実行する必要がありますを決定します。  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - association forms [SharePoint development in Visual Studio]
 - initiation forms [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, workflow initiation forms
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c9878da7c1384dec8d0c8aa863b0eff4252e9efe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b9d4fe908e372a478d382a1087a7d7e1363dbef5
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53824737"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54864385"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>チュートリアル: ワークフロー関連付けフォームと開始フォームを作成します。
   このチュートリアルでは、アソシエーションと開始フォームの使用方法が組み込まれている基本的なシーケンシャル ワークフローを作成する方法を示します。 これらは、まず、SharePoint 管理者 (関連付けフォーム) が関連付けられているとき、およびユーザー (開始フォーム) が、ワークフローを開始、ワークフローに追加するパラメーターを有効にする ASPX フォームです。  

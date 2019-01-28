@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 497e479b-add8-4644-870a-917f15306b97
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9eff9cb08c07c33ff2af707501f1ee6fac2e01da
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 95f691e0bfc73c7ce5f1f87d441dbf083173b6c0
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914745"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54955119"
 ---
 # <a name="windows-installer-basics"></a>Windows インストーラーの基本事項
 Windows インストーラーは、Windows インストーラーのコンポーネント (WICs または単なるコンポーネントとも呼ばれます) と呼ばれる単位でこれらのタスクを実行するアプリケーションやユーザーのコンピューター上のソフトウェア製品をアンインストールします。 各 WIC では、インストールと参照カウントの Windows インストーラーを使用してセットアップの基本的な単位を識別する GUID。  

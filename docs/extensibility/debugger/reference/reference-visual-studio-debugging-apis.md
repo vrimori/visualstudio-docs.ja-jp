@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9810fc50-43c7-4916-9916-1cf333037b51
 author: gregvanl
 ms.author: gregvanl
-manager: douge
+manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6e9de42d4ff1000ead76158aa3a8c9956286d89
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ab22fa02cdad34031c970c6d0abf591aba5b58bf
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53845643"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54973318"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>参照 (Visual Studio のデバッグ API)
 Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと、デバッガーとそのコンポーネントの機能の基本的なモデルを説明します。 ドキュメントでは、インターフェイスによって定義の動作とは別に、説明、コンポーネントとインターフェイスについてできるだけ少ない想定。  

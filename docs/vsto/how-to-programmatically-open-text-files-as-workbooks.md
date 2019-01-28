@@ -9,17 +9,17 @@ helpviewer_keywords:
 - workbooks, opening text files as
 - text [Office development in Visual Studio], text files
 - text files, opening as workbooks
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f45eef21448ecbc0ee4e866d15ea746f098f2aba
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b0e333cd8ebb76df964c52ee48f4bde07e90fbaf
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964190"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54866205"
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>方法: プログラムによってブックとしてテキスト ファイルを開く
   テキスト ファイルをブックとして開くことができます。 開きたいテキスト ファイルの名前を渡す必要があります。 ファイル内のデータの列の形式、解析を開始する行番号など、いくつかの省略可能なパラメーターを指定できます。  

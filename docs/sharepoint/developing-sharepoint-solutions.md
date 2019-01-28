@@ -10,17 +10,17 @@ dev_langs:
 - CSharp
 helpviewer_keywords:
 - SharePoint development in Visual Studio, overview
-author: TerryGLee
-ms.author: tglee
-manager: douge
+author: John-Hart
+ms.author: johnhart
+manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bc45f1420f073347153c6b7b8dd72cae44dd6b0f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4384396781172c73056de27fd3c674535571d591
+ms.sourcegitcommit: c0202a77d4dc562cdc55dc2e6223c062281d9749
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53871058"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54869019"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint ソリューションを開発します。
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトおよびサイト要素を作成するための SharePoint プロジェクトの種類のテンプレートがいくつか用意されています。 使用可能なプロジェクトの種類の一覧は、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)します。 次に、SharePoint プロジェクトの要素およびプロパティについて説明します。  
@@ -101,7 +101,7 @@ ms.locfileid: "53871058"
 |配置場所|SharePoint サーバー上のファイルの完全修飾パス。 このパスは、[配置ルート] プロパティと [配置パス] プロパティで構成されます。|  
 |配置パス|Workflow1 など、SharePoint サーバー ファイル上のファイルの相対パス\\します。 ファイルの完全修飾パスは、 *Deployment Path* 値の末尾に *Deployment Root* 値を連結することによって作成されます。<br /><br /> 値を選択する*RootFile*の*展開の種類*プロパティの変更、 *Deployment Root*プロパティを\<{sharepointroot} >\\の完全修飾パスで結果として得られる、 \<{sharepointroot} > \Workflow1\\します。 詳細については、次を参照してください。[パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)します。|  
 |Deployment Root|文字列。 ファイルの配置先となる SharePoint Server 上のルート フォルダーです たとえば、 \<{sharepointroot} > \Template\Features\\\<FeatureName >\\します。<br /><br /> *Deployment Root* プロパティの値は、 *Deployment Type* の設定に依存します。|  
-|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment: *\<値なし >*<br /><br /> ElementManifest:*\<{Sharepointroot} > \Template\Features\\\<FeatureName >*\\<br /><br /> ElementFile:*\<{Sharepointroot} > \Template\Features\\\<FeatureName >\\*<br /><br /> TemplateFile:*\<{Sharepointroot} > \Template\\*<br /><br /> RootFile:*\<{Sharepointroot} >\\*<br /><br /> GlobalResource:*\<{Sharepointroot} > \Resources\\*<br /><br /> ClassResource:*\<ClassResourcePath >\\*<br /><br /> 詳細については、「 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType> 」を参照してください。|  
+|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment: *\<値なし >*<br /><br /> ElementManifest:*\<SharePointRoot>\Template\Features\\\<FeatureName>*\\<br /><br /> ElementFile:*\<SharePointRoot>\Template\Features\\\<FeatureName>\\*<br /><br /> TemplateFile:*\<SharePointRoot>\Template\\*<br /><br /> RootFile:*\<SharePointRoot>\\*<br /><br /> GlobalResource:*\<SharePointRoot>\Resources\\*<br /><br /> ClassResource:*\<ClassResourcePath>\\*<br /><br /> 詳細については、「 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType> 」を参照してください。|  
 |ファイル名|項目ファイルの名前またはフォルダーの名前です。|  
 |完全パス|項目ファイルの場所です。 システム テーブルは読み取り専用です。|  
   
