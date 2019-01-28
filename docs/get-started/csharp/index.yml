@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: f65c4c6ea5ed255f40467839e5fa41c879d422f2
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.openlocfilehash: 7da3e8111a16a8003331de0c388805c459cefa07
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204321"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55014070"
 documentType: LandingData
-title: Visual Studio | C#
+title: Visual Studio のチュートリアル | C#
 metadata:
   title: Visual Studio での C# 開発 | Microsoft Docs
   description: Visual Studio での C# アプリの開発に関するチュートリアルと概念記事です。
   ms.custom: seodec18
   author: ghogen
-  manager: douge
+  manager: jillfra
   ms.prod: visual-studio-dev15
   ms.technology: vs-acquisition
   ms.topic: landing-page
@@ -20,6 +20,8 @@ metadata:
   ms.author: ghogen
   dev_langs:
   - CSharp
+abstract:
+  description: このページには、Visual Studio で C# のアプリを作成する方法を学ぶための、初心者向けチュートリアルへのリンクが含まれています。 Visual Studio の完全なドキュメントについては、<a href="/visualstudio/ide/">Visual Studio</a> に関する記事を参照してください。 C# 言語のドキュメントについては、「<a href="/dotnet/csharp">C# のガイド</a>」を参照してください。
 sections:
 - title: 開始するには
   items:

@@ -1,23 +1,25 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: c9110582a80de3031ed4d2698a4f1afcf31e3b72
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 6c68bfe6d5216c6730a4b42713c5124b8075e9e1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53442944"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54946426"
 documentType: LandingData
-title: Visual Studio | Visual Basic
+title: Visual Studio のチュートリアル | Visual Basic
 metadata:
   title: Visual Studio での Visual Basic 開発 | Microsoft Docs
   description: Visual Studio での Visual Basic アプリの開発に関するチュートリアルと概念記事です。
   ms.custom: seodec18
   author: ghogen
-  manager: douge
+  manager: jillfra
   ms.prod: visual-studio-dev15
   ms.technology: vs-acquisition
   ms.topic: landing-page
   ms.date: 10/30/2018
   ms.author: ghogen
+abstract:
+  description: このページには、Visual Basic ユーザーが Visual Studio を学ぶための初心者向けチュートリアルへのリンクが含まれています。 Visual Studio の完全なドキュメントについては、<a href="/visualstudio/ide/">Visual Studio</a> に関する記事を参照してください。 Visual Basic 言語のドキュメントについては、「<a href=/dotnet/visual-basic>Visual Basic のガイド</a>」を参照してください。
 sections:
 - title: 作業開始
   items:
