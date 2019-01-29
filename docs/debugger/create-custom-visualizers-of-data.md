@@ -1,8 +1,6 @@
 ---
 title: カスタム データ ビジュアライザーを作成する |Microsoft Docs
-ms.custom: ''
 ms.date: 11/07/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.visualizer.troubleshoot
@@ -21,14 +19,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c5f505bfa8032b0f7d59f348835e1e4969b2648
-ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
-ms.translationtype: MT
+ms.openlocfilehash: 9bb693e509eb12b01d3c70f8f341b39de06e5797
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607823"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54204389"
 ---
-# <a name="create-custom-data-visualizers"></a>カスタム データ ビジュアライザーを作成します。 
+# <a name="create-custom-data-visualizers"></a>カスタム データ ビジュアライザーを作成します。
  A*ビジュアライザー*の一部である、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]デバッガー ユーザー インターフェイスのデータ型に適した方法で変数またはオブジェクトを表示します。 たとえば、HTML ビジュアライザーは、HTML 文字列を解釈し、ブラウザー ウィンドウに表示される結果を表示します。 ビットマップ ビジュアライザーは、ビットマップ構造を解釈し、表すグラフィックを表示します。 一部のビジュアライザーを使用して、変更も、データを表示できます。
 
  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] デバッガーには、6 つの標準的なビジュアライザーが用意されています。 テキスト、HTML、XML、および JSON ビジュアライザーが文字列オブジェクトで動作します。 WPF ツリー ビジュアライザーには、WPF オブジェクトのビジュアル ツリーのプロパティが表示されます。 データセット visualizer は、データセット、データ ビュー、および DataTable オブジェクトによって適しています。 
@@ -42,13 +40,13 @@ ms.locfileid: "51607823"
  > [!NOTE]
  > ネイティブ コードに対するカスタム ビジュアライザーを作成するを参照してください。、 [SQLite ネイティブ デバッガー ビジュアライザー](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/SqliteVisualizer)サンプル。 UWP と Windows 8.x アプリでは、カスタム ビジュアライザーはサポートされていません。
 
-以外の任意のマネージ クラスのオブジェクトに対するカスタム ビジュアライザーを記述する<xref:System.Object>と<xref:System.Array>します。  
+<xref:System.Object> および <xref:System.Array> を除く任意のマネージド クラスのオブジェクトのカスタム ビジュアライザーを記述できます。  
   
 デバッガー ビジュアライザーのアーキテクチャには、次の 2 つの部分があります。  
   
 - *デバッガー側*Visual Studio デバッガー内で実行し、作成し、ビジュアライザーのユーザー インターフェイスが表示されます。  
   
-- *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。 デバッグ対象プロセスに (たとえば、文字列オブジェクト) を視覚化するデータ オブジェクトが存在します。 デバッグ対象側は、オブジェクトを作成するユーザー インターフェイスに表示されるデバッガー側に送信します。  
+- "*デバッグ対象側*" - Visual Studio がデバッグしているプロセス (*デバッグ対象*) 内で動作します。 デバッグ対象プロセスに (たとえば、文字列オブジェクト) を視覚化するデータ オブジェクトが存在します。 デバッグ対象側は、オブジェクトを作成するユーザー インターフェイスに表示されるデバッガー側に送信します。  
 
 デバッガー側からのデータ オブジェクトを受け取る、*オブジェクト プロバイダー*を実装する、<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>インターフェイス。 デバッグ対象側を使用してオブジェクトを送信する、*オブジェクト ソース*から派生<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>します。 
 
@@ -84,14 +82,14 @@ ms.locfileid: "51607823"
   
 ## <a name="see-also"></a>関連項目
   
- [チュートリアル : C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)  
+ [チュートリアル: C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)  
 
- [チュートリアル : Visual Basic でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)  
+ [チュートリアル: Visual Basic でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)  
   
- [方法 : ビジュアライザーをインストールする](../debugger/how-to-install-a-visualizer.md)  
+ [方法: ビジュアライザーをインストールする](../debugger/how-to-install-a-visualizer.md)  
   
- [方法 : ビジュアライザーをテストおよびデバッグする](../debugger/how-to-test-and-debug-a-visualizer.md)  
+ [方法: ビジュアライザーをテストおよびデバッグする](../debugger/how-to-test-and-debug-a-visualizer.md)  
   
  [ビジュアライザー API リファレンス](../debugger/visualizer-api-reference.md)  
   
- [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)
+ [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

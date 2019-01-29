@@ -1103,8 +1103,8 @@ items:
 - name: リソース
   items:
   - name: Visual Studio 2017 の新機能
-    href: ide/whats-new-in-visual-studio.md
-  - name: Visual Studio 2019 の新機能
+    href: ide/whats-new-visual-studio-2017.md
+  - name: Visual Studio 2019 Preview の新機能
     href: ide/whats-new-visual-studio-2019.md
   - name: リリース ノートとシステム要件
     items:
@@ -1146,9 +1146,10 @@ items:
     href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
   - name: ご意見
     href: ide/talk-to-us.md
-ms.openlocfilehash: ee98252a961a3a2e6a656be5042e8f4298132c2c
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
+  expanded: true
+ms.openlocfilehash: 3734bd3e2955f1f2297ec9a63f92d2e617341142
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417955"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089293"

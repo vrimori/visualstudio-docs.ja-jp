@@ -2,7 +2,6 @@
 title: デバッガーでのレジスタ値を表示 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/19/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.registers
@@ -25,16 +24,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 31d9b9a9243bdf5bd39ebddf90ffa0ea32b23072
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
-ms.translationtype: MTE95
+ms.openlocfilehash: 8622bb1288324429ad346834930559d1435ac6d5
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058442"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53867580"
 ---
 # <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>[レジスタ] ウィンドウで、レジスタの値を表示 (C#、C++、Visual Basic、 F#)
 
-**登録**Visual Studio のデバッグ中に、レジスタの内容をウィンドウが表示されます。 レジスタの背後にある概念について大まかな概要について、**登録**ウィンドウを参照してください[デバッグの基礎。[レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md).
+**登録**Visual Studio のデバッグ中に、レジスタの内容をウィンドウが表示されます。 レジスタの背後にある概念について大まかな概要について、**登録**ウィンドウを参照してください[デバッグの基礎: [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)します。
 
 > [!NOTE]
 > 登録情報は、スクリプトや SQL アプリのご利用いただけません。
@@ -56,5 +55,5 @@ ms.locfileid: "53058442"
 
 ### <a name="see-also"></a>関連項目
 
-- [デバッグの基礎:[レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)
+- [デバッグの基礎: [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)
 - [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
