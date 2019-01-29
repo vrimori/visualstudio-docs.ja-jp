@@ -13,15 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 875208d068c791c0238c110ea0e83b04e18348fc
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
-ms.translationtype: MT
+ms.openlocfilehash: 4e42058d2728d806551ae319112052e664950dab
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117941"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53863421"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf ファイルのアップグレード
 
@@ -65,15 +64,15 @@ Visual Studio を使用してデータベース ファイルを含むプロジ�
 
     -   **データ ソース**: `Microsoft SQL Server (SqlClient)`
 
-    -   **サーバー名**:
+    -   **サーバー名**: 
 
         -   既定のバージョンを使用する:`(localdb)\MSSQLLocalDB`します。  これを指定 ProjectV12 または ProjectV13 のいずれかによっては、Visual Studio のバージョンがインストールされているし、最初の LocalDB インスタンスの作成時にします。 **MSSQLLocalDB**ノード**SQL Server オブジェクト エクスプ ローラー**ポイントにバージョンを示しています。
 
         -   特定のバージョンを使用する:`(localdb)\ProjectsV12`または`(localdb)\ProjectsV13`V12 は LocalDB 2014、V13 は LocalDB 2016。
 
-    -   **データベース ファイルを添付**: プライマリの物理パス *.mdf*ファイル。
+    -   **データベース ファイルを添付**:プライマリの物理パス *.mdf*ファイル。
 
-    -   **論理名**: ファイルで使用する名前。
+    -   論理名(&L):ファイルで使用する名前です****。
 
 3.  **[OK]** ボタンを選択します。
 

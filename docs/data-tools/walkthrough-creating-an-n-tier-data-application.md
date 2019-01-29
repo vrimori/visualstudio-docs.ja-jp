@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : n 層データ アプリケーションの作成'
+title: 'チュートリアル: n 層データ アプリケーションを作成する'
 ms.date: 09/08/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,17 +13,16 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
-ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 71c1c8dbaf34613d07ce29fa3f5e08d8e9c6961f
-ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
-ms.translationtype: MTE95
+ms.openlocfilehash: 2e224ae331b1fba42d06973777b50e84bf1f7e8b
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52305703"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "53924268"
 ---
-# <a name="walkthrough-create-an-n-tier-data-application"></a>チュートリアル: n 層データ アプリケーションを作成します。
+# <a name="walkthrough-create-an-n-tier-data-application"></a>チュートリアル: n 層データ アプリケーションを作成する
 *n 層*データ アプリケーションとは、データにアクセスするアプリケーションの中でも、複数の論理レイヤー、つまり*層*に分離されるアプリケーションです。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)します。
 
 n 層アプリケーションで各層を分離する 1 つの方法は、アプリケーションに組み込む層ごとに別個のプロジェクトを作成することです。 型指定されたデータセットには、生成されたデータセットと `DataSet Project` コードの格納先となるプロジェクトを決定する、`TableAdapter` プロパティが含まれています。
@@ -50,7 +49,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 -   データ テーブルにデータを読み込むコードを記述する。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版について、次を参照してください。 [Video How to: n 層データ アプリケーションを作成する](http://go.microsoft.com/fwlink/?LinkId=115188)します。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版について、次を参照してください[ビデオ操作方法: n 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
@@ -106,7 +105,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
  次に、型指定されたデータセットを作成します。 Dataset クラスで型指定されたデータセットが作成されます (含む`DataTables`クラス) と`TableAdapter`1 つのプロジェクト内のクラス。 (すべてのクラスが 1 つのファイルに生成されます)。まま、その他のプロジェクトに移動されたデータセット クラスが、データセットと TableAdapters を別々 のプロジェクトに分離する場合、`TableAdapter`元のプロジェクト内のクラス。 そのため、Tableadapter (DataAccessTier プロジェクト) を含む最終的にプロジェクトで、データセットを作成します。 使用して、データセットを作成して、**データ ソース構成ウィザード**します。
 
 > [!NOTE]
-> 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
+> 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[方法。サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
 ### <a name="to-create-the-dataset"></a>データセットを作成するには
 
@@ -156,7 +155,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 5. **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。
 
-   データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 データセット全体を含んでいたプロジェクト (`DataAccessTier`) には Tableadapter しか含まれています。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (`DataEntityTier`)、型指定されたデータセットが含まれています: *NorthwindDataSet.Dataset.Designer.vb* (または*NorthwindDataSet.Dataset.Designer.cs*)。
+   データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 データセット全体を含んでいたプロジェクト (`DataAccessTier`) には Tableadapter しか含まれています。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (`DataEntityTier`)、型指定されたデータセットが含まれています。*NorthwindDataSet.Dataset.Designer.vb* (または*NorthwindDataSet.Dataset.Designer.cs*)。
 
 > [!NOTE]
 > **[DataSet プロジェクト]** プロパティを設定してデータセットと TableAdapter を分離する場合でも、プロジェクト内の既存のデータセット部分クラスは自動的には移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。

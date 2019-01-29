@@ -1,9 +1,7 @@
 ---
 title: マルチ スレッド アプリをデバッグします。
 description: スレッド ウィンドウと、デバッグの場所 ツールバーを使用して、Visual Studio のデバッグします。
-ms.custom: ''
 ms.date: 11/21/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd66d7f9d8f214e8e7166a77162553b694e20cc5
-ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
-ms.translationtype: MTE95
+ms.openlocfilehash: 2d320c4cc2a224dd17ea85337e38fb43ae8aa5bd
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389404"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54227669"
 ---
-# <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window"></a>チュートリアル: [スレッド] ウィンドウを使用してマルチ スレッド アプリをデバッグします。
+# <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>チュートリアル: [スレッド] ウィンドウを使用してマルチ スレッド アプリのデバッグ (C#、Visual Basic、C++)
 
 いくつかの Visual Studio ユーザー インターフェイス要素では、マルチ スレッド アプリケーションをデバッグするのに役立ちます。 この記事には、コード エディター ウィンドウで、マルチ スレッドのデバッグ機能が導入されています**デバッグの場所**ツールバー、および**スレッド**ウィンドウ。 マルチ スレッド アプリケーションをデバッグするためには、その他のツールについては、次を参照してください。[マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)します。 
   
@@ -99,7 +97,7 @@ ms.locfileid: "52389404"
 
 1. 開く、**デバッグの場所**を選択してツールバー**ビュー** > **ツールバー** > **デバッグの場所**します。 ツールバー領域で右クリックして**デバッグの場所**します。 
    
-1. **デバッグの場所**ツールバーが 3 つのフィールド:**プロセス**、**スレッド**、および**スタック フレーム**します。 ドロップダウン リスト、**スレッド**一覧、およびスレッドの数に注意してください。 **スレッド**で現在実行中のスレッドがマークされている、リスト、 **>** シンボル。 
+1. **デバッグの場所**ツールバーが 3 つのフィールド。**プロセス**、**スレッド**、および**のスタック フレーム**します。 ドロップダウン リスト、**スレッド**一覧、およびスレッドの数に注意してください。 **スレッド**で現在実行中のスレッドがマークされている、リスト、 **>** シンボル。 
    
 1. ソース コード ウィンドウの余白で、スレッド マーカーのアイコンをポイントし、データヒントで、フラグ アイコン (または空のフラグ アイコンのいずれか) を選択します。 フラグ アイコンが赤に変わります。 
    
@@ -188,4 +186,4 @@ ms.locfileid: "52389404"
   
 ## <a name="see-also"></a>関連項目  
  [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+ [方法: デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)

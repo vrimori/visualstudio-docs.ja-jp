@@ -3,7 +3,6 @@ title: マルチ スレッド アプリケーションのデバッグについ�
 description: Visual Studio での並列スタック ウィンドウや 並列ウォッチ ウィンドウを使用したデバッグします。
 ms.custom: H1HackMay2017
 ms.date: 11/16/2018
-ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,14 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a6ded522a917dd7207da7731850303535e19fdb
-ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
-ms.translationtype: MT
+ms.openlocfilehash: 95a198213daa90a1370cba056a8c522495e06c94
+ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51948986"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54227981"
 ---
-# <a name="get-started-debugging-multithreaded-applications"></a>マルチ スレッド アプリケーションのデバッグの開始します。
+# <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>マルチ スレッド アプリケーションのデバッグの開始 (C#、Visual Basic、C++)
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグする方法をユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック**ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、および [フィルター] ブレークポイント。 このチュートリアルを完了に慣れることがするマルチ スレッド アプリケーションをデバッグするための Visual Studio の機能を使用します。
 
 | | |
@@ -35,11 +34,11 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
 
 これら 2 つのトピックでは、その他のマルチ スレッド デバッグ ツールを使用して追加についてを説明します。
 
-- 使用する、**デバッグの場所**ツールバーと**スレッド**ウィンドウを参照してください[チュートリアル: マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)します。
+- 使用する、**デバッグの場所**ツールバーと**スレッド**ウィンドウを参照してください[チュートリアル。マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)します。
 
 - 使用するサンプルの<xref:System.Threading.Tasks.Task>(マネージ コード) を参照してください (C++)、同時実行ランタイムと[チュートリアル: 並行アプリケーションをデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)します。 最もマルチ スレッド アプリケーションの種類に適用される一般的なデバッグ ヒント、そのトピックと、この 1 つの両方を参照します。
   
-まず、マルチ スレッド アプリケーション プロジェクトを必要があります。 次に例をします。  
+まず、マルチ スレッド アプリケーション プロジェクトを必要があります。 以下に例を示します。  
   
 ## <a name="create-a-multithreaded-app-project"></a>マルチ スレッド アプリ プロジェクトを作成します。  
   
@@ -47,7 +46,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  言語の選択: **Visual C#** 、 **Visual C**、または**Visual Basic**します。  
+2.  言語の選択**Visual c#**、 **Visual C**、または**Visual Basic**します。  
   
 3.  **Windows デスクトップ**、選択**コンソール アプリ**します。  
   
@@ -194,7 +193,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
     End Class
     ```
   
-7.  **ファイル**メニューの **すべて保存**します。  
+7.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="debug-the-multithreaded-app"></a>マルチ スレッド アプリをデバッグします。  
   
@@ -258,7 +257,7 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
     これらの右クリック メニューからさまざまなアクションを実行することができますが、このチュートリアルでこれらの詳細の示しますが、**並列ウォッチ**ウィンドウ (次のセクション)。
 
     > [!NOTE]
-    > リスト ビューを各スレッドの情報を表示する、**スレッド**ウィンドウ代わりにします。 参照してください[チュートリアル: マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)します。
+    > リスト ビューを各スレッドの情報を表示する、**スレッド**ウィンドウ代わりにします。 「[チュートリアル:マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)します。
 
 ### <a name="set-a-watch-on-a-variable"></a>変数のウォッチを設定します。
 
@@ -345,6 +344,6 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
 ## <a name="see-also"></a>関連項目  
 [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)  
-[方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)  
-[方法: 並列スタック ウィンドウを使用](../debugger/using-the-parallel-stacks-window.md)  
+[方法: デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)  
+[方法: 並列スタック ウィンドウを使用します。](../debugger/using-the-parallel-stacks-window.md)  
 [方法: [並列ウォッチ] ウィンドウを使用する](../debugger/how-to-use-the-parallel-watch-window.md)  
