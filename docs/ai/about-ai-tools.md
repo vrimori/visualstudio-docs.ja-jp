@@ -1,5 +1,6 @@
 ---
 title: AI Tools for Visual Studio
+titleSuffix: ''
 description: AI Tools for Visual Studio の概要
 keywords: AI, Visual Studio
 author: lisawong19
@@ -11,12 +12,12 @@ ms.devlang: multiple
 ms.service: multiple
 ms.workload:
 - multiple
-ms.openlocfilehash: bb68e1b7b109b762f11410194076ab2b2eb30bb5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 51ee7cb2ea1e90a749fe8f2409125b42b02970c3
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53908554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54800931"
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
@@ -46,5 +47,5 @@ Visual Studio Tools for AI は Azure Machine Learning と統合されており�
 ## <a name="supported-operating-systems"></a>Supported Operating Systems
 現在、この拡張機能は Windows の 64 ビット オペレーティング システムをサポートしています。
 
-# <a name="support"></a>サポート
+## <a name="support"></a>サポート
 この拡張機能のサポートは、[GitHub Issue Tracker](http://github.com/Microsoft/vs-tools-for-ai/issues) で提供されています。 バグ レポートや機能の提案を送信したり、ディスカッションに参加したりできます。

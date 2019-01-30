@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d0501fdd-4b3a-4e74-b6ac-51d950a2e15b
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8175a8337f15517e0b9c88ae3f5405148a4b22b2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f13930905721cca2d957707655cfd0948c875607
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53934970"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54945217"
 ---
 # <a name="object-lifetime-view"></a>オブジェクトの有効期間ビュー
 オブジェクトの有効期間ビューは、**[パフォーマンス セッション]** プロパティ ページで **[Also collect .NET object lifetime data]\(.NET オブジェクトの有効期間情報も収集\)** チェック ボックスがオンになっている場合に使用できます。  

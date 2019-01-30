@@ -4,18 +4,18 @@ ms.date: 01/16/2019
 ms.prod: visual-studio-dev15
 ms.topic: reference
 f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.FSharp.Advanced
+- VS.ToolsOptionsPages.Text_Editor.F%2523.Advanced
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b58f22983d11e44a863c834188cc938282c2626
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+ms.openlocfilehash: 9a3158708215303be4dc0bd66202a165cf3a5d4a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398415"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54955714"
 ---
 # <a name="options-text-editor-f-advanced"></a>[オプション]、[テキスト エディター]、[F#]、[詳細]
 
@@ -23,12 +23,12 @@ ms.locfileid: "54398415"
 
 ## <a name="block-structure-guides"></a>ブロック構造のガイド
 
-コードの中かっこ (**{}**) の間に垂直の点線を表示するには、このチェック ボックスをオンにします。 これによって、個々のコード ブロックを簡単に識別できます。
-  
+選択した場合、構造化されたコード ブロックに合う垂直線がエディターに表示され、個々のコード ブロックを簡単に識別できます。
+
 ## <a name="outlining"></a>アウトライン
 
 このチェック ボックスをオンにすると、ファイルのアウトラインが自動的に作成され、折りたたみ可能なコード ブロックが作成されます。
-  
+
 ## <a name="see-also"></a>関連項目
 
 - [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 820cf192-7fd6-4bee-9a51-aa69154aca85
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4922020a6020630ce54767e788b14a1ed7c0462
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f64789bafa8fe5077678715a7439cbd1c1bf03b3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986376"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927204"
 ---
 # <a name="filter-report-views"></a>レポート ビューのフィルター処理
 フィルターをプロファイル データ ファイルに適用すると、パフォーマンス レポート ビューに表示する、またはレポート ファイルにエクスポートするプロファイル データを制限することができます。 レポートはタイム スタンプ値の間のデータに制限でき、データは特定のプロセスおよびスレッドに制限できます。 フィルターをファイルに保存し、保存したフィルターをインポートすることで、別のプロファイル データ ファイルにフィルターを作成できます。  
