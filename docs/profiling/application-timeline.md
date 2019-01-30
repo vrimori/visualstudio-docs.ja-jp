@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 96d770679055acd39f0913aef3e8a38281201762
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ebba86ae6683ecce39a1246ac92fc714d6649a89
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53911313"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54948610"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>リソース消費量と UI スレッド アクティビティを分析する (XAML)
 
@@ -84,7 +84,7 @@ ms.locfileid: "53911313"
 
 ![CPU 使用状況グラフ](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")  
 
-**[UI スレッド使用状況 (%)]** グラフは、コレクション期間中にあるカテゴリで費やされた相対的な時間を横棒グラフで示したものです。  
+[ **UI スレッド使用状況 (%)** ] グラフは、コレクション期間中にあるカテゴリで費やされた相対的な時間を横棒グラフで示したものです。  
 
 ### <a name="BKMK_Visual_throughput_FPS_graph"></a> ビジュアル スループット (FPS) グラフ  
 
@@ -112,12 +112,12 @@ ms.locfileid: "53911313"
   
 #### <a name="BKMK_Customizing_Timeline_details_"></a> タイムラインの詳細のカスタマイズ  
 
-**[タイムラインの詳細]** ツールバーを使用して、**[タイムラインの詳細]** ビュー エントリの並べ替え、フィルター操作、注釈の指定を行います。  
+[ **タイムラインの詳細** ] ツールバーを使用して、[ **タイムラインの詳細** ] ビュー エントリの並べ替え、フィルター操作、注釈の指定を行います。  
   
 |||  
 |-|-|  
 |**並べ替え**|開始時刻またはイベントの長さによって並べ替えます。|  
-|![フレームごとのグループ イベント](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|フレームごとにイベントをグループ化する最上位の **[フレーム]** カテゴリを追加または削除します。|  
+|![フレームごとのグループ イベント](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|フレームごとにイベントをグループ化する最上位の [ **フレーム** ] カテゴリを追加または削除します。|  
 |![タイムラインの詳細リストのフィルター](../profiling/media/timeline_filter.png "TIMELINE_Filter")|選択したカテゴリまたはイベントの長さに基づいて、一覧をフィルター処理します。|  
 |![タイムラインの詳細情報のカスタマイズ](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|イベントに注釈を指定できます。|  
   

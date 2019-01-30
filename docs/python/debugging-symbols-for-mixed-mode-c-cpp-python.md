@@ -6,16 +6,16 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 909b3ab71a4e204372c291ec6ca5421b500a056a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9d61c3bcf9e7d403a73c78700257f1ecfe8a70fd
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885969"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010156"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルをインストールする
 
@@ -51,7 +51,7 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
 
 1. **[ツール]** > **[オプション]** メニューを選択し、**[デバッグ]** > **[シンボル]** に移動します。
 
-1. ツールバーの **[追加]** ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、*c:\python34\Symbols* など、*python.pdb* がある場所) を入力し、**[OK]** を選びます。 
+1. ツールバーの **[追加]** ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、*c:\python34\Symbols* など、*python.pdb* がある場所) を入力し、**[OK]** を選びます。
 
     ![混合モードのデバッグでのシンボルのオプション](media/mixed-mode-debugging-symbols.png)
 
@@ -62,9 +62,9 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
 
 ## <a name="official-distributions"></a>公式ディストリビューション
 
-| Python のバージョン | ダウンロード | 
-| --- | --- | 
-| 3.5 以降 | Python インストーラーでシンボルをインストールします。 | 
+| Python のバージョン | ダウンロード |
+| --- | --- |
+| 3.5 以降 | Python インストーラーでシンボルをインストールします。 |
 | 3.4.4 | [32 ビット](https://www.python.org/ftp/python/3.4.4/python-3.4.4-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64-pdb.zip) |
 | 3.4.3 | [32 ビット](https://www.python.org/ftp/python/3.4.3/python-3.4.3-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64-pdb.zip) |
 | 3.4.2 | [32 ビット](https://www.python.org/ftp/python/3.4.2/python-3.4.2-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64-pdb.zip) |

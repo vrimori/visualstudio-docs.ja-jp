@@ -10,12 +10,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6b96faf4ec1daa80bdd6d97e623fd0e155a39325
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bd4986d88654e584b3c05be2fd2b720b76be423a
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53942188"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54834254"
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio 2017 で Live Unit Testing の使用を開始する
 
@@ -25,7 +25,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 完全な C# ソリューションは、GitHub 上の [MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) リポジトリからダウンロードできます。
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 完全な Visual Basic ソリューションは、GitHub 上の [MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/visual-basic/UtilityLibraries/) リポジトリからダウンロードできます。
 
 ---
@@ -78,7 +78,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 1.  Visual Studio の最上位メニューから、**[ビルド]** > **[ソリューションのビルド]** の順に選択します。 Visual Studio によって目的のライブラリが正常にビルドされるはずです。
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、Visual Basic ノードを選択し、次に **[.NET Standard]** を選択します。
@@ -124,7 +124,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
    > [!NOTE]
    > 単体テストを記述する言語は、クラス ライブラリと同じ言語でなくてもかまいません。
 
-1. 次の図に示すように、右側のウィンドウで **[単体テスト プロジェクト (.NET Core)]** テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibraryTests`」と入力します。
+1. 次の図に示すように、右側のウィンドウで [**単体テスト プロジェクト (.NET Core)**] テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibraryTests`」と入力します。
 
    ![単体テスト プロジェクトの場合の [新しいプロジェクトの追加] ダイアログ](./media/lut-start/add-unit-test-cs.png)
 
@@ -153,7 +153,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 1. Visual Studio の最上位メニューから、**[ビルド]** > **[ソリューションのリビルド]** の順に選択して、単体テスト プロジェクトをコンパイルします。
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
@@ -162,7 +162,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
    > [!NOTE]
    > 単体テストを記述する言語は、クラス ライブラリと同じ言語でなくてもかまいません。
 
-1. 次の図に示すように、右側のウィンドウで **[単体テスト プロジェクト (.NET Core)]** テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibraryTests`」と入力します。
+1. 次の図に示すように、右側のウィンドウで [**単体テスト プロジェクト (.NET Core)**] テンプレートを選択し、**[名前]** テキスト ボックスに「`StringLibraryTests`」と入力します。
 
    ![単体テストの場合の [新しいプロジェクトの追加] ダイアログ](./media/lut-start/add-unit-test-vb.png)
 
@@ -210,7 +210,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Live Unit Testing の開始後のテスト エクスプローラーとコード ウィンドウ](media/lut-start/lut-results-cs.png)
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Live Unit Testing の開始後のテスト エクスプローラーとコード ウィンドウ](media/lut-start/lut-results-vb.png)
 
 ---
@@ -226,7 +226,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
    ![Return ステートメントのコード カバレッジ](media/lut-start/code-coverage-cs2.png)
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. `StartsWithUpper` メソッド内の `If (String.IsNullOrWhiteSpace(s)) Then` という行に表示された緑のチェック マークをクリックします。 次の図に示すように、Live Unit Testing は、そのコード行が 3 つのテストでカバーされており、いずれのテストも正常に実行されていることを示します。
 
    !["If" 条件付きステートメントのコード カバレッジ](media/lut-start/code-coverage-vb1.png)
@@ -262,7 +262,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
     ![StartsWithLower メソッドのコード カバレッジ](media/lut-start/lut-extended-cs.png)
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 次の `TestStartsWithLower` メソッドと `TestDoesNotStartWithLower` メソッドをプロジェクトのテスト ソース コード ファイルに追加します。
 
     [!code-vb[StringLibraryTest source code](samples/snippets/visual-basic/lut-start/unittest2.vb#1)]
@@ -322,7 +322,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
 1. テスト プログラムの実行を続行するには、**[デバッグ]** > **[続行]** の順に選択するか、**F5** キーを押すか、あるいはツールバーの **[続行]** ボタンをクリックします。 ハンドルされない例外が発生したため、テストは終了します。
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. テスト ファイルに次のメソッドを追加します。
 
     [!code-vb[The TestHasEmbeddedSpaces test method](samples/snippets/visual-basic/lut-start/unittest2.vb#3)]
@@ -370,7 +370,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
     ![成功した HasEmbeddedSpaces テスト](media/lut-start/test-success-cs.png)
 
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. `HasEmbeddedSpaces` メソッドでの比較を確認します。 このメソッドでは、埋め込みスペースを U+0020 と見なしています。 ただし、Unicode Standard には、その他にも多くの空白文字が含まれています。 このことは、空白文字かどうかのテストが、ライブラリ コードで正しく行われていないことを示しています。
 
 1. 等価比較を、<xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> メソッドへの呼び出しに置き換えます。
