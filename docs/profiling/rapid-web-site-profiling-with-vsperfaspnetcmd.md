@@ -7,15 +7,15 @@ helpviewer_keywords:
 - VSPerfASPNETCmd
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac8ec48f7e860d4588a1d133792ceeb1c26add45
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 617e032805f0074b813bc3a7dc5a66047186861b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53849646"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54989719"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング
 
@@ -61,7 +61,7 @@ Web アプリケーション内の静的にコンパイルされた .*dll* フ�
 
  また、**/Trace** オプションを使用して .NET メモリ データと共に詳細なタイミング情報を収集することもできます。
 
- **vsperfaspnetcmd /memory** **[:lifetime]** **/trace**`websiteUrl`
+ **vsperfaspnetcmd /memory** [**:lifetime**] **/trace**`websiteUrl`
 
 ## <a name="to-collect-tier-interaction-data"></a>階層相互作用データを収集するには
 
@@ -80,7 +80,7 @@ Web アプリケーション内の静的にコンパイルされた .*dll* フ�
 
 .NET メモリ データと共に階層相互作用データを収集するには、コマンド ラインに次のように入力します。
 
-**vsperfaspnetcmd /memory** **[:lifetime]** **/tip**_websiteUrl_
+**vsperfaspnetcmd /memory** [**:lifetime**] **/tip**_websiteUrl_
 
 ## <a name="use-the-nowait-option"></a>/NoWait オプションの使用
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 4017d9d1-d609-4f41-8e4e-976abae746b3
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21cb675136ba5180c8a7d26073ea16e6c6831aac
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 23bdb6bc462f88f1409fdfb3ab792bce092acb0c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53831681"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54961219"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの詳細なタイミング データの収集
 このセクションでは、コマンド ラインからインストルメンテーション メソッドを使用して、クライアント (スタンドアロン) コンポーネントの詳細なパフォーマンス データを収集する手順とオプションについて説明します。  

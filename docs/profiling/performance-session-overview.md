@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 35752f95-a57a-4def-b64d-cf4899669e99
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b673bad7bbcd552140cca25cc5a3fe90404c0716
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 0dbd4cfbaa67c2aec73bd04e0c5bc8f28b1c970d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867174"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54959513"
 ---
 # <a name="performance-session-overview"></a>パフォーマンス セッションの概要
 この概要では、プロファイリングの基本について説明します。 パフォーマンス作業を初めて行う開発者は、すぐに成果を上げてコードのパフォーマンスを向上させるうえで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールがいかに役立つかを理解できます。 プロファイリングの経験がある開発者は、プロファイリング ツールに関する特定の機能やプロセスの概要を確認できます。  
