@@ -52,6 +52,11 @@
 ## [Subversion リポジトリのセットアップ](set-up-subversion-repository.md)
 ## [Subversion の使用](working-with-subversion.md)
 
+# [Web アプリのデプロイ](web-app-deployment.md)
+## [Azure App Service に発行する](publish-app-svc.md)
+## [フォルダーに発行する](publish-folder.md)
+
+
 # [ワークロード](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
 ### [Razor](razor.md)
