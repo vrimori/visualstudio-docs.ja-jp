@@ -6,17 +6,17 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 25492d3f6d152369bdabaad5eafc05f5e8822132
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c37492bfe514536ff94cf8c51a616e2df69b891e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53879359"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55010208"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>プロジェクトの Python 環境を選択する方法
 
@@ -46,7 +46,7 @@ Visual Studio のすべての新しい Python プロジェクトは、最初は�
 
 ## <a name="use-virtual-environments"></a>仮想環境を使用する
 
-仮想環境は、特定の Python インタープリターと、他のグローバル環境や conda 環境とは異なる特定のライブラリ セットの固有の組み合わせです。 仮想環境はプロジェクトに固有であり、プロジェクト フォルダーで管理されます。 そのフォルダーには、環境のインストール済みのライブラリの他に、ファイル システムの他の場所にある環境の "*基本インタープリター*" へのパスを示す *pyvenv.cfg* ファイルが格納されます。 (つまり、仮想環境にはインタープリターのコピーではなく、それに対するリンクのみが含まれます)。 
+仮想環境は、特定の Python インタープリターと、他のグローバル環境や conda 環境とは異なる特定のライブラリ セットの固有の組み合わせです。 仮想環境はプロジェクトに固有であり、プロジェクト フォルダーで管理されます。 そのフォルダーには、環境のインストール済みのライブラリの他に、ファイル システムの他の場所にある環境の "*基本インタープリター*" へのパスを示す *pyvenv.cfg* ファイルが格納されます。 (つまり、仮想環境にはインタープリターのコピーではなく、それに対するリンクのみが含まれます)。
 
 仮想環境を使用する利点は、プロジェクトを開発しているときに、仮想環境ではプロジェクトの正確な依存関係が常に反映されることです  (一方、共有グローバル環境では、プロジェクトでの使用の有無に関係なく、複数のライブラリが含まれます)。仮想環境から *requirements.txt* ファイルを簡単に作成でき、そのファイルを使用して依存関係を別の開発環境または実稼働コンピューターに再インストールできます。 詳細については、「[requirements.txt での必須パッケージの管理](managing-required-packages-with-requirements-txt.md)」をご覧ください。
 
