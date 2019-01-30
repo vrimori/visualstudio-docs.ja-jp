@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5a53472-6f2a-42b8-a6db-593ca99c9790
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fee34977f790589194ec120ea88515bcf884a9e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: eb0e4d6cbcceb92485f3427e5e18a8d7e7fc18c4
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53921774"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54989563"
 ---
 # <a name="lc-task"></a>LC タスク
 *LC.exe* をラップします。LC.exe は *.licx* ファイルから *.license* ファイルを生成します。 *LC.exe* の詳細については、「[Lc.exe (ライセンス コンパイラ)](/dotnet/framework/tools/lc-exe-license-compiler)」を参照してください。  

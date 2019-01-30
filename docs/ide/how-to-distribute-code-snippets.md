@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5f717abd-e167-47ae-818c-6b0bae100ceb
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e624f313c66df09c7496babe08a32dfd8453829c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 890bec08c29491bbd867c9c8380172cced71d2fe
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53836063"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54985709"
 ---
 # <a name="how-to-distribute-code-snippets"></a>方法: コード スニペットを配布する
 
@@ -28,7 +28,7 @@ Visual Studio 拡張機能を作成するには、Visual Studio SDK をインス
 
 ## <a name="set-up-the-extension"></a>拡張機能を設定する
 
-この手順では、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」で作成したのと同じ Hello World コード スニペットを使います。コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」を参照してください。 *.snippet* のテキストは用意されているため、前の手順に戻ってコード スニペットを作成する必要はありません。
+この手順では、「[チュートリアル: コード スニペットを作成する」で作成したのと同じ Hello World コード スニペットを使います。コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」を参照してください。 *.snippet* のテキストは用意されているため、前の手順に戻ってコード スニペットを作成する必要はありません。
 
 1. **TestSnippet** という新しい VSIX プロジェクトを作成します  (**[ファイル]** > **[新規作成]** > **[プロジェクト]** > **[Visual C#] (または [Visual Basic])** > **[拡張]**)。
 
