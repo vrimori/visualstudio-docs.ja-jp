@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: b3191df6ead3454bb138efae2aaf7183cc556d12
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 326627f16bb431b582666cccafb6a511cf815718
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968366"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54918603"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>Visual Studio で R コードを編集する
 
@@ -40,7 +40,7 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 ## <a name="edit-and-organize-code"></a>コードを編集し、整理する
 
-コードを入力すると、RTVS は [IntelliSense](r-intellisense.md) ページでの記述に従ってオート コンプリートを行います。 また、かっこの補完などのオート フォーマットを実行します。 
+コードを入力すると、RTVS は [IntelliSense](r-intellisense.md) ページでの記述に従ってオート コンプリートを行います。 また、かっこの補完などのオート フォーマットを実行します。
 
 ![インライン書式設定を示すアニメーション](media/editing-inline-formatting.gif)
 
@@ -129,6 +129,6 @@ RTVS には、関数のパラメーター名を使って [Roxygen](http://roxyge
 | | 最初の文字入力時の入力候補一覧 | オン | 最初の文字入力で入力候補一覧を表示します。 オフのときは、入力候補一覧は **[編集]**、**[IntelliSense]**、**[メンバーの一覧]** (**Ctrl**+**J**) の順に選択すると表示されます。 |
 | | **Tab** キーの使用時の入力候補一覧 | オフ | 1 つ以上の文字を入力して **Tab** キーを押すと、入力候補一覧が表示されます。 |
 | | 部分的に入力した引数名と一致させる | オフ | 関数呼び出しで引数名を入力するとき、シグネチャを使って最適な引数の説明を示します。 |
-| 対話型ウィンドウ | R コンソールにおける構文チェック | オフ | 対話型ウィンドウで構文チェックを適用します。 複数行のステートメントでは、構文チェックが正しく機能しないことがあります。 | 
+| 対話型ウィンドウ | R コンソールにおける構文チェック | オフ | 対話型ウィンドウで構文チェックを適用します。 複数行のステートメントでは、構文チェックが正しく機能しないことがあります。 |
 | アウトライン | コードのアウトライン表示 | オン | 複数行ステートメントなどの部分に折りたたみ可能な領域を自動的に作成します。 |
 | 構文チェック | [構文エラーの表示] | オン | コードの自動構文チェックを有効にします。 |
