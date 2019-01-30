@@ -1,22 +1,22 @@
 ---
 title: Python で CookieCutter テンプレートを使用する
 description: Visual Studio では、Python コード用のテンプレートを見つけて、これらのテンプレートからプロジェクトを作成する、グラフィカルな Cookiecutter 拡張機能がサポートされています。
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f5123323794d7a333440cb8aa94c51e44c8fc87
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b09e46f65d7aeafbf781af2a5e77ae9e4cc17ea0
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53958236"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231793"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter 拡張機能の使用
 
@@ -60,7 +60,7 @@ Cookiecutter のホーム ページにはテンプレートの一覧が次のグ
 
 ![Cookiecutter のオプション ページ](media/cookiecutter-template-options.png)
 
-各 Cookiecutter テンプレートでは、独自のオプションのセットを定義し、各オプションの既定値 (各エントリ フィールドで推奨テキストとして表示される値) を指定します。 既定値はコード スニペットの場合もあります。これは主に、他のオプションを使用する動的な値である場合です。 
+各 Cookiecutter テンプレートでは、独自のオプションのセットを定義し、各オプションの既定値 (各エントリ フィールドで推奨テキストとして表示される値) を指定します。 既定値はコード スニペットの場合もあります。これは主に、他のオプションを使用する動的な値である場合です。
 
 各オプションの既定値はユーザー構成ファイルを使用してカスタマイズできます。 Cookiecutter 拡張機能はユーザー構成ファイルを検出すると、テンプレートの既定値をユーザー構成ファイルの既定値で上書きします。 この動作については、Cookiecutter ドキュメントの [User Config](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) に関するセクションで説明しています。
 

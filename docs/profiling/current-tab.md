@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2c7b1ae5-3756-4795-bc59-f6bb113f2ba5
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04700ebac239be6c72038b30c67d66cfb0e3ec7f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4303336fe12f817bdb2843d03f9e936a5b1736c1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53964735"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55069148"
 ---
 # <a name="current-tab"></a>現在のタブ
 **現在**のタブをクリックすると、CPU スレッド セグメントが選択されている場合、現在の選択ポイントに最も近い呼び出し履歴 (利用できる場合) が表示されます。  その場合、選択ポイントはタイムラインの上に黒い矢印またはキャレットで表示されます。 ブロッキング セグメントが選択されているとき、実行がないため、キャレットは表示されません。 しかしながら、セグメントは強調表示され、呼び出し履歴が表示されます。  

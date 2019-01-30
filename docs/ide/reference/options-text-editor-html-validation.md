@@ -8,15 +8,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Validation
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fad568f43e1064fe264c528d68a39b072bf905db
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
+ms.openlocfilehash: 7f629a0b8d9f149ee10f7a35c75e351a6c3abfd3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417825"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031774"
 ---
 # <a name="options-text-editor-html-web-forms-validation"></a>[オプション]、[テキスト エディター]、[HTML (Web フォーム)]、[検証]
 
@@ -27,7 +27,7 @@ ms.locfileid: "54417825"
 - **検証スキーマの検出に DOCTYPE を使用する**
 
    スキーマは、要素、属性、およびそのスキーマで有効な大文字小文字の設定を決定します。 IntelliSense で使用できるタグと属性も決定します。
-  
+
    Visual Studio がページの **<!DOCTYPE>** 宣言と **html** 要素の内容を使用してスキーマを判断するように設定するには、このオプションを選択します。 たとえば、このオプションを選択しているときに、ページに `<!DOCTYPE html>` 宣言が含まれている場合、Visual Studio では HTML5 スキーマが使用されます。 ただし、**html** タグに **xmlns** 属性 (`<html xmlns="http://www.w3.org/1999/xhtml">` など) が含まれている場合、Visual Studio では XHTML5 スキーマが使用されます。
 
 - **DOCTYPE が見つからないときのターゲット**
@@ -37,7 +37,7 @@ ms.locfileid: "54417825"
   - **エラーの表示**
 
      検証を有効にするには、このチェック ボックスをオンにします。 チェック ボックスをオフにすると、エディターは検証エラーをマークしません。
-    
+
      他のチェック ボックスを使用してエディターでマーク対象とする個々のエラーの種類を指定することで、検証を細かく調整できます。
 
      > [!NOTE]

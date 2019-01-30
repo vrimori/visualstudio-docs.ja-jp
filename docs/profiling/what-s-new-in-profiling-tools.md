@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: d4736cc8-8961-4089-be9e-d5190ce8353c
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ca95259ad8f31822e235c470e437daf0adaadc3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b1822ec74903c8baa75ce437b0115cecdfb911c3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53865480"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55026946"
 ---
 # <a name="whats-new-in-profiling-tools-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] プロファイリング ツールの新機能
 
@@ -24,7 +24,7 @@ ms.locfileid: "53865480"
 
 詳しくは、「[[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] リリース ノート](/visualstudio/releasenotes/vs2017-relnotes#debuggingdiag)」をご覧ください。
 
-パフォーマンス分析の主な領域に重点を置くことができる、**概要**タブがツールに追加されました。 概要タブには発生したイベントの数が表示され、ヒープのスナップショットを作成して、CPU 使用率のデータ収集を直ちに有効にすることができます。 このビューには、[Application Insights](https://azure.microsoft.com/en-us/documentation/articles/app-insights-visual-studio/) または [UI Analysis](/visualstudio/releasenotes/vs2017-relnotes#UIAnalysis) のイベントが表示されます。 また、Visual Studio Enterprise では、ビューに IntelliTrace イベントも表示されます。
+パフォーマンス分析の主な領域に重点を置くことができる、**概要**タブがツールに追加されました。 概要タブには発生したイベントの数が表示され、ヒープのスナップショットを作成して、CPU 使用率のデータ収集を直ちに有効にすることができます。 このビューには、[Application Insights](/azure/azure-monitor/app/visual-studio) または [UI Analysis](/visualstudio/releasenotes/vs2017-relnotes#UIAnalysis) のイベントが表示されます。 また、Visual Studio Enterprise では、ビューに IntelliTrace イベントも表示されます。
 
 ![診断ツールの概要タブ](../profiling/media/DiagToolsSummaryTab-2.png "DiagToolsSummaryTab")
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3e84e513-dc64-40bb-b385-03281f28b519
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b83ed1ae187647f4e1025d18b4973cb1e25b399
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e8586bff16bdcf8a67d8d1e27abb37b13efa5ce4
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53844944"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55041972"
 ---
 # <a name="performance-report-views"></a>パフォーマンス レポートのビュー
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのレポートおよびビューに関するリファレンス情報を提供します。 プロファイリング データ ファイルのビューは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 (IDE) で表示されます。 レポートは、[VSPerfReport](../profiling/vsperfreport.md) コマンド ライン ツールによって生成されます。  
