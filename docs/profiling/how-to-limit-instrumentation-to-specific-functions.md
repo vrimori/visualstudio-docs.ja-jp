@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: bd98d6bf-2560-4eba-b063-2facb09f87c4
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0135ea7d3a99f54b8bc61fb77c5b1657992033c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bf74936fcd4f8529692d6709cdb9c8600f273025
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53895059"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54994343"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>方法: インストルメンテーションを特定の関数に制限する
 インストルメンテーションとデータ収集は、1 つ以上の関数に制限することができます。これを行うには、**[パフォーマンス セッション]** のプロパティ ページまたはターゲット バイナリのプロパティ ページの **[詳細]** ページでオプションを設定します。  

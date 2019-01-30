@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c879ddc38b2dd3988878119f87c3d777aea7c09d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f4665d437290e75d1542e79d62f898f916576806
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53917502"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54978140"
 ---
 # <a name="generateresource-task"></a>GenerateResource タスク
 *.txt* ファイルおよび *.resx* (XML ベースのリソース形式) ファイルと共通言語ランタイムの *.resources* バイナリ ファイルとの間の変換を行います。 .resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、*.txt* ファイルまたは *.resx* ファイルを *.resources* ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
