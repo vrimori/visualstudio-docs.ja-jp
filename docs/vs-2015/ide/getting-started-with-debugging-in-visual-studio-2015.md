@@ -9,13 +9,13 @@ ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7e4366061cc6eba29f630cb51757ddc2ace58970
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+manager: jillfra
+ms.openlocfilehash: 7fecc637a62e96381362d79f66eb5a3cd4d8fa1d
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53066245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54764849"
 ---
 # <a name="getting-started-with-debugging-in-visual-studio-2015"></a>Visual Studio 2015 のデバッグの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ Visual Studio 2015 は、プロジェクトのビルドとデバッグ ツール
  エディターを見つけ、コードをいくらか作成しました。 これから、そのコードのデバッグを開始します。 ほとんどの IDE と同じように、Visual Studio 2015 には、2 つのデバッグ フェーズがあります。1 つは、コードをビルドして、プロジェクト エラーとコンパイラ エラーをキャッチして解決するフェーズです。もう 1 つは、環境でそのコードを実行し、実行時エラーと動的エラーをキャッチして解決するフェーズです。
 
 ### <a name="configuring-a-build"></a>ビルドの構成
- 2 つの基本的な種類のビルド構成があります。**デバッグ**と**リリース**します。 最初の構成では、より低速で大きな実行可能ファイルが生成されます。対話型の実行時デバッグ機能はより豊富ですが、これが出荷されることはありません。 2 つ目のビルドはより高速で、より最適化された実行可能ファイルです。(少なくともコンパイラの観点から) このビルドが出荷に適しています。
+ ビルドの構成には、**デバッグ**および**リリース**という 2 つの基本的な種類があります。 最初の構成では、より低速で大きな実行可能ファイルが生成されます。対話型の実行時デバッグ機能はより豊富ですが、これが出荷されることはありません。 2 つ目のビルドはより高速で、より最適化された実行可能ファイルです。(少なくともコンパイラの観点から) このビルドが出荷に適しています。
 
  既定のビルド構成は、**デバッグ**です。
 
@@ -190,5 +190,5 @@ Visual Studio 2015 は、プロジェクトのビルドとデバッグ ツール
 
  Visual Studio 2015 の単体テストの詳細、およびより優れた品質のコードの作成に単体テストがどのように役立つかについては、「[単体テストの基本](../test/unit-test-basics.md)」をお読みください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
  [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)[デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md) [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)[デバッガーの基本事項](../debugger/debugger-basics.md)

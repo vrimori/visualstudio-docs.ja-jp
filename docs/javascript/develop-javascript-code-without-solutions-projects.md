@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e8c42bd40528dfe8567219bdc2bc4a8d216e7c6b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 37061173a7bc0b3d9c3b9b7e011428ec3a297b72
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53899757"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55043714"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio で JavaScript と TypeScript のコードをソリューションまたはプロジェクトなしで開発します
 
@@ -32,9 +32,9 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 
 ## <a name="npm-integration"></a>npm 統合
 
-開いたフォルダーに *package.json* ファイルが含まれている場合、*package.json* を右クリックして npm に固有のコンテキスト メニュー (ショートカット メニュー) を表示できます。 
+開いたフォルダーに *package.json* ファイルが含まれている場合、*package.json* を右クリックして npm に固有のコンテキスト メニュー (ショートカット メニュー) を表示できます。
 
-![ソリューション エクスプローラーの npm メニュー](../javascript/media/solution-explorer-npm-ctx.png) 
+![ソリューション エクスプローラーの npm メニュー](../javascript/media/solution-explorer-npm-ctx.png)
 
 ショートカット メニューでは、プロジェクト ファイルの利用時に [npm パッケージを管理する](npm-package-management.md)ときと同じ方法で、npm によってインストールされたパッケージを管理できます。
 
@@ -43,7 +43,8 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 ## <a name="build-and-debug"></a>ビルドとデバッグ
 
 ### <a name="packagejson"></a>package.json
-フォルダーの *package.json* で `main` 要素が指定される場合、**Debug** コマンドを *package.json* の右クリック ショートカット メニューで利用できます。 これをクリックすると、指定のスクリプトをその引数として *node.exe* が開始されます。
+フォルダーの *package.json* で `main` 要素が指定される場合、**Debug** コマンドを *package.json* の右クリック ショートカット メニューで利用できます。
+これをクリックすると、指定のスクリプトをその引数として *node.exe* が開始されます。
 
 ### <a name="javascript-files"></a>JavaScript ファイル
 ファイルを右クリックし、ショートカット メニューから **[デバッグ]** を選択すると JavaScript ファイルをデバッグできます。 これにより、その JavaScript ファイルをその引数として *node.exe* が開始されます。

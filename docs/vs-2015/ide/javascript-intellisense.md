@@ -1,13 +1,9 @@
 ---
 title: JavaScript IntelliSense | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [JavaScript]
 - <reference> JavaScript XML tag
@@ -29,13 +25,13 @@ ms.assetid: af1a3171-c9d8-45a3-9c96-a763e3b163ef
 caps.latest.revision: 67
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a70e9598a6cae07a1ef6fcb861924b250a444ffe
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 64da24c21ef40bd850e7fb91ed530df67bfe66b4
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53864544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54763285"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -288,5 +284,5 @@ IntelliSense ではコード入力中に情報が表示されるため、コー�
 - [識別子の入力候補](../ide/statement-completion-for-identifiers.md)
 - [XML ドキュメント コメント](../ide/xml-documentation-comments-javascript.md)
 - [DHTML オブジェクト モデルについて](http://go.microsoft.com/fwlink/?LinkID=92344)
-- [リスト メンバー](http://msdn.microsoft.com/en-us/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
+- [リスト メンバー](http://msdn.microsoft.com/1b9cc469-9cd4-4d42-9999-1f9479635ff8)
 - [SRC 属性&#124;src プロパティ](http://go.microsoft.com/fwlink/?LinkId=92345)

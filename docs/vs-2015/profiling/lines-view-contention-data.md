@@ -1,27 +1,22 @@
 ---
 title: 行ビュー - 競合データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Lines view
 ms.assetid: 859b02d2-eddf-4ad3-95de-0df67ee2ab03
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d85173dcf2ab5632fdb18233f9f27f329ddd3769
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8cb6b8191b39bfc79615bf0bbcd4fb469395f8d8
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51773198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779051"
 ---
 # <a name="lines-view---contention-data"></a>行ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -70,11 +65,8 @@ ms.locfileid: "51773198"
 |**ソース開始行**|ステートメントが開始されるソース ファイル内の行番号。|  
 |**ソース終了行**|ステートメントが終了するソース ファイル内の行番号。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [行ビュー](../profiling/lines-view.md)   
  [行ビュー - サンプリング](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [行 ビュー](../profiling/lines-view-sampling-data.md)
-
-
-

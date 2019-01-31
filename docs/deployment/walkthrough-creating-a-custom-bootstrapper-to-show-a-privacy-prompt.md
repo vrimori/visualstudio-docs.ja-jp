@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e32ea7053d79a64e0c1502ed251d55f6150500a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c8719f3dc6d892801135d14d093c265445e90fcb
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882723"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55021534"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用のカスタム ブートス トラップを作成します。
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
@@ -272,7 +272,7 @@ ms.locfileid: "53882723"
   
 8.  次のエラー メッセージを表示する詳細をクリックします。コンポーネント更新プログラムの同意 ダイアログ ボックスは、次のエラー メッセージでのインストールに失敗しました。「自動更新の契約に同意がありません」。 次のコンポーネントがインストールに失敗しました-更新プログラムの同意 ダイアログ。  
   
-9. [ **閉じる**] をクリックします。  
+9. **[閉じる]** をクリックします。  
   
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>同意を作成してクリックして、セットアップ プログラムをテスト、するには  
   

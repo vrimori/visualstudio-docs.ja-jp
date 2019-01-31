@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 30af6a2f-be84-429e-a96a-d0f9ed9343fb
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e278a9512bf5b85f67bd96be958cc51534735fdd
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f33406f19a3401b503d81b5d7ede3999dc3a6149
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53827742"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55070755"
 ---
 # <a name="idiasymbolgetinlspec"></a>IDiaSymbol::get_InlSpec
 この関数は、関数がインラインとしてマークされているかどうかを示すフラグを取得します (のいずれかを使用して、 [inline、_ _inline、 \__forceinline](/cpp/cpp/inline-functions-cpp)属性)。  

@@ -1,14 +1,9 @@
 ---
 title: '&lt;フィールド&gt;(JavaScript) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - <field> JavaScript XML tag
 - field JavaScript XML tag
@@ -16,13 +11,13 @@ ms.assetid: c494bae0-3095-42a3-aa0a-4c415188c65c
 caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a57f84901f2ac6bc691c50fa6d1e3c8b94db6c50
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b2fe09070261460b7b83f54de44a07cf96d40cf2
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49939907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54766557"
 ---
 # <a name="ltfieldgt-javascript"></a>&lt;フィールド&gt;(JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -91,7 +86,7 @@ ms.locfileid: "49939907"
   `description`  
   任意。 フィールドの説明。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  コンストラクター関数内のフィールドをドキュメント化する場合は、`name` 属性が必要です。 それ以外のすべてのシナリオでは、`<field>` 要素の属性はすべて省略可能です。  
   
  コンストラクター関数をドキュメント化する場合は、`<field>` 要素をフィールド宣言の直前に記述する必要があります。 `name` 属性は、ソース コードで使用されているフィールド名と一致する必要があります。 オブジェクトのメンバーの場合、`name` 要素がオブジェクト メンバー宣言の直前にあれば、`<field>` 属性は省略できます。  
@@ -160,8 +155,5 @@ new calculator().f.   // Completion list for a Number.
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [XML ドキュメント コメント](../ide/xml-documentation-comments-javascript.md)
-
-
-

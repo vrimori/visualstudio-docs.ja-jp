@@ -1,14 +1,9 @@
 ---
-title: '方法 : Windows カウンター データを収集する | Microsoft Docs'
-ms.custom: ''
+title: '方法: Windows カウンター データを収集する | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.syscounter
 - vs.performance.property.wincounter
@@ -20,15 +15,15 @@ ms.assetid: db4fbac2-bea5-4558-aa8b-160fcccf4b33
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 030a36f2f09465b29faf23b1fc05ad13f4a01326
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2c3e4a9cffd81561af39cef5eb88f4a7745b2dad
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51770493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54753417"
 ---
-# <a name="how-to-collect-windows-counter-data"></a>方法 : Windows カウンター データを収集する
+# <a name="how-to-collect-windows-counter-data"></a>方法: Windows カウンター データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Windows カウンターは、プロファイル中に一定間隔で収集できるシステム パフォーマンス カウンターです。 プロファイリング ツール レポートのマーク ビューでは、データ収集の間隔ごとに **[AutoMark]** のラベルが行に付けられます。 この行には、その間隔でのパフォーマンス カウンター値を示す列が含まれます。 2 個の具体的なマーク間の時間を分析するには、マークを選択して右クリックし、ショートカット メニューの **[フィルター方法]** ->  **[マーク]** を選択します。  
@@ -58,10 +53,7 @@ Windows カウンターは、プロファイル中に一定間隔で収集でき
   
 8.  **[適用]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)   
  [CPU カウンターと Windows カウンター](../profiling/cpu-and-windows-counters.md)
-
-
-

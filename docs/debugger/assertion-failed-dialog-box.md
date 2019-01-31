@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64af5bed-e38b-420f-b9ce-d64f35100aae
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d13d216a47d77d4948fe7ec28bffd0d750433a3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 942abb66e56e72cbe462f35944a9e4e03d471052
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53824848"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54941815"
 ---
 # <a name="assertion-failed-dialog-box"></a>[アサートに失敗しました] ダイアログ ボックス
 アサート ステートメントでは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true にならない場合、アサーションは失敗し、プログラムの実行が停止し、このダイアログ ボックスが表示されます。  

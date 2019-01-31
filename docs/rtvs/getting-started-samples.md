@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 80553e54489b5c887facca57f3491fd81fd8d24b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d4ebd1c8363c9801a9ac16a3b10a702de5954a14
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53837460"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55023263"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>R Tools for Visual Studio のサンプル プロジェクト
 
@@ -48,7 +48,7 @@ ms.locfileid: "53837460"
 
     ![ベンチマーク プロットの例](media/samples-mro-benchmark-plot.png)
 
-- `Bike_Rental_Estimation_with_MRS` では、Microsoft ML Server を使用して、履歴データセットに基づくレンタルサイクルの需要予測モデルを作成します。 
+- `Bike_Rental_Estimation_with_MRS` では、Microsoft ML Server を使用して、履歴データセットに基づくレンタルサイクルの需要予測モデルを作成します。
 
 - `Data_Exploration` には、次の 3 つのスクリプトが含まれます。
 
@@ -59,7 +59,7 @@ ms.locfileid: "53837460"
       ![ggplot2.R を使用した出力例](media/samples-3d-interactive.png)
 
 - `Datasets` には、他のサンプルによって使用される *.csv* ファイルが 3 つ含まれています。
-- `Flight_Delays_Prediction_with_R` と `Flight_Delays_Prediction_with_MRS` では、R、Machine Learning、過去の定時運行データおよび気象データを使用して、航空便の遅延を予測する方法を示します。 
+- `Flight_Delays_Prediction_with_R` と `Flight_Delays_Prediction_with_MRS` では、R、Machine Learning、過去の定時運行データおよび気象データを使用して、航空便の遅延を予測する方法を示します。
 - `Machine learning` には、航空便の遅延、住宅価格、レンタルサイクルの予測方法を学習できる 3 つのサンプルが含まれています。 また、これらのサンプルは、R と Microsoft ML Server のアプリケーションから現実世界の問題へのデモンストレーションでもあります。 また、いくつかの一般的な Machine Learning モデルを使用し、[Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/) ワークスペースを使用して、Azure Web サービスとして配置する方法も示します。
 
 - `R_MRO_MRS_Comparison` は、6 パーツの比較で、構文、コンストラクト、パフォーマンスを含む、R、Microsoft R Open、Microsoft ML Server の類似点と相違点を示しています。

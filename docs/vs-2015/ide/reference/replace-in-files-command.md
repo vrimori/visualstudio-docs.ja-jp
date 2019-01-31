@@ -1,14 +1,9 @@
 ---
 title: Replace In Files コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.replaceinfiles
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: eba6dfcf95c006fb05d4faaa0c370c9dba56e4e7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 919e3ed3f372a2f6614553974f5f47cfba24e3ff
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54798533"
 ---
 # <a name="replace-in-files-command"></a>ReplaceinFiles コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,10 +38,10 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>引数  
  `findwhat`  
- 必須。 検索するテキスト。  
+ 必須です。 検索するテキスト。  
   
  `replacewith`  
- 必須。 一致したテキストと置き換えるテキスト。  
+ 必須です。 一致したテキストと置き換えるテキスト。  
   
 ## <a name="switches"></a>スイッチ  
  /all または /a  
@@ -99,13 +94,10 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [テキストの検索と置換](../../ide/finding-and-replacing-text.md)   
  [フォルダーを指定して置換](../../ide/replace-in-files.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
-
-
-
