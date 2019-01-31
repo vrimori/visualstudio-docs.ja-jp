@@ -32,7 +32,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
  Kerberos 認証は、以下の場合には使用できません。  
   
-- ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
+- ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している  
   
    \- または  
   

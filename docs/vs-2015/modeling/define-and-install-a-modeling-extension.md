@@ -17,7 +17,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: 6f7895916cc4ee877c53b056f703d8e46b64b409
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51805568"
@@ -121,9 +121,9 @@ Visual Studio では、モデリング図に対して拡張機能を定義する
   
     2.  ファイルを見つけます**bin\\\*\\**_プロジェクト_**.vsix**  
   
-2.  拡張機能をインストールする対象のコンピューターに **.vsix** ファイルをコピーします。 自分のコンピューターでも別のコンピューターでもかまいません。  
+2.  拡張機能をインストールするターゲット コンピューターに **.vsix** ファイルをコピーします。 自分のコンピューターでも別のコンピューターでもかまいません。  
   
-    -   ターゲット コンピューターは、 **source.extension.vsixmanifest** の **[Installation Targets]**(インストールの対象) タブで指定した Visual Studio のいずれかのエディションを搭載している必要があります。  
+    -   ターゲット コンピューターは、**source.extension.vsixmanifest** の **[インストールの対象]** タブで指定した Visual Studio のいずれかのエディションを搭載している必要があります。  
   
 3.  ターゲット コンピューターで **.vsix** ファイルを開きます。たとえば、ダブルクリックして開きます。  
   

@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51798470"
 ---
-# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー : 対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません。
+# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー: ターゲット コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このエラーは、Visual Studio リモート デバッガー サービスがデバッグを開始したコンピューターに接続するときに、このサービスを実行しているユーザー アカウントを認証できないことを示します。  

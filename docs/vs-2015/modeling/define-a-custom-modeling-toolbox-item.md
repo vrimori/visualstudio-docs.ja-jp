@@ -16,7 +16,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: dcb562eb76e13b5dcb16532ed808b2447de0d6c8
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51778411"
@@ -211,7 +211,7 @@ ms.locfileid: "51778411"
 3.  アンインストールまたは拡張機能を一時的に無効にする、開く**拡張機能と更新**から、**ツール**メニュー。  
   
 ## <a name="localization"></a>ローカリゼーション  
- 拡張機能が別のコンピューターにインストールされると対象のコンピュータの言語でツールの名前やヒントが表示されるように設定できます。  
+ 拡張機能が別のコンピューターにインストールされるとターゲット コンピューターの言語でツールの名前やヒントが表示されるように設定できます。  
   
 #### <a name="to-provide-versions-of-the-tool-in-more-than-one-language"></a>複数の言語のバージョンのツールを提供するには  
   

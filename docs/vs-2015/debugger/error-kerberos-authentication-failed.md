@@ -23,7 +23,7 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 2ec03ae3d3b64435877b51996cb84a1768cc4a42
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51732343"
@@ -41,7 +41,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
  Kerberos 認証は、以下の場合には使用できません。  
   
-- ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
+- ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している  
   
    \- または -  
   

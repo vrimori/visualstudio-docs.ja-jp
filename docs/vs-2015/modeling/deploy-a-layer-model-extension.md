@@ -17,7 +17,7 @@ ms.author: gewarren
 manager: douge
 ms.openlocfilehash: a31413f5332ddfec8dc6021da85e2135d691f930
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51735119"
@@ -36,7 +36,7 @@ Visual Studio の他のユーザーは、Visual Studio を使って作成され�
   
 2. コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。  
   
-3. インストール先のコンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。  
+3. ターゲット コンピューターの Windows エクスプローラーで *.vsix をダブルクリックします。  
   
     VSIX インストーラーが起動します。  
   
