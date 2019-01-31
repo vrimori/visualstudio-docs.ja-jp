@@ -1,13 +1,9 @@
 ---
 title: 64 ビット サポート |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 64-bit applications [C++]
 - Visual Studio, 64-bit support
@@ -16,13 +12,13 @@ ms.assetid: b08ff3ad-c6fd-468f-94d5-01a61aab6833
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1935265b05c5074d043a008aad8a150bf4398c89
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: ab42cd9466561f64ecb35e65621bcbb91004f8f3
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54775918"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE の 64 ビット サポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "53852363"
 
 -   [64 ビット アプリケーションの配置のための必要条件](../deployment/deploying-prerequisites-for-64-bit-applications.md)
 
--   [方法: 64 ビット プラットフォーム用の Windows インストーラーを作成します。](http://msdn.microsoft.com/en-us/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)
+-   [方法: 64 ビット プラットフォーム用の Windows インストーラーを作成します。](http://msdn.microsoft.com/232bfc64-f99a-4cc6-9806-ba70bb9a09ff)
 
 ## <a name="configuring-projects-as-64-bit-applications"></a>プロジェクトを 64 ビット アプリケーションとして構成
  次のトピックでは、64 ビット アプリケーションにビルドするプロジェクトの構成について説明しています。
@@ -44,7 +40,7 @@ ms.locfileid: "53852363"
 ## <a name="debugging-a-64-bit-application"></a>64 ビット アプリケーションのデバッグ
  [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] を 64 ビット Windows オペレーティング システムで実行している場合、エディット コンティニュは機能しません。 次のトピックでは、64 ビット アプリケーションのデバッグについて説明しています。
 
--   [方法: 64 ビット プラットフォームでのデバッグします。](http://msdn.microsoft.com/en-us/27495e23-a624-46fb-996f-043d0a816dd5)
+-   [方法: 64 ビット プラットフォームでのデバッグします。](http://msdn.microsoft.com/27495e23-a624-46fb-996f-043d0a816dd5)
 
 -   [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 58e9dc24-baf6-4ab8-916c-aea28b72e3b0
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 132f00ccca207a854832568585c4d2594c79a337
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 88c48782a808a5af7ee8dabf314996af6e305e0e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853763"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54982820"
 ---
 # <a name="message-properties-dialog-box"></a>[メッセージ プロパティ] ダイアログ ボックス
 特定のメッセージの詳細を確認するには、このダイアログ ボックスを使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウ。 ツリーで、メッセージの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

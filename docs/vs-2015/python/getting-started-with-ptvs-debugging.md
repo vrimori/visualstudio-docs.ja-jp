@@ -1,27 +1,22 @@
 ---
-title: 'PTVS の概要: デバッグ | Microsoft Docs'
-ms.custom: ''
+title: PTVS の概要。デバッグ |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-python
+ms.topic: conceptual
 ms.assetid: 82803559-1d60-4c57-98fb-2dc1e0182b42
 caps.latest.revision: 5
 author: kraigb
 ms.author: kraigb
-manager: ghogen
-ms.openlocfilehash: 8a92eb3779abf5be00f39bd4aa3e66238a729ded
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b636dd4f3a5c5265231898573bfdf52de2dff84e
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204937"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54834475"
 ---
-# <a name="getting-started-with-ptvs-debugging"></a>PTVS の概要: デバッグ
+# <a name="getting-started-with-ptvs-debugging"></a>PTVS の概要。デバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio の対話型デバッガーを使用すると、Python コード内の問題を簡単に診断して解決できます。  
@@ -59,7 +54,6 @@ if __name__ == "__main__":
   
  これらの手順は、非常に短い [Youtube ビデオ](https://www.youtube.com/watch?v=bO7wpzgy74A&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=4)で視聴できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Wiki ドキュメント](https://github.com/Microsoft/PTVS/wiki/Debugging)   
  [PTVS の概要と詳細に関するビデオ](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
-

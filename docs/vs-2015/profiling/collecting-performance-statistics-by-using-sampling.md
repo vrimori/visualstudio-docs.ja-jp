@@ -1,14 +1,9 @@
 ---
 title: サンプリングを使用したパフォーマンス統計情報の収集 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,sampling
 - sampling profiling method
@@ -16,13 +11,13 @@ ms.assetid: 8e36361b-bb3d-40c6-b286-0e68c0ecb915
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a67c6542c2b838de7e80ee23588847cc15c15292
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a557691d06c41fc3d8919be10ff22038975686a3
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54777106"
 ---
 # <a name="collecting-performance-statistics-by-using-sampling"></a>サンプリングを使用したパフォーマンス統計情報の収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,12 +49,9 @@ ms.locfileid: "51755276"
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**[全般]** ページで、.NET のメモリ割り当ておよび有効期間データ コレクションを追加し、生成されるプロファイリング データ (.vsp) ファイルの名前付けの詳細を指定します。|-   [.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [方法: パフォーマンス データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)|  
-|**[サンプリング]** ページで、サンプリング速度を変更するか、プロセッサのクロック サイクルのサンプリング イベントを別のプロセッサ パフォーマンス カウンターを変更するか、または両方を変更します。|-   [方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)|  
+|**[サンプリング]** ページで、サンプリング速度を変更するか、プロセッサのクロック サイクルのサンプリング イベントを別のプロセッサ パフォーマンス カウンターを変更するか、または両方を変更します。|-   [方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)|  
 |コード ソリューション内に複数の .exe プロジェクトがある場合は、**[起動]** ページで、開始するアプリケーションおよび開始順序を指定します。|-   [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|  
 |**[階層の相互作用]** ページで、実行するプロファイリングで収集されるデータに ADO.NET 呼び出し情報を追加します。|-   [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|  
 |**[Windows イベント]** ページで、サンプリング データと共に収集する 1 つ以上の ETW (Windows イベント トレーシング) イベントを指定します。|-   [方法: ETW (Event Tracing for Windows) データを収集する](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|  
-|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|-   [方法 : Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|  
-|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|-   [方法: side-by-side 実行でプロファイリングするように .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
-
-
-
+|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|-   [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|  
+|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|-   [方法: .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

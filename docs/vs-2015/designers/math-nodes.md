@@ -1,25 +1,20 @@
 ---
 title: 数値演算ノード | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: adc225cc-1cf5-4f7c-9b00-e7ac8450b6b9
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: bab77bbed9f14ccc81429c37ad367d7d51709871
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c2971a13e82e4b31f985be6db2a8a32167a3f74b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49305774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54796221"
 ---
 # <a name="math-nodes"></a>数値演算ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,6 +53,3 @@ ms.locfileid: "49305774"
 |**Sqrt**|指定された入力の要素ごとの平方根を計算します。<br /><br /> 結果の要素ごとに、対応する要素の平方根が計算されます。<br /><br /> **入力:**<br /><br /> `X`: `float`、`float2`、`float3`、または `float4`<br /> 平方根を計算する値。<br /><br /> **出力:**<br /><br /> `Output`: 入力 `X` と同じ<br /> 要素ごとの平方根。|なし|  
 |**Subtract**|指定された入力の要素ごとの差を計算します。<br /><br /> 結果の要素ごとに、入力 `Y` の対応する要素が入力 `X` の対応する要素から減算されます。 この演算を使用して、1 つ目の入力から 2 つ目の入力までのベクターを計算できます。<br /><br /> **入力:**<br /><br /> `X`: `float`、`float2`、`float3`、または `float4`<br /> 減算元の値。<br /><br /> `Y`: 入力 `X` と同じ<br /> 入力 `X` から減算する値。<br /><br /> **出力:**<br /><br /> `Output`: 入力 `X` と同じ<br /> 要素ごとの差。|なし|  
 |**Transform 3D Vector**|指定された 3-D ベクターを別の空間に変換します。<br /><br /> この演算を使用すると、ポイントまたはベクターを共通の空間に移して、重要な計算の実行に使用することができます。<br /><br /> **入力:**<br /><br /> `Vector`: `float3`<br /> 変換するベクトル。<br /><br /> **出力:**<br /><br /> `Output`: `float3`<br /> 変換されたベクトル。|**システムから**<br /> ベクターのネイティブ空間です。<br /><br /> **システムへ**<br /> ベクターを変換する空間です。|
-
-
-

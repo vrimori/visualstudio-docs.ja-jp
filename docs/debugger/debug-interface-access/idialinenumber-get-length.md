@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2c55a6f7-4ef5-45fb-9fd1-d72deaaa2829
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34e36486f95964169200cee7c41ac8eaebc27960
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1044f681efbdf0f07687a34652723612feb5a4ec
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916414"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54939895"
 ---
 # <a name="idialinenumbergetlength"></a>IDiaLineNumber::get_length
 ブロックのバイト数を取得します。  

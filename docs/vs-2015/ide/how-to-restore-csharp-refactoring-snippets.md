@@ -1,14 +1,9 @@
 ---
-title: '方法 : C# リファクタリング スニペットを復元する | Microsoft Docs'
-ms.custom: ''
+title: '方法: C# リファクタリング スニペットを復元 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - unsafe expansion
 - expansions, unsafe
@@ -16,15 +11,15 @@ ms.assetid: 12114273-7f2f-43d0-abcb-2d4711a3a68d
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8cb5906009d4c3f5d9d94a8e9898a1f02b3aedc0
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c9ebd6b96a24b10601257d5eefc58014ef7058c9
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54782597"
 ---
-# <a name="how-to-restore-c-refactoring-snippets"></a>方法 : C# リファクタリング スニペットを復元する
+# <a name="how-to-restore-c-refactoring-snippets"></a>方法: C# リファクタリング スニペットを復元します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 C# リファクタリング操作は、次のディレクトリにあるコード スニペットに依存しています。  
@@ -61,10 +56,7 @@ C# リファクタリング操作は、次のディレクトリにあるコー�
   
 6.  **[コード スニペット ディレクトリ]** ダイアログ ボックスの **[開く]** をクリックし、コード スニペット マネージャーの **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)   
  [リファクタリング (C#)](../csharp-ide/refactoring-csharp.md)   
  [コード スニペット](../ide/code-snippets.md)
-
-
-
