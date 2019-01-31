@@ -109,18 +109,18 @@ helpviewer_keywords:
 ms.assetid: 860c7f13-a108-4fe5-8fca-d235cd3ca1cb
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4351553d5df55dd5dceeffe542ff542a9487d6e5
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 163b3e2d3ac222fd2e495e7a3b71841c818a4a3f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53957911"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54961847"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ デバッグ構成のプロジェクト設定
-C または C++ デバッグ構成でのプロジェクトの設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[方法。デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md). 次の表は、**[プロパティ ページ]** ダイアログ ボックスのデバッガー関連の設定の場所を示しています。  
+C または C++ デバッグ構成でのプロジェクトの設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[方法。デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。 次の表は、**[プロパティ ページ]** ダイアログ ボックスのデバッガー関連の設定の場所を示しています。  
   
 > [!NOTE]
 >  デバッグ プロジェクト設定、**構成プロパティ/デバッグ**カテゴリは UWP アプリ、C++ で記述されたコンポーネントは異なります。 参照してください[(VB、c#、C++ および XAML) は、デバッグ セッションを開始](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)します。  

@@ -11,15 +11,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d63cde2fff8f02d2e628ad737fb2c25dad79af8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3bf7719543f6d2dce18bb2a23321a6b18067c97e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914732"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54981858"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>エラー :混合モード デバッグは、Microsoft .NET Framework 2.0 以上を使用している場合にのみサポートされます
 ネイティブ コードとマネージド コードの混合をデバックするには、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] Version 2.0、3.0、 3.5、または 4 が必要です。 以前のバージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を使用した混合モード デバッグはサポートされていません。  

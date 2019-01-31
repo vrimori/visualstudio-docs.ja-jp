@@ -1,25 +1,20 @@
 ---
 title: WPF の概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: b29e4e241589134c8dfa5b94e997d6603b075ee3
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8ed8e7366b438d152abbd6faef91e3f3a0707a61
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49826355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54756010"
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -91,16 +86,16 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
 ```  
   
 ```csharp  
-using System.Windows; // Window, RoutedEventArgs, MessageBox   
+using System.Windows; // Window, RoutedEventArgs, MessageBox   
   
 namespace SDKSample  
 {  
-    public partial class AWindow : Window  
+    public partial class AWindow : Window  
     {  
         public AWindow()  
         {  
-            // InitializeComponent call is required to merge the UI   
-            // that is defined in markup with this class, including    
+            // InitializeComponent call is required to merge the UI   
+            // that is defined in markup with this class, including    
             // setting properties and registering event handlers  
             InitializeComponent();  
         }  
@@ -117,28 +112,28 @@ namespace SDKSample
 ```vb  
 Namespace SDKSample  
   
-    Partial Public Class AWindow  
+    Partial Public Class AWindow  
         Inherits System.Windows.Window  
   
-        Public Sub New()  
+        Public Sub New()  
   
-            ' InitializeComponent call is required to merge the UI   
-            ' that is defined in markup with this class, including    
+            ' InitializeComponent call is required to merge the UI   
+            ' that is defined in markup with this class, including    
             ' setting properties and registering event handlers  
             InitializeComponent()  
   
-        End Sub   
+        End Sub   
   
-        Private Sub button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)  
+        Private Sub button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)  
   
             ' Show message box when button is clicked  
             MessageBox.Show("Hello, Windows Presentation Foundation!")  
   
-        End Sub   
+        End Sub   
   
-    End Class   
+    End Class   
   
-End Namespace  
+End Namespace  
   
 ```  
   
@@ -194,17 +189,17 @@ End Namespace
   
  レイアウト システムは基本の WPF クラスを介して子コントロールに公開されます。 グリッド、スタック、ドックなどの一般的なレイアウトについて、WPF には複数のレイアウト コントロールが組み込まれています。  
   
-- <xref:System.Windows.Controls.Canvas>: 子コントロールは独自のレイアウトを提供します。  
+- <xref:System.Windows.Controls.Canvas>:子コントロールには独自のレイアウトがあります。  
   
-- <xref:System.Windows.Controls.DockPanel>: 子コントロールはパネルの縁に並べられます。  
+- <xref:System.Windows.Controls.DockPanel>:子コントロールはパネルの縁に並べられます。  
   
-- <xref:System.Windows.Controls.Grid>: 子コントロールは行ごと、列ごとに位置指定されます。  
+- <xref:System.Windows.Controls.Grid>:子コントロールは行ごと、列ごとに位置指定されます。  
   
-- <xref:System.Windows.Controls.StackPanel>: 子コントロールは垂直方向または水平方向に積み上げられます。  
+- <xref:System.Windows.Controls.StackPanel>:子コントロールは垂直方向または水平方向に積み上げられます。  
   
-- <xref:System.Windows.Controls.VirtualizingStackPanel>: 子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>:子コントロールは仮想化され、水平方向または垂直方向の 1 本の線上に配置されます。  
   
-- <xref:System.Windows.Controls.WrapPanel>: 子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。  
+- <xref:System.Windows.Controls.WrapPanel>:子コントロールは左から右への順序に配置され、現在の行に納まらない場合は、次の行に折り返されます。  
   
   次の例では <xref:System.Windows.Controls.DockPanel> を使用して複数の <xref:System.Windows.Controls.TextBox> コントロールを配置しています。  
   
@@ -522,10 +517,7 @@ End Namespace
   
  アプリケーションを作成する際に、この概要に立ち戻って主要な機能を思い出し、ここで取り上げられている機能をより詳しく説明したページへの参照を見つけることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [WPF の概要](../designers/getting-started-with-wpf.md)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)   
  [Windows Presentation Foundation](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)
-
-
-

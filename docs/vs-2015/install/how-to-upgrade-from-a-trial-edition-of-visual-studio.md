@@ -1,24 +1,20 @@
 ---
 title: '方法: 評価版からのアップグレード |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-install
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 717f11fe-be6c-4d6e-9006-e7e5220c02bb
 caps.latest.revision: 28
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.openlocfilehash: 415f60116e3120f9690d20d20dfd37c560d5ad9f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 6740755567c24ceb9b70d0e63e159e5d74b7955b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54785959"
 ---
 # <a name="how-to-upgrade-from-a-trial-edition-of-visual-studio"></a>方法: Visual Studio の評価版からのアップグレード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,4 +44,4 @@ Visual Studio のプレリリース版は、製品を登録しないでも 14 �
     >  Visual Studio のいずれのエディションの登録やロック解除にも、インターネットへの接続が必要になります。 ただし、Visual Studio の登録後、インターネットへの接続は任意になります。
 
 ## <a name="see-also"></a>「
- [Visual Studio のインストール](../install/install-visual-studio-2015.md) [Visual Studio にサインイン](../ide/signing-in-to-visual-studio.md)[方法。Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)[検索または Team Foundation Server のプロダクト キーを変更](http://msdn.microsoft.com/library/64f29927-b520-4c9f-b633-bcb527e562cd) [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)
+ [Visual Studio のインストール](../install/install-visual-studio-2015.md) [Visual Studio にサインイン](../ide/signing-in-to-visual-studio.md)[方法。Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)[検索または Team Foundation Server のプロダクト キーを変更](http://msdn.microsoft.com/library/64f29927-b520-4c9f-b633-bcb527e562cd) [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)

@@ -1,14 +1,9 @@
 ---
 title: WriteCodeFragment タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +16,13 @@ ms.assetid: 1d2514b4-5bef-43bb-bebe-496da8ef063c
 caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 862792e14bd52d52e3dafd83b4a8784f46ce8369
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ee0b819d0387ecbd0bec3a460bf3c63d3122b269
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49290538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54796942"
 ---
 # <a name="writecodefragment-task"></a>WriteCodeFragment タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,12 +40,9 @@ ms.locfileid: "49290538"
 |`OutputDirectory`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> 生成されたコードの出力先フォルダーを指定します。一般的には、中間フォルダーにします。|  
 |`OutputFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> 生成されたファイルのパスを指定します。 ファイル名を使用してこのパラメーターを設定する場合、出力先フォルダーがファイル名の前に付加されます。 ルートを使用して設定される場合、出力先フォルダーは無視されます。<br /><br /> このパラメーターが設定されない場合、出力ファイル名が出力先フォルダー、任意のファイル名、指定言語の既定のファイル名拡張子になります。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-

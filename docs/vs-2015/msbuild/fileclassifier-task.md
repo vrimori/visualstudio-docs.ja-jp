@@ -1,14 +1,9 @@
 ---
 title: FileClassifier タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -22,13 +17,13 @@ ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 2e0515d4f21993a50ce590df10ca283e6e66b17a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 58d81e5553fe4fd4f08bb30f5108e411b2d71c7d
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49271444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54803817"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "49271444"
 |`SatelliteEmbeddedFiles`|省略可能な **ITaskItem[]** 型の出力パラメーターです。<br /><br /> **Culture** パラメーターで指定されたカルチャのサテライト アセンブリに埋め込まれる、ローカライズ可能なファイルを指定します。|  
 |`SourceFiles`|必須の **ITaskItem[]** 型のパラメーターです。<br /><br /> 分類するファイルのリストを指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **Culture** パラメーターを設定しない場合、**SourceFiles** パラメーターを使用して指定したリソースは、すべてローカライズできないリソースになります。それ以外の場合は、**Localizable** 属性が **false** に設定されていない限り、ローカライズ可能なリソースになります。  
   
 ## <a name="example"></a>例  
@@ -72,12 +67,9 @@ ms.locfileid: "49271444"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [WPF アプリケーション (WPF) のビルド](http://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)
-
-
-

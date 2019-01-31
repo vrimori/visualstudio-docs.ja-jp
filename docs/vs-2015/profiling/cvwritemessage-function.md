@@ -1,14 +1,9 @@
 ---
 title: CvWriteMessage 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteMessageW
 - cvmarkers/CvWriteMessageExW
@@ -31,13 +26,13 @@ ms.assetid: e20ae7be-bfa7-437a-b8c1-fa0f1baa7f83
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d98ead3931e884c0a99b112a71ee3921e85e3eb3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: f6a364498306758f8c2f01de741aed50166cc8f4
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779064"
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -119,15 +114,12 @@ HRESULT CvWriteMessageExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvWriteMessageW、CvWriteMessageVW、CvWriteMessageExW、CvWriteMessageExVW  
   
  **ANSI:** CvWriteMessageA、CvWriteMessageVA、CvWriteMessageExA、CvWriteMessageExVA  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
-
-
-

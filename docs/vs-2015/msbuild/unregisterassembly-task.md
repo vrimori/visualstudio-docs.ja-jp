@@ -1,14 +1,9 @@
 ---
 title: UnregisterAssembly タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#UnregisterAssembly
 dev_langs:
@@ -23,13 +18,13 @@ ms.assetid: 04f549dd-3591-4dda-9c3a-cf6ede9df2c3
 caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: dcfddcf1603a16ee4d436766e4f34fa2c41491bb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 497a767a1cd67c08e82a743d0665a152c5dd7062
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298611"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54833720"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +41,7 @@ COM 相互運用のために、指定されたアセンブリの登録を解除�
 |`AssemblyListFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> `RegisterAssembly` タスクと `UnregisterAssembly` タスクの間の状態に関する情報が含まれます。 これにより、`RegisterAssembly` タスクで登録に失敗したアセンブリの登録をタスクが解除しないようにできます。<br /><br /> このパラメーターが指定されている場合、`Assemblies` と `TypeLibFiles` のパラメーターは無視されます。|  
 |`TypeLibFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 指定したアセンブリから指定したタイプ アセンブリを登録解除します。 **注:** このパラメーターは、タイプ ライブラリのファイル名がアセンブリ名と異なる場合にのみ必要です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  アセンブリが存在していなくても、このタスクは正常に終了します。 存在しないアセンブリの登録を解除しようとした場合、タスクは警告を発行して正常終了します。 これは、アセンブリ登録をレジストリから削除することが、このタスクのジョブであるためです。 アセンブリが存在しない場合、アセンブリはレジストリに登録されていないため、タスクは正常に終了します。  
   
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:System.MarshalByRefObject> クラスから継承されます。 `MarshalByRefObject` クラスは <xref:Microsoft.Build.Utilities.Task> クラスと同じ機能を提供しますが、独自のアプリケーション ドメインでインスタンス化できます。  
@@ -69,10 +64,7 @@ COM 相互運用のために、指定されたアセンブリの登録を解除�
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [RegisterAssembly タスク](../msbuild/registerassembly-task.md)   
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-

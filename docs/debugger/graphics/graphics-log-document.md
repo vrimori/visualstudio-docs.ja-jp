@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 6ccb1269-d55f-49c4-920d-baedf7de2888
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad9c458891a13a28d9b13ec9674a4a9e829b95a1
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ba089ace95308ddcf6067920da8484064e797ecd
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53955280"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55015109"
 ---
 # <a name="graphics-log-document"></a>グラフィックス ログ ドキュメント
 グラフィックス ログのドキュメントは、アプリがグラフィックス診断のセッションで実行されているときに発生したグラフィックス イベントのレコードです。 記録した後で、Visual Studio Graphics Analyzer でログを確認して、レンダリングとパフォーマンスの問題を診断することができます。  
@@ -42,7 +42,7 @@ ms.locfileid: "53955280"
 ## <a name="playback-machine"></a>再生コンピューター  
  **[フレーム一覧]** の右上隅には、**[再生コンピューター]** も表示されます。 再生コンピューターは、後のグラフィックス診断のセッション中にグラフィックス ログ ファイルからグラフィックス イベントを再生するために使用されるコンピューターまたはデバイスです。 開発用コンピューターの代わりに別のデバイスを使用し、キャプチャしたイベントを再生することにより、問題が発生する実行環境をより正確に再現できます。たとえば、開発用コンピューターとは異なるグラフィックス ハードウェアまたはドライバーを使用するコンピューター、または ARM ベースの Windows RT タブレットや Windows Phone デバイスなどのデバイスを使用できます。  
 
- 再生コンピューターを指定する方法については、次を参照してください。[方法。グラフィックス診断再生マシンを変更する](how-to-change-the-graphics-diagnostics-playback-machine.md)  
+ 再生コンピューターを指定する方法については、次を参照してください。[方法。グラフィックス診断再生マシンを変更する](how-to-change-the-graphics-diagnostics-playback-machine.md)」を参照してください。  
 
 ## <a name="graphics-log-summary-information"></a>グラフィックス ログの概要情報  
  グラフィックス ログ ファイルがアクティブ ドキュメントの場合、**[プロパティ]** ウィンドウには、グラフィックス診断キャプチャ セッションをホストしていた環境に関する情報が表示されます。 複数のカテゴリの情報が表示されます。  

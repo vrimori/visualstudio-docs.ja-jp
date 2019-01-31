@@ -1,27 +1,22 @@
 ---
 title: コール ツリー ビュー - インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
 ms.assetid: 306bd176-0ce9-4a10-89ca-20b043d37d4e
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 630f75468adf5995eb887ac5f73d82462bfe32a4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 385d12550692f5f27521afe4dea12e5bdb0aa9d8
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54782389"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>コール ツリー ビュー - インストルメンテーション データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -90,11 +85,8 @@ ms.locfileid: "51786251"
 |**最大アプリケーション時間 (関数のみ)**|このコンテキストのこの関数の呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション時間 (関数のみ)**|このコンテキストのこの関数の呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)   
  [コール ツリー ビュー - インストルメンテーション](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [コール ツリー ビュー - サンプリング](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
-
-
-

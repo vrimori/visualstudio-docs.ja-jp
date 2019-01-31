@@ -1,27 +1,22 @@
 ---
-title: '方法: 3-D モデルのピボット ポイントを変更する | Microsoft Docs'
-ms.custom: ''
+title: '方法: 3-D モデルのピボット ポイントの変更 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: c20b4ec8-29f5-4ca5-bc39-d4548ca6f573
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: beba04bab85b3fd09aafb195039ad6e34106e293
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7b28a279e729900d8a1cb26f25bca6370c00a08c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54774102"
 ---
-# <a name="how-to-modify-the-pivot-point-of-a-3-d-model"></a>方法: ピボット ポイントの 3-D モデルを変更する
+# <a name="how-to-modify-the-pivot-point-of-a-3-d-model"></a>方法: 3-D モデルのピボット ポイントを変更します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このドキュメントでは、モデル エディターを使用した 3-D モデルの*ピボット ポイント*の変更方法を示します。 ピボット ポイントは、オブジェクトの回転と拡大縮小の数学的な中心を定義する空間内のポイントです。  
@@ -37,7 +32,7 @@ ms.locfileid: "49850530"
   
 #### <a name="to-modify-the-pivot-point-of-a-3-d-model"></a>3-D モデルのピボット ポイントを変更するには  
   
-1. 「[方法: 基本 3-D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)」に記載されているものなどの既存の 3-D モデルから始めます。  
+1. 説明されているものなどの既存の 3-D モデルから始めます[方法。基本的な 3-D モデルを作成](../designers/how-to-create-a-basic-3-d-model.md)です。  
   
 2. ピボット モードを開始します。 **[モデル エディターのモード]** ツール バーで、**[ピボット モード]** をクリックしてピボット モードをアクティブにします。 **[ピボット モード]** を囲むボックスが表示されて、モデル エディターがピボット モードになっていることが示されます。 ピボット モードでは、平行移動などの操作は、ワールド空間内のオブジェクトの構造ではなくオブジェクトのピボット ポイントに影響を与えます。  
   
@@ -54,9 +49,6 @@ ms.locfileid: "49850530"
   
    ![変更されたピボット ポイントを含む家のモデル](../designers/media/digit-modified-model.png "Digit-Modified-Model")  
   
-## <a name="see-also"></a>関連項目  
- [方法: 基本 3-D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)   
+## <a name="see-also"></a>「  
+ [方法: 基本的な 3-D モデルを作成します。](../designers/how-to-create-a-basic-3-d-model.md)   
  [モデル エディター](../designers/model-editor.md)
-
-
-

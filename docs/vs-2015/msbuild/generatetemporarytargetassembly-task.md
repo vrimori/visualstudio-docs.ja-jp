@@ -1,14 +1,9 @@
 ---
 title: GenerateTemporaryTargetAssembly タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +18,13 @@ ms.assetid: 92b6539c-6897-45e0-8989-0c234bbfe782
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 1dd1df7ce9d7672917296207e38a846ff69aba5a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f3f537e6f9f1712e3d103a0d425265153bf2152e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49205168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54774684"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +46,7 @@ ms.locfileid: "49205168"
 |`ReferencePath`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 一時ターゲット アセンブリにコンパイルされる型によって参照されるアセンブリの一覧を、パスおよびファイル名を使用して指定します。|  
 |`ReferencePathTypeName`|必須の **String** 型のパラメーターです。<br /><br /> コンパイル ターゲット (**CompileTargetName**) パラメーターによって使用される、アセンブリ参照の一覧 (**ReferencePath**) を指定するパラメーターを指定します。 適切な値は、**ReferencePath** です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) によって実行される最初のマークアップ コンパイル パスでは、[!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルがバイナリ形式にコンパイルされます。 したがって、コンパイラでは、[!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルで使用される型を含んでいる参照アセンブリの一覧が必要になります。 ただし、同じプロジェクト内で定義されている型が [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルで使用されていると、そのプロジェクトの対応するアセンブリは、プロジェクトがビルドされるまで作成されません。 このため、最初のマークアップ コンパイル パスの間にアセンブリ参照を用意することができません。  
   
  代わりに、**MarkupCompilePass1** は、同じプロジェクト内の型への参照を含む [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルの変換を、[MarkupCompilePass2](../msbuild/markupcompilepass2-task.md) によって実行される 2 番目のマークアップ コンパイル パスまで延期します。 **MarkupCompilePass2** が実行される前に、一時アセンブリが生成されます。 このアセンブリには、マークアップ コンパイル パスが延期された [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルによって使用される型が含まれます。 **MarkupCompilePass2** の実行時には、生成されたアセンブリへの参照を指定します。これにより、コンパイルが延期された [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] ファイルをバイナリ形式にコンパイルできるようになります。  
@@ -79,13 +74,10 @@ ms.locfileid: "49205168"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [WPF アプリケーション (WPF) のビルド](http://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
  [WPF XAML ブラウザー アプリケーションの概要](http://msdn.microsoft.com/library/3a7a86a8-75d5-4898-96b9-73da151e5e16)
-
-
-

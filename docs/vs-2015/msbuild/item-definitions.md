@@ -1,27 +1,22 @@
 ---
 title: 項目定義 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
 caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 35506967ee20ff6c936e2de4a19d7860e154e4c5
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 08d91cbeb4424e2285a49e45d10c5ef2a0484afe
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49866572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54796674"
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,7 +42,7 @@ ms.locfileid: "49866572"
 > [!NOTE]
 >  このトピックでは、多くの例に ItemDefinitionGroup 要素が示されていますが、それに対応する ItemGroup 定義は例の簡潔さを保つために省略しています。  
   
- ItemGroup に明示的に定義されたメタデータは、ItemDefinitionGroup 内のメタデータより優先されます。 ItemDefinitionGroup 内のメタデータは、ItemGroup に対応するメタデータが定義されていない場合のみ適用されます。 例えば:  
+ ItemGroup に明示的に定義されたメタデータは、ItemDefinitionGroup 内のメタデータより優先されます。 ItemDefinitionGroup 内のメタデータは、ItemGroup に対応するメタデータが定義されていない場合のみ適用されます。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -98,7 +93,7 @@ ms.locfileid: "49866572"
   
 - 最後のメタデータ指定が優先されます。  
   
-  複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例えば:  
+  複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -116,7 +111,7 @@ ms.locfileid: "49866572"
   
  この例では、メタデータ "o" が "m" および "n" に追加されます。  
   
- さらに、定義済みのメタデータ値も追加できます。 例えば:  
+ さらに、定義済みのメタデータ値も追加できます。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -152,7 +147,7 @@ ms.locfileid: "49866572"
 ```  
   
 ## <a name="using-conditions-in-an-itemdefinitiongroup"></a>ItemDefinitionGroup での条件の使用  
- ItemDefinitionGroup では、条件を使用してメタデータの追加を制御できます。 例えば:  
+ ItemDefinitionGroup では、条件を使用してメタデータの追加を制御できます。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">  
@@ -167,7 +162,7 @@ ms.locfileid: "49866572"
 > [!NOTE]
 >  条件では、ローカル メタデータ参照のみサポートされます。  
   
- 前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 例えば:  
+ 前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -183,7 +178,7 @@ ms.locfileid: "49866572"
  この例では、項目 "i" が条件に含まれる項目 "test" を参照しています。  
   
 ## <a name="overriding-and-deleting-metadata"></a>メタデータのオーバーライドと削除  
- ItemDefinitionGroup 要素に定義されたメタデータは、値を空白に設定することにより、後の ItemDefinitionGroup 要素でオーバーライドできます。 また、メタデータ項目は空の値に設定することによって削除できます。 例えば:  
+ ItemDefinitionGroup 要素に定義されたメタデータは、値を空白に設定することにより、後の ItemDefinitionGroup 要素でオーバーライドできます。 また、メタデータ項目は空の値に設定することによって削除できます。 次に例を示します。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -234,7 +229,7 @@ ms.locfileid: "49866572"
 </ItemDefinitionGroup>  
 ```  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 例えば:  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 次に例を示します。  
   
 ```  
 <ItemGroup>  
@@ -245,8 +240,5 @@ ms.locfileid: "49866572"
 </ItemGroup>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [バッチ処理](../msbuild/msbuild-batching.md)
-
-
-

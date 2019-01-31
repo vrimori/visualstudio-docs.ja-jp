@@ -1,14 +1,9 @@
 ---
-title: '方法 : 構成を作成および編集する | Microsoft Docs'
-ms.custom: ''
+title: '方法: 作成し、構成の編集 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - solution build configurations, editing
 - build configurations, creating
@@ -23,15 +18,15 @@ ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f171c337f73db495b7b71aded24f669b6e613a07
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e885ffa758f6503c10517c672745a31ef0960fe5
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49887788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54767332"
 ---
-# <a name="how-to-create-and-edit-configurations"></a>方法 : 構成を作成および編集する
+# <a name="how-to-create-and-edit-configurations"></a>方法: 構成を作成および編集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 ソリューションに対して、複数のビルド構成を作成することができます。 たとえば、問題を検出して修正するためにテスト担当者が使用できるデバッグ ビルドを構成できます。他にも、多様な顧客に配布できる多様な種類のビルドを構成できます。  
@@ -58,7 +53,7 @@ ms.locfileid: "49887788"
   
      **[プロパティ ページ]** ウィンドウが開きます。  
   
-     構成に応じたプロパティを設定できます。 たとえば、リリース構成の場合、ソリューションのビルド時にコードを最適化することを指定できます。デバッグ構成の場合、`DEBUG` 条件付きコンパイル シンボルを含むことを指定できます。 プロパティ ページの設定の詳細については、次を参照してください。[プロジェクト デザイナーの概要](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)します。  
+     構成に応じたプロパティを設定できます。 たとえば、リリース構成の場合、ソリューションのビルド時にコードを最適化することを指定できます。デバッグ構成の場合、`DEBUG` 条件付きコンパイル シンボルを含むことを指定できます。 プロパティ ページの設定の詳細については、次を参照してください。[プロジェクト デザイナーの概要](http://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)します。  
   
 ## <a name="creating-and-modifying-project-configurations"></a>プロジェクト構成の作成と変更  
   
@@ -128,10 +123,7 @@ ms.locfileid: "49887788"
   
 3.  **[プロジェクトのコンテキスト]** ウィンドウで、すべてのプロジェクトに対して、必要な **[構成]** と **[プラットフォーム]** を選択し、**[ビルド]** するかどうかおよび **[配置]** するかどうかを指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ビルド構成について](../ide/understanding-build-configurations.md)   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
- [NIB 方法: プロジェクト プロパティおよび構成設定を変更する](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
-
-
-
+ [(NIB) 方法:プロジェクトのプロパティと構成設定を変更します。](http://msdn.microsoft.com/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

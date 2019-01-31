@@ -1,25 +1,20 @@
 ---
 title: コマンド ラインからの基本的なプロファイリング レポートの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 30361f0f4ae147458252400a5232a657574553d4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5f13921dea810ab2185e626cc2889f339d9d174f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51786765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54804015"
 ---
 # <a name="creating-basic-profiling-reports-from-the-command-line"></a>コマンド ラインからの基本的なプロファイリング レポートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,13 +47,10 @@ ms.locfileid: "51786765"
 |**Line**|プロファイル データがソース コード行別に一覧表示されます。|-   [サンプリング データ](../profiling/lines-view-sampling-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [競合データ](../profiling/lines-view-contention-data.md)|  
 |**Header**|プロファイル データ ファイルのヘッダー情報です。|ファイルによって異なります。|  
 |**マーク**|プロファイル実行中に収集されたプロファイル マークが表示されます。|-   [マーク ビュー](../profiling/marks-view.md)|  
-|**モジュール**|モジュールのプロファイル データが一覧表示されます。|-   [サンプリング データ](../profiling/modules-view-sampling-data.md)<br />-   [インストルメンテーション データ](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET メモリ インストルメンテーション データ](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [競合データ](../profiling/modules-view-contention-data.md)|  
+|**Module**|モジュールのプロファイル データが一覧表示されます。|-   [サンプリング データ](../profiling/modules-view-sampling-data.md)<br />-   [インストルメンテーション データ](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET メモリ サンプリング データ](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET メモリ インストルメンテーション データ](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [競合データ](../profiling/modules-view-contention-data.md)|  
 |**Process**|プロセスのプロファイル データが一覧表示されます。|-   [プロセス ビュー](../profiling/process-view.md)<br />-   [競合データ](../profiling/process-view-contention-data.md)|  
 |**スレッド**|スレッドのプロファイル データが一覧表示されます。|-   [プロセス ビュー](../profiling/process-view.md)|  
 |**Type**|割り当てプロファイル データが種類別に一覧表示されます。|-   [割り当て ビュー](../profiling/dotnet-memory-allocations-view.md)|  
 |**Contention**|リソースの競合が表示されます。|-   [リソースの競合](../profiling/resource-contentions-view-contention-data.md)|  
 |**RuleWarnings**|パフォーマンス規則の問題が一覧表示されます。|-   規則の問題の CheckId、説明、およびソース コードの場所が一覧表示されます。|  
 |**ETW**|プロファイリング実行で収集された ETW (Event Tracing for Windows) イベントが一覧表示されます。|-   [ETW レポート](../profiling/event-tracing-for-windows-etw-report.md)|
-
-
-

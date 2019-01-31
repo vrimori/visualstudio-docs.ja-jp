@@ -1,27 +1,22 @@
 ---
 title: アクセシビリティのヒントとテクニック | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f4fe4f45f6c858ede7bebc7cbbf3a5e734130000
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 77254bea0c4b587df8f4aef8297f17b6b4304339
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49241021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54800789"
 ---
 # <a name="accessibility-tips-and-tricks"></a>アクセシビリティのヒントとテクニック
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,10 +25,10 @@ ms.locfileid: "49241021"
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] にはアクセシビリティ機能が組み込まれているため、簡単にキーボードで作業したり、スクリーン リーダーやその他の支援技術デバイスを使用したりすることができます。 ここでは、便利なショートカット キーのいくつかの組み合わせのほか、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のアクセシビリティを向上するために最適化する場合の推奨事項についてもいくつか示します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="save-your-ide-settings"></a>IDE 設定を保存する  
- ウィンドウのレイアウト、キーボード マップ スキーム、およびその他の設定を保存することにより、IDE エクスペリエンスをカスタマイズできます。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+ ウィンドウのレイアウト、キーボード マップ スキーム、およびその他の設定を保存することにより、IDE エクスペリエンスをカスタマイズできます。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="common-windows-shortcut-key-combinations"></a>一般的な Windows のショートカット キーの組み合わせ  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で作業を行う場合、標準的な Windows のショートカット キーの組み合わせの多くを使用することができます。 これらのショートカット キーの組み合わせのいくつかを以下に示します。  
@@ -55,10 +50,7 @@ ms.locfileid: "49241021"
 |[ツールボックス] ウィンドウ|[ツールボックス] からフォームまたはデザイナーにコントロールを追加します。|**Enter**|  
 |[キーボード]\([オプション] ダイアログ ボックス - [環境])|**[ショートカット キー]** オプションに入力されたキーの組み合わせを削除します。|**Backspace**|  
 |すべてのツール ウィンドウ|ウィンドウのツール バーにある最初のボタンを選択します。|**Shift** + **Alt**|  
-|IDE ツール バー|標準ツール バーの最初のボタンを選択します。|**Alt**、**Ctrl** + **Tab**。**注:** 次の IDE ツール バーの最初のボタンを選択する場合は、**Ctrl** + **Tab** キーをもう一度押します。|  
+|IDE ツール バー|標準ツール バーの最初のボタンを選択します。|**ALT**、 **CTRL** + **タブ****に注意してください。** キーを押して**CTRL** + **タブ**次の IDE ツールバーの最初のボタンを選択するには、もう一度です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio のユーザー補助機能](../../ide/reference/accessibility-features-of-visual-studio.md)
-
-
-
