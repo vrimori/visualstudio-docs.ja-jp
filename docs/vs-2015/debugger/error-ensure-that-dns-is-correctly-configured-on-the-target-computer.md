@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 1258b0667009d8d6ad9aafe839a76b3a838f1bcc
 ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51751047"
 ---
-# <a name="error-ensure-that-dns-is-correctly-configured-on-the-target-computer"></a>エラー : 対象コンピューターで DNS が正しく構成されていることを確認してください。
+# <a name="error-ensure-that-dns-is-correctly-configured-on-the-target-computer"></a>エラー: ターゲット コンピューターで DNS が正しく構成されていることを確認してください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 リモート デバッグを行おうとすると、次のエラー メッセージが表示される場合があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "51751047"
 Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Ensure that DNS is correctly configured on the target computer.  
 ```  
   
- このエラーは、対象コンピューターが Visual Studio デバッガー ホスト コンピューターの名前を解決できない場合に発生します。 ターゲット コンピューターの DNS 設定を確認します。  
+ このエラーは、ターゲット コンピューターが Visual Studio デバッガー ホスト コンピューターの名前を解決できない場合に発生します。 ターゲット コンピューターの DNS 設定を確認します。  
   
 - Windows 8.1、Vista、Windows 7、Windows Server 2012、Windows Server 2008、または Windows Server 2008 R2 で DNS 設定を表示する方法については、これを行う: で、**開始**] メニューの [選択**ヘルプし、サポート**を検索し**TCP/IP 設定の変更**します。  
   

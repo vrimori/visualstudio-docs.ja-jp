@@ -1,5 +1,5 @@
 ---
-title: エラー :対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
+title: エラー :ターゲット コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55018892"
 ---
-# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー :対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
+# <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー :ターゲット コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 このエラーは、Visual Studio リモート デバッガー サービスがデバッグを開始したコンピューターに接続するときに、このサービスを実行しているユーザー アカウントを認証できないことを示します。  
   
  コンピューターにアクセスできるアカウントは、次の表のとおりです。  

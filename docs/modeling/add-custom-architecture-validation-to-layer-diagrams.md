@@ -221,7 +221,7 @@ Visual Studio で、ソース コードが依存関係図に、依存関係に�
 
 ### <a name="deploying-a-validation-extension"></a>検証拡張機能を配置する
 
-適切なバージョンの Visual Studio がインストールされているコンピューターに検証拡張機能をインストールするには、対象のコンピューターで VSIX ファイルを開きます。
+適切なバージョンの Visual Studio がインストールされているコンピューターに検証拡張機能をインストールするには、ターゲット コンピューターで VSIX ファイルを開きます。
 
 ##  <a name="example"></a> Example code
 
