@@ -1,25 +1,20 @@
 ---
 title: シェーダー デザイナー ノード | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
 caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f41d1d3d934ecd85ac36d24d704db561d42faa97
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 659ac2dadd5500ef3cd4a4a3e7c3b36b91e9cc49
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49293502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54793265"
 ---
 # <a name="shader-designer-nodes"></a>シェーダー デザイナー ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +44,7 @@ ms.locfileid: "49293502"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[定数ノード](../designers/constant-nodes.md)|シェーダーの計算でリテラル値および補間された頂点状態の情報を表すために使うことができるノードについて説明します。 頂点状態は補間され、ピクセルごとに異なるので、各ピクセル シェーダー インスタンスは異なるバージョンの定数を受け取ります。|  
 |[パラメーター ノード](../designers/parameter-nodes.md)|シェーダーの計算でカメラの位置、素材のプロパティ、ライティング パラメーター、時刻、およびその他のアプリの状態情報を表すために使うことができるノードについて説明します。|  
@@ -57,6 +52,3 @@ ms.locfileid: "49293502"
 |[数値演算ノード](../designers/math-nodes.md)|HLSL の命令に直接マップする、代数演算、論理演算、三角関数演算、その他の算術演算を実行するために使うことができるノードについて説明します。|  
 |[ユーティリティ ノード](../designers/utility-nodes.md)|HLSL の命令に直接マップしない、一般的なライティング計算や他の一般的な演算を実行するために使うことができるノードについて説明します。|  
 |[フィルター ノード](../designers/filter-nodes.md)|テクスチャ フィルター処理とカラー フィルター処理の実行に使うことができるノードについて説明します。|
-
-
-

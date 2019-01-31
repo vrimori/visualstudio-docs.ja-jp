@@ -1,24 +1,19 @@
 ---
 title: テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
 caps.latest.revision: 13
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 8dab39c5718b8872df5e81281ba9dda886ebf313
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3952f73c214c0d7070005f28140e048136279215
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49941205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54760224"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -143,7 +138,7 @@ ms.locfileid: "49941205"
   
 1. 各単体テスト コード ファイルに、テスト対象プロジェクトのヘッダー用に `#include` ステートメントを追加します。  
   
-2. 単体テスト コード ファイルに、テスト クラスとメソッドを追加します。 例えば:  
+2. 単体テスト コード ファイルに、テスト クラスとメソッドを追加します。 次に例を示します。  
   
    ```cpp  
    #include "stdafx.h"  
@@ -163,7 +158,7 @@ ms.locfileid: "49941205"
    }  
    ```  
   
-   詳細については、「[テスト エクスプローラーを使用したネイティブ コードの単体テスト](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)」を参照してください。  
+   詳細については、「[テスト エクスプローラーを使用したネイティブ コードの単体テスト](http://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)」を参照してください。  
   
 ## <a name="run-the-tests"></a>テストを実行  
   
@@ -171,7 +166,4 @@ ms.locfileid: "49941205"
   
 2. テスト エクスプローラーで **[すべて実行]** をクリックします。  
   
-   詳細については、「[クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)」を参照してください。
-
-
-
+   詳細については、次を参照してください。[クイック スタート。テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)

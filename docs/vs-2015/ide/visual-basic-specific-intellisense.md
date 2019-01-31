@@ -1,14 +1,9 @@
 ---
 title: Visual Basic 固有の IntelliSense | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
 - IntelliSense [Visual Studio], Visual Basic
@@ -16,13 +11,13 @@ ms.assetid: 4dec8753-05e5-4f74-b304-5f8c4ed8723b
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7fbeae534915863ec8a49e529bef4f6eb0c0fcb0
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ce0d1f2fd5c4ea8549f638f97846fdf7a1726b90
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49852493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54796894"
 ---
 # <a name="visual-basic-specific-intellisense"></a>Visual Basic 固有の IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,8 +51,5 @@ Visual Basic ソース コード エディターでは、次の IntelliSense 機
   
   詳細については、「[ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [IntelliSense の使用](../ide/using-intellisense.md)
-
-
-

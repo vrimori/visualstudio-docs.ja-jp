@@ -1,14 +1,9 @@
 ---
 title: テンプレート パラメーター | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, parameters
 - template parameters [Visual Studio]
@@ -18,13 +13,13 @@ ms.assetid: 1b567143-08c6-4d7a-b484-49f0671754fe
 caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: ef4e1a6e3c56df744ce5375a1cb3a1dbd53a6fad
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1433d9ba1f207a0f86902d7afd56db6476b1fd56
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49238902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54787093"
 ---
 # <a name="template-parameters"></a>テンプレート パラメーター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +27,7 @@ ms.locfileid: "49238902"
 テンプレート内でパラメーターを使用すると、テンプレートがインスタンス化されたときに、テンプレート内の主要な部分 (クラス名や名前空間など) の値を置き換えることができます。 ユーザーが **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスで **[OK]** をクリックすると、これらのパラメーターが、バックグラウンドで実行されているテンプレート ウィザードによって置き換えられます。  
   
 ## <a name="declaring-and-enabling-template-parameters"></a>テンプレート パラメーターの宣言と有効化  
- テンプレート パラメーターは、$*parameter*$ という形式で宣言されます。 例えば:  
+ テンプレート パラメーターは、$*parameter*$ という形式で宣言されます。 次に例を示します。  
   
 -   $safeprojectname$  
   
@@ -79,7 +74,7 @@ ms.locfileid: "49238902"
 ## <a name="custom-template-parameters"></a>カスタム テンプレート パラメーター  
  パラメーター置換時に使用される既定の予約済みテンプレート パラメーターの他に、独自のテンプレート パラメーターと値を指定できます。詳細については、「[CustomParameters 要素 (Visual Studio テンプレート)](../extensibility/customparameters-element-visual-studio-templates.md)」を参照してください。  
   
-## <a name="example-replacing-files-names"></a>例: ファイル名の置換  
+## <a name="example-replacing-files-names"></a>例:ファイル名の置換  
  `TargetFileName` 属性を指定してパラメーターを使用することにより、プロジェクト項目に対して変数ファイル名を指定できます。 たとえば、.exe ファイルが `$projectname$` によって指定されるプロジェクト名をファイル名として使用するように指定できます。  
   
 ```  
@@ -93,7 +88,7 @@ ms.locfileid: "49238902"
 </TemplateContent>  
 ```  
   
-## <a name="example-using-the-project-name-for-the-namespace-name"></a>例: 名前空間名に対するプロジェクト名の使用  
+## <a name="example-using-the-project-name-for-the-namespace-name"></a>例:Namespace 名に対するプロジェクト名を使用します。  
  Visual C# クラス ファイル Class1.cs で名前空間に対してプロジェクト名を使用するには、次の構文を使用します。  
   
 ```  
@@ -128,8 +123,5 @@ namespace $safeprojectname$
 </TemplateContent>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: -Run (devenv.exe) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - /run Devenv
 - run Devenv switch
@@ -20,13 +15,13 @@ ms.assetid: b1f22f9d-39a5-4918-8a2a-4b5c1e872665
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9fb26412d6abb2c438088bf42bef620d5c8bb2d4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 120ff132ac33a156cdf734ee0e17f4cfade9380c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49257546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54768894"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,12 +37,12 @@ devenv {/run|/r} {SolutionName|ProjectName}
   
 ## <a name="arguments"></a>引数  
  `SolutionName`  
- 必須。 ソリューション ファイルの完全パスと名前。  
+ 必須です。 ソリューション ファイルの完全パスと名前。  
   
  `ProjectName`  
- 必須。 プロジェクト ファイルの完全パスと名前。  
+ 必須です。 プロジェクト ファイルの完全パスと名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  アクティブなソリューション構成に対して指定された設定に従って、指定したプロジェクトまたはソリューションをコンパイルして実行します。 このスイッチは、統合開発環境 (IDE) を起動し、プロジェクトまたはソリューションの実行が完了しても IDE をアクティブな状態のままにします。  
   
 -   空白を含む文字列を二重引用符で囲みます。  
@@ -61,12 +56,9 @@ devenv {/run|/r} {SolutionName|ProjectName}
 devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)   
  [/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)   
  [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
  [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
  [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
-
-
-

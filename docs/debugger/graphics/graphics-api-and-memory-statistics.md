@@ -8,15 +8,15 @@ f1_keywords:
 ms.assetid: 27d2f303-e3ed-4219-9009-345a0d849506
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36feec786ba0bba71723073fb990054cc0206847
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e0c1ed6e2fdd461b0fdf502c01089aeafd9a87cb
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916680"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54925631"
 ---
 # <a name="graphics-api-and-memory-statistics"></a>グラフィックス API とメモリの統計情報
 <!-- VERSIONLESS --> Visual Studio 2017 およびそれ以降は、グラフィックス API 統計情報とメモリの統計情報のツールをサポートします。  これら 2 つのツールを使用して、さまざまなリソースの GPU メモリ使用量と、Direct3D API 使用量情報のさまざまな部分を表示できます。
