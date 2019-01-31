@@ -1,14 +1,9 @@
 ---
 title: 呼び出し履歴の一覧表示コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.listcallstack
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 69c3708960f5b1ddaf0ff6620b8d90eb64cd86d8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e1fbd5fa522753f813d6987734de80bb7fc05593
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49194377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54756374"
 ---
 # <a name="list-call-stack-command"></a>ListCallStack コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -82,7 +77,7 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
  Thread:`n`  
  任意。 スレッド `n` の呼び出し履歴を表示します。 スレッドが指定されていない場合、現在のスレッドの呼び出し履歴が表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  引数やスイッチに加えられた変更は、以降のコマンドの呼び出しに適用されます。 Debug.ListCallStackby を単独で実行すると、呼び出し履歴全体が表示されます。 たとえば、次のようなインデックスを指定します。  
   
 ```  
@@ -105,13 +100,10 @@ kb 2
 >Debug.CallStack /Count:4 /ShowTypes:yes  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [逆アセンブリの一覧表示コマンド](../../ide/reference/list-disassembly-command.md)   
  [スレッドの一覧表示コマンド](../../ide/reference/list-threads-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: Replace コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.replace
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 83281a656d553dfa677d7ae25bf043fc0b588978
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f230a2270274f85fd799f86caa278bb98cb5fd46
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54772236"
 ---
 # <a name="replace-command"></a>Replace コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,10 +37,10 @@ Edit.Replace findwhat replacewith [/all] [/case]
   
 ## <a name="arguments"></a>引数  
  `findwhat`  
- 必須。 検索するテキスト。  
+ 必須です。 検索するテキスト。  
   
  `replacewith`  
- 必須。 一致したテキストと置き換えるテキスト。  
+ 必須です。 一致したテキストと置き換えるテキスト。  
   
 ## <a name="switches"></a>スイッチ  
  /all または /a  
@@ -94,12 +89,9 @@ Edit.Replace findwhat replacewith [/all] [/case]
 >Edit.Replace btnSend btnSubmit /open  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [テキストの検索と置換](../../ide/finding-and-replacing-text.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

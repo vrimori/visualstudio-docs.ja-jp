@@ -1,14 +1,9 @@
 ---
-title: 'DA0006: 値の型で Equals() をオーバーライドしてください | Microsoft Docs'
-ms.custom: ''
+title: DA0006:値の型で Equals() をオーバーライドしてください | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAOverrideEquals
 - vs.performance.6
@@ -18,15 +13,15 @@ ms.assetid: 4d85bdd6-b571-47e0-afd6-ba3764e4eed5
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a60bc533ccc826b09e288e7d8ca934702f0443e5
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2229edad7ff338251fea23740343e23f87aa2792
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51768311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54793033"
 ---
-# <a name="da0006-override-equals-for-value-types"></a>DA0006: 値の型で Equals() をオーバーライドしてください
+# <a name="da0006-override-equals-for-value-types"></a>DA0006:値の型で Equals() をオーバーライドしてください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 規則 Id |DA0006 |  
@@ -44,7 +39,4 @@ ms.locfileid: "51768311"
  Equals と等値演算子をオーバーライドする方法については、[Equals および等値演算子 (==) 実装のガイドライン](http://go.microsoft.com/fwlink/?LinkId=177818)を参照してください。  
   
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
- Equals と等値演算子の実装例については、コード分析ルールの「[CA1815: equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。
-
-
-
+ Equals と等値演算子の実装例については、コード分析ルールの「[CA1815:equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。

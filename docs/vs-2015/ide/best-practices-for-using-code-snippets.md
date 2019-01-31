@@ -1,14 +1,9 @@
 ---
 title: コード スニペットを使用するためのベスト プラクティス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, best practices
 - code snippets, security
@@ -16,13 +11,13 @@ ms.assetid: a293ec17-4dd7-4a99-8eeb-99f44a822a8b
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1dad7bd7ccddf3645abb11dc55afcdf2e7cce7ad
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 750d96442f59c29a8e565e6b57eda292656ad1f7
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49919911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54770324"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>コード スニペットを使用するためのベスト プラクティス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "49919911"
 コード スニペットのコードは、最も基本的な処理方法のみを示しています。 ほとんどのアプリケーションでは、そのアプリケーションに合わせてコードを変更する必要があります。  
   
 ## <a name="handling-exceptions"></a>例外処理  
- 通常、コード スニペットの Try…Catch ブロックは、すべての例外をキャッチして再スローします。 これは、プロジェクトにより適していない場合があります。 例外ごとに、対応方法はいくつかあります。 たとえば、「[方法: try/catch を使用して例外を処理する (C# プログラミング ガイド)](http://msdn.microsoft.com/library/ca8e3773-980e-4767-8633-7408540e9818)」と「[Try...Catch...Finally Statement](http://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b)」(Try...Catch...Finally ステートメント) を参照してください。  
+ 通常、コード スニペットの Try…Catch ブロックは、すべての例外をキャッチして再スローします。 これは、プロジェクトにより適していない場合があります。 例外ごとに、対応方法はいくつかあります。 たとえば、「[方法:処理、例外 try/catch を使用して (c# プログラミング ガイド)](http://msdn.microsoft.com/library/ca8e3773-980e-4767-8633-7408540e9818)と[お試しください.キャッチしてください.Finally ステートメント](http://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b)します。  
   
 ## <a name="file-locations"></a>ファイルの位置  
  ファイルの位置をアプリケーションに採用する場合、次の点を考慮する必要があります。  
@@ -71,10 +66,7 @@ ms.locfileid: "49919911"
   
     -   スニペットには、プロジェクトに自動的に追加され、任意の場所からシステムに読み込まれる参照が含まれている可能性があります。 このような参照は、スニペットをダウンロードしたコンピューターにダウンロードされている可能性があります。 また、スニペットから、悪意のあるコードを実行する参照内のメソッドを呼び出す可能性があります。 このような攻撃から保護するには、スニペット ファイルのインポート ブロックと参照ブロックを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Basic の IntelliSense コード スニペット](http://msdn.microsoft.com/library/ffdde4c9-8141-4906-b09b-15181357a643)   
  [アプリケーションの保護](../ide/securing-applications.md)   
  [コード スニペット](../ide/code-snippets.md)
-
-
-

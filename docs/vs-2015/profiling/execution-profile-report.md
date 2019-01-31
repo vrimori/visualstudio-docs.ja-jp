@@ -1,14 +1,9 @@
 ---
 title: 実行プロファイル レポート | Microsoft ドキュメント
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.report.execution
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: c8128472-a8ed-46f4-b1c8-a25358d6f2c1
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4c211271bbc4be147d22ab4cb0262b591f4b839a
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a0d95d4593939b878194d2aeef79bdd0a8ad946a
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51763599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54756518"
 ---
 # <a name="execution-profile-report"></a>実行プロファイル レポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "51763599"
   
 |Column|説明|  
 |------------|-----------------|  
-|名前|呼び出し履歴の各レベルの関数の名前。|  
+|name|呼び出し履歴の各レベルの関数の名前。|  
 |包括サンプル|このレベルの呼び出し履歴のツリーにまとめられたすべてのスタックについて集められたサンプルの合計数。 包括数は、この関数の排他サンプルと、すべての子ノードの包括カウンターの合計です。|  
 |排他サンプル|この関数が呼び出し履歴の最も低いレベルにある、収集されたサンプルの合計数。|  
 |% 包括|包括サンプル列に表示されているサンプルの合計の割合。 割合は小数点以下 2 桁に丸めて表示されます。|  
@@ -47,8 +42,5 @@ ms.locfileid: "51763599"
   
  このレポートの表については、[実行時間 (スレッド ビュー)](../profiling/execution-time-threads-view.md) ビューで確認できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)
-
-
-

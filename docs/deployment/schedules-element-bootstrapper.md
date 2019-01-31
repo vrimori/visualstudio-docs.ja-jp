@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 28d094cf-64f5-42b1-bd8a-3697082aab4f
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 850c94274f783c306fe31fde4d86c9563c928adf
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ccba6de5795dd461c2a68f6aeeb593314ceede09
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53894299"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54962483"
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;スケジュール&gt;要素 (ブートス トラップ)
 `Schedules`要素が含まれます`Schedule`によって定義されたコマンドで特定の時間を定義するには、要素、`Command`要素を実行する必要があります。  

@@ -1,14 +1,9 @@
 ---
 title: フォルダーを指定して検索コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - edit.findinfiles
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 5a278bb50af4488e9e627e884b20332717d6d0f8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9cc8218bafd4a6a0a6ce5622b9aff0e28dda8673
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49256725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54753318"
 ---
 # <a name="find-in-files-command"></a>FindinFiles コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,7 +37,7 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
   
 ## <a name="arguments"></a>引数  
  `findwhat`  
- 必須。 検索するテキスト。  
+ 必須です。 検索するテキスト。  
   
 ## <a name="switches"></a>スイッチ  
  /case または /c  
@@ -92,12 +87,9 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [フォルダーを指定して検索](../../ide/find-in-files.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: c8b25b3a5ef82093403392fcce9c60beeb36c156
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c7efe1fc6b4a1bf47a2b9d2fe34eee203fcf014a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53893566"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55018928"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend での XAML のデバッグ
 アプリの XAML をデバッグするために [!INCLUDE[blend_first](../debugger/includes/blend_first_md.md)] のツールを使用できます。 プロジェクトをビルドする場合、エラーは **[結果]** パネルに表示されます。 エラーをダブルクリックして、エラーに関連するマークアップを検索します。 作業領域を増やす必要がある場合は、F12 キーを押して **[結果]** パネルを非表示にできます。  

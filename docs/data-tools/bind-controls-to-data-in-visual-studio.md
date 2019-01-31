@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: f6e40e5353fb33462459a6d4d4a97b34af800524
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: ff7c2db3fc1032e08a9e15f17ca6ae1af6d9373b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154448"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54991633"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータへのコントロールのバインド
 
@@ -33,12 +33,12 @@ ms.locfileid: "54154448"
 
 | データ ソース | **Windows フォーム デザイナー**でのドラッグ アンド ドロップのサポート | **WPF デザイナー**でのドラッグ アンド ドロップのサポート | **Silverlight デザイナー**でのドラッグ アンド ドロップのサポート |
 | - | - | - | - |
-| データセット | [はい] | [はい] | × |
-| エンティティ データ モデル | ○<sup>1</sup> | [はい] | [はい] |
+| データセット | はい | [はい] | × |
+| エンティティ データ モデル | ○<sup>1</sup> | はい | はい |
 | LINQ to SQL クラス | ×<sup>2</sup> | ×<sup>2</sup> | ×<sup>2</sup> |
-| サービス ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む) | [はい] | [はい] | [はい] |
-| Object | [はい] | [はい] | [はい] |
-| SharePoint | [はい] | [はい] | [はい] |
+| サービス ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む) | はい | [はい] | はい |
+| Object | はい | [はい] | はい |
+| SharePoint | はい | [はい] | はい |
 
 1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。
 

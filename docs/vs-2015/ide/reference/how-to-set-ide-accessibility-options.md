@@ -1,27 +1,22 @@
 ---
-title: '方法: IDE アクセシビリティ オプションを設定する | Microsoft Docs'
-ms.custom: ''
+title: '方法: IDE アクセシビリティ オプションを設定 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 485529a8be2adf57f7b79a3d2f0844d662920448
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b1f70f2f33b8ad0af4f0fa13489cb75be529c322
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49867287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54803224"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,12 +27,12 @@ ms.locfileid: "49867287"
  また、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] では、Dvorak 配列のキーボードがサポートされています。この配列では、最も使用頻度の高い文字が最も入力しやすい位置にあります。 また、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で設定されている既定のショートカット キーをカスタマイズすることもできます。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="editors-dialogs-and-tool-windows"></a>エディター、ダイアログ、およびツール ウィンドウ  
  既定では、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のダイアログ ボックスおよびツール ウィンドウに対し、オペレーティング システムで使用されているフォント サイズと色が使用されます。 IDE、ダイアログ ボックス、ツール バー、ツール ウィンドウのフレームの色の設定は、配色 (明るいまたは暗い) に基づいています。 [[全般] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/general-environment-options-dialog-box.md) で、現在の配色テーマを変更することができます。  
   
- エディターのコード ビューでは、ポップアップ ウィンドウも表示できます。 これらのウィンドウを表示し、関数またはステートメントを完成させるために利用できる現在のオブジェクトのメンバーおよびパラメーターを示すことができます。 キー入力が困難な場合は、ウィンドウの表示が役に立ちます。 ただし、ウィンドウを表示するとコード エディターのフォーカスが妨げられるので、ユーザーによっては問題になる場合があります。 これらのウィンドウの表示を中止するには、**[オプション]** ダイアログ ボックスを開き、**[テキスト エディター]**、**[すべての言語]**、**[全般]** を順にクリックし、**[自動メンバー表示]** および **[パラメーター ヒント]** をオフにします。 詳しくは、「[方法: 一般エディター オプションを設定する](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)」をご覧ください。  
+ エディターのコード ビューでは、ポップアップ ウィンドウも表示できます。 これらのウィンドウを表示し、関数またはステートメントを完成させるために利用できる現在のオブジェクトのメンバーおよびパラメーターを示すことができます。 キー入力が困難な場合は、ウィンドウの表示が役に立ちます。 ただし、ウィンドウを表示するとコード エディターのフォーカスが妨げられるので、ユーザーによっては問題になる場合があります。 これらのウィンドウの表示を中止するには、**[オプション]** ダイアログ ボックスを開き、**[テキスト エディター]**、**[すべての言語]**、**[全般]** を順にクリックし、**[自動メンバー表示]** および **[パラメーター ヒント]** をオフにします。 詳細については、「[方法 :一般的なエディターのオプションを設定](http://msdn.microsoft.com/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)します。  
   
  統合開発環境 (IDE: Integrated Development Environment) のウィンドウを作業に最も適した位置に整列し直すことができます。 各ツール ウィンドウを、ドッキング、フローティング、非表示、自動非表示にできます。  
   
@@ -89,7 +84,7 @@ ms.locfileid: "49867287"
   
 4.  **[表示項目]** から、**[テキスト形式]**、**[インジケーター マージン]**、**[スペースの表示]**、**[HTML の属性名]**、**[XML 属性]** など変更対象の項目を選択します。  
   
-5.  **[前景色]**、**[背景色]**、および **[太字]** の各オプションから表示設定を選択します。  
+5.  表示設定を **[前景色]**、**[背景色]**、**[太字]** のオプションから選択します。  
   
 6.  **[OK]** をクリックします。  
   
@@ -116,9 +111,6 @@ ms.locfileid: "49867287"
   
 2.  **[名前]** の右側に、選択したボタンの新しいキャプションを入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio のユーザー補助機能](../../ide/reference/accessibility-features-of-visual-studio.md)   
  [ユーザー補助アプリケーションのデザイン リソース](../../ide/reference/resources-for-designing-accessible-applications.md)
-
-
-

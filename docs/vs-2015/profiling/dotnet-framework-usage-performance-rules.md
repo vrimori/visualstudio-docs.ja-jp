@@ -1,25 +1,20 @@
 ---
 title: .NET Framework の使用に関するパフォーマンス規則 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: ab573755-6370-48aa-853d-a7321c424c79
 caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 0706a5279a2ab338cc6e50cce25051b4fba7b366
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a9c976560b39fd8a9146733d78cd3a094ed3b118
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51756142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54755113"
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework の使用に関するパフォーマンス規則
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +23,7 @@ ms.locfileid: "51756142"
   
 |||  
 |-|-|  
-|[DA0001: StringBuilder を使用して連結してください](../profiling/da0001-use-stringbuilder-for-concatenations.md)|<xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> の呼び出しがプロファイル データの大きな割合を占めています。 <xref:System.Text.StringBuilder> クラスを使用して、複数のセグメントからの文字列を連結することを検討してください。|  
+|[DA0001: 連結には StringBuilder を使用してください](../profiling/da0001-use-stringbuilder-for-concatenations.md)|<xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> の呼び出しがプロファイル データの大きな割合を占めています。 <xref:System.Text.StringBuilder> クラスを使用して、複数のセグメントからの文字列を連結することを検討してください。|  
 |[DA0005: 頻繁な GC2 のコレクションです](../profiling/da0005-frequent-gc2-collections.md)|比較的多数の .NET メモリ オブジェクトが、ジェネレーション 2 のガベージ コレクションで回収されています。 ジェネレーション 1 のコレクションで回収されない有効期間の短いオブジェクトが多すぎる場合、メモリ管理コストが簡単に過剰になる可能性があります。|  
 |[DA0006: 値の型で Equals() をオーバーライドしてください](../profiling/da0006-override-equals-parens-for-value-types.md)|パブリック値型の `Equals` メソッドまたは等値演算子の呼び出しが、プロファイリング データの大きな割合を占めています。 さらに効率的な方法を実装することを検討してください。|  
 |[DA0007: 制御フローでの例外の使用を避けてください](../profiling/da0007-avoid-using-exceptions-for-control-flow.md)|.NET Framework 例外ハンドラーの多くの部分が、プロファイリング データで呼び出されました。 他の制御フロー ロジックを使用して、スローされる例外の数を減らすことを検討してください。|  
@@ -43,6 +38,3 @@ ms.locfileid: "51756142"
 |[DA0024: 過剰な GC CPU 時間](../profiling/da0024-excessive-gc-cpu-time.md)|プロファイリングの間に収集されたシステム パフォーマンス データで、ガベージ コレクションに費やされた時間がアプリケーション処理時間全体と比較して大き過ぎることが示されています。 このルールは、ガベージ コレクションに費やされた時間がルール DA0023 の上限しきい値を超えると発生します。|  
 |[DA0038: 高率のロック競合](../profiling/da0038-high-rate-of-lock-contentions.md)|プロファイリング データで収集されたシステム パフォーマンス データが、アプリケーションの実行中に非常に高率のロック競合が発生したことを示しています。 競合の原因を見つけるために、コンカレンシー プロファイル方法を使用して、プロファイリングを再度実行することを検討してください。|  
 |[DA0039: 非常に高率のロック競合](../profiling/da0039-very-high-rate-of-lock-contentions.md)|プロファイリング データで収集されたシステム パフォーマンス データが、アプリケーションの実行中に極端に高率のロック競合が発生したことを示しています。 競合の原因を見つけるために、コンカレンシー プロファイル方法を使用して、プロファイリングを再度実行することを検討してください。 このルールは、ロック競合の割合がルール DA0038 の上限しきい値を超えると発生します。|
-
-
-

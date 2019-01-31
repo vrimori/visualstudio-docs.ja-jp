@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ddc7d794-c622-4c63-b2a6-72f8b2d0022a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1325d32c3656a45cab41bd174596113a18c5f58c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 56ed4b317dc9259458ddb9f984c5d086595d7846
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936907"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55033922"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 コンパイル単位の情報を使用したシンボルに分割されて、`SymTagCompiland`タグ (解像度の低い) と`SymTagCompilandDetails`タグ (詳細)。 `SymTagCompilandDetails` 追加のシンボルを読み込む必要があります。 ただしは、豊富な情報では利用できませんが、コンパイル単位について、`SymTagCompiland`シンボル。  

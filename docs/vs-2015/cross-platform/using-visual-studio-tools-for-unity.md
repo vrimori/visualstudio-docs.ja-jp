@@ -1,25 +1,20 @@
 ---
 title: Visual Studio Tools for Unity を使用する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-unity-tools
+ms.topic: conceptual
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
 caps.latest.revision: 7
 author: conceptdev
 ms.author: crdun
-manager: ghogen
-ms.openlocfilehash: a7dbe0e13691e5ac0dbf67945728bada3ef4e57f
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 90926994f6cf67e36260dc85e29accaa88e519ca
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51771310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54777382"
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -80,7 +75,7 @@ ms.locfileid: "51771310"
   
 ##### <a name="to-view-the-unity-project-explorer"></a>Unity プロジェクト エクスプローラーを表示するには  
   
-- Visual Studio のメイン メニューで、**[表示]**、**[Unity Project Explorer]** の順に選択します。 キーボードでは、**Alt + Shift + E** キーを押します。  
+- Visual Studio のメイン メニューで、**[表示]**、**[Unity Project Explorer]** の順に選択します。 キーボード:**Alt + Shift + E**  
   
    ![Unity プロジェクト エクスプローラー ウィンドウを表示します。](../cross-platform/media/vstu-view-unity-project-explorer.png "vstu_view_unity_project_explorer")  
   
@@ -193,4 +188,3 @@ ms.locfileid: "51771310"
      PDB ファイルには DLL のデバッグのシンボルや、DLL コードからソース コード フォームへのマップが格納されているため、デバッグには PDB ファイルが必要です。 Visual Studio Tools for Unity は、DLL と PDB からの情報を使用して DLL.MDB ファイルを作成します。このファイルは、Unity スクリプト エンジンが使用するデバッグ シンボル形式になっています。  
   
 4. コードをデバッグします。 これで、Unity プロジェクトのソース コードと DLL ソース コードを一緒にしてデバッグできるようになりました。ブレークポイントやコードのステップ実行など、いつも使用しているデバッグ機能をすべて使用できます。
-

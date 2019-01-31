@@ -1,27 +1,22 @@
 ---
 title: コンカレンシー ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.performance.cvcollectioncmd
 ms.assetid: 476601be-1608-4014-af15-5aba6ccbed1c
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ee6ba9335cee43a36750dfcdf46faed16c56db4e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d7d37db61f49db19d952cf5b45699b604a91e090
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51790990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54752914"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>コンカレンシー ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,7 +76,7 @@ ms.locfileid: "51790990"
 |MarkerProvider|単一のマーカー プロバイダーを指定します。|以下の要素が含まれている必要があります。<br /><br /> -   Level<br />-   GUID<br />-   Name<br /><br /> 以下の要素を含めることができます。<br /><br /> -   Categories<br />-   IsEnabled|  
 |レベル|MarkerProvider の重要度レベルを設定します。|-   Low<br />-   Normal<br />-   High<br />-   Critical<br />-   Everything|  
 |GUID|ETW マーカー プロバイダーのグローバル一意識別子。|GUID。|  
-|名前|マーカー プロバイダーの説明を指定します。|文字列。|  
+|name|マーカー プロバイダーの説明を指定します。|文字列。|  
 |カテゴリ|マーカー プロバイダーについて収集するカテゴリを指定します。|コンマ区切りの文字列または数値の範囲。|  
 |IsEnabled|マーカー プロバイダーをコレクションに有効にするかどうかを判別する値を設定します。|-   True<br />-   False|  
 |FilterConfig|コレクションからフィルター処理する ETW イベントの構成オプションのリストを指定します。|以下の要素を含めることができます。<br /><br /> -   CollectClrEvents<br />-   ClrCollectionOptions<br />-   CollectSampleEvents<br />-   CollectGpuEvents<br />-   CollectFileIO|  
@@ -158,6 +153,3 @@ ms.locfileid: "51790990"
 </LocalConfig>  
   
 ```
-
-
-
