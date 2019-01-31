@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce5553f54b5864c27fc4dfa14376e8eb7735c613
-ms.sourcegitcommit: d0b02affd24e66efed924c197824f35f823e3240
+ms.openlocfilehash: 69c74548340e8b8f642fa1e373bdd424c3c81a69
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417799"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54989745"
 ---
 # <a name="options-text-editor-general"></a>[オプション]、[テキスト エディター]、[全般]
 
@@ -67,7 +67,7 @@ ms.locfileid: "54417799"
 
 選択した場合、**Ctrl** キーを押ながらマウスをクリックすると、マウス ポインターが要素に移動します。 これを行うと、選択した要素の定義に移動します。 **[修飾キーの使用]** ドロップダウンから、**[Alt]** または **[Ctrl** + **Alt]** を選択することもできます。
 
-コード エディターの現在の場所から移動せずに選択した要素の定義をウィンドウに表示するには、**[ピーク ビューで定義を開く]** チェック ボックスをオンにします。 
+コード エディターの現在の場所から移動せずに選択した要素の定義をウィンドウに表示するには、**[ピーク ビューで定義を開く]** チェック ボックスをオンにします。
 
 ## <a name="display"></a>表示
 

@@ -1,14 +1,9 @@
 ---
 title: MSBuild バッチ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
@@ -16,13 +11,13 @@ ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
 caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 24baafbaf213e90999a5e4e0eea030f2ef608501
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c2e2392c3b04ce7f81e023f449da890122946e3b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49304175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54770810"
 ---
 # <a name="msbuild-batching"></a>MSBuild バッチ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -108,11 +103,8 @@ ms.locfileid: "49304175"
   
  プロパティ関数の詳細については、「[プロパティ関数](../msbuild/property-functions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ItemMetadata 要素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)
-
-
-

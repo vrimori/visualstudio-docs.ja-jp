@@ -11,12 +11,12 @@ ms.devlang: multiple
 ms.service: multiple
 ms.workload:
 - azure
-ms.openlocfilehash: 937f5f1606e24a40c0c5ffe90f739cc68df7e4b7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d6a8592950fafa1d0ffc564aafaab4371b315088
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53872068"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55041634"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI での AI モデルのトレーニング
 
@@ -34,7 +34,7 @@ Azure Batch AI は、Visual Studio Tools for AI に統合されているため�
 
 3. **[表示] > [チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Azure DevOps に接続したり、リポジトリを複製したりすることができます。
 
-    ![Azure DevOps、GitHub、リポジトリの複製を示すチーム エクスプローラー ウィンドウ](media/train-model/team-explorer.png)
+    ![Azure DevOps、GitHub、リポジトリの複製を示すチーム エクスプローラー ウィンドウ](media/train-model/team-explorer-devops.png)
 
 4. **[Local Git Repositories]\(ローカル Git リポジトリ\)** の下の [URL] フィールドに、`https://github.com/Microsoft/samples-for-ai` と入力し、複製されたファイル用のフォルダーを入力し、**[複製]** を選択します。
 

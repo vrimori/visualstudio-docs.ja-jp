@@ -1,13 +1,9 @@
 ---
 title: ソリューションおよびプロジェクト
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.savedeferredsaveprojectonclose
 - vs.untrustedtemplateopeningdocuments
@@ -53,13 +49,13 @@ ms.assetid: aeaf56cb-c2dd-47f6-b012-23b84b7a7254
 caps.latest.revision: 41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a4e50e386be097338207a2ef66904347f9170d3b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 32b2f33af3c34cf6245e511cbd54d6ce7cc3a2bd
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54795253"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +75,7 @@ Visual Studio でアプリケーション、Web サイト、Web アプリ、ス�
  カスタム プロジェクトや項目テンプレートを作成することもできます。 詳細については、「[Creating Project and Item Templates](../ide/creating-project-and-item-templates.md)」 (プロジェクトと項目テンプレートの作成) をご覧ください。
 
 ## <a name="creating-new-projects"></a>プロジェクトの新規作成
- 新しいプロジェクトを作成する最も簡単な方法は、最初に定義済みのプロジェクト テンプレートを使用することです。これらのテンプレートは、特定のプログラミング言語で特定の種類のアプリケーションや Web サイトを作成し始めるのに必要な、生成済みのコード ファイル、構成ファイル、資産、および設定の基本セットで構成されます。 これらのテンプレートは、メイン メニューの **[ファイル &#124; 新規作成 &#124; プロジェクト]** または **[ファイル &#124; 新規作成 &#124; Web サイト]** を選択して **[新しいプロジェクト]** ダイアログに移動したときに表示されます。 詳しくは、「[Creating Solutions and Projects](../ide/creating-solutions-and-projects.md)」 (ソリューションとプロジェクトの作成) および「[NIB テンプレートからのプロジェクトの作成](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)」をご覧ください。
+ 新しいプロジェクトを作成する最も簡単な方法は、最初に定義済みのプロジェクト テンプレートを使用することです。これらのテンプレートは、特定のプログラミング言語で特定の種類のアプリケーションや Web サイトを作成し始めるのに必要な、生成済みのコード ファイル、構成ファイル、資産、および設定の基本セットで構成されます。 これらのテンプレートは、メイン メニューの **[ファイル &#124; 新規作成 &#124; プロジェクト]** または **[ファイル &#124; 新規作成 &#124; Web サイト]** を選択して **[新しいプロジェクト]** ダイアログに移動したときに表示されます。 詳しくは、「[Creating Solutions and Projects](../ide/creating-solutions-and-projects.md)」 (ソリューションとプロジェクトの作成) および「[NIB テンプレートからのプロジェクトの作成](http://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2)」をご覧ください。
 
 ## <a name="managing-projects-in-solution-explorer"></a>ソリューション エクスプローラーでのプロジェクトの管理
  新しいプロジェクトを作成した後は、 **ソリューション エクスプローラー** を使用して、プロジェクト、ソリューション、およびそれらの関連項目を表示して管理します。 次の図に、2 つのプロジェクトを含む C# ソリューションが表示されたサーバー エクスプローラーを示します。

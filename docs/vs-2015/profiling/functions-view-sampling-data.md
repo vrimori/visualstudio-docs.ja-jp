@@ -1,14 +1,9 @@
 ---
 title: 関数ビュー - サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method,Functions View
 - Functions view
@@ -16,13 +11,13 @@ ms.assetid: 029d5ebb-e551-46b0-b64e-2c553d9dbb8e
 caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: d74ed306c2e8396b1b7bc06910105552fc7d5873
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 68280c4da20ce063b93b7347cc2857d4a83b9a18
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51733024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54769156"
 ---
 # <a name="functions-view---sampling-data"></a>関数ビュー - サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,11 +42,8 @@ ms.locfileid: "51733024"
 |**サンプル数 (関数のみ)**|この関数の本文内のコードが実行されたとき、つまり、この関数が呼び出し履歴の一番上にあったときに収集されたサンプルの合計数。 この関数によって呼び出された関数で収集されたサンプルは含まれません。|  
 |**サンプル % (関数のみ)**|プロファイル実行のすべてのサンプルに対する、この関数の排他サンプルの割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)
-
-
-

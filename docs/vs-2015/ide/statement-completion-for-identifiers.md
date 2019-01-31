@@ -1,14 +1,9 @@
 ---
 title: 識別子の入力候補 |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [JavaScript], statement completion
 - statement completion, JavaScript IntelliSense
@@ -16,13 +11,13 @@ ms.assetid: c2cd4945-c67e-471b-8057-96cfd25f7fb2
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d58c5ecc1d787195f7f5c91a07da7a4e775fc27e
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 89f507c2f4d01cf5e3e1e983cfcb5bafd9d9a7dd
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49827058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54787653"
 ---
 # <a name="statement-completion-for-identifiers"></a>識別子の入力候補
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,8 +60,5 @@ JavaScript をして入力変数の宣言を明示的に許可されていませ
   
   オブジェクトの入力候補一覧は、XML ドキュメントのコメントまたは JavaScript IntelliSense の拡張機能を使用してオーバーライドできます。 これらの機能を使用して行うことができますの種類の情報とわかりやすい IntelliSense の情報ができない可能性がありますそれ以外の場合とします。 詳細については、次を参照してください。 [JavaScript IntelliSense の拡張](../ide/extending-javascript-intellisense.md)と[XML ドキュメント コメントの作成](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)
-
-
-

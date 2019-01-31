@@ -6,16 +6,16 @@ ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 09799a4625791efa137dc9b97b7c3ad9a041feae
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 56493da196a0d53ead738b2eff6d10a2f9328c37
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53897801"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929326"
 ---
 # <a name="static-helper-classes"></a>静的ヘルパー クラス
 
@@ -131,7 +131,7 @@ public static class MathEx {
 public partial class MathExTests {
      [PexMethod]
      public int SquareTest(int a) {
-        int result = MathEx.Square(a); 
+        int result = MathEx.Square(a);
         // storing result
         return result;
      }
@@ -149,7 +149,8 @@ public partial class MathExTests {
 
 **例**
 
-これは **PexAssume.Arrays.ElementsAreNotNull** メソッドの実装例です。 このメソッドでは、IntelliTest がさまざまなサイズの配列の生成を試行しないように、配列値の長さに対する制約を無視します。 制約はここだけで無視されます。 配列の長さが異なると、テストされるコードの動作も異なる場合、IntelliTest はテストされるコードの制約とは異なるサイズの配列を生成できません。
+これは **PexAssume.Arrays.ElementsAreNotNull** メソッドの実装例です。
+このメソッドでは、IntelliTest がさまざまなサイズの配列の生成を試行しないように、配列値の長さに対する制約を無視します。 制約はここだけで無視されます。 配列の長さが異なると、テストされるコードの動作も異なる場合、IntelliTest はテストされるコードの制約とは異なるサイズの配列を生成できません。
 
 ```csharp
 public static void AreElementsNotNull<T>(T[] value)

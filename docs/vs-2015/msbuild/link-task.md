@@ -1,14 +1,9 @@
 ---
 title: Link タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceFileOutput
 - VC.Project.VCLinkerTool.LinkStatus
@@ -35,13 +30,13 @@ ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
 caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f2ca9c721567d89bddad4a9ee61639bd3a82f10d
-ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4575516304862b4d50060a101a08a74f88db4597
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54768515"
 ---
 # <a name="link-task"></a>Link タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -194,7 +189,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
    マネージド コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
-   詳細については、次を参照してください。 [/CLRUNMANAGEDCODECHECK (追加 SuppressUnmanagedCodeSecurityAttribute)](http://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2)します。  
+   詳細については、「[/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute の追加)](http://msdn.microsoft.com/library/73abc426-dab0-45e2-be85-0f9a14206cc2)」を参照してください。  
   
 - **CreateHotPatchableImage**  
   
@@ -932,8 +927,5 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
    詳細については、「[/VERSION (バージョン情報)](http://msdn.microsoft.com/library/b86d0e86-dca6-4316-aee2-d863ccb9f223)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 22dfe8f1-8271-4708-9c25-6bbb13920ac8
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fdd69b83702b07aae8a1c39c6c9298201c2f048
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b738a419c93e1741fd2567fb18c9998beb181bd7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53862167"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55040633"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置の固有のエラーのトラブルシューティング
 この記事では、展開するときに発生する可能性がある次の一般的なエラーを示します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、各問題を解決する手順を示します。  
@@ -105,7 +105,7 @@ ms.locfileid: "53862167"
  Microsoft Visual Studio Web Authoring コンポーネントから公開しているコンピューターにインストールされているがあることを確認します。 Express ユーザーは、このコンポーネントは、既定ではインストールされません。 詳細については、「[http://go.microsoft.com/fwlink/?LinkId=102310](http://go.microsoft.com/fwlink/?LinkId=102310)」を参照してください。  
 
 #### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>エラー メッセージファイルが見つかりませんでした ' Microsoft.Windows.Common-コントロール、バージョン 6.0.0.0、カルチャを = = *、PublicKeyToken = 6595b64144ccf1df、ProcessorArchitecture =\*型 = win32'  
- Visual スタイルが有効になっている WPF アプリケーションを発行しようとしたときに、このエラー メッセージが表示されます。 この問題を解決するには、次を参照してください。[方法。Visual スタイルが有効になっている WPF アプリケーションを公開する](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)  
+ Visual スタイルが有効になっている WPF アプリケーションを発行しようとしたときに、このエラー メッセージが表示されます。 この問題を解決するには、次を参照してください。[方法。Visual スタイルが有効になっている WPF アプリケーションの発行](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)  
 
 ## <a name="using-mage"></a>Mage を使用します。  
 

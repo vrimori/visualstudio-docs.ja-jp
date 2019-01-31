@@ -1,14 +1,9 @@
 ---
 title: 実行時間 (スレッド ビュー) | Microsoft ドキュメント
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.timeline.execution
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 80c100f8-2502-4613-bfef-4f4f2e09cc8d
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 89dd600976e151c377db8ebb2c0e67935c23e006
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b4306e030c2f48d87b12ba6338a847dc9e9aa892
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51789864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54766240"
 ---
 # <a name="execution-time-threads-view"></a>実行時間 (スレッド ビュー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,9 +31,6 @@ ms.locfileid: "51789864"
   
  現在のビューのすべての実行セグメントについて、従来のサンプリング プロファイルを参照するには、表示されているタイムライン プロファイルで **[実行]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [実行プロファイル レポート](../profiling/execution-profile-report.md)   
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)
-
-
-

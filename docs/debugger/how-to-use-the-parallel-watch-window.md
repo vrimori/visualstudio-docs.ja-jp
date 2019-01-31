@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 28004d9b-420c-48f7-b80e-ab1519802558
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75ffa4075c58750834558f38dcd2e2fcacc0d358
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: 86111c5ac40e4379e1130bdf143e736dec1494f9
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227318"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55021469"
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio での並列スレッドの変数のウォッチ ポイントを設定 (C#、Visual Basic、C++)
 [並列ウォッチ] ウィンドウには、複数のスレッドで 1 つの式が保持している値を同時に表示できます。 各行は、1 つのアプリケーションで実行中のスレッドを表しますが、スレッドは複数の行に表示される場合があります。 具体的には、各行は関数シグネチャが現在のスタック フレーム上の関数に一致する関数呼び出しを表します。 列内の項目の並べ替え、順序変更、削除、およびグループ化を行うことができます。 スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 **[並列ウォッチ]** ウィンドウには次の列が表示されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "54227318"
   
 ### <a name="to-switch-to-another-thread"></a>別のスレッドに切り替える  
   
--   現在のスレッドの列をダブルクリックします (2 番目の列)。 キーボード行を選択し、Enter キーを押します。)  
+-   現在のスレッドの列をダブルクリックします (2 番目の列)。 (キーボード:行を選択し、Enter キーを押します。)  
   
 ### <a name="to-sort-a-column"></a>列を並べ替えるには  
   

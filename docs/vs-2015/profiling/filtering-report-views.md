@@ -1,36 +1,31 @@
 ---
 title: レポート ビューのフィルター処理 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, configuring
 ms.assetid: 820cf192-7fd6-4bee-9a51-aa69154aca85
 caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b5ce703fdc3b0d20feda83b59706e7c4792d2ade
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d27e104aec3719e3f88e75cb326082913068b44b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51753439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54793088"
 ---
 # <a name="filtering-report-views"></a>レポート ビューのフィルター処理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 フィルターをプロファイル データ ファイルに適用すると、パフォーマンス レポート ビューに表示する、またはレポート ファイルにエクスポートするプロファイル データを制限することができます。 レポートはタイム スタンプ値の間のデータに制限でき、データは特定のプロセスおよびスレッドに制限できます。 フィルターをファイルに保存し、保存したフィルターをインポートすることで、別のプロファイル データ ファイルにフィルターを作成できます。  
   
- また、概要ビューのグラフィカルなタイムラインを使用することで、レポートを時間セグメントに制限することもできます。 「[方法: 概要ビューのタイムラインからレポート ビューをフィルター処理する](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)」を参照してください。  
+ また、概要ビューのグラフィカルなタイムラインを使用することで、レポートを時間セグメントに制限することもできます。 「[方法:概要ビューのタイムラインからレポート ビューをフィルター処理する](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)」を参照してください。  
   
- レポートからシステムとサードパーティ コードを除外する方法については、「[方法: プロファイリング ツールのレポート ビューをフィルター処理してマイ コードのみを表示する](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)」を参照してください。  
+ システムおよびサードパーティのコードをレポートから除外するには、次のページを参照してください。[方法:プロファイル ツールのレポート ビューをフィルター処理してマイ コードのみを表示する](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)  
   
 ## <a name="procedures"></a>手順  
   
@@ -99,8 +94,5 @@ ms.locfileid: "51753439"
   
 2.  保存するフィルター (.vspf) ファイルの場所と名前を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [パフォーマンス ツール のレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)
-
-
-

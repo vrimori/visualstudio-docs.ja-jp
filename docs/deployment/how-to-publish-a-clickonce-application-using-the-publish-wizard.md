@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2e4aa67c-4445-4f7b-9e03-9acb95829127
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a6b916e8050bd68f4ccd601e92725768a01c4c7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 53a0d26e5eba40a0e089055ad2c3bf69404f4db7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935048"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55016552"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する
 ユーザーが ClickOnce アプリケーションを利用できるようにするには、アプリケーションをファイル共有やパス、FTP サーバー、またはリムーバブル メディアに発行する必要があります。 アプリケーションの発行は、発行ウィザードを使用して実行できます。発行に関連する追加のプロパティは、**プロジェクト デザイナー**の **[発行]** ページで設定できます。 詳細については、「[ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)」を参照してください。

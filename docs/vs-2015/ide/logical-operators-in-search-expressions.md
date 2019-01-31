@@ -1,14 +1,9 @@
 ---
 title: 検索式の論理演算子 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Help Viewer 2.0, logical operators in search
 - logical operators in search [Help Viewer 2.0]
@@ -16,13 +11,13 @@ ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
 caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8337c455ac283e7b9abbf70c39493b31c01a7d06
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 66d6aa6a11ef0ce308c5ba2b089aaa8170b6441f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49212538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54760071"
 ---
 # <a name="logical-operators-in-search-expressions"></a>検索式の論理演算子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,9 +34,6 @@ ms.locfileid: "49212538"
 |同じトピック内の最初の用語 (2 番目の用語を含まない)|NOT|"operating system" NOT DOS|"operating system" を含むが、"DOS" を含まないトピック。|  
 |トピック内で近接する両方の用語|NEAR|user NEAR kernel|"kernel" にきわめて近い "user" を含むトピック。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [フルテキスト検索のヒント](../ide/full-text-search-tips.md)   
  [情報の検索](../ide/locate-information.md)
-
-
-

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a1320587-7ce7-401f-9548-2f8bcece5cc3
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a87861d4672d3ff7691fae3378dd3de09beb70a7
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: e5a2530dce21c31df57003d3d4eb4de63ce0aad6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53828996"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54999094"
 ---
 # <a name="idiaenumsymbolsbyaddrnext"></a>IDiaEnumSymbolsByAddr::Next
 アドレスの順序で次のシンボルを取得します。  

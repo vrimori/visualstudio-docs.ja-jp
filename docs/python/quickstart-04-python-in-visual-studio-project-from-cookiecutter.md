@@ -6,17 +6,17 @@ ms.prod: visual-studio-dev15
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8e4712a5dd73c899e82a8fc6e07331be5b6e6c46
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9dd949f921c3d504823e9204e0974617c8a2b3e7
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53863694"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54953186"
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>クイック スタート: Cookiecutter テンプレートからプロジェクトを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "53863694"
 
 1. Visual Studio を起動します。
 
-1. **[ファイル]** > **[新規]** > **[From Cookiecutter...]\(Cookiecutter から...\)** の順に選択します。 このコマンドによって、テンプレートを参照できるウィンドウが Visual Studio で開きます。 
+1. **[ファイル]** > **[新規]** > **[From Cookiecutter...]\(Cookiecutter から...\)** の順に選択します。 このコマンドによって、テンプレートを参照できるウィンドウが Visual Studio で開きます。
 
     ![Cookiecutter テンプレートを使用した新しいプロジェクト](media/projects-from-cookiecutter1.png)
 
@@ -38,7 +38,7 @@ ms.locfileid: "53863694"
 
 1. 手順が完了すると、"**ファイルが正常に作成されました。**" というメッセージが表示されます。 **[ソリューション エクスプローラーで開く]** のコマンドを選択し、プロジェクトを開きます。
 
-1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグなしで開始]** の順に選択し、プログラムを実行します。 
+1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグなしで開始]** の順に選択し、プログラムを実行します。
 
     ![python-sklearn-classifier-cookiecutter テンプレート プロジェクトの出力](media/projects-from-cookiecutter4.png)
 

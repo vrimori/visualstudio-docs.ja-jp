@@ -1,14 +1,9 @@
 ---
 title: ズーム コントロール (スレッド ビュー) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.zoom
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 7f9bda07-53a8-4f11-9846-a3e31064c596
 caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 897ee8b650914b352c1cd4053428a35bf48997ec
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 44d816c7107d34cf81369a98ea0c435133e8e4b3
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51804437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54767521"
 ---
 # <a name="zoom-control-threads-view"></a>ズーム コントロール (スレッド ビュー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +31,8 @@ ms.locfileid: "51804437"
 ## <a name="zooming-in-and-out-by-using-the-mouse-wheel"></a>マウス ホイールを使用した拡大縮小  
  タイムライン上の任意の点をクリックし (マウス フォーカスを確実に置くため)、Ctrl キーを押しながらマウス ホイールを移動します (拡大するには前方へ、縮小するには後方へ)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [チャネルの管理](../profiling/manage-channels.md)   
  [測定モード オン/オフ](../profiling/measure-mode-on-off.md)   
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)   
  [使用状況ナビゲーター](../profiling/utilization-navigator.md)
-
-
-

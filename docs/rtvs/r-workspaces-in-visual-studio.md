@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: a72784b0ab265c090f2efd9c5949698118b559ef
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 897b5b82b00235404c599f77b8909b007fc80bb8
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53857015"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54987688"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>ワークスペースで R コードが実行する場所を制御する
 
@@ -34,7 +34,7 @@ R Tools for Visual Studio (RTVS) のワークスペースを使用すると、R 
 
 ## <a name="local-workspaces"></a>ローカル ワークスペース
 
-ローカル ワークスペースのリストには、コンピューターにインストールされているすべての R インタープリターが表示されます。 
+ローカル ワークスペースのリストには、コンピューターにインストールされているすべての R インタープリターが表示されます。
 
 Visual Studio は起動時に、**HKEY_LOCAL_MACHINE\Software\R-Core\\** レジストリ キーを調べて、インストールされているすべてのバージョンの R を自動的に検出します。 このチェックは起動時にのみ行われるため、新しい R インタープリターをインストールした場合は、Visual Studio を再起動する必要があります。
 
@@ -129,7 +129,7 @@ Visual Studio で R プロジェクトの作業を行っているときは、リ
 
 ![ファイル転送の設定があるプロジェクトのプロパティの [実行] タブ](media/workspaces-remote-file-transfer-filter-settings.png)
 
-ここで、**[Transfer files on run]\(実行時にファイルを転送する\)** プロパティは、RTVS がプロジェクト ファイルを自動的にコピーするかどうかを決定します。 **[Files to transfer]\(転送するファイル\)** の値は、転送されるファイルを正確に抽出します。 既定では、*.R*、*.Rmd*、*.sql*、*.md*、*.cpp* ファイルのみコピーされます。 この動作は、誤って実行のたびに大きなデータ ファイルがサーバーにコピーされるのを防ぎます。 
+ここで、**[Transfer files on run]\(実行時にファイルを転送する\)** プロパティは、RTVS がプロジェクト ファイルを自動的にコピーするかどうかを決定します。 **[Files to transfer]\(転送するファイル\)** の値は、転送されるファイルを正確に抽出します。 既定では、*.R*、*.Rmd*、*.sql*、*.md*、*.cpp* ファイルのみコピーされます。 この動作は、誤って実行のたびに大きなデータ ファイルがサーバーにコピーされるのを防ぎます。
 
 ## <a name="copy-files-from-a-remote-workspace"></a>リモート ワークスペースからファイルをコピーする
 

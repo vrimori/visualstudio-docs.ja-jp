@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 701b2699c0c7097eca29cd853d68c8a0e2d910a6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1302b2e035bc884bd6b3e914b848eada79e45236
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53875577"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55014992"
 ---
 # <a name="properties-window"></a>[プロパティ] ウィンドウ
 このウィンドウで、エディターやデザイナーのオブジェクトを選択してデザイン時のプロパティやイベントを表示および変更できます。 また、**[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティの編集や表示もできます。 **[プロパティ]** ウィンドウは **[表示]** メニューにあります。 また、F4 キーを押すか、**[クイック起動]** ウィンドウに「**プロパティ**」と入力して開くこともできます。

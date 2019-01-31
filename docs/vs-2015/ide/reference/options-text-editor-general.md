@@ -1,14 +1,9 @@
 ---
 title: '[オプション]、[テキスト エディター]、[全般] | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.TEXT_EDITOR.SQL_SERVER_TOOLS.GENERAL
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
@@ -52,13 +47,13 @@ ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
 caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 47fb93aebeecf50ae20616fc47033be60724cd45
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5ac63b183493b378fc0e1df454bc94a56722224f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49257830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54794458"
 ---
 # <a name="options-text-editor-general"></a>[オプション]、[テキスト エディター]、[全般]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -67,7 +62,7 @@ ms.locfileid: "49257830"
 このダイアログ ボックスでは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コード/テキスト エディターのグローバル設定を変更できます。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダーを展開し、**[全般]** をクリックします。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="settings"></a>設定  
  [ドラッグ アンド ドロップ編集]  
@@ -102,13 +97,10 @@ ms.locfileid: "49257830"
  [現在の行を強調表示する]  
  選択すると、カーソルが置かれているコード行の周りに灰色のボックスが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[オプション]、[テキスト エディター]、[すべての言語]](../../ide/reference/options-text-editor-all-languages.md)   
  [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [[オプション]、[テキスト エディター]、[ファイル拡張子]](../../ide/reference/options-text-editor-file-extension.md)   
  [キーボード ショートカットの識別とカスタマイズ](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)   
  [エディターのカスタマイズ](../../ide/customizing-the-editor.md)   
  [IntelliSense の使用](../../ide/using-intellisense.md)
-
-
-

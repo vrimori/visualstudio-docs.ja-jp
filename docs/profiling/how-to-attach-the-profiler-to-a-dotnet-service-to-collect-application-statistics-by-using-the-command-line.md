@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: a0046c47-26c8-4bec-96a0-81da05e5104a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3b417242ef56632b595c1e75f506ca99abd73a7c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 05dd75a88f2ad55f7aba77098ba5b6f0c24d4a82
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53833780"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54923741"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する
 この記事では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのコマンド ライン ツールを使用して、プロファイラーを .NET Framework サービスにアタッチし、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "53833780"
 
 3. プロファイル環境変数を初期化します。 型:  
 
-    **VSPerfClrEnv /globalsampleon** **[/samplelineoff]**  
+    **VSPerfClrEnv /globalsampleon** [**/samplelineoff**]  
 
    -   **/globalsampleon** はサンプリングを有効にします。  
 

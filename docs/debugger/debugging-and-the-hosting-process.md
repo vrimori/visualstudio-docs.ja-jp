@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d0f0b9a6-2a6e-463d-b6ea-9518ee727933
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98985877a2a85e56e9e1861c3baeaf0c87ad0f9c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 109bd4ee3c54e8d468714c2a955e349ec76db2fe
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53852191"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54952094"
 ---
 # <a name="debugging-and-the-hosting-process"></a>プロセスのデバッグとホスト
 Visual Studio のホスト プロセスでは、デバッガーのパフォーマンスを向上させ、部分信頼のデバッグやデザイン時の式の評価など、新しいデバッガー機能が使用できるようになりました。 必要に応じてホスト プロセスを無効にすることもできます。 次のセクションでは、ホスト プロセスがある場合とない場合のデバッグの違いについて説明します。

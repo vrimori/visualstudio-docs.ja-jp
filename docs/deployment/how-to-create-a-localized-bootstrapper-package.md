@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 129f684c7dca4fc8da27286d51a9c3309ed87531
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 80896483e0d7d1f3b42fce11ed53cbd253dc1b82
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53990400"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55030133"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>方法: ローカライズ版のブートストラップ パッケージを作成する
 ブートストラップ パッケージを作成したら、さらに 2 つのファイルをロケールごとに作成して、ローカライズ版のブートストラップ パッケージを作成できます。2 つのファイルとは、ソフトウェア ライセンス条項ファイル (*eula.rtf* など) とパッケージ マニフェスト (*package.xml*) です。  

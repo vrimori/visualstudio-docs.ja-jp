@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e05a1e0c-5082-479d-bbc9-d395b0bc6580
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c3737174843a8b9ff77ecdfb592e1275b88c84c
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: b1359371cc7a10ceb3056660a7b445f47e950247
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154396"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54918271"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でデータに WPF コントロールをバインドする
 
@@ -53,10 +53,10 @@ Visual Studio でのデータ バインド コントロールを作成する方�
 
 | データ ソース | コントロールをデータ ソースにバインドする XAML の生成 | データ ソースにデータを読み込むコードの生成 |
 | - | - | - |
-| データセット | [はい] | [はい] |
-| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | [はい] | [はい] |
-| サービス | [はい] | × |
-| Object | [はい] | × |
+| データセット | はい | [はい] |
+| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | [はい] | はい |
+| サービス | はい | × |
+| Object | はい | × |
 
 ### <a name="datasets"></a>データセット
 

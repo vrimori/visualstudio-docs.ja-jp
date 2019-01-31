@@ -1,14 +1,9 @@
 ---
 title: アセンブリおよびマニフェストへの署名の管理 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - manifests [Visual Studio]
 - signing manifests [Visual Studio]
@@ -18,13 +13,13 @@ ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
 caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 831fb08941e16abdb197d3a25e71f2a20fcb14cb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 63a2e1b98baa61ef0a83c1de65653dd2e57a8b2c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49909680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54755465"
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -66,15 +61,12 @@ ms.locfileid: "49909680"
 > [!WARNING]
 >  キー ファイルは常にパスワードで保護して、第三者が使用できないようにする必要があります。 プロバイダーまたは証明書ストアを使用して、キーを保護することもできます。  
   
- また、既に作成したキーを指定することもできます。 キーの作成の詳細については、「[方法 : 公開キーと秘密キーのキー ペアを作成する](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)」を参照してください。  
+ また、既に作成したキーを指定することもできます。 キーの作成の詳細については、次を参照してください。[方法。公開キーと秘密キーのキー ペアを作成する](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)」を参照してください。  
   
  公開キーのみにアクセスできる場合は、遅延署名を使用して、キーの割り当てを遅延させることができます。 **[遅延署名のみ]** チェック ボックスをオンにすると、遅延署名が有効になります。 遅延署名されたプロジェクトは実行されず、デバッグすることもできません。 ただし、[Sn.exe (厳密名ツール)](http://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) で `-Vr` オプションを指定すると、開発時に検証をスキップできます。  
   
- マニフェストへの署名については、「[方法: アプリケーション マニフェストおよび配置マニフェストに署名する](../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。  
+ マニフェストへの署名については、「[方法:アプリケーション マニフェストおよび配置マニフェストに署名する](../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [厳密な名前付きアセンブリ](http://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
  [厳密名アセンブリ (アセンブリ署名) (C++/CLI)](http://msdn.microsoft.com/library/c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc)
-
-
-

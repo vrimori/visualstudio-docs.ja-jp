@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 19bfabf3-1a2e-49dc-8819-a813982e86fd
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 917c9bab910b8f3153af46dc9d1d1a64ec6e529d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8699c468a3bf5f9c72131add984055f08f23c7c3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841266"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54959292"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 **どのように最適化は、.NET で使用できます。** 場合のコードをデバッグしようとすると、方が簡単とコードがある**いない**最適化します。 これは、コードの最適化時に、コンパイラとランタイムに変更を加える出力 CPU コードする高速で実行されますは、元のソース コードに直接マップされているためにです。 これは、デバッガーは、ローカル変数の値がわかるし、コードのステップ実行することがよくないと、ブレークポイントが期待どおりに機能しないことを意味します。

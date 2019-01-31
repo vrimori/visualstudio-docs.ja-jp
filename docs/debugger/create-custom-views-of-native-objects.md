@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 2d9a177a-e14b-404f-a6af-49498eff0bd7
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d91a62971db47b78b974cc2dede77d0a47b5c851
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ca1cf68af84556a76c29417c9bd56894a70f12ca
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821193"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54997326"
 ---
 # <a name="create-custom-views-of-native-objects-in-the-debugger"></a>デバッガーでのネイティブ オブジェクトのカスタム ビューの作成
 
@@ -26,10 +26,6 @@ Visual Studio *Natvis* framework ネイティブ型をなどのデバッガー�
 
 Natvis 置換、 *autoexp.dat* XML 構文より適切に診断、バージョン管理、Visual Studio の以前のバージョンと複数のファイルをサポートします。  
 
-Natvis には機能しません。
-
-- C++ Windows デスクトップを使用するとプロジェクト**デバッガーの種類**設定**Mixed** **構成プロパティ** > **デバッグ**. 
-- [混合モード デバッグ](how-to-debug-in-mixed-mode.md)マネージ互換モードでの Windows デスクトップ アプリ (**ツール** > **オプション** > **デバッグ**  > **全般** > **マネージ互換モードを使用して、**)。
 
 ## <a name="BKMK_Why_create_visualizations_"></a>Natvis 視覚化
 

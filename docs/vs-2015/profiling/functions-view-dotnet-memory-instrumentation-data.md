@@ -1,27 +1,22 @@
 ---
 title: 関数ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Functions view
 ms.assetid: cd45b379-394b-4b71-828c-92cd89e46ae0
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 8bacc61ec9c254ce662854a08fe6a508977a72e2
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+manager: jillfra
+ms.openlocfilehash: 340a12bfb8dc9a26c4200682851bb0acc684dddf
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "51730185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54787394"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -109,6 +104,3 @@ ms.locfileid: "51730185"
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   
  [関数ビュー](../profiling/functions-view-sampling-data.md)
-
-
-

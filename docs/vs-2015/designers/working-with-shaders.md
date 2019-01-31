@@ -1,25 +1,20 @@
 ---
 title: シェーダーの操作 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 6b2ea1ed-b995-4e75-af19-c68fd37a3bc5
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 72325522886ed1bc6ab262152c84fc3660231d86
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 3e0f962440d722a881d7a8de4ed2e7c9a9c7755f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49226850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54795911"
 ---
 # <a name="working-with-shaders"></a>シェーダーの操作
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,11 +35,8 @@ ms.locfileid: "49226850"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[シェーダー デザイナー](../designers/shader-designer.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェーダー デザイナーを使用してシェーダーを操作する方法について説明します。|  
 |[シェーダー デザイナー ノード](../designers/shader-designer-nodes.md)|グラフィックス効果を得るためのシェーダー デザイナー ノードについて説明します。|  
 |[シェーダー デザイナーの例](../designers/shader-designer-examples.md)|シェーダー デザイナーを利用して一般的なグラフィックス効果を得る方法を示すトピックのリンクを提供します。|
-
-
-

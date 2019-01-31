@@ -1,27 +1,22 @@
 ---
 title: 命令ポインター (IP) ビュー - サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Instruction Pointers view
 ms.assetid: c7f647bb-c5a3-4708-9f9d-33c0fd6e2e96
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 7bd936d9483469900a679ad08aada4bcf9235e78
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b2d4ce3c3a6ba7e49d70b335a85a17a847739962
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51721962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54758492"
 ---
 # <a name="instruction-pointers-ips-view---sampling-data"></a>命令ポインター (IP) ビュー - サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,8 +44,5 @@ ms.locfileid: "51721962"
 |**サンプル数 (関数のみ)**|命令を実行していたときに収集されたサンプルの合計数です。|  
 |**サンプル % (関数のみ)**|命令を実行していたときに収集された、プロファイル実行内のすべてのサンプルの割合です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [命令ポインター (IP) ビュー - サンプリング](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
-
-
-

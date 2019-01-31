@@ -1,14 +1,9 @@
 ---
 title: メモリの割り当ておよびオブジェクトの有効期間のデータ値について | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - .NET memory profiling method
 - Profiling Tools, .NET memory method
@@ -16,13 +11,13 @@ ms.assetid: a22445b3-39a6-4919-8506-2b5b0ceaf77e
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 3df4fe3189078da07f282b6f323ca697c763a08b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9ddfc891126e5018757f50a1a04378793fe83c53
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51793725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54763156"
 ---
 # <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当ておよびオブジェクトの有効期間のデータ値について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,9 +40,6 @@ ms.locfileid: "51793725"
 -   プロファイラーは、呼び出し履歴上の他のすべての関数の包括サンプル数をインクリメントします。  
   
 ## <a name="lifetime-data"></a>有効期間データ  
- .NET Framework のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは 0、1、および 2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。  
+ .NET Framework のガベージ コレクターは、アプリケーションのメモリの割り当ておよび解放を管理します。 ガベージ コレクターのパフォーマンスを最適化するために、マネージド ヒープは 0、1、2 の 3 つのジェネレーションに分割されます。 ランタイムのガベージ コレクターは、新しいオブジェクトをジェネレーション 0 に格納します。 ガベージ コレクションでごみではないと判断されたオブジェクトは昇格してジェネレーション 1 とジェネレーション 2 に格納されます。  
   
  ガベージ コレクターは、オブジェクトのジェネレーション全体の割り当てを解除して、メモリを解放します。 プロファイル対象アプリケーションで作成されたオブジェクトの場合、オブジェクトの有効期間ビューにはオブジェクトの数とサイズ、および解放時のジェネレーションが表示されます。
-
-
-

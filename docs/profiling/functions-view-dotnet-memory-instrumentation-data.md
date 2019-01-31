@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: cd45b379-394b-4b71-828c-92cd89e46ae0
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b578fd091b0b7473eb9e09e8c1eb13510c9e1b84
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b00b9f8b455e12a3a851e82b40ef614ed44146f6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53962335"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55030094"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数がリストされます。 関数行では、その関数の割り当てのサイズと数、およびタイミング データが報告されます。  

@@ -1,14 +1,9 @@
 ---
 title: '[オプション]、[テキスト エディター]、[すべての言語] | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.General
 - VS.ToolsOptionsPages.Text_Editor.ResJSON.General
@@ -24,13 +19,13 @@ ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 987e0339f2d27405c81ce05b6a30181a1469be7b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0abb0a38e63231dfddea391b3a63a73ae982bd24
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49884174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54802559"
 ---
 # <a name="options-text-editor-all-languages"></a>[オプション]、[テキスト エディター]、[すべての言語]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -44,7 +39,7 @@ ms.locfileid: "49884174"
  全般オプション ページでオプションを選択すると、一部のプログラミング言語で灰色のチェックマークが表示されることがあります。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="statement-completion"></a>[入力候補]  
  自動メンバー表示  
@@ -101,10 +96,7 @@ ms.locfileid: "49884174"
  [ナビゲーション バー]  
  選択すると、コード エディターの上部に**ナビゲーション バー**が表示されます。 そのドロップダウンの **[オブジェクト]** 一覧と **[メンバー]** 一覧では、コードの特定のオブジェクトを選択したり、そのメンバーから選択したり、コード エディターで選択したメンバーの宣言に移動したりできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[オプション]、[テキスト エディター]、[すべての言語]、[タブ]](../../ide/reference/options-text-editor-all-languages-tabs.md)   
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [IntelliSense の使用](../../ide/using-intellisense.md)
-
-
-

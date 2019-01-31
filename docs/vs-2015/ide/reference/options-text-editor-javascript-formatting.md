@@ -1,14 +1,9 @@
 ---
 title: '[オプション]、[テキスト エディター]、[JavaScript]、[書式設定] | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.Spacing
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Formatting.General
@@ -17,19 +12,19 @@ ms.assetid: 28a0aef1-9353-4d94-95a5-54b42e15c0dc
 caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 86c766f776195da17a33b9d52570a2867f700c9b
-ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 545d5ff9530de577a553923eea3cb208bd5bc68e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50219992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54794411"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
   
-[**オプション**] ダイアログ ボックスの [**書式設定**] ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで [**ツール**]、[**オプション**] の順にクリックし、次に、[**テキスト エディター**]、[**JavaScript**]、[**書式設定**] を展開します。  
+**[オプション]** ダイアログ ボックスの **[書式設定]** ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで **[ツール]**、**[オプション]** の順にクリックし、次に、**[テキスト エディター]**、**[JavaScript]**、**[書式設定]** を展開します。  
   
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +51,7 @@ ms.locfileid: "50219992"
 |**新しい行にコントロール ブロックの始めかっこを配置する**|このオプションをオンにすると、コントロール ブロック (`if` コントロール ブロック、`while` コントロール ブロックなど) に関連付けられている始めかっこが新しい行に移動します。|  
   
 ## <a name="spacing"></a>スペース  
- これらのオプションでスペースを挿入する方法を決定**ソース**ビュー。  
+ 次のオプションによって、**[ソース]** ビューにスペースが挿入される条件を指定します。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
   
@@ -69,8 +64,5 @@ ms.locfileid: "50219992"
 |**匿名関数に対する関数キーワードの後にスペースを挿入する**|このオプションをオンにすると、匿名関数に対する`function`キーワードの後にスペースが挿入されます。|  
 |**かっこ内が空でない場合に始めかっこの後ろと終わりかっこの前にスペースを挿入する**|このオプションをオンにすると、かっこ内が空でない場合に始めかっこの後ろと終わりかっこの前にスペースが挿入されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-

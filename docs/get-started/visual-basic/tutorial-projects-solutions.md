@@ -7,17 +7,17 @@ ms.custom: get-started
 ms.topic: tutorial
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d3196a1e6828d093245043ec5c21accd50a6bbb
-ms.sourcegitcommit: 159ed9d4f56cdc1dff2fd19d9dffafe77e46cd4e
+ms.openlocfilehash: c55f0bf2d36d06cc47e39086236b41d4cc8340c9
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53739618"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54961612"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic を使用するプロジェクトとソリューションについて理解する
 
@@ -158,7 +158,7 @@ ms.locfileid: "53739618"
 
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を含む *Calendar.vb* ファイル内の行では、**QuickTest** プロジェクトのアセンブリ名 (ファイル名) を参照します。 アセンブリ名はプロジェクト名と常に同じであるとは限りません。 プロジェクトのアセンブリ名を検索するには、プロジェクトのプロパティを開きます。
 
-1. **ソリューション エクスプローラー**で **QuickTest** プロジェクトを選択します。 右クリックまたはコンテキスト メニューから、**[プロパティ]** を選択するか、または**Alt**+**Enter** キーを押します  (**ソリューション エクスプローラー**で **[My Project]** をダブルクリックすることもできます)。
+1. **ソリューション エクスプローラー**で **QuickTest** プロジェクトを選択します。 右クリックまたはコンテキスト メニューから、**[プロパティ]** を選択するか、または**Alt**+**Enter** キーを押します。 (**ソリューション エクスプローラー**で **[My Project]** をダブルクリックすることもできます)。
 
    **[アプリケーション]** タブで、プロジェクトの "*プロパティ ページ*" が開きます。プロパティ ページには、プロジェクトのさまざまな設定が含まれます。 **QuickTest** プロジェクトのアセンブリ名が "QuickTest" であることに注目してください。 これを変更する場合は、ここでその変更を行います。 テスト プロジェクトをビルドすると、結果として得られるバイナリ ファイルの名前は *QuickTest.dll* から、選択した任意の名前に変わります。
 

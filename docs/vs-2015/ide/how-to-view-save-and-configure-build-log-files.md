@@ -1,25 +1,20 @@
 ---
-title: '方法: ビルド ログ ファイルを表示、保存、および構成する | Microsoft Docs'
-ms.custom: ''
+title: '方法: 表示、保存、およびビルド ログ ファイルの構成 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 26ece0c0d46e5c747ac05bae8c2d4fc793c34601
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6826a2f2618ee77944102245781a8df3b2a4596b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49207403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54760058"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>方法: ビルド ログ ファイルを表示、保存、および構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,10 +56,7 @@ Visual Studio IDE でプロジェクトをビルドしたら、**[出力]** ウ�
     > [!IMPORTANT]
     >  **[出力]** ウィンドウ (すべてのプロジェクト) と *ProjectName*.txt ファイル (C++ プロジェクトのみ) に変更を反映するには、プロジェクトをリビルドする必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
-
-
-

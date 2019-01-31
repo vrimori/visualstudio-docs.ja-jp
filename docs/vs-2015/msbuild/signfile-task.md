@@ -1,14 +1,9 @@
 ---
 title: SignFile タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#SignFile
 dev_langs:
@@ -23,13 +18,13 @@ ms.assetid: edef1819-ddeb-4e09-95de-fc7063ba9388
 caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 849c82fe11e4440c4b3394532ceecfe30ef57253
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 07215b20da99a02100eeb8781c5a637c3b689e71
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49206415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54764893"
 ---
 # <a name="signfile-task"></a>SignFile タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +47,7 @@ ms.locfileid: "49206415"
 |`TimestampUrl`|省略可能な `String` 型のパラメーターです。<br /><br /> タイム スタンプ サーバーの URL を指定します。|  
 |`TargetFrameworkVersion`|ターゲットに使用される .NET Framework のバージョンです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  上記のパラメーターに加えて、このタスクは <xref:Microsoft.Build.Utilities.Task> クラスからパラメーターを継承します。 これらの追加パラメーターのリストとその説明については、「[Task Base Class](../msbuild/task-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
@@ -76,7 +71,7 @@ ms.locfileid: "49206415"
 ```  
   
 > [!NOTE]
->  証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、「[Obtain the SHA-1 Hash of a Trusted Root CA Certificate](http://msdn.microsoft.com/en-us/dd641990-9a88-4228-a245-017797131a87)」 (信頼されたルート CA 証明書の SHA-1 ハッシュの取得) を参照してください。  
+>  証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、「[Obtain the SHA-1 Hash of a Trusted Root CA Certificate](http://msdn.microsoft.com/dd641990-9a88-4228-a245-017797131a87)」 (信頼されたルート CA 証明書の SHA-1 ハッシュの取得) を参照してください。  
   
 ## <a name="example"></a>例  
  次に、`Exec` タスクを使用して、`FilesToSign` アイテム コレクションで指定したファイルに、`Certificate` プロパティで指定された証明書で署名する例を示します。 これを使用すると、ビルド処理中に Windows インストーラー ファイルに署名できます。  
@@ -99,9 +94,6 @@ ms.locfileid: "49206415"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)
-
-
-

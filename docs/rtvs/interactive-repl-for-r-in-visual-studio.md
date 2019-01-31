@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 7df300a57120bec2fc93ec7433a7ea9fdd3a2fc8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: af83b0998afa92fc59203fefa4b9d6d21635e642
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53947076"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54921184"
 ---
 # <a name="work-with-the-r-interactive-window"></a>R 対話型ウィンドウの使用
 
@@ -51,24 +51,24 @@ REPL での以前の入力と出力はすべて読み取り専用となり、変
 
 ツール バー コマンドは次のとおりです。そのほとんどに対応するキーボードがあり、**[R Tools]** の **[セッション]** か **[R Tools]** の **[作業ディレクトリ]** メニュー (または前述のとおり) でも使用可能です。
 
-| ボタン | コマンド | キーの組み合わせ | 説明 | 
+| ボタン | コマンド | キーの組み合わせ | 説明 |
 | --- | --- | --- | --- |
 | ![[リセット] ボタン](media/repl-toolbar-01-reset.png) | リセット | **Ctrl** + **Shift** + **F10** | すべての変数と履歴を消去し、対話型ウィンドウ セッションをリセットします。 |
 | ![[クリア] ボタン](media/repl-toolbar-02-clear.png) | Clear | **Ctrl** + **L** | 対話型ウィンドウに表示されている出力を消去します。セッション変数や履歴には影響しません。 |
 | ![[履歴] ボタン](media/repl-toolbar-03-history.png) | 過去の履歴コマンド<br/>次の履歴コマンド | **↑**、**↓**<br/>**Alt**+**↑**、**Alt**+**↓** | 複数行コード ブロックの特定の動作で、履歴をスクロールします。 「[履歴](#history)」を参照してください。 |
 | ![[ワークスペースの読み込み] ボタン](media/repl-toolbar-04-load-workspace.png) | ワークスペースの読み込み | N/A | 以前に保存したワークスペースを読み込みます (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
 | ![[作業状態の保存] ボタン](media/repl-toolbar-05-save-workspace-as.png)| 作業状態の保存 | N/A | セッションの現在の状態をワークスペースとして、保存します (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
-| ![[R スクリプトのソース化] ボタン](media/repl-toolbar-06-source-r-script.png) | R スクリプトのソース化 | **Ctrl** + **Shift** + **S** | Visual Studio エディターで現在アクティブな R スクリプトを使用して `source` を呼び出します。これにより、コードが実行されます。  このボタンは、R ファイルが Visual Studio エディターで開いている場合にのみ表示されます。 | 
+| ![[R スクリプトのソース化] ボタン](media/repl-toolbar-06-source-r-script.png) | R スクリプトのソース化 | **Ctrl** + **Shift** + **S** | Visual Studio エディターで現在アクティブな R スクリプトを使用して `source` を呼び出します。これにより、コードが実行されます。  このボタンは、R ファイルが Visual Studio エディターで開いている場合にのみ表示されます。 |
 | ![[エコーによる R スクリプトのソース化] ボタン](media/repl-toolbar-07-source-r-script-with-echo.png) | エコーによる R スクリプトのソース化 | **Ctrl**+**Shift**+**Enter** | [R スクリプトのソース化] と同じですが、対話型ウィンドウにはスクリプトのコンテンツが表示されます。 |
 | ![[R の割り込み] ボタン](media/repl-toolbar-08-interrupt-r.png)| R の割り込み | **Esc** | このセクションの冒頭で示したスクリーンショットの `while` ループなど、対話型ウィンドウで実行中のコードを停止します。 |
-| ![[デバッガーのアタッチ] ボタン](media/repl-toolbar-09b-attach-debugger.png)| デバッガーのアタッチ | N/A | **[デバッグ]** の **[R インタラクティブ型に接続]** コマンドを使用することもできます。 | 
+| ![[デバッガーのアタッチ] ボタン](media/repl-toolbar-09b-attach-debugger.png)| デバッガーのアタッチ | N/A | **[デバッグ]** の **[R インタラクティブ型に接続]** コマンドを使用することもできます。 |
 | ![[作業ディレクトリをソース ファイルの場所に設定] ボタン](media/repl-toolbar-10-set-working-directory-source.png)| 作業ディレクトリをソース ファイルの場所に設定 | **Ctrl**+**Shift**+**E** | 対話型ウィンドウに最後に読み込まれたソース ファイルに作業ディレクトリを設定します (`source` を使用)。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 | ![[作業ディレクトリをプロジェクトの場所に設定] ボタン](media/repl-toolbar-11-set-working-directory-to-project.png) | 作業ディレクトリをプロジェクトの場所に設定 | **Ctrl** + **Shift** + **P** | Visual Studio に現在読み込まれているプロジェクトのルートに作業ディレクトリを設定します。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 | (テキスト フィールド) | 作業ディレクトリの選択 | N/A | 作業ディレクトリの直接入力フィールド。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 
 ## <a name="workspaces-and-sessions"></a>ワークスペースとセッション
 
-対話型ウィンドウでコードを実行すると、現在のセッションでコンテキストが作成されます。 コンテキストはグローバル変数、関数定義、ライブラリの読み込みなどで構成されます。 このコンテキストはまとめて*ワークスペース*と呼ばれます。ワークスペースはいつでも保存して読み込むことができます。 
+対話型ウィンドウでコードを実行すると、現在のセッションでコンテキストが作成されます。 コンテキストはグローバル変数、関数定義、ライブラリの読み込みなどで構成されます。 このコンテキストはまとめて*ワークスペース*と呼ばれます。ワークスペースはいつでも保存して読み込むことができます。
 
 **[作業状態の保存]** ボタンを選択するか、**[R Tools]**、**[セッション]**、**[作業状態の保存]** コマンドの順に選択すると、場所とファイル名 (既定の拡張子は *.RData*) の入力が求められます。
 

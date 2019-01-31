@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bc06740c56beac2dc092fb421a92f9d59d044d2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d9195bdb33b84420f66e93afb338b1c203c3886c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53860135"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55023120"
 ---
 # <a name="code-analysis-project-designer"></a>コード分析 (プロジェクト デザイナー)
 コードに対して実行できるコード分析ツールが含まれます。 ツールは、Microsoft .NET Framework デザイン ガイドラインに規定されたプログラミングやデザインに関する規則違反など、アセンブリに関する情報を報告します。

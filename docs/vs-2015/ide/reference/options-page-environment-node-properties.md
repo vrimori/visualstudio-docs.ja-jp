@@ -1,14 +1,9 @@
 ---
 title: '[環境] ノード プロパティ ([オプション] ページ) | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - automation [Visual Studio], controlling Tools Options
 - Tools Options settings, Environment node properties
@@ -16,13 +11,13 @@ ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
 caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 8deae718faceb1613f73e9be732706c7d5441c8f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ae1dc5c7eb8b1f10771afacfe1398e17b2bf8ed8
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49239643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54753517"
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -111,7 +106,7 @@ ms.locfileid: "49239643"
   
 |プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
-|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します.vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
+|Scheme|Get/Set (String)|組み込みスキームを含む文字列、または読み込まれた .vsk ファイルの完全パスを含む文字列を返します。 .vsk ファイルが読み込まれていない場合は "(既定)" を返します。|  
   
 ## <a name="projects-and-solution"></a>プロジェクトおよびソリューション  
  `DTE.Properties("Environment", "ProjectsAndSolution")`  
@@ -141,7 +136,7 @@ ms.locfileid: "49239643"
   
 |プロパティ項目名|[値]|説明|  
 |------------------------|-----------|-----------------|  
-|OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、0 ～ 5 の値で示されます。<br /><br /> -   0: ホーム ページを開く<br />-   1: 最後に読み込んだソリューション<br />-   2: **[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3: **[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4: 空の環境の表示<br />-   5: スタート ページの表示|  
+|OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、0 ～ 5 の値で示されます。<br /><br /> -   0:ホーム ページを開く<br />-   1:最後に読み込んだソリューション<br />-   2:**[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3:**[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4:空の環境の表示<br />-   5:スタート ページの表示|  
 |StartPageRSSUrl|Get/Set (String)|起動時に使用する RSS フィードの URL です。|  
 |StartPageRefreshDownloadedContent|Get/Set (Boolean)|StartPageRefreshInterval で指定された間隔が経過するたびにスタート ページを更新します。|  
 |StartPageRefreshInterval|Get/Set (Short)|スタート ページを更新する間隔 (分単位) です。|  
@@ -166,12 +161,9 @@ ms.locfileid: "49239643"
 |ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Source、Design、External) です。|  
 |ViewSourceExternalProgram|Get/Set (String)|外部ソース ビューアーのパスです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [オプション設定の制御](http://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)   
  [オプション ページにあるプロパティ項目名の確認](http://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)   
  [[フォントおよび色] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-fonts-and-colors-node-properties.md)   
  [[テキスト エディター] ノード プロパティ ([オプション] ページ)](../../ide/reference/options-page-text-editor-node-properties.md)   
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)
-
-
-

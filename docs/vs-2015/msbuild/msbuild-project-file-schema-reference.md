@@ -1,14 +1,9 @@
 ---
 title: MSBuild プロジェクト ファイル スキーマ リファレンス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +15,13 @@ ms.assetid: d9a68146-1f43-4621-ac78-2c8c3f400936
 caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cd1add4f68bb2e0648cf3cf08b72b1bc6f592595
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 67a57953dc0583b105741be358b19a74897c308c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49305982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54772587"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild プロジェクト ファイル スキーマ リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,16 +52,14 @@ ms.locfileid: "49305982"
 |[ProjectExtensions 要素 (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|  
 |[Property 要素 (MSBuild)](../msbuild/property-element-msbuild.md)|--|条件|  
 |[PropertyGroup 要素 (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*プロパティ*|条件|  
-|[Target 要素 (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *タスク*|AfterTargets<br /><br /> BeforeTargets<br /><br /> 条件<br /><br /> DependsOnTargets<br /><br /> 受け取る値<br /><br /> KeepDuplicateOutputs<br /><br /> 名前<br /><br /> 出力<br /><br /> 戻り値|  
+|[Target 要素 (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *タスク*|AfterTargets<br /><br /> BeforeTargets<br /><br /> 条件<br /><br /> DependsOnTargets<br /><br /> 受け取る値<br /><br /> KeepDuplicateOutputs<br /><br /> name<br /><br /> 出力<br /><br /> 戻り値|  
 |[Task 要素 (MSBuild)](../msbuild/task-element-msbuild.md)|出力|条件<br /><br /> ContinueOnError<br /><br /> *パラメーター*|  
 |[TaskBody 要素 (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*データ*|評価|  
 |[UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> TaskBody|AssemblyFile<br /><br /> AssemblyName<br /><br /> 条件<br /><br /> TaskFactory<br /><br /> TaskName|  
 |[When 要素 (MSBuild)](../msbuild/when-element-msbuild.md)|[保存]<br /><br /> ItemGroup<br /><br /> PropertyGroup|条件|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [条件](../msbuild/msbuild-conditions.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)  
  [MSBuild](msbuild.md)
-
-

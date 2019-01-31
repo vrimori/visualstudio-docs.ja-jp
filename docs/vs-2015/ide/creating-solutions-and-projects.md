@@ -1,14 +1,9 @@
 ---
 title: ソリューションとプロジェクトの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.openprojectfromweb
 - vs.newproject
@@ -22,13 +17,13 @@ ms.assetid: 836f8ca0-3fc9-4f4b-9090-45f2e4d2e9c8
 caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 336fb41ee6a4c90e7065187b2805aefe9e6e6df7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: db0aaaee01c27fa4588cc2268cd3106abfcc739e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49893703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54763115"
 ---
 # <a name="creating-solutions-and-projects"></a>Creating Solutions and Projects
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +31,7 @@ ms.locfileid: "49893703"
 プロジェクトは、アプリケーションをビルドするのに必要なものすべての論理的なコンテナーです。 メイン メニューから **[ファイル &#124; 新規作成 &#124; プロジェクト]** の順に選択してプロジェクトを作成すると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] によりプロジェクトを含むソリューションが作成されます。 その後、必要に応じて新規または既存のプロジェクトをソリューションにさらに追加できます。 既存のコード ファイルからプロジェクトを作成することができますし、作業が終った時に削除する一時プロジェクト (.NET のみ) を作成することもできます。  
   
 > [!NOTE]
->  このトピックの説明は、Visual Studio Community エディション に基づいています。 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、使用中の設定または Visual Studio のエディションによっては、この中の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  このトピックの説明は、Visual Studio Community エディション に基づいています。 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、使用中の設定または Visual Studio のエディションによっては、この中の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="create-a-project-from-an-installed-project-template"></a>インストールされたプロジェクト テンプレートからプロジェクトを作成する  
  メイン メニューから **[ファイル &#124; 新規 &#124; プロジェクト]** の順に選択し、[新しいプロジェクト] ダイアログを表示します。 **[インストール済み &#124; テンプレート]** の下の左側のウィンドウで、プログラミング言語とプラットフォームまたはテクノロジを選択します。それから、中央のウィンドウで、使用可能なテンプレートを選択します。  
@@ -85,7 +80,7 @@ ms.locfileid: "49893703"
    空のソリューションの作成後、 **[プロジェクト]** メニューの **[新しい項目の追加]** または **[既存項目の追加]** をクリックして、新規または既存のプロジェクトまたは項目を追加できます。  
   
 ### <a name="deleting-solutions"></a>ソリューションの削除  
- ソリューションを完全に削除することもできますが、その場合は、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] は使用しません。 ソリューションを削除する前に、別のソリューションで再利用するプロジェクトはすべて移動しておいてください。 次に、ファイル エクスプローラーを使用して、.sln および .suo ソリューション ファイルのあるディレクトリを削除します。  
+ ソリューションを完全に削除することもできますが、その場合は、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]は使用しません。 ソリューションを削除する前に、別のソリューションで再利用するプロジェクトはすべて移動しておいてください。 次に、ファイル エクスプローラーを使用して、.sln および .suo ソリューション ファイルのあるディレクトリを削除します。  
   
 > [!NOTE]
 >  .suo ファイルは隠しファイルであり、ファイル エクスプローラーの既定の設定では表示されません。  
@@ -98,9 +93,6 @@ ms.locfileid: "49893703"
   
 3.  ソリューションのあるディレクトリを選択し、Del キーを押します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)   
- [NIB 方法: 複数のプロジェクトから成るソリューションを作成する](http://msdn.microsoft.com/en-us/02ecd6dd-0114-46fe-b335-ba9c5e3020d6)
-
-
-
+ [(NIB) 方法:マルチ プロジェクト ソリューションを作成します。](http://msdn.microsoft.com/02ecd6dd-0114-46fe-b335-ba9c5e3020d6)

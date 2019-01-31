@@ -2,22 +2,22 @@
 title: Visual Studio での Python チュートリアル、手順 3、対話型 REPL
 titleSuffix: ''
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9cc9bc13f26707132703851dea5cc3c7de351601
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: cf51a53301ad65debe2bb69d33ce8a159aa9612f
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53986831"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231884"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -74,7 +74,7 @@ Visual Studio の Python 用 **対話型**ウィンドウによって機能豊�
     ![対話型のウィンドウでの前のステートメントの編集](media/vs-getting-started-python-16-interactive6.png)
 
 1. この手順を繰り返し、最適な値が見つかるまで、別のステップ設定を試します。 たとえば、`range(0, 1800, 12)` のように範囲を長くして波を繰り返すことも可能です。
- 
+
 1. **対話型**ウィンドウで満足のいくコードを記述できたら、それを選択して、右クリックして **[コードのコピー]** (**Ctrl** + **Shift** + **C**) を選択してから、エディターに貼り付けます。 Visual Studio のこの特殊機能が、任意の出力や `>>>` と `...` のプロンプトを自動的に除外することに注目してください。 たとえば、次の図は、プロンプトと出力を含む選択に対し、**[コードのコピー]** コマンドを使用しているところを示しています。
 
     ![プロンプトと出力を含む選択での対話型ウィンドウでのコードのコピー コマンド](media/vs-getting-started-python-17-interactive7.png)

@@ -1,14 +1,9 @@
 ---
 title: '[ビルド] ページ (プロジェクト デザイナー) (C#) | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - cs.ProjectPropertiesBuild
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
 caps.latest.revision: 47
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a377db0ac82b672d053e59c621714945fa9b515c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 066535309c7001c3f7a951f68321f7530a06ed05
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49837185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805322"
 ---
 # <a name="build-page-project-designer-c"></a>[ビルド] ページ (プロジェクト デザイナー) (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,13 +35,13 @@ ms.locfileid: "49837185"
  次のオプションを使用すると、表示または変更する構成およびプラットフォームを選択できます。  
   
 > [!NOTE]
->  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、これらのオプションは表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+>  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、これらのオプションは表示されません。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
  **構成**  
  表示または変更する構成設定を指定します。 この設定は、**[アクティブ (Debug)]** (既定)、**[Debug]**、**[Release]**、または **[すべての構成]** に指定できます。  
   
  **プラットフォーム**  
- 表示または変更するプラットフォーム設定を指定します。 既定の設定は **[アクティブ (Any CPU)]** です。 アクティブなプラットフォームは、**構成マネージャー**を使って変更できます。 詳細については、「[How to: Create and Edit Configurations](../../ide/how-to-create-and-edit-configurations.md)」(方法 : 構成を作成および編集する) を参照してください。  
+ 表示または変更するプラットフォーム設定を指定します。 既定の設定は **[アクティブ (Any CPU)]** です。 アクティブなプラットフォームは、**構成マネージャー**を使って変更できます。 詳細については、「[方法 :構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。  
   
 ## <a name="general"></a>全般  
  次のオプションでは、いくつかの C# コンパイラ設定を構成できます。  
@@ -109,9 +104,9 @@ ms.locfileid: "49837185"
  次の設定は、ビルド処理の出力オプションを構成するために使用します。  
   
  **出力パス**  
- このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** をクリックし、パスを指定します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug または bin\Release\\ です。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** をクリックし、パスを指定します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug または bin\Release\\ です。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
- 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
+ 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。 詳細については、「[デバッグ構成およびリリース プロジェクト構成](http://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)」を参照してください。  
   
  **XML ドキュメント ファイル**  
  ドキュメントのコメントを処理するファイルの名前を指定します。 詳しくは、「[/doc (C# コンパイラ オプション)](http://msdn.microsoft.com/library/849eea59-c936-4311-bad8-d07404480f2a)」をご覧ください。  
@@ -125,9 +120,6 @@ ms.locfileid: "49837185"
  **詳細設定**  
  クリックすると、[[ビルドの詳細設定] ダイアログ ボックス (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md) ダイアログ ボックスが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [プロジェクトのプロパティのリファレンス](../../ide/reference/project-properties-reference.md)   
  [C# コンパイラ オプション](http://msdn.microsoft.com/library/d3403556-1816-4546-a782-e8223a772e44)
-
-
-

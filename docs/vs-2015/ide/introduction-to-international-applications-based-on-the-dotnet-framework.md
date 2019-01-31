@@ -1,14 +1,9 @@
 ---
 title: .NET Framework ベースの国際対応アプリケーションの概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - strings [Visual Studio], localizing
 - Web applications [.NET Framework], globalization
@@ -30,13 +25,13 @@ ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
 caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3d1539d832b67a160e29b22b71066f72609e35b8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 86ca63ead6b2014dfe0d90d496ef4b7d7efe7f63
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54784801"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework ベースの国際対応アプリケーションの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,9 +48,8 @@ ms.locfileid: "49270041"
   
  ローカライズされたアプリケーションの実行時の外観は 2 つのカルチャ値によって決まります  (*カルチャ*とは、ユーザーの言語、環境、および文化的な慣習に関連する、一連のユーザー設定情報です)。読み込まれるリソースは、UI カルチャ設定によって決まります。 UI カルチャは、Web.config ファイルとページ ディレクティブの `UICulture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> として設定されます。 カルチャ設定によって、日付、数値、通貨などの値の形式が決まります。 カルチャは、Web.config ファイルとページ ディレクティブでは `Culture` として設定され、Visual Basic または Visual C# コードでは <xref:System.Globalization.CultureInfo.CurrentCulture%2A> として設定されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  <xref:System.Globalization>   
  <xref:System.Resources>   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)   
  [セキュリティおよびローカライズされたサテライト アセンブリ](../ide/security-and-localized-satellite-assemblies.md)
-

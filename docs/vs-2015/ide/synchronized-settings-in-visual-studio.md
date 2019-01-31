@@ -1,26 +1,22 @@
 ---
 title: 同期された設定
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c6b2d0fd5618c0c0f48c05bc5246170f81a800a8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: e6ea971705b164a27fc7f65c3ac2d681b1569177
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53962526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54758800"
 ---
 # <a name="synchronized-settings-in-visual-studio"></a>Visual Studio での同期された設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "53962526"
 ## <a name="synchronized-settings"></a>同期された設定
  既定では、次の設定が同期されます。
 
--   開発設定 (Visual Studio を初めて実行するときに設定を選択する必要がありますが、選択内容はいつでも変更できます)。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
+-   開発設定 (Visual Studio を初めて実行するときに設定を選択する必要がありますが、選択内容はいつでも変更できます)。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
 
 -   **[ツール &#124; オプション]** ページの次のオプション。
 

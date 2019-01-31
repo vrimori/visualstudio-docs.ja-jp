@@ -5,23 +5,23 @@ ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1414c2102d2b19728c8dfb74470fefae499bc622
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: aecc48392a036cb6ef17cc3b3ea58eb82a6e59aa
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53877138"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089267"
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
 Visual Studio には、[プロファイリングと診断](../profiling/profiling-feature-tour.md)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
 
-カスタム ヒープを使用し、標準ヒープの割り当てオーバーヘッドを回避する方法を使用したい場合があります。  たとえば、[VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) を使用し、アプリまたはゲームの開始時に大量のメモリを割り当て、そのリスト内で独自のブロックを管理できます。  このシナリオでは、メモリ プロファイラー ツールは最初の割り当てのみを認識し、メモリ チャンク内で行われたカスタム管理は認識されません。  ただし、カスタム ネイティブ ヒープの ETW プロバイダーを使用すると、標準ヒープ外で行うあらゆる割り当てをこのツールに認識させることができます。
+カスタム ヒープを使用し、標準ヒープの割り当てオーバーヘッドを回避する方法を使用したい場合があります。  たとえば、[VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) を使用し、アプリまたはゲームの開始時に大量のメモリを割り当て、そのリスト内で独自のブロックを管理できます。  このシナリオでは、メモリ プロファイラー ツールは最初の割り当てのみを認識し、メモリ チャンク内で行われたカスタム管理は認識されません。  ただし、カスタム ネイティブ ヒープの ETW プロバイダーを使用すると、標準ヒープ外で行うあらゆる割り当てをこのツールに認識させることができます。
 
 たとえば、`MemoryPool` がカスタム ヒープである次のようなプロジェクトでは、Windows ヒープに割り当てが 1 つだけ表示されます。
 

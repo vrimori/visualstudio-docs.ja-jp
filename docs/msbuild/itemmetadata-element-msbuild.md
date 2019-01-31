@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e3db5122-202d-43a9-b2f4-3e0ec4ed3d08
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64786e5066476fcaca161fe0511f97a1fd2c7fd6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 78be9b906efd9720d9bc7ccdbe09614899ef6818
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53917528"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54989589"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata 要素 (MSBuild)
 ユーザー定義の項目メタデータのキーを格納します。項目メタデータの値が含まれます。 1 つの項目が、任意の数のメタデータ キー/値ペアを含むことができます。  

@@ -1,14 +1,9 @@
 ---
 title: フルテキスト検索のヒント | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - hv_search
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: bcaad23d-2ca7-4bec-8b54-b884bc34e70b
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 85770dfd3c610f92bcb190b7a2c151b40cd31a4c
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a015aeff983979bbb8f6ddedc245c74d3fb5f77b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49850049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54791709"
 ---
 # <a name="full-text-search-tips"></a>フルテキスト検索のヒント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -65,9 +60,6 @@ ms.locfileid: "49850049"
 ### <a name="words-ignored-in-searches-stop-words"></a>検索で無視される言葉 (ストップ ワード)  
  よく使われる言葉や数字 (ストップ ワードと呼ばれることもあります) は、フルテキスト検索で自動的に無視されます。 たとえば、"pass through" という句を検索すると、"pass" という単語を含むトピックが表示され、"through" は無視されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [情報の検索](../ide/locate-information.md)   
  [検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)
-
-
-

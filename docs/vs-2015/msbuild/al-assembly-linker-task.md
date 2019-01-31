@@ -1,14 +1,9 @@
 ---
 title: AL (アセンブリ リンカー) タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#AL
 dev_langs:
@@ -23,13 +18,13 @@ ms.assetid: 2ddefbf2-5662-4d55-99a6-ac383bf44560
 caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cf0f5995b9f0e2fca0d909b9d0da0dbe6b386978
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b8d70651d319f174f2ed7c1ee81021d89201bbcf
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54758649"
 ---
 # <a name="al-assembly-linker-task"></a>AL (アセンブリ リンカー) タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,13 +56,13 @@ AL タスクは、[!INCLUDE[winsdklong](../includes/winsdklong-md.md)] と共に
 |`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定したリソース ファイルをアセンブリにリンクします。 リソースはアセンブリの一部になりますが、ファイルはコピーされません。 このパラメーターに渡すアイテムには、`LogicalName`、`Target`、および `Access` という名前の省略可能なメタデータを添付することができます。 `LogicalName` メタデータは、リソースの内部識別子を指定するために使われます。 `Target` メタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定できます。その後は、この新しいファイルがアセンブリにコンパイルされます。 リソースを他のアセンブリから見えないようにするには、`Access` メタデータを `private` に設定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」で `/link[resource]` オプションのドキュメントをご覧ください。|  
 |`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> モジュールを実行可能ファイルに変換するときに、エントリ ポイントとして使うメソッドの完全修飾名 (*class.method*) を指定します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/main` オプションに対応します。|  
 |`OutputAssembly`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> このタスクで生成されるファイルの名前を指定します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/out` オプションに対応します。|  
-|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> このコードを実行できるプラットフォームを制限します。`x86`、`Itanium`、`x64`、または `anycpu` のいずれかでなければなりません。 既定値は `anycpu` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/platform` オプションに対応します。|  
+|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> このコードを実行できるプラットフォームを制限します。`x86`、`Itanium`、`x64`、または `anycpu` のいずれかでなければなりません。 既定値は、`anycpu` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/platform` オプションに対応します。|  
 |`ProductName`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Product` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」で `/prod[uct]` オプションのドキュメントをご覧ください。|  
 |`ProductVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `ProductVersion` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」で `/productv[ersion]` オプションのドキュメントをご覧ください。|  
 |`ResponseFiles`|省略可能な `String[]` 型のパラメーターです。<br /><br /> アセンブリ リンカーに渡す追加のオプションが含まれる応答ファイルを指定します。|  
 |`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> resgen.exe などの SDK ツールのパスを指定します。|  
 |`SourceModules`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリにコンパイルする 1 つ以上のモジュール。 モジュールは生成されるアセンブリのマニフェストに列記され、アセンブリを読み込むにはモジュールを配布して使用できるようにする必要があります。 このパラメーターに渡すアイテムには、`Target` という名前の追加メタデータを指定できます。このメタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定します。その後は、この新しいファイルがアセンブリにコンパイルされます。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」のドキュメントをご覧ください。 このパラメーターは、特定のスイッチを指定しないで Al.exe に渡されるモジュールのリストに対応します。|  
-|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式として、`library` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win` (Windows ベースのアプリケーション) を指定します。 既定値は `library` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/t[arget]` オプションに対応します。|  
+|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式として、`library` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win` (Windows ベースのアプリケーション) を指定します。 既定値は、`library` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/t[arget]` オプションに対応します。|  
 |`TemplateFile`|省略可能な `String` 型のパラメーターです。<br /><br /> カルチャ フィールドを除く、すべてのアセンブリ メタデータの継承元であるアセンブリを指定します。 指定するアセンブリには厳密な名前が必要です。<br /><br /> `TemplateFile` パラメーターを指定して作成したアセンブリは、サテライト アセンブリになります。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/template` オプションに対応します。|  
 |`Timeout`|省略可能な `Int32` 型のパラメーターです。<br /><br /> タスク実行を終了するまでの時間をミリ秒単位で指定します。 既定値は `Int.MaxValue` であり、タイムアウト期限がないことを示します。|  
 |`Title`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Title` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」で `/title` オプションのドキュメントをご覧ください。|  
@@ -77,7 +72,7 @@ AL タスクは、[!INCLUDE[winsdklong](../includes/winsdklong-md.md)] と共に
 |`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> .ico ファイルをアセンブリに挿入します。 この .ico ファイルは、エクスプローラーにおける出力ファイルの視覚的な表現を提供します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」の `/win32icon` オプションに対応します。|  
 |`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (.res ファイル) を出力ファイルに挿入します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/library/b5382965-0053-47cf-b92f-862860275a01)」で `/win32res` オプションのドキュメントをご覧ください。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
@@ -100,9 +95,6 @@ AL タスクは、[!INCLUDE[winsdklong](../includes/winsdklong-md.md)] と共に
 </AL>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)
-
-
-

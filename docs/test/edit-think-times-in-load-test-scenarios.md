@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8e03bee5-ab7b-4b40-9497-9dbe91ccb90e
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.prod: visual-studio-dev15
-ms.openlocfilehash: 0e1ef7811e96372952bf9b5c845b8fe5c2deb27a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b40c6bec851add0a3808888ae889be4cf948cfe6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53927036"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54964549"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>待ち時間を編集してロード テスト シナリオにおける Web サイトでの対話操作の遅延をシミュレートする
 

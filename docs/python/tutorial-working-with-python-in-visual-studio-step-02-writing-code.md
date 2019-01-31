@@ -2,22 +2,22 @@
 title: Visual Studio の Python のチュートリアルの手順 2、コードを記述して実行する
 titleSuffix: ''
 description: コードの編集やプロジェクトの実行など、Visual Studio での Python 機能の中核となるチュートリアルの手順 2。
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 201284ad236b2182ba6c4e69971ff15d0b43a009
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6aec7825387c2eda58c76bf885bcd29b0b7bdd1b
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935145"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231780"
 ---
 # <a name="step-2-write-and-run-code"></a>手順 2: コードを記述して実行する
 
@@ -46,7 +46,7 @@ ms.locfileid: "53935145"
     ![IntelliSense の構文の色分け表示とエラーの強調表示](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > 開発環境は非常に個人的な問題であるため、Visual Studio では Visual Studio の外観と動作の完全な制御が提供されています。 **[ツール]** > **[オプション]** メニュー コマンドを選択し、**[環境]** と **[テキスト エディター]** タブの下の設定を調べます。 既定では限られた数のオプションしか表示されません。すべてのプログラミング言語のすべてのオプションを表示するには、ダイアログ ボックスの下部で **[すべての設定を表示]** を選択します。 
+    > 開発環境は非常に個人的な問題であるため、Visual Studio では Visual Studio の外観と動作の完全な制御が提供されています。 **[ツール]** > **[オプション]** メニュー コマンドを選択し、**[環境]** と **[テキスト エディター]** タブの下の設定を調べます。 既定では限られた数のオプションしか表示されません。すべてのプログラミング言語のすべてのオプションを表示するには、ダイアログ ボックスの下部で **[すべての設定を表示]** を選択します。
 
 1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグの開始]** メニュー項目を選択して、このポイントまでに書き込んだコードを実行します。 コードにエラーがまだある場合は、Visual Studio によって警告されます。
 

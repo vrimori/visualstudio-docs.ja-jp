@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ccee6551-a1b9-4ca2-8845-9c1cf4ac2560
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 652c7eee2e4b3830966882afd4a9b9b31c8aceb3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6dac1a48db34f1b3a5a9dbdbac4469344f3e5383
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53923271"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55001723"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application"></a>チュートリアル: ClickOnce アプリケーションを手動で展開します。
 Visual Studio を使用してデプロイすることはできません場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、または高度な展開の機能を使用する必要があります使用する必要があります信頼されたアプリケーションの配置など、 *Mage.exe* 、を作成するコマンドラインツール。[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストします。 このチュートリアルを作成する方法について説明、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コマンドラインのいずれかのバージョンを使用した展開 (*Mage.exe*) またはグラフィカル バージョン (*MageUI.exe*) のマニフェストの生成とツールを編集します。  

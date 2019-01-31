@@ -1,14 +1,9 @@
 ---
 title: CvEnterSpan 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvEnterSpanVA
 - cvmarkers/CvEnterSpanW
@@ -29,13 +24,13 @@ ms.assetid: 91689e9c-6733-44b9-b36a-8b9b2eef7d1d
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 818dda3c96dd4c10d7fc9e87cc957015497906be
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 40031567b5339803ccfa7f4a5b3db4f006c6c134
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51816294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54755168"
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -131,15 +126,12 @@ HRESULT CvEnterSpanExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvEnterSpanW、CvEnterSpanVW、CvEnterSpanExW、CvEnterSpanExVW  
   
  **ANSI:** CvEnterSpanA、CvEnterSpanVA、CvEnterSpanExA、CvEnterSpanExVW  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
-
-
-

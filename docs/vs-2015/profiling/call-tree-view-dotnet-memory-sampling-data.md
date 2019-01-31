@@ -1,27 +1,22 @@
 ---
 title: コール ツリー ビュー - .NET メモリ サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
 ms.assetid: fbb6cb60-420b-4ca9-8306-2494f7d321fe
 caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: b6667d0e0ad76210434f40eaf89e4790430ffb0e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7ed0d8a2ccf8e33b493ddcb71f9ce3a794a06862
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51758606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54787666"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>コール ツリー ビュー - .NET メモリ サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,10 +53,7 @@ ms.locfileid: "51758606"
 |**割り当てバイト数 (関数のみ)**|コール ツリーの親関数が呼び出した、この関数のインスタンスによって割り当てられたメモリのバイト数。 この数には、子関数によって行われた割り当てが含まれません。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイル実行で割り当てられたすべてのメモリのバイト数に対する、この関数の排他的割り当てであったバイト数の割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [コール ツリー ビュー - インストルメンテーション](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-instrumentation-data.md)
-
-
-

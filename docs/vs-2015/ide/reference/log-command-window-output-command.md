@@ -1,14 +1,9 @@
 ---
 title: Log Command Window Output コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - tools.logcommandwindowoutput
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
 caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c48c61177f80be00532347d3c49173aae54c7109
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: be51445940816f0feffcbc7ba0e542e94d0f0648
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49266397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54791603"
 ---
 # <a name="log-command-window-output-command"></a>LogCommandWindowOutput コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -55,7 +50,7 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
  /overwrite  
  任意。 `filename` 引数に指定したファイル名が既存のファイルと同じ場合は、既存のファイルが上書きされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  ファイルを指定しない場合、既定では、ファイル cmdline.log が作成されます。 既定では、このコマンドのエイリアスは Log です。  
   
 ## <a name="examples"></a>使用例  
@@ -77,11 +72,8 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 >Tools.LogCommandWindowOutput /on  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

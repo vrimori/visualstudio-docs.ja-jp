@@ -9,17 +9,17 @@ ms.topic: quickstart
 ms.devlang: vb
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b36051f3a316f2b00ebdd08110f22346a910512
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c41aac277136de164ba7148e26fc9c0f422b2eef
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53853919"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55014615"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>クイック スタート: Visual Studio を使用して初めての C# コンソール アプリを作成する
 
@@ -49,7 +49,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
-C# プロジェクト テンプレートを選択し、プロジェクトに名前を付けると、簡単な "Hello World" アプリケーションが Visual Studio によって自動的に作成されます。 
+C# プロジェクト テンプレートを選択し、プロジェクトに名前を付けると、簡単な "Hello World" アプリケーションが Visual Studio によって自動的に作成されます。
 
 (これを行うために、<xref:System.Console.WriteLine%2A> メソッドが呼び出され、リテラル文字列 "Hello World!" が コンソール ウィンドウに表示されます。)
 

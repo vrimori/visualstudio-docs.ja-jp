@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 0bede3afc12eb7f22f516d7f21727609d5724a9a
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9f4c00056c93230d588216ff425dee56d42e0961
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53943156"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54921095"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
@@ -40,7 +40,7 @@ Visual Studio Test Professional や SQL Server Management Studio などの製品
 
 1. Visual Studio インストーラーを実行して、**[変更]** オプションを選びます (詳しくは、[Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)。 Visual Studio をまだインストールしていない場合は、[Visual Studio のインストール](../install/install-visual-studio.md)に関するページをご覧ください。 Windows 7 の場合、Visual Studio 2017 バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
-1. **[データ サイエンスと分析のアプリケーション]** ワークロードを選択します。
+1. [**データ サイエンスと分析のアプリケーション**] ワークロードを選択します。
 
     ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](media/installation-data-science-workload.png)
 

@@ -1,14 +1,9 @@
 ---
 title: XDCMake タスク | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 f1_keywords:
 - vc.task.xdcmake
 dev_langs:
@@ -24,13 +19,13 @@ ms.assetid: a7de9c64-903a-4a02-85f3-f37672270f25
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: caf3803edff01e6ffe650f18aaccef99fc50728f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 58257921634e1afb89dfc0c012728523bc98a2ef
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54792890"
 ---
 # <a name="xdcmake-task"></a>XDCMake タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +35,7 @@ XML ドキュメント ツール (xdcmake.exe) をラップします。このツ
   
  Visual C++ ソース コードにドキュメンテーション コメントを記入し、[/doc](http://msdn.microsoft.com/library/b54f7e2c-f28f-4f46-9ed6-0db09be2cc63) コンパイラ オプションでコンパイルすると、.xdc ファイルが作成されます。 詳細については、[XDCMake リファレンス](http://msdn.microsoft.com/library/14e65747-d000-4343-854b-8393bf01cbac)、[XML ドキュメント ジェネレーター プロパティ ページ](http://msdn.microsoft.com/library/645912b5-197a-4c36-ba58-64df09444ca0)、xdcmake.exe のコマンドライン ヘルプ オプション (**/?**) をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  既定では、xdcmake.exe ツールはいくつかのコマンドライン オプションをサポートしています。 **/old** コマンドライン オプションを指定すると、追加のオプションがサポートされます。  
   
 ## <a name="parameters"></a>パラメーター  
@@ -58,8 +53,5 @@ XML ドキュメント ツール (xdcmake.exe) をラップします。このツ
 |**SuppressStartupBanner**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、タスクの開始時に著作権およびバージョン番号のメッセージが表示されないようにします。<br /><br /> 詳細については、「[XDCMake リファレンス](http://msdn.microsoft.com/library/14e65747-d000-4343-854b-8393bf01cbac)」の **/nologo** オプションの説明を参照してください。|  
 |**TrackerLogDirectory**|省略可能な **String** 型のパラメーターです。<br /><br /> トラッカー ログのディレクトリを指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-

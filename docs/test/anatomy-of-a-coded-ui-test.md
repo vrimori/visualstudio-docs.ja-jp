@@ -7,15 +7,15 @@ helpviewer_keywords:
 - coded UI tests
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbee9735922b680daad51a698b3e05ad54f31115
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9adcc03a66aa6359613f42dc4dd6ee67024185ea
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53949311"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54999731"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
 
@@ -30,8 +30,8 @@ ms.locfileid: "53949311"
 |ファイル|目次|編集可能かどうか|
 |-|-|-|
 |[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [プロパティ](#UIMapProperties)|×|
-|[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|[はい]|
-|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|[はい]|
+|[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|はい|
+|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|はい|
 |[UIMap.uitest](#UIMapuitest)|テストに使用する UI の XML マップ。|×|
 
 ###  <a name="UIMapDesignerFile"></a> UIMap.Designer.cs

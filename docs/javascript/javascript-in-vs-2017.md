@@ -16,13 +16,13 @@ ms.assetid: 74dca14c-5071-416f-a92b-d09f95e3dfb8
 caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
-manager: douge
-ms.openlocfilehash: 1045c515870d2574bfb86d12396c5572b01ddda4
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+manager: jillfra
+ms.openlocfilehash: ee22803c7a479c6d22821a9a6b267cd72938792e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398435"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55013003"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 の JavaScript
 
@@ -206,7 +206,8 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
   }
 }
 ```
-# <a name="troubleshooting-the-javascript-language-service-has-been-disabled-for-the-following-projects"></a>"JavaScript Language Service は次のプロジェクトに対して無効になっています" という問題をトラブルシューティングする
+
+## <a name="troubleshooting-the-javascript-language-service-has-been-disabled-for-the-following-projects"></a>"JavaScript Language Service は次のプロジェクトに対して無効になっています" という問題をトラブルシューティングする
 大量のコンテンツを持つ JavaScript プロジェクトを開くと、"JavaScript Language Service は次のプロジェクトに対して無効になっています" という内容のメッセージが表示される場合があります。 大量の JavaScript ソースを持つ最も一般的な理由としては、20 MB というプロジェクトの上限を超えるソース コードがライブラリに含まれていることが挙げられます。
 
 プロジェクトを最適化するための最も簡単な方法は、プロジェクトのルートに `tsconfig.json` ファイルを追加して、無視しても問題ないファイルを言語サービスに知らせてやることです。 以下のサンプルを使用して、ライブラリの格納場所である最も一般的なディレクトリを除外します。
@@ -231,7 +232,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 }
 ```
 
-必要に応じて、他のディレクトリを追加します。 他のいくつかの例には、"vendor" または "wwwroot/lib" ディレクトリが含まれています。 
+必要に応じて、他のディレクトリを追加します。 他のいくつかの例には、"vendor" または "wwwroot/lib" ディレクトリが含まれています。
 
 > [!NOTE]
 > コンパイラ プロパティ `disableSizeLimit` を使用して、20 MB のチェック制限を無効にすることもできます。 この制限を無効にすると、言語サービスでクラッシュ発生の可能性がありますので、このプロパティを使用する場合は特別な注意が必要です。

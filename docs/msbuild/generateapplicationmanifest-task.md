@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54f3739795b5fb3257ba82c52bf9f9df7edaa62b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c15f3ae12aec25747629dfb634ad5790405a11c6
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53900692"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54940662"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest タスク
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストまたはネイティブ マニフェストを生成します。 ネイティブ マニフェストでは、コンポーネントの一意の ID を定義し、コンポーネントを構成するアセンブリおよびファイルを指定することによって、コンポーネントを記述します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストはネイティブ マニフェストを拡張するもので、アプリケーションのエントリ ポイントとセキュリティ レベルを指定します。  

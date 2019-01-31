@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3ddb96f9-9bda-4a68-ad4d-ef488a0a68dc
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53f9137c35bd89e812f1d671e2e51f88b343753c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 1e14fb1e90da5812d15cf36448b6c3f7283b5b87
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53920259"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54992374"
 ---
 # <a name="sleep-time"></a>スリープ時間
 タイムライン内のこれらのセグメントは、スリープとして分類されるブロック時間と関連付けられています。 スリープのカテゴリは、スレッドが自発的にその論理コアを明け渡して、処理を行わなかったことを示しています。 この期間中、コンカレンシー ビジュアライザーがスリープとしてカウントしている API で、1 つのスレッドがブロックされています。 `Sleep()` や `SwitchToThread()` などの API がこのグループになります。  

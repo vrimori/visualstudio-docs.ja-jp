@@ -1,23 +1,19 @@
 ---
 title: 単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
 caps.latest.revision: 8
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 9cc93fb1382dba70aedc989a609ac2932cf4f466
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+manager: jillfra
+ms.openlocfilehash: c3b0e7cf2ddc4ada4fe015feba17c5adbcc328d3
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53901478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54803268"
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "53901478"
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection>
 
 ## <a name="attributes-used-to-establish-a-calling-order"></a>呼び出し順序を確立するために使用する属性
- 次のいずれかの属性で装飾されたコード要素は、指定した時点で呼び出されます。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
+ 次のいずれかの属性で装飾されたコード要素は、指定した時点で呼び出されます。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
 
 ### <a name="for-assemblies"></a>アセンブリの場合
  AssemblyInitialize がアセンブリの読み込みの直後に、AssemblyCleanup がアセンブリのアンロードの直前に呼び出されます。
@@ -68,7 +64,7 @@ ms.locfileid: "53901478"
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>テスト クラスとテスト メソッドの識別に使用する属性
- 各テスト クラスには TestClass 属性が必要であり、各テスト メソッドには TestMethod 属性が必要です。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
+ 各テスト クラスには TestClass 属性が必要であり、各テスト メソッドには TestMethod 属性が必要です。 詳細については、「[単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)」を参照してください。
 
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 
@@ -122,7 +118,7 @@ ms.locfileid: "53901478"
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssProjectStructureAttribute>
 
 ## <a name="classes-used-with-private-accessors"></a>プライベート アクセサーと共に使用するクラス
- 「[publicize を使用したプライベート アクセサーの作成](http://msdn.microsoft.com/en-us/2056c6a7-6672-42a7-8f53-fead33c56deb)」に説明されているように、プライベート メソッドの単体テストを生成できます。 生成するとプライベート アクセサー クラスが作成され、このクラスにより、PrivateObject クラスのオブジェクトがインスタンス化されます。 PrivateObject クラスは、プライベート アクセサー プロセスの一部としてリフレクションを使用するラッパー クラスです。 これは PrivateType クラスに似ていますが、PrivateType クラスは、プライベート インスタンス メソッドの呼び出しではなく、プライベート静的メソッドの呼び出しに使用されます。
+ 「[publicize を使用したプライベート アクセサーの作成](http://msdn.microsoft.com/2056c6a7-6672-42a7-8f53-fead33c56deb)」に説明されているように、プライベート メソッドの単体テストを生成できます。 生成するとプライベート アクセサー クラスが作成され、このクラスにより、PrivateObject クラスのオブジェクトがインスタンス化されます。 PrivateObject クラスは、プライベート アクセサー プロセスの一部としてリフレクションを使用するラッパー クラスです。 これは PrivateType クラスに似ていますが、PrivateType クラスは、プライベート インスタンス メソッドの呼び出しではなく、プライベート静的メソッドの呼び出しに使用されます。
 
 -   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject>
 

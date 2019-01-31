@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 14fb2903-b771-44d6-b0a8-44e0097c58ce
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef883d8b0aa7870b9444ea92f6b0b23143caf43d
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a9061a4f95e8bc70382185c9996c21524339fcaa
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53832967"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54919955"
 ---
 # <a name="idiasessionfindsymbolbyrva"></a>IDiaSession::findSymbolByRVA
 または、指定された相対仮想アドレス (RVA) に最も近いする指定の記号の型を取得します。  

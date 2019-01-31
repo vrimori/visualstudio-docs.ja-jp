@@ -6,16 +6,16 @@ ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Exploration bounds
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 718c8cfdf7b4d03ea0c1c3b5f9f4a120a5997a8e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8077b08765e1db372ec9f19c39e62f10dd2c285a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53935464"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55069916"
 ---
 # <a name="exploration-bounds"></a>探索の範囲
 
@@ -106,7 +106,7 @@ for (int i=0; i<100; i++) { }
 
 ```csharp
 [PexMethod]
-void ParameterizedTest(int n) 
+void ParameterizedTest(int n)
 {
      for (int i=0; i<n; i++) { // conditions are "0<n", "1<n", ..., "!(n<n)"
           ...
@@ -144,10 +144,10 @@ IntelliTest が探索中に考慮する一意のパスの最大数。
 
 この探索の範囲の背後にある意図は、ループまたは再帰を含むコードには無限の実行パスが存在する場合があるため、IntelliTest を[入力生成](input-generation.md)中に制限する必要があることです。
 
-**MaxRuns** と **MaxRunsWithUniquePaths** の 2 つの設定は次のように関連します。 
+**MaxRuns** と **MaxRunsWithUniquePaths** の 2 つの設定は次のように関連します。
 
 * IntelliTest は、さまざまなテスト入力で **MaxRuns** の最大回数までパラメーター化されたテスト メソッドを呼び出します。
-* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。 
+* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。
 * IntelliTest は、一意の実行パスの検出数をカウントします。この数は、**MaxRunsWithUniquePaths** オプションで制限されます。
 
 <a name="maxexceptions"></a>

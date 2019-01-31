@@ -1,14 +1,9 @@
 ---
 title: Visual C++ コードの使用 (クラス デザイナー) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
 helpviewer_keywords:
@@ -23,13 +18,13 @@ ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
 caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f777c9bdd0cf2ea300d2df8e7cbfbc8900c25c2a
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 90f0c73abb33a2da9c2735bcbc16b5559437bc65
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49929531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54765013"
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Visual C++ コードの使用 (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +48,7 @@ ms.locfileid: "49929531"
 -   Typedef  
   
 > [!NOTE]
->  これは、モデリング プロジェクトで作成できる UML クラス図と同じではありません。 詳細については、「[UML Class Diagrams: Reference](../modeling/uml-class-diagrams-reference.md)」(UML クラス図: リファレンス) を参照してください。  
+>  これは、モデリング プロジェクトで作成できる UML クラス図と同じではありません。 詳細については、「[UML Class Diagrams:Reference](../modeling/uml-class-diagrams-reference.md)」(UML クラス図: リファレンス) を参照してください。  
   
 ## <a name="troubleshooting-type-resolution-and-display-issues"></a>型解決および表示の問題のトラブルシューティング  
   
@@ -68,7 +63,7 @@ ms.locfileid: "49929531"
 ### <a name="type-resolution-issues"></a>型解決の問題  
  クラス デザイナーは、次のような理由により、型解決ができない場合があります。  
   
-- 型が、クラス ダイアグラムを含むプロジェクトから参照されていないプロジェクトまたはアセンブリ内にあります。 このエラーを修正するには、型を含むプロジェクトまたはアセンブリへの参照を追加します。 詳しくは、「[方法: [参照の追加] ダイアログ ボックスを使用して参照を追加または削除する](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)」を参照してください。  
+- 型が、クラス ダイアグラムを含むプロジェクトから参照されていないプロジェクトまたはアセンブリ内にあります。 このエラーを修正するには、型を含むプロジェクトまたはアセンブリへの参照を追加します。 詳細については、次を参照してください。[に NIB 方法。追加または参照の追加 ダイアログ ボックスを使用して参照を削除する](http://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)します。  
   
 - 型が正しいスコープ内にないため、クラス デザイナーが型を見つけられません。 コードに `using` ステートメント、`imports` ステートメント、または `#include` ステートメントが欠落していないことを確認します。 また、型 (または関連する型) を最初に配置した名前空間の外に移動していないことも確認します。  
   
@@ -82,7 +77,7 @@ ms.locfileid: "49929531"
   
 - クラス デザイナーが、入力した型をサポートしていることを確認します。 「[C++ コード要素の制限事項](#limitations)」を参照してください。  
   
-- 型の解決を試みます。 型は、クラス ダイアグラムを含むプロジェクトから参照されていないプロジェクトまたはアセンブリ内にある場合もあります。 このエラーを修正するには、型を含むプロジェクトまたはアセンブリへの参照を追加します。 詳しくは、「[方法: [参照の追加] ダイアログ ボックスを使用して参照を追加または削除する](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)」を参照してください。  
+- 型の解決を試みます。 型は、クラス ダイアグラムを含むプロジェクトから参照されていないプロジェクトまたはアセンブリ内にある場合もあります。 このエラーを修正するには、型を含むプロジェクトまたはアセンブリへの参照を追加します。 詳細については、次を参照してください。[に NIB 方法。追加または参照の追加 ダイアログ ボックスを使用して参照を削除する](http://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)します。  
   
 - クラス デザイナーが型を検出できるように、型が正しいスコープ内にあることを確認します。 コードに `using` ステートメント、`imports` ステートメント、または `#include` ステートメントが欠落していないことを確認します。 また、型 (または関連する型) を最初に配置した名前空間の外に移動していないことも確認します。  
   
@@ -111,7 +106,7 @@ ms.locfileid: "49929531"
   
 -   クラス デザイナーでは、void 型または void 型から派生した型を表示できません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [クラスと型のデザインおよび表示](../ide/designing-and-viewing-classes-and-types.md)   
  [クラスと他の型の使用 (クラス デザイナー)](../ide/working-with-classes-and-other-types-class-designer.md)   
  [クラス ダイアグラムの使用 (クラス デザイナー)](../ide/working-with-class-diagrams-class-designer.md)   
@@ -121,6 +116,3 @@ ms.locfileid: "49929531"
  [クラス デザイナーの Visual C++ 構造体](../ide/visual-cpp-structures-in-class-designer.md)   
  [クラス デザイナーの Visual C++ 列挙体](../ide/visual-cpp-enumerations-in-class-designer.md)   
  [クラス デザイナーにおける Visual C++ の typedef](../ide/visual-cpp-typedefs-in-class-designer.md)
-
-
-

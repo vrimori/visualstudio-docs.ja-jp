@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41161a41b1e2d1e13c5b9d8ebfad47c558570206
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7dae0859970d5a9a70abb0bed20630348b270a7f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53926266"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031284"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからプロジェクトをビルドできます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]をインストールします。 自動化されたプロセスを使用してビルドを再現することができます、たとえば、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの範囲外の手法です。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5b96640b-8efe-48a4-8d0a-1ae3f9587e44
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d764cea7992a9833bd8bddde8432388aebbc994
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f2e00e836725620c9a3ded6e2df5119a66d1cb54
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867161"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54942284"
 ---
 # <a name="miscellaneous-files"></a>その他のファイル
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のエディターでは、プロジェクトともソリューションとも関係のないファイルを操作できます。 ソリューションを開いているときに、ファイルをソリューションやプロジェクトに追加せずに開いて編集できます。 コンテナーとは関係なく操作されるファイルを "その他のファイル" と呼びます。 "その他のファイル" は、ソリューションやプロジェクトの外部にあり、ビルドには含まれません。また、ソース管理の対象になっているソリューションに含めることはできません。

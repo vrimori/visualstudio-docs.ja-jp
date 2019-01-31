@@ -1,5 +1,5 @@
 ---
-title: '方法 : 構成を作成および編集する'
+title: '方法: 構成を作成および編集する'
 ms.date: 06/21/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d3f6b271eb6b9b663e30953fa597fb7d8cec6ac
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 949febb1b6d1aae01ae46b586721e1cf238549de
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51348527"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55002048"
 ---
-# <a name="how-to-create-and-edit-configurations"></a>方法 : 構成を作成および編集する
+# <a name="how-to-create-and-edit-configurations"></a>方法: 構成を作成および編集する
 
 ソリューションに対して、複数のビルド構成を作成することができます。 たとえば、問題を検出して修正するためにテスト担当者が使用できるデバッグ ビルドを構成できます。他にも、多様な顧客に配布できる多様な種類のビルドを構成できます。
 

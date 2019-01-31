@@ -8,15 +8,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: db27509faf1c3d83eab1cd6c8fcd6b5b70fab48e
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+ms.openlocfilehash: 69f0d2f89901632ab4f500879fc89e3b6ca1e0ba
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398300"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54959724"
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 
@@ -47,7 +47,7 @@ ms.locfileid: "54398300"
    using Newtonsoft.Json;
    using System;
    ```
-   
+
    並べ替えた後:
 
    ```csharp
@@ -58,7 +58,7 @@ ms.locfileid: "54398300"
    using FluentValidation;
    using Newtonsoft.Json;
    ```
-   
+
 - ディレクティブ グループを使用して分離します
 
    選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって、同じルート名前空間を持つディレクティブのグループの間に空の行を挿入することで、`using` ディレクティブが分離されます。
@@ -73,28 +73,28 @@ ms.locfileid: "54398300"
    using Newtonsoft.Json;
    using System;
    ```
-   
+
    並べ替えた後:
-   
+
    ```csharp
    using AutoMapper;
-   
+
    using FluentValidation;
-   
+
    using Newtonsoft.Json;
-   
+
    using System;
    using System.Collections.Generic;
    using System.Linq;
    ```
-   
-- 参照アセンブリの型に using を提案する 
-- NuGet パッケージの型に using を提案する 
+
+- 参照アセンブリの型に using を提案する
+- NuGet パッケージの型に using を提案する
 
    これらのオプションを選択した場合、[クイック アクション](../quick-actions.md)を使用して NuGet パッケージをインストールし、参照されていない型の `using` ディレクティブを追加できます。
 
    ![Visual Studio に NuGet パッケージをインストールするためのクイック アクション](media/nuget-lightbulb.png)
-  
+
 ## <a name="highlighting"></a>強調表示
 
 - カーソルの下にあるシンボルへの参照をハイライトする

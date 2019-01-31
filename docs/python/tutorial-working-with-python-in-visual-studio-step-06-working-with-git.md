@@ -2,22 +2,22 @@
 title: Visual Studio の Python のチュートリアルの手順 6、Git の操作
 titleSuffix: ''
 description: Visual Studio の Python の中核となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明しています。
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 87a4e8c67d7d0f6f1fecabad87d7c2b9ebf7a422
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 3d7d792300a55c1ad7dee0b25f523f5574c6bca8
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53928936"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231745"
 ---
 # <a name="step-6-work-with-git"></a>手順 6: Git の操作
 

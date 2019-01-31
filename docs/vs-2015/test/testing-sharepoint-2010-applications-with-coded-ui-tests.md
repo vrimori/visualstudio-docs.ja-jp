@@ -1,24 +1,19 @@
 ---
 title: コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: e450cd333c01e4e2e557013ef106337fe5a80a71
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 96a3a9fc38d82a2eaeb1adfbcfdd59f9ae503275
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49937279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54775013"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,7 +53,7 @@ ms.locfileid: "49937279"
 > [!WARNING]
 >  Excel のセルにテキストを入力してから方向キーを操作すると、正しく記録されません。 セルの選択にはマウスを使用してください。  
   
- 空のセルに対する操作を記録している場合は、セルをダブルクリックしてからテキスト設定操作を実行して、コードを変更する必要があります。 そうする必要があるのは、セルをクリックした後、キーボードを操作すると、セル内の `textarea` がアクティブになるためです。 単に空のセルで `setvalue` を記録すると、セルがクリックされるまでは存在しない `editbox` が検索されます。 例えば:  
+ 空のセルに対する操作を記録している場合は、セルをダブルクリックしてからテキスト設定操作を実行して、コードを変更する必要があります。 そうする必要があるのは、セルをクリックした後、キーボードを操作すると、セル内の `textarea` がアクティブになるためです。 単に空のセルで `setvalue` を記録すると、セルがクリックされるまでは存在しない `editbox` が検索されます。 次に例を示します。  
   
 ```csharp  
 Mouse.DoubliClick(uiItemCell,new Point(31,14));  
@@ -148,13 +143,10 @@ uiGridKeyboardInputEdit.Text=value;
 ### <a name="forum"></a>フォーラム  
  [Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=254496)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [SharePoint 2010 および 2013 アプリケーションの Web パフォーマンス テストおよびロード テスト](http://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54)   
  [SharePoint ソリューションの作成](http://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)   
  [SharePoint コードの検証およびデバッグ](http://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)   
  [SharePoint ソリューションのビルドとデバッグ](http://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)   
  [SharePoint アプリケーションのパフォーマンスのプロファイリング](http://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)
-
-
-

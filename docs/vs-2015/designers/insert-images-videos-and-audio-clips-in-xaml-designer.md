@@ -1,25 +1,20 @@
 ---
 title: XAML デザイナーでイメージ、ビデオ、およびオーディオ クリップを挿入する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: ff707aca-6bc5-4a2d-834b-bb6511a7b8f6
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 63d26d079e686339ad8ed93c5aefb8c7a468e899
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: db6225f8bf8055edb0fb5b6f3cdea98de79b4bcc
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49283960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54774141"
 ---
 # <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>XAML デザイナーでイメージ、ビデオ、およびオーディオ クリップを挿入する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,8 +34,5 @@ ms.locfileid: "49283960"
 |Adobe Photoshop ファイルのインポート|![インストールされている機能を構成する](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Photoshop ファイルを Blend にインポートする](https://www.youtube.com/watch?v=ekYyhirFKs0)|  
 |オーディオ クリップを挿入する|![インストールされている機能を構成する](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [オーディオ クリップを追加する](https://www.youtube.com/watch?v=7qW9l0tmkAI&index=52&list=PLBDF977B2F1DAB358)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
-
-
-

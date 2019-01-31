@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 9bb64cae648f8ad747100fb0e27f83617603c804
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d7659de6e90ca13172459b1bcc1e305e14a91cfc
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53878235"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231962"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、保守
 
@@ -354,11 +354,7 @@ ms.locfileid: "53878235"
 
 ## <a name="videos"></a>ビデオ
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif) [コード化された UI テストの概要](http://go.microsoft.com/fwlink/?LinkID=230573)
-
-![ビデオへのリンク](../data-tools/media/playvideo.gif) [コード化された UI テストのメンテナンスとデバッグ](http://go.microsoft.com/fwlink/?LinkID=230574)
-
-![ビデオへのリンク](../data-tools/media/playvideo.gif) [コード化された UI テストのハード コーディング](http://go.microsoft.com/fwlink/?LinkID=230575)
+![ビデオへのリンク](../data-tools/media/playvideo.gif) [コード化された UI テストの概要](https://onedrive.live.com/?id=2DB0E1EFE1C1D3B8%21110&cid=2DB0E1EFE1C1D3B8)
 
 ## <a name="faq"></a>FAQ
 

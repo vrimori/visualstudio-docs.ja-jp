@@ -1,27 +1,22 @@
 ---
 title: モジュール ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 26516139-0981-41de-917d-ad5769391b8d
 caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 85024296eff4fb4d26b3a588217a1e6fe5221d3e
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 10d63e85a7e0b97b588b368318eb7d040694c72b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51755404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54784526"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>モジュール ビュー - .NET メモリ インストルメンテーション データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -105,10 +100,7 @@ ms.locfileid: "51755404"
 |**最大アプリケーション排他時間 (関数のみ)**|-   関数の場合、この関数の呼び出しの最大アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|-   関数の場合、このモジュールまたは関数の呼び出しの最小アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [モジュール ビュー - サンプリング](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [モジュール ビュー](../profiling/modules-view-instrumentation-data.md)   
  [モジュール ビュー](../profiling/modules-view-sampling-data.md)
-
-
-

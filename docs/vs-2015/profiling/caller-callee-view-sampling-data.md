@@ -1,14 +1,9 @@
 ---
 title: 呼び出し元/呼び出し先ビュー - サンプリング データ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - sampling profiling method,Caller/Callee view
 - Caller/Callee view
@@ -16,13 +11,13 @@ ms.assetid: 28e85ed5-1512-4b59-bb84-138a2abca7dd
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 8e46befbdd8f727485884197a3cfb284fa5a8cf6
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f5e3c28d7aa24f46bb3fc09045574030f8eb03db
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51796962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54803924"
 ---
 # <a name="caller--callee-view---sampling-data"></a>呼び出し元/呼び出し先ビュー - サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,10 +50,7 @@ ms.locfileid: "51796962"
 |**サンプル数 (関数のみ)**|-   現在の関数の場合、この関数が直接実行されていたとき、つまりこの関数が呼び出し履歴の最上位にあったときに収集されたプロファイル実行のサンプル数。 この関数の子関数の実行中に収集されたサンプルは、排他カウントには含まれません。<br />-   呼び出し元関数の場合、この関数が現在の関数を呼び出したときに収集された現在の関数の排他サンプル数。<br />-   呼び出し先関数の場合、現在の関数がこの関数を呼び出したときに収集されたこの関数の排他サンプル数。|  
 |**サンプル % (関数のみ)**|プロファイル実行のすべてのサンプルに対する、この関数の排他サンプルの割合。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
  [呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
  [呼び出し元/呼び出し先ビュー - インストルメンテーション データ](../profiling/caller-callee-view-instrumentation-data.md)
-
-
-

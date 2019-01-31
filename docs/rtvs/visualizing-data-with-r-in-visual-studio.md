@@ -6,15 +6,15 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 8b0c633e3236f537e9f631df12a5af597e67475c
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bc568c6e2e28d27516ac5a92d7ccd01d3704bb7c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53859082"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55009935"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R でデータを視覚化する
 
@@ -38,7 +38,7 @@ ms.locfileid: "53859082"
 
 プロットの生成には "アクティブな" プロット ウィンドウが使用されます。前のプロットはプロット履歴に保存されます (「[プロット履歴](#plot-history)」参照)。 たとえば、「`plot(100:1)`」と入力すると、最初のプロットが下の行に置き換えられます。
 
-他のすべての Visual Studio ウィンドウと同様に、 プロット ウィンドウのレイアウトはカスタマイズできます (「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」参照)。 プロット ウィンドウは Visual Studio フレーム内のさまざまな場所にドッキングできます。このとき、そのフレームの中でサイズが変更されます。あるいは、フレームから完全に引き出し、フレームに関係なくサイズを変更できます。 
+他のすべての Visual Studio ウィンドウと同様に、 プロット ウィンドウのレイアウトはカスタマイズできます (「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」参照)。 プロット ウィンドウは Visual Studio フレーム内のさまざまな場所にドッキングできます。このとき、そのフレームの中でサイズが変更されます。あるいは、フレームから完全に引き出し、フレームに関係なくサイズを変更できます。
 
 プロット ウィンドウのサイズを変更すると必ずプロットが再レンダリングされ、最良の画質が与えられます。 プロットのサイズ変更は通常、次のセクションで説明するコマンドを利用し、プロットをファイルまたはクリップボードにエクスポートする前に行います。
 
@@ -46,7 +46,7 @@ ms.locfileid: "53859082"
 
 プロット ウィンドウのツールバーには適用できるコマンドが表示されます。コマンドの多くは、**[R Tools]**、**[プロット]** メニューの順に選択しても表示できます。
 
-| ボタン | コマンド | 説明 | 
+| ボタン | コマンド | 説明 |
 | --- | --- | --- |
 | ![新しいプロット ウィンドウ ボタン](media/plotting-toolbar-01-new-plot-window.png) | 新しいプロット ウィンドウ | 個別のプロット ウィンドウとその履歴を作成します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
 | ![プロット ウィンドウをアクティブにするボタン](media/plotting-toolbar-02-activate-plot-window.png) | プロット ウィンドウをアクティブにする | 後続の `plot` ウィンドウが現在のプロット ウィンドウにレンダリングされるように、現在のプロット ウィンドウをアクティブ ウィンドウとして設定します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
@@ -54,8 +54,8 @@ ms.locfileid: "53859082"
 | ![プロット履歴ボタン](media/plotting-toolbar-04-plot-history-arrows.png) | 前/次のプロット |  履歴の前のプロット/次のプロットに移動します。 Ctrl + Alt + F11 (前) と Ctrl + Alt + F12 (次) でも移動できます。 「[プロット履歴](#plot-history)」を参照してください。 |
 | ![イメージとして保存ボタン](media/plotting-toolbar-05-save-as-image.png)| イメージとして保存 | ファイル名の入力を求め、現在のプロット (ウィンドウ コンテンツ、ウィンドウ サイズ) をイメージ ファイルに保存します。 利用できる形式は `.png`、`.jpg`、`.bmp`、`.tif` です。 |
 | ![PDF として保存ボタン](media/plotting-toolbar-06-save-as-pdf.png)| PDF として保存 | 現在のウィンドウ サイズで現在のプロットを PDF ファイルに保存します。 PDF が拡大または縮小されると、プロットは再レンダリングされます。 |
-| ![ビットマップとしてコピー ボタン](media/plotting-toolbar-07-copy-as-bitmap.png)| ビットマップとしてコピー | 現在のウィンドウ サイズでプロットをラスター ビットマップとしてクリップボードにコピーします。 | 
-| ![メタファイルとしてコピー ボタン](media/plotting-toolbar-08-copy-as-metafile.png)| メタファイルとしてコピー | プロットを [Windows メタファイル](https://en.wikipedia.org/wiki/Windows_Metafile) としてクリップボードにコピーします (Wikipedia)。 | 
+| ![ビットマップとしてコピー ボタン](media/plotting-toolbar-07-copy-as-bitmap.png)| ビットマップとしてコピー | 現在のウィンドウ サイズでプロットをラスター ビットマップとしてクリップボードにコピーします。 |
+| ![メタファイルとしてコピー ボタン](media/plotting-toolbar-08-copy-as-metafile.png)| メタファイルとしてコピー | プロットを [Windows メタファイル](https://en.wikipedia.org/wiki/Windows_Metafile) としてクリップボードにコピーします (Wikipedia)。 |
 | ![プロットの削除ボタン](media/plotting-toolbar-09-remove-plot.png)| プロットの削除 | 履歴から現在のプロットを削除します。 |
 | ![すべてのプロットをクリア ボタン](media/plotting-toolbar-10-clear-all-plots.png) | すべてのプロットをクリア | 履歴からプロットをすべて削除します (確認が求められます)。 |
 
@@ -84,7 +84,7 @@ ms.locfileid: "53859082"
 
 ## <a name="programmatically-manipulate-plot-windows"></a>プロット ウィンドウをプログラムで操作する
 
-R コードからプロット ウィンドウをプログラムで操作できます。デバイス番号を利用し、特定のプロット ウィンドウを特定します。 
+R コードからプロット ウィンドウをプログラムで操作できます。デバイス番号を利用し、特定のプロット ウィンドウを特定します。
 
 - `dev.list()`: 現在の R セッション内のグラフィックス デバイスをすべて一覧表示します。
 - `dev.new()`: 新しいグラフィックス デバイス (新しいプロット ウィンドウ) を作成します。

@@ -1,14 +1,9 @@
 ---
 title: VSPerfCmd | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, VSPerfCmd tool
 - command-line tools, VSPerfCmd tool
@@ -19,13 +14,13 @@ ms.assetid: 778bc105-7643-46c4-a338-f3620e31125a
 caps.latest.revision: 54
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: e8cd602a005026c8dec4bf5a309d6f04044b960d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: da82cbd8426b1a9af08e27577cdb76ca4a64d2e2
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51766666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54776099"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,17 +54,17 @@ VSPerfCmd [/U] [/options]
 |[ProcessOff](../profiling/processon-and-processoff.md) **:** `pid`|指定したプロセスのデータ コレクションを停止します。|  
 |[ThreadOn と ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|**VSPerfCmdThreadOff** を呼び出し、プロファイリングを一時停止した後、指定したプロセスのプロファイリングを再開します。 インストルメンテーション メソッドでプロファイリングするときにのみ、**ThreadOn** を使用します。|  
 |[ThreadOn と ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|指定したスレッドのプロファイリングを一時停止します。 インストルメンテーション方法でプロファイリングするときにのみ、**ThreadOff** を使用します。|  
-|[Mark](../profiling/mark.md) **:** _MarkNum_[**,**_MarkText_**]**|プロファイリング データ ファイルにマークと任意のテキストを挿入します。|  
+|[Mark](../profiling/mark.md) **:**_MarkNum_[**,**_MarkText_**]**|プロファイリング データ ファイルにマークと任意のテキストを挿入します。|  
   
 ## <a name="sampling-method-options"></a>サンプリング メソッド オプション  
  次のオプションは、サンプリング プロファイル方法の使用時にのみ利用できます。  
   
 |オプション|説明|  
 |------------|-----------------|  
-|[Launch](../profiling/launch.md) **:** *Executable*|指定したアプリケーションを開始し、プロファイリングを開始します。|  
-|[Args](../profiling/args.md) **:** *Arguments*|起動したアプリケーションに渡すコマンド ライン引数を指定します。|  
+|[Launch](../profiling/launch.md) **:***Executable*|指定したアプリケーションを開始し、プロファイリングを開始します。|  
+|[Args](../profiling/args.md) **:***Arguments*|起動したアプリケーションに渡すコマンド ライン引数を指定します。|  
 |[コンソール](../profiling/console.md)|新しいコマンド プロント ウィンドウで指定のコマンドを開始します。|  
-|[Attach](../profiling/attach.md) **:** *PID*[**,**_PID_]|指定されたプロセスのプロファイリングを開始します。 プロセスはプロセス ID またはプロセス名で識別されます。|  
+|[Attach](../profiling/attach.md) **:***PID*[**,**_PID_]|指定されたプロセスのプロファイリングを開始します。 プロセスはプロセス ID またはプロセス名で識別されます。|  
 |[Detach](../profiling/detach.md)[**:**_PID_[,_PID_]]|指定されたプロセスのプロファイリングを停止します。 プロセスはプロセス ID またはプロセス名で識別されます。 プロセスが指定されていない場合、すべてのプロセスに対してプロファイリングが停止します。|  
 |[GC](../profiling/gc-vsperfcmd.md)[**:**{**Allocation**`&#124;`**Lifetime**}]|.NET メモリの割り当てとオブジェクトの有効期間データを収集します。 使用時は必ず **VSPerfCmdLaunch** オプションを付けます。|  
   
@@ -91,16 +86,13 @@ VSPerfCmd [/U] [/options]
 |------------|-----------------|  
 |**Admin:Security** \<**ALLOW&#124;DENY**> *Right*[ *Right*] \<*User*&#124;*Group*>|プロファイリング サービスへの指定のユーザーまたはグループ アクセスを許可または拒否します。<br /><br /> `Right` には以下があります。<br /><br /> CrossSession - セッション間プロファイリングを行うために、サービスへのアクセス権をユーザーに与えます。<br /><br /> SampleProfiling - サンプリング プロファイリングを有効にするために、ドライバーへのアクセス権をユーザーに与えます。 トレース プロファイリング中、カーネル遷移情報にアクセスするためにも使用されます。<br /><br /> FullAccess - CrossSession アクセスと SampleProfiling アクセスの両方をユーザーに与えます。|  
 |**Admin:Security, List**|プロファイリング サービスの現在の状態を一覧表示し、ユーザー アクセス許可を一覧表示します。|  
-|**Admin:** \<*Service*&#124;*Driver*>\<**START**&#124;**STOP**&#124;**INSTALL**&#124;**UNINSTALL**>|プロファイリング サービス コンポーネント (サービス) またはカーネル モード デバイス ドライバー (ドライバー) を開始、停止、インストール、アンインストールします。|  
-|**Admin:** \<*Service*&#124;*Driver*>**AutoStart**\<**ON**&#124;**OFF**>|再起動後、プロファイリング サービス (サービス) またはカーネル モード デバイス ドライバー (ドライバー) の自動開始を有効または無効にします。|  
+|**Admin:**\<*Service*&#124;*Driver*>\<**START**&#124;**STOP**&#124;**INSTALL**&#124;**UNINSTALL**>|プロファイリング サービス コンポーネント (サービス) またはカーネル モード デバイス ドライバー (ドライバー) を開始、停止、インストール、アンインストールします。|  
+|**Admin:**\<*Service*&#124;*Driver*>**AutoStart**\<**ON**&#124;**OFF**>|再起動後、プロファイリング サービス (サービス) またはカーネル モード デバイス ドライバー (ドライバー) の自動開始を有効または無効にします。|  
   
 ## <a name="vsperfcmd-driver"></a>VSPerfCmd /Driver  
  **VSPerfCmd /Driver** オプションは現在使われていません。 この機能には **VsPerfCmdAdmin** オプションを使用してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [VSInstr](../profiling/vsinstr.md)   
  [VSPerfMon](../profiling/vsperfmon.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
-
-
-

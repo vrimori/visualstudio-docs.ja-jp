@@ -1,14 +1,9 @@
 ---
 title: アプリケーション リソースの管理 (.NET) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - msvse_resedit.dlg.SetCustomTool
 - msvse_settingsdesigner.err.formatvalue
@@ -26,13 +21,13 @@ ms.assetid: f2582734-8ada-4baa-8a7c-e2ef943ddf7e
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: b29f32fa59f719af3efab6901596b682c95a5d57
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8319e4e71b313e0c4614f720cb371b339c09d391
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49287223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54784776"
 ---
 # <a name="managing-application-resources-net"></a>アプリケーション リソースの管理 (.NET)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,5 +41,4 @@ ms.locfileid: "49287223"
 ## <a name="working-with-resources"></a>リソースの操作  
  マネージド コード プロジェクト内で、プロジェクトのプロパティ ウィンドウを開くために、 **ソリューション エクスプローラー** でプロジェクト ノードを右クリックして **[プロパティ]** をクリックするか、 **[クイック起動]** ウィンドウに **プロジェクトのプロパティ** を入力するか、 **ソリューション エクスプローラー** ウィンドウ内で Alt キーを押しながら Enter キーを押します。 **[リソース]** タブをクリックします。プロジェクトにまだ .resx ファイルが含まれていない場合や、異なる種類のリソースを追加および削除する場合、また既存のリソースを変更する場合は、.resx ファイルを追加できます。  
   
- C++ プロジェクトでのリソースの操作方法については、「[方法: リソースを作成する](http://msdn.microsoft.com/library/aad44914-9145-45a3-a7d8-9de89b366716)」を参照してください。
-
+ C++ プロジェクト内のリソースを操作する方法についてを参照してください。[方法。リソースを作成する](http://msdn.microsoft.com/library/aad44914-9145-45a3-a7d8-9de89b366716)

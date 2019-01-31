@@ -1,14 +1,9 @@
 ---
 title: ブロック時間のプロファイル レポート | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.report.blocking
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
 caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 31be25e5fb41f2e7a92ee2c19803d74c442fcad4
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0efeb7fb0eb481d0b8d62ff4a9ebf9daad98c39f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51807024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54782295"
 ---
 # <a name="blocking-time-profile-report"></a>ブロック時間のプロファイル レポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,7 @@ ms.locfileid: "51807024"
   
 |列名|説明|  
 |-----------------|-----------------|  
-|名前|呼び出し履歴の各レベルの関数の名前。|  
+|name|呼び出し履歴の各レベルの関数の名前。|  
 |インスタンス|表示された期間のブロック呼び出しのインスタンスの数。|  
 |包括的ブロック時間|呼び出し履歴ツリーのこのレベルまでのすべてのスタックに使われたブロック時間合計。 包括的な数字は、この関数の排他的ブロック時間とそのすべての子ノードの排他的ブロック時間の合計です。|  
 |排他的ブロック時間|この関数が呼び出し履歴の最下位レベルにあるときに使われたブロック時間合計。 排他的ブロック時間の値が高い一意の呼び出し履歴エントリが関心のある関数となる可能性があります。|  
@@ -66,8 +61,5 @@ ms.locfileid: "51807024"
 ### <a name="ui-processing"></a>UI 処理  
  UI 処理レポートには、UI 処理ブロックでブロックしているセグメントの原因となっている呼び出しと各呼び出し履歴のブロック時間の集計が表示されます。 詳細については、「[UI 処理時間](../profiling/ui-processing-time.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)
-
-
-

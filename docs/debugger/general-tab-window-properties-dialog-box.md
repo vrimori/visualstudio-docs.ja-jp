@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 19142c60-9b32-46ba-a556-b62fd77568c1
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac2cbdea0f5ff8fc14ab2901772cd3b77372d471
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 455706670424bdeb1119036df98bac91e6cc9355
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53874616"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55018759"
 ---
 # <a name="general-tab-window-properties-dialog-box"></a>[全般] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 使用して、**全般** タブを選択したウィンドウに関する情報を表示します。 表示する、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

@@ -1,14 +1,9 @@
 ---
 title: '方法: 複数のプロジェクト ファイルで同じターゲットを使用する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, importing
 - MSBuild, using the same target in multiple project files
@@ -16,15 +11,15 @@ ms.assetid: 163734bd-1bfd-4093-a730-7741fc21742d
 caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 7b886c4865d715c4fee4e9385288f2e4eb15baa5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9e0f787426846137038adf16b9373012f3deeb25
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54769334"
 ---
-# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>方法 : 複数のプロジェクト ファイルで同じターゲットを使用する
+# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>方法: 複数のプロジェクト ファイルで同じターゲットを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
   
@@ -37,7 +32,7 @@ ms.locfileid: "49223341"
   
 1.  インポートを行うプロジェクトのファイルで、インポートされるプロジェクトのプロパティとアイテムを対象に、パラメーターとして使用されるすべてのプロパティとアイテムを定義します。  
   
-2.  `Import` 要素を使用し、プロジェクトをインポートします。 例えば:  
+2.  `Import` 要素を使用し、プロジェクトをインポートします。 次に例を示します。  
   
      `<Import Project="MyCommon.targets"/>`  
   
@@ -120,9 +115,6 @@ ms.locfileid: "49223341"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)   
  [ターゲット](../msbuild/msbuild-targets.md)
-
-
-

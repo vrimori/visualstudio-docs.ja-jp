@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca3ba2c6-d2ea-41f2-b7e3-0fc2b0730460
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65e8980df4d98e4d7c76df43f32d7ca0a224e699
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: a87fffbc69860fe41e3497109f889dc2ae8298ca
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53891843"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54980363"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper タスク
 アプリケーションとその前提条件を検出、ダウンロード、インストールする自動化方法を提供します。 これは、アプリケーションを構成するすべてのコンポーネントの別々のインストーラーを統合する単一のインストーラーとして機能します。  

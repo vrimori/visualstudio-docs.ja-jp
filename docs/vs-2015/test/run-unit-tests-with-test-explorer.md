@@ -1,26 +1,21 @@
 ---
 title: テスト エクスプローラーを使用して単体テストを実行する | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 f1_keywords:
 - vs.unittesting.testexplorer.overview
 ms.assetid: 91b167a3-280a-498b-8fc2-f67859a2c64e
 caps.latest.revision: 29
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: f4c5a8a4d090a7603f83f6fb3c3d9deb0c67d5f8
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8c8894239e1e1dd3979b9bb7c61e5aa1f294fe2b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49846838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805109"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -117,7 +112,7 @@ ms.locfileid: "49846838"
   ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_View_the_source_code_of_a_test_method"></a> テスト メソッドのソース コードを表示する  
- Visual Studio エディターのテスト メソッドのソース コードを表示するには、テストを選択し、コンテキスト メニューの **[テストを開く]** を選択します (キーボードの F12 キー)。  
+ Visual Studio エディターでテスト メソッドのソース コードを表示するには、テストを選び、コンテキスト メニューの **[テストを開く]** を選択します (キーボード:F12 キー)。  
   
  ![ページのトップへ](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
@@ -135,8 +130,8 @@ ms.locfileid: "49846838"
   
 |グループ化|説明|  
 |-----------|-----------------|  
-|**期間**|実行時間によるテストのグループ化: **[高速]**、 **[通常]**、および **[低速]**。|  
-|**Outcome**|実行結果によるテストのグループ化: **[失敗したテスト]**、 **[スキップされたテスト]**、 **[成功したテスト]**。|  
+|**期間**|実行時間によるテストのグループ化:**高速**、**中**、**低速**|  
+|**Outcome**|実行結果によるテストのグループ化:**失敗したテスト**、**スキップされたテスト**、**成功したテスト数**|  
 |**Traits**|ユーザーが定義するカテゴリ/値のペアによるテストのグループ化。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。|  
 |**プロジェクト**|プロジェクトの名前によるテストのグループ化。|  
   
@@ -216,7 +211,7 @@ TEST_METHOD(Method1)
 |**ファイル パス**|テストのソース ファイルの完全修飾ファイル名から一致を検索します。|  
 |**Fully Qualified Name**|テストの名前空間、クラス、およびメソッドの完全修飾ファイル名から一致を検索します。|  
 |**出力**|標準出力 (stdout) または標準エラー (stderr) に書き込まれるユーザー定義のエラー メッセージを検索します。 出力メッセージを指定する構文は、単体テスト フレームワークによって定義されます。|  
-|**Outcome**|テスト エクスプローラーのカテゴリ名から一致を検索します: **[失敗したテスト]**、 **[スキップされたテスト]**、 **[成功したテスト]**。|  
+|**Outcome**|テスト エクスプローラーのカテゴリ名で一致を検索する:**失敗したテスト**、**スキップされたテスト**、**成功したテスト数**|  
   
  フィルター処理結果のサブセットを除外するには、次の構文を使用します。  
   
@@ -224,7 +219,7 @@ TEST_METHOD(Method1)
 FilterName:"Criteria" -FilterName:"SubsetCriteria"  
 ```  
   
- 例えば以下のようにします。  
+ たとえば、オブジェクトに適用された  
   
 ```  
 FullName:"MyClass" - FullName:"PerfTest"  
@@ -295,11 +290,8 @@ FullName:"MyClass" - FullName:"PerfTest"
 ##  <a name="BKMK_External_resources"></a> 外部リソース  
   
 ###  <a name="BKMK_Guidance"></a> ガイダンス  
- [Visual Studio 2012 を使用した継続的デリバリーのためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 – Chapter 2 による継続的デリバリーのテスト。単体テスト内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [64 ビット プロセスとして単体テストを実行する](../test/run-a-unit-test-as-a-64-bit-process.md)
-
-
-

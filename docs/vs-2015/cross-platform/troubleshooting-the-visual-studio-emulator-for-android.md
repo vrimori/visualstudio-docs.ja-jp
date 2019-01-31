@@ -1,23 +1,19 @@
 ---
 title: Emulator for Android のトラブルシューティング |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: troubleshooting
 ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 01c73e4701d98422323b92918bd96d0d09bf2dfb
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5500af58ab93b41cc73b48f5ebe2d63ed16ca495
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53841344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54754941"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -259,7 +255,7 @@ ms.locfileid: "53841344"
 
   この問題を解決するには、マザーボードの BIOS 設定で USB3 を無効にして、コンピューターを再起動します。 次に、Gigabyte からマザーボードの BIOS の更新プログラムがリリースされているかどうかを確認します。
 
-  詳細については、次のサポート技術情報の記事を参照してください。[Gigabyte システムで HYPER-V ロールのインストール後に起動できない](https://support.microsoft.com/en-us/kb/2693144)します。
+  詳細については、次のサポート技術情報の記事を参照してください。[Gigabyte システムで HYPER-V ロールのインストール後に起動できない](https://support.microsoft.com/kb/2693144)します。
 
 ##  <a name="ADB"></a> Visual Studio がエミュレーターにアプリを配置しようとして行き詰まっているか、エミュレーターが他の IDE でデバッグ ターゲットとして表示されません。
  エミュレーターが実行されていても、ADB (Android Debug Bridge) に接続されているように見えない、または ADB を利用する Android ツール (Android Studio や Eclipse など) 内で見えない場合は、エミュレーターが ADB を検索する場所を調整する必要があります。 エミュレーターはレジストリ キーを使用して、Android SDK の基本場所を識別し、そのディレクトリで \platform-tools\adb.exe ファイルを検索します。 エミュレーターで使用される Android SDK パスを変更するには、次のようにします。
