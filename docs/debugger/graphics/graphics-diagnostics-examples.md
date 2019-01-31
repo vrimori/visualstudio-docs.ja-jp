@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: 45dd86b2-801e-4b07-a8c4-7bd25641d7f8
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8419ea4f653d870802fd104da2824952b422ab6f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2509b7e3c373cecfe5cd1554805554afbedd2b3f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53867028"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54999315"
 ---
 # <a name="graphics-diagnostics-examples"></a>グラフィックス診断例
 これらの例は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] グラフィックス診断を使用して、DirectX ベースのアプリで発生するレンダリングの問題をデバッグする方法を示しています。  
@@ -52,4 +52,4 @@ ms.locfileid: "53867028"
 ## <a name="debugging-compute-shaders"></a>計算シェーダーをデバッグする  
  グラフィックス診断を使用して、正しくない結果を生成する DirectCompute 計算シェーダー カーネルをデバッグできます。 DirectCompute を使用すると、GPU 計算能力を使用して、多数のデータ要素に対して並列に計算を実行できます。 問題の種類によっては、GPU を利用することにより、適切に最適化された CPU コードの何倍も高速に実行できる場合があります。 ただし、従来のデバッガーでは、GPU で実行されるコードを検出できません。 この種のコードをデバッグするには、多くの場合販売元固有の専用ツールが必要であり、Visual Studio と密接に統合されない場合があります。 計算シェーダーのデバッグを、さまざまな GPU にまたがってより一貫したものにするために、グラフィックス診断は、Direct3D レンダリング イベントに加えて DirectCompute の Dispatch イベントをキャプチャし、使い慣れたツールを使用して計算シェーダー コードの問題をデバッグできるようにします。  
   
- 計算シェーダーのバグによって引き起こされるシミュレーションの問題をデバッグする方法については、シナリオでは、次を参照してください。[チュートリアル。計算シェーダーをデバッグするためのグラフィックス診断の使用](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)
+ 計算シェーダーのバグによって引き起こされるシミュレーションの問題をデバッグする方法については、シナリオでは、次を参照してください。[チュートリアル: 計算シェーダーをデバッグするグラフィックス診断を使用して](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)します。
