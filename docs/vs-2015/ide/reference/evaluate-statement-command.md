@@ -1,14 +1,9 @@
 ---
 title: Evaluate Statement コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.evaluatestatement
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 032039bc-9477-4f93-9b9d-66d4be0e90f4
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d3e50b519b162201d741f2460a8e9dbbe675c16e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 54f581b710777cf4548115e76580be552e4e7520
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54800696"
 ---
 # <a name="evaluate-statement-command"></a>Evaluate Statement コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,9 +35,9 @@ Debug.EvaluateStatement text
   
 ## <a name="arguments"></a>引数  
  `text`  
- 必須。 評価するステートメント。  
+ 必須です。 評価するステートメント。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **EvaluateStatement** コマンドをどのウィンドウに入力するかによって、等号 (=) を比較演算子として解釈するのか、代入演算子として解釈するのかが決まります。  
   
  **[コマンド]** ウィンドウの場合、等号 (=) は、比較演算子と解釈されます。 したがって、たとえば変数 `a` と変数 `b` の値が異なる場合、次のコマンド  
@@ -67,12 +62,9 @@ Debug.EvaluateStatement text
 >Debug.EvaluateStatement(a+b)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Print コマンド](../../ide/reference/print-command.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

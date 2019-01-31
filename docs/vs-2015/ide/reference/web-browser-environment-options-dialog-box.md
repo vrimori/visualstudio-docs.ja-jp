@@ -1,14 +1,9 @@
 ---
 title: '[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.Environment.Web Browser
 - VS.ToolsOptionsPages.Environment.WebBrowser
@@ -28,13 +23,13 @@ ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: fa793fa91667dd360c301442ccb0831d11122473
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f66dae4d9e69ce1fc5d4351d72606e1fdad10725
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49931839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54755314"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー]\([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ ms.locfileid: "49931839"
 内部 Web ブラウザーと Internet Explorer のオプションを設定します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[Web ブラウザー]** を選択します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 > [!IMPORTANT]
 >  Web の特定のファイルまたはコンポーネントを開いて、コンピューター上のコードを実行できます。  
@@ -59,7 +54,7 @@ ms.locfileid: "49931839"
   
 - **ソース エディター** 選択すると、[[コードの作成]](../../ide/writing-code-in-the-code-and-text-editor.md) にソースが表示されます。  
   
-- **HTML エディター** 選択すると、[HTML デザイナー](http://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)に表示されます。 この場合、デザイン ビューまたは標準のテキストベースのソース ビューで Web ページを編集します。  
+- **HTML エディター** 選択すると、[HTML デザイナー](http://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)に表示されます。 この選択を使用し、Web ページを 2 つのビュー、デザイン ビューまたは標準のテキスト ベースのソース ビューのいずれかで編集します。  
   
 - **外部エディター** 選択すると、別のエディターにソースが表示されます。 選択するエディター (Notepad.exe など) のパスを指定します。  
   
@@ -69,10 +64,7 @@ ms.locfileid: "49931839"
 > [!NOTE]
 >  [ブラウザーの選択] ダイアログ ボックスで、別の外部 Web ブラウザーを使用して Visual Studio 内部 Web ブラウザー (Internet Explorer のいずれかのバージョン) を置き換えます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)   
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [HTML デザイナー](http://msdn.microsoft.com/library/640043cc-3657-4677-a091-bc315e636477)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 拡張 SDK と比較して NuGet を使用した参照の追加 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.toolsoptionspages.nuget_package_manager.general
 - vs.toolsoptionspages.nuget_package_manager.package_sources
@@ -16,13 +11,13 @@ ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 031b582665abeb14f705725c7bee97f272bd5ab4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 29590b96a8d8d2ad8fbddaf0d97b9ed55e6aadf2
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49235808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54763599"
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -75,8 +70,5 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 |このメカニズムは、Visual Studio のすべてのエディションで使用できます。|Y|SDK では、Visual Studio Express から [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] まで、Visual Studio のすべてのエディションがサポートされています。|Y|NuGet では、Express から [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] まで、Visual Studio のすべてのエディションがサポートされています。|  
 |このメカニズムは、すべてのプロジェクトの種類で使用できます。|N|SDK では [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 以降の [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] アプリケーションがサポートされています。|N|許可されているプロジェクトの一覧をレビューできます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
-
-
-
