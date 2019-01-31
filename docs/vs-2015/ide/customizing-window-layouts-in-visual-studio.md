@@ -1,13 +1,9 @@
 ---
 title: ウィンドウ レイアウトをカスタマイズする
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.windows
 - vs.environment
@@ -27,13 +23,13 @@ ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7a0f6b087f512750ae729d52c0855e3d4981d330
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+manager: jillfra
+ms.openlocfilehash: c02bd6bfdbb11a42688bb434cecfd5748e072d96
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53934376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54802030"
 ---
 # <a name="customizing-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,7 +77,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
   ツール ウィンドウとドキュメント ウィンドウは、ドラッグ、 **[ウィンドウ]** メニューのコマンドの使用、および配置するウィンドウのタイトル バーの右クリックによって配置できます。
 
 > [!NOTE]
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。
 
 ### <a name="docking-windows"></a>ウィンドウのドッキング
  ツール ウィンドウのタイトル バーまたはドキュメント ウィンドウのタブをクリックしてドラッグすると、ガイド用のひし形が表示されます。 ドラッグ操作中にマウス カーソルが、ひし形の矢印のいずれかの上にくると、網かけされた部分が表示されます。これは、この時にマウスのボタンを離すと、ウィンドウがドッキングされるを示しています。
@@ -186,4 +182,4 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 |[ウィンドウの種類](../misc/kinds-of-windows.md)|IDE の各種ツール ウィンドウおよびドキュメント ウィンドウの違いについて説明します。|
 |[方法: ウィンドウを整列およびドッキングする](../misc/how-to-arrange-and-dock-windows.md)|ウィンドウをドッキングする方法、自動的に非表示にする方法、並べて表示する方法、およびウィンドウ レイアウトをリセットする方法について説明します。|
 |[方法: IDE 内で移動する](../ide/how-to-move-around-in-the-visual-studio-ide.md)|IDE 内で開いているウィンドウ間を使用順に移動する方法について説明します。 特定のドキュメントに移動する方法についても説明します。|
-|[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)|設定の組み合わせの概要と、これらの設定が IDE のウィンドウ レイアウト、ショートカット キー、およびその他の要素に与える影響について説明します。|
+|[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)|設定の組み合わせの概要と、これらの設定が IDE のウィンドウ レイアウト、ショートカット キー、およびその他の要素に与える影響について説明します。|

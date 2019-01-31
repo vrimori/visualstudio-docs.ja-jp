@@ -1,25 +1,20 @@
 ---
 title: LINQ to XML による WPF のデータ バインディングの概要 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 3bf80845-891b-41de-a71b-4080b5bd3ea6
 caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 457a097d46f9af409580d3784bb577090db0c535
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: a614a90fe6388d9189d2b63e02f9bf63f83f0b7b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49852415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54774179"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML による WPF のデータ バインディングの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,7 +56,7 @@ ms.locfileid: "49852415"
   WPF のデータ バインディングの詳細については、「[データ バインディングの概要](http://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)」を参照してください。  
   
 ## <a name="dynamic-properties-in-linq-to-xml-classes"></a>LINQ to XML クラスの動的プロパティ  
- ほとんどの LINQ to XML クラスは、WPF の動的データ ソースとして適切ではありません。その理由は、最も有用な情報の一部はメソッドを経由した場合にのみ取得でき (プロパティでは取得できません)、LINQ to XML クラスのプロパティには変更通知も実装されていないためです。 LINQ to XML では、WPF のデータ バインディングをサポートするために一連の*動的プロパティ*が公開されます。  
+ ほとんどの LINQ to XML クラスは、WPF の動的データ ソースとして適切ではありません。メソッド (およびプロパティではなく) を通じてのみ使用できますが、最も役に立つ情報の一部と、これらのクラスのプロパティは変更通知を実装していません。 LINQ to XML では、WPF のデータ バインディングをサポートするために一連の*動的プロパティ*が公開されます。  
   
  これらの動的プロパティは、<xref:System.Xml.Linq.XAttribute> クラスと <xref:System.Xml.Linq.XElement> クラスの既存のメソッドやプロパティと同じ機能を持つ特殊な実行時プロパティであり、 これらのクラスを WPF の動的データ ソースとして使用することのみを目的として追加されています。 この目的を満たすため、これらすべての動的プロパティに変更通知が実装されています。 これらの動的プロパティの詳細については、次の「[LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)」を参照してください。  
   
@@ -93,12 +88,9 @@ ms.locfileid: "49852415"
   
  WPF の動的バインドを実装するには、動的プロパティを <xref:System.Windows.Data> 名前空間 (特に <xref:System.Windows.Data.Binding> クラス) の機能と共に使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)   
  [LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)   
  [WPF の XAML](http://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)   
  [データ バインド (WPF)](http://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)   
  [ワークフロー マークアップの使用](http://go.microsoft.com/fwlink/?LinkId=98685)
-
-
-

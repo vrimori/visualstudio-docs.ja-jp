@@ -1,14 +1,9 @@
 ---
 title: MSBuild ベスト プラクティス | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 helpviewer_keywords:
 - best practices, MSBuild
 - MSBuild, best practices
@@ -16,13 +11,13 @@ ms.assetid: 90ef8693-e921-410a-a377-fe4d13f58c48
 caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 94941cacdfea79c2d846b9936b8532f155d6cebb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: ad2070bb696a3ce326331d01145b3ef3b54ae5ec
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49218390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54780667"
 ---
 # <a name="msbuild-best-practices"></a>MSBuild のベスト プラクティス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,8 +35,5 @@ MSBuild スクリプトを記述するための次のベスト プラクティ�
   
 -   項目を選択するときに、ワイルドカードを避けます。 代わりに、ファイルを明示的に指定します。 ファイルを追加または削除する場合に発生する可能性のあるエラーを追跡しやすくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)
-
-
-

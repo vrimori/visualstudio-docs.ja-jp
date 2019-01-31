@@ -1,14 +1,9 @@
 ---
 title: クラス デザイナーにおける Visual C++ の typedef | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.typedef
 - vs.classdesigner.aliasofline
@@ -18,13 +13,13 @@ ms.assetid: c1984108-71fc-4d3a-b4d4-3eac2c6b4ebf
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1ba65af46589e01aa5473b5757124ed184da2197
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 234b4252edc587ef52db57d3ec18eb98bb6b849b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54778618"
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>クラス デザイナーにおける Visual C++ の typedef
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +50,7 @@ typedef class coord
 };  
 ```  
   
- `typedef` 型の使用法の詳細については、「[(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)」を参照してください。  
+ `typedef` 型の使用法の詳細については、「[(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)」を参照してください。  
   
  C++ の typedef 図形には、typedef で指定された型の図形があります。 たとえば、ソースで `typedef class` が宣言されている場合、図形の角が丸くなり、**Class** のラベルが付きます。 `typedef struct` の場合、図形の角は四角で、**Struct** のラベルが付きます。  
   
@@ -205,9 +200,6 @@ class A {
   
  -> MyIntVect  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual C++ コードの使用 (クラス デザイナー)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
-
-
-
+ [(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)

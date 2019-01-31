@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ba1863ad-e35f-4d34-a2f2-5e68957d1915
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 171537a752818e31ba6a3e7e185fd02017dcb967
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 2fed378aad3a988daa532bb22c0dfd6cb3cbfd2f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53967710"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54923231"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 関数
 マーカー プロバイダーを初期化します。 他のコンカレンシー ビジュアライザー SDK 関数の前に呼び出す必要があります。  

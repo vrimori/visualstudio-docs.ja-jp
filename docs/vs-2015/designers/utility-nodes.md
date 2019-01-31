@@ -1,25 +1,20 @@
 ---
 title: ユーティリティ ノード | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: ff732221-b731-424c-ad5b-82ef5f21dff5
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1d85735c5fb355163f2003a27a96675ed097d66e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 5907b388e59b136a2d89b02348e7ac3d2b25d63c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49174422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54783864"
 ---
 # <a name="utility-nodes"></a>ユーティリティ ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,6 +32,3 @@ ms.locfileid: "49174422"
 |**ベクターのマスク**|指定されたベクターの成分をマスクします。<br /><br /> これを使用すると、カラー値から特定のカラー チャネルを削除したり、特定の成分がその後の計算に影響を与えないようにしたりすることができます。<br /><br /> **入力:**<br /><br /> `Vector`: `float4`<br /> マスクするベクター。<br /><br /> **出力:**<br /><br /> `Output`: `float4`<br /> マスクされるベクター。|**赤 / X**<br /> 赤 (x) 成分をマスクアウトする場合は **False**、それ以外の場合は **True** です。<br /><br /> **緑 / Y**<br /> 緑 (y) 成分をマスクアウトする場合は **False**、それ以外の場合は **True** です。<br /><br /> **青 / Z**<br /> 青 (z) 成分をマスクアウトする場合は **False**、それ以外の場合は **True** です。<br /><br /> **アルファ / W**<br /> アルファ (w) 成分をマスクアウトする場合は **False**、それ以外の場合は **True** です。|  
 |**反射ベクター**|カメラの位置に基づいて、接空間における現在のピクセルの反射ベクターを計算します。<br /><br /> 反射、キューブ マップ座標、および反射光の効果を計算するために使用します<br /><br /> **入力:**<br /><br /> `Tangent Space Surface Normal`: `float3`<br /> 現在のピクセルの接空間で定義される、現在のピクセルの表面法線。 通常のマップと同様に、外見上の表面法線を摂動する際にこれを使用できます。<br /><br /> **出力:**<br /><br /> `Output`: `float3`<br /> 反射ベクター。|なし|  
 |**反射**|指定された表面法線を使用することによって、フォン光源モデルに応じた反射光の効果を計算します。<br /><br /> 反射光を使用すると、水、プラスチック、金属などの光沢や反射を、オブジェクトに与えられます。<br /><br /> **入力:**<br /><br /> `Surface Normal`: `float3`<br /> 現在のピクセルの接空間で定義される、現在のピクセルの表面法線。 通常のマップと同様に、外見上の表面法線を摂動する際にこれを使用できます。<br /><br /> **出力:**<br /><br /> `Output`: `float3`<br /> 反射の光源の色の効果。|なし|
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: コード スニペットの関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets [Visual Studio], functions
 - snippets [Visual Studio], functions
@@ -17,18 +12,18 @@ ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
 caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3874b162719deb02813ceb7eae09b373e208f458
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 95ee6a99a069f81a2e63c5bbe11186afaf773423
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54790008"
 ---
 # <a name="code-snippet-functions"></a>コード スニペットの関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[csprcs](../includes/csprcs-md.md)] コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
+[!INCLUDE[csprcs](../includes/csprcs-md.md)] コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](http://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
   
 ## <a name="functions"></a>関数  
  次の表で、コード スニペットの `Function` 要素で使用できる関数について説明します。  
@@ -158,9 +153,6 @@ ms.locfileid: "49270882"
 </CodeSnippets>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Function 要素 (IntelliSense コード スニペット)](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
+## <a name="see-also"></a>「  
+ [Function 要素 (IntelliSense コード スニペット)](http://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df)   
  [コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)
-
-
-

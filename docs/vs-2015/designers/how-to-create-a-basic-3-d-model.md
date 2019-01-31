@@ -1,27 +1,22 @@
 ---
-title: '方法: 基本 3-D モデルを作成する | Microsoft Docs '
-ms.custom: ''
+title: '方法: 基本的な 3-D モデルの作成 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 83d4069135adf37156457321b8ce15a254c9c27b
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c7c904e74793710dedc96d4a769d4f6c61a15e69
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49825492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54760772"
 ---
-# <a name="how-to-create-a-basic-3-d-model"></a>方法: 基本 3-D モデルを作成する
+# <a name="how-to-create-a-basic-3-d-model"></a>方法: 基本的な 3-D モデルを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このドキュメントでは、モデル エディターを使用した基本 3-D モデルの作成方法を示します。  
@@ -79,12 +74,9 @@ ms.locfileid: "49825492"
   
    ![簡単な家の完成したモデル](../designers/media/gfx-model-demo-house-final.png "gfx_model_demo_house_final")  
   
-   次の手順として、この 3-D モデルにシェーダーを適用できます。 詳細については、「[方法: シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。  
+   次の手順として、この 3-D モデルにシェーダーを適用できます。 詳細については、「[方法:シェーダーを 3-D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [方法: 3-D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)   
+## <a name="see-also"></a>「  
+ [方法: 3-D 地形をモデル](../designers/how-to-model-3-d-terrain.md)   
  [モデル エディター](../designers/model-editor.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)
-
-
-

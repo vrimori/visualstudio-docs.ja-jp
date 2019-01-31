@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87399e20-5510-41e4-b5b7-4a87c5773f21
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86d7512101adf58f13a07481910ab1c28251b8da
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 6aab5fb7487cc2e79bc2e0e1a7a5dffce96447f9
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53885252"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55024553"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>64 ビット アプリケーションの配置のための必要条件
 ClickOnce の配置では、 64 ビット プラットフォームのアプリケーションのインストールをサポートします。 対象プラットフォームは、32 ビット プラットフォームの場合は **x86**、AMD64 命令セットと EM64T 命令セットをサポートするコンピューターの場合は **x64**、64 ビットの Itanium プロセッサの場合は **Itanium** です。  
@@ -36,11 +36,11 @@ ClickOnce の配置では、 64 ビット プラットフォームのアプリ�
 
 | 再頒布可能パッケージ | x64 サポート | IA64 サポート |
 | - |-------------|--------------|
-| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | [はい] | × |
-| Visual C++ 2010 ランタイム ライブラリ (IA64) | × | [はい] |
-| Visual C++ 2010 ランタイム ライブラリ (x64) | [はい] | × |
-| Microsoft .NET Framework 4 (x86 および x64) | [はい] | |
-| Microsoft .NET Framework 4 Client Profile (x86 および x64) | [はい] | |
+| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | はい | × |
+| Visual C++ 2010 ランタイム ライブラリ (IA64) | × | はい |
+| Visual C++ 2010 ランタイム ライブラリ (x64) | はい | × |
+| Microsoft .NET Framework 4 (x86 および x64) | はい | |
+| Microsoft .NET Framework 4 Client Profile (x86 および x64) | はい | |
 
 ## <a name="see-also"></a>関連項目  
  [アプリケーション、サービス、およびコンポーネントをデプロイします。](../deployment/deploying-applications-services-and-components.md)   

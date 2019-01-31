@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 859b02d2-eddf-4ad3-95de-0df67ee2ab03
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0afb540a314d1e980e9b0a6ccace0b36145cce6
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 25f6e144e75a9544caf7bc11c66bb0ba542bd775
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53905427"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54917264"
 ---
 # <a name="lines-view---contention-data"></a>行ビュー - 競合データ
 競合データの行ビューには、プロファイルを実行してサンプルを収集するときに実行したステートメントのパフォーマンス データが表示されます。 ソース ファイルでは、1 つのステートメントを複数の行にわたって記述することも、複数のステートメントを 1 つの行に含めることもできます。  

@@ -3,21 +3,18 @@ title: Visual Studio 2015 |Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 772b6cf4-cee5-42d0-bc18-b4eb07e22ff0
 caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c6bd4e34e25add01de6e6e54c2439c2ca80ccf33
-ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+manager: jillfra
+ms.openlocfilehash: 76e1d9c4a7cbfdfc2a7011668eb58a5ea9741d3d
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54780680"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -136,7 +133,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
 8. **[定義に移動]** コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
 
-9. [オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメソッドとプロパティが含まれているかを確認できます。
+9. [オブジェクト ブラウザー](http://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメソッドとプロパティが含まれているかを確認できます。
 
      ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png "ObjectBrowser")
 
@@ -157,7 +154,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  [Immediate Window](../ide/reference/immediate-window.md) では、式に入力し、その結果を即時に表示できます。
 
- [ [IntelliTrace](http://msdn.microsoft.com/en-us/629e9660-c59a-446b-8c30-290059158f61) ] ウィンドウでは、実行中の .NET プログラムの各メソッド呼び出しとその他のイベントを記録します。問題の発生源をすぐに見つけることができます。
+ [ [IntelliTrace](http://msdn.microsoft.com/629e9660-c59a-446b-8c30-290059158f61) ] ウィンドウでは、実行中の .NET プログラムの各メソッド呼び出しとその他のイベントを記録します。問題の発生源をすぐに見つけることができます。
 
  詳細については、「 [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。
 
@@ -206,7 +203,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 |[Visual Studio のサンプル](../ide/visual-studio-samples.md)|[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)|
 |[アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)|[UI リファレンス](../ide/reference/general-user-interface-elements-visual-studio.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 - [Visual Studio 2015 のインストール](../install/install-visual-studio-2015.md)
 - [コードの編集](https://www.visualstudio.com/features/ide-vs)

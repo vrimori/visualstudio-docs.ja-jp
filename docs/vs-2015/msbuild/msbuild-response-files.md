@@ -1,14 +1,9 @@
 ---
 title: MSBuild 応答ファイル | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +18,13 @@ ms.assetid: 9f53987b-20ee-470a-ab62-fce997bb5e15
 caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 09271f90eb0b065df6c6f28bc318509d7141a252
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 9168582d5bfc97dc657fb7a9b867459cb08c90a1
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49242295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54770724"
 ---
 # <a name="msbuild-response-files"></a>MSBuild 応答ファイル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,9 +34,6 @@ ms.locfileid: "49242295"
   
  自動応答ファイルは、プロジェクトをビルドする際に MSBuild.exe が自動的に使用する特別な .rsp ファイルです。 この MSBuild.rsp ファイルは、MSBuild.exe と同じディレクトリに配置する必要があります。それ以外の場合は検出されません。 このファイルを編集して、MSBuild.exe に既定のコマンド ライン スイッチを指定できます。 たとえば、プロジェクトをビルドする際に毎回同じロガーを使用する場合は、**/logger** スイッチを MSBuild.rsp に追加することで、プロジェクトがビルドされるたびに MSBuild.exe がそのロガーを使用するようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)
-
-
-

@@ -1,14 +1,9 @@
 ---
 title: 高性能コンピューティング (HPC) クラスターでのプロファイリング | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.hpc.wizard.exeoptions
 - vs.performance.hpc.wizard.summary
@@ -25,13 +20,13 @@ ms.assetid: 1525bbdb-27da-4088-8487-a486cee5e7b3
 caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: f6b0838a7fb3db86290647fadec9ca3572cbdf90
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e952f9611b7bdb4d96e8a50b502ae15e1e6ce528
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51809157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54802315"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,8 +55,8 @@ ms.locfileid: "51809157"
 |||  
 |-|-|  
 |*%HeadNode%*|クラスターのヘッド ノードの名前。|  
-|*%FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] インストーラーへのパス。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] インストール メディア上のパスは、WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe です。|  
-|*%ProfilerPath%*|スタンドアロン バージョンのプロファイリング ツール インストーラーへのパス。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] インストール メディア上のパスは、Standalone Profiler\x64\vs_profiler.exe です。|  
+|*%FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] インストーラーへのパス。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]インストール メディアのパスは。WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe です。|  
+|*%ProfilerPath%*|スタンドアロン バージョンのプロファイリング ツール インストーラーへのパス。 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]インストール メディアのパスは。Standalone Profiler\x64\vs_profiler.exe です。|  
   
 ## <a name="profiling-on-an-hpc-compute-node"></a>HPC 計算ノード上でのプロファイリング  
  HPC パフォーマンス ウィザードを使用してプロファイリング セッションを構成し、HPC クラスターや対象の情報を指定します。 パフォーマンス セッションのプロパティ ページで、追加のオプションを設定できます。 プロファイリング ツールにより、必要な対象バイナリが自動的に配置され、プロファイラーと HPC アプリケーションが起動されます。  
@@ -155,6 +150,3 @@ ms.locfileid: "51809157"
 |**プロファイル前スクリプトの引数**|プロファイル前スクリプトに渡す引数を指定します。|  
 |**プロファイル後スクリプト**|プロファイリング セッションの終了後に、ローカルの開発用コンピューター上で実行するスクリプトのパスとファイル名を指定します。|  
 |**プロファイル後スクリプトの引数**|プロファイル後スクリプトに渡す引数を指定します。|
-
-
-

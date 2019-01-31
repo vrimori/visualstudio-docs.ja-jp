@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a4c7f4c-7a41-45f2-9af4-8b1666469b89
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 216d3802ddac4e2a4cee2b8ab20d4d3abd381424
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: d3be7039995c27990a1c5c55bf173ef06e5fee0c
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53888453"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54984705"
 ---
 # <a name="deploy-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントの配置
 従来の COM コンポーネントのデプロイには、困難な作業がきました。 コンポーネントは、グローバルに登録する必要があるおり、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 このような状況問題には一般に .NET Framework アプリケーションでコンポーネントがアプリケーションに完全に分離されたまたはサイド バイ サイドでの互換性があるのためです。 Visual Studio、Windows XP または以上のオペレーティング システムの分離された COM コンポーネントを配置することができます。  

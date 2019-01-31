@@ -2,19 +2,19 @@
 title: Visual Studio サブスクリプションにライセンスを割り当てる | Microsoft Docs
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.date: 07/16/2018
 ms.topic: conceptual
 description: 管理者がサブスクライバーにライセンスを割り当てる方法を説明します
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 6f0bbded7682bd8f7162ae415c6c83711df04a04
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4dfec16161f6cd6b875b38738a9340e12d62f975
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49931234"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54970124"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 
@@ -46,7 +46,7 @@ Visual Studio サブスクリプションの管理者は、管理者ポータル
 
     サブスクリプションに独自の参照メモを追加する場合は、**[Add reference]\(参照の追加\)** セクションで追加できます。
    > [!div class="mx-imgBorder"]
-   > ![サブスクリプションごとに独自の参照メモを追加する](media/add-subscriber-reference-notes.png) 
+   > ![サブスクリプションごとに独自の参照メモを追加する](media/add-subscriber-reference-notes.png)
 
     オプションの選択とサブスクライバーのデータの入力が終わったら、**[Add Subscriber]\(サブスクライバーの追加\)** フライアウトの下部にある **[追加]** を選択します。
    > [!div class="mx-imgBorder"]
@@ -54,7 +54,7 @@ Visual Studio サブスクリプションの管理者は、管理者ポータル
 
 4. サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
    > [!div class="mx-imgBorder"]
-   > ![必要なときにいつでもアクティブ化メールを任意または複数のユーザーに再送する](media/resend-subscriber-activation-emails.png) 
+   > ![必要なときにいつでもアクティブ化メールを任意または複数のユーザーに再送する](media/resend-subscriber-activation-emails.png)
 
 ## <a name="bulk-assignments"></a>一括割り当て
 
@@ -65,7 +65,7 @@ Visual Studio サブスクリプションの管理者は、管理者ポータル
 2. 一括割り当てでは、Microsoft Excel テンプレートを使ってサブスクライバーをアップロードします。 [Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで、**[ダウンロード]** をクリックしてテンプレートをダウンロードします。
    > [!div class="mx-imgBorder"]
    > ![複数のサブスクライバーをアップロードするための Excel テンプレートをダウンロードする](media/download-template-upload-subscribers.png)
-   > 
+   >
    > [!NOTE]
    > 常にこのテンプレートの最新バージョンをダウンロードしてください。 古いバージョンを使うと、一括アップロードが失敗する可能性があります。
 

@@ -6,15 +6,15 @@ f1_keywords:
 - vs.graphics.frameanalysis
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aced0df16791e44c7fd8be67ccc22343b1272fa
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: aaa4a034b6b53397999f9f6d5149742f6fa6e229
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54154377"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54986333"
 ---
 # <a name="graphics-frame-analysis"></a>グラフィックス フレーム分析
 Visual Studio Graphics Analyzer のグラフィックス フレーム分析を使用して、Direct3D ゲームまたはアプリケーションのレンダリング パフォーマンスを分析し、最適化します。  

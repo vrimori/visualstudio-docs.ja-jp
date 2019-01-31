@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: aedf42e8-896c-48fa-88df-7f7c9536aa69
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6642981934c764fc2f6d512cb19502a21ac224e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 17323482bfd300dc226ae21354a3dd11bd0c1753
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53850701"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55011024"
 ---
 # <a name="walkthrough-linqtoxmldatabinding-example"></a>チュートリアル: LinqToXmlDataBinding の例
 このチュートリアルでは、LinqToXmlDataBinding の例を示し、*L2DBForm.xaml* と *L2DBForm.xaml.cs* という 2 つの主要なソース ファイルに関する興味深い情報をいくつか説明します。

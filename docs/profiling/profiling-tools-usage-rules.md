@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: afa7db3b-8c1d-473a-81ac-24ede112a17f
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd7a74f546a7d9ae09767ee79747ce9d7fcaba36
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 67d9d98ed089c8afc32cc8daba2ca029ccd99101
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53961804"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54987441"
 ---
 # <a name="profiling-tools-usage-rules"></a>プロファイリング ツールの使用に関する規則
 プロファイリング ツールの使用カテゴリのパフォーマンス規則は、プロファイラーを使用してデータを最も効率よく収集する方法に関するガイダンスを提供します。  

@@ -7,17 +7,17 @@ ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 74118aee63a67310656926d84300ba180ff74188
-ms.sourcegitcommit: a7e6675185fd34ac8084f09627b2038046cdd2b1
+ms.openlocfilehash: 6a179dc2dc8f3851b1b75ca840b55e07e1ff6a30
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060830"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927516"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>手順 4: 完全な Flask Web プロジェクト テンプレートを使用する
 
@@ -163,7 +163,7 @@ def about():
 
 この記事の冒頭でお話ししたように、Visual Studio には "Flask/Jade Web プロジェクト" テンプレートがあります。このテンプレートによって、"Flask Web プロジェクト" で生成されるものと見た目が同じアプリケーションが作成されます。 主な違いは、Jade テンプレート エンジンの使用です。これは Jinja の拡張であり、同じ概念をより簡潔な言語で実行します。 具体的には、たとえば、Jade は {% %} 区切り記号で囲まれたタグの代わりにキーワードが使用され、キーワードを利用して CSS スタイルや HTML 要素を参照できます。
 
-Jade を有効にするために、プロジェクト テンプレートは最初に *requirements.txt* に pyjade パッケージを含めます。 
+Jade を有効にするために、プロジェクト テンプレートは最初に *requirements.txt* に pyjade パッケージを含めます。
 
 アプリの *\_\_init\_\_.py* ファイルには次の行が含まれています。
 

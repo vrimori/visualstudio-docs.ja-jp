@@ -1,14 +1,9 @@
 ---
-title: 'DA0001: StringBuilder を使用して連結してください | Microsoft Docs'
-ms.custom: ''
+title: DA0001:StringBuilder を使用して連結してください | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0001
 - vs.performance.rules.DAUseStringBuilder
@@ -18,18 +13,18 @@ ms.assetid: a7cc7613-ad5f-48c8-bd2b-56372cc12dfc
 caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 4cbfbabc96273f6a39a69888025b80d12103dd4b
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: da0de740155936497c2e21213d7e063fa761aade
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51803319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54804902"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: StringBuilder を使用して連結してください
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001:連結には StringBuilder を使用してください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [DA0001: StringBuilder を使用](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)docs.microsoft.com でリリースされました。  
+Visual Studio 2017 の最新ドキュメントについては、次を参照してください[DA0001:。連結に StringBuilder を使用して](https://docs.microsoft.com/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)docs.microsoft.com でリリースされました。  
   
 |||  
 |-|-|  
@@ -51,4 +46,3 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
  [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、サンプリング プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 文字列連結を最も頻繁に使用するプログラムをセクションを特定します。 頻繁な文字列連結など、複雑な文字列操作には StringBuilder クラスを使用します。  
   
  文字列の使用方法の詳細については、Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの[第 5 章「マネージド コード パフォーマンスの向上](http://go.microsoft.com/fwlink/?LinkId=177817)」の「[文字列処理](http://go.microsoft.com/fwlink/?LinkId=177816)」を参照してください。
-

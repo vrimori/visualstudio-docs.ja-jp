@@ -1,14 +1,9 @@
 ---
 title: VSInstr の警告 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - instrumentation, VSInstr tool
 - warnings
@@ -19,13 +14,13 @@ ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: be30404e4fb9cff6c53bb3afbdedb4ce03ba2d80
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 300088cb8051f53f5f1afbfe41be92dac9853b53
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51765136"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54834324"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr の警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,8 +45,5 @@ ms.locfileid: "51765136"
 |**VSP2013**|このイメージをインストルメント化するには、32 ビット プロセスとして実行する必要があります。 CLR ヘッダー フラグは、これを反映するように更新されました。<br /><br /> プロファイラーは、64 ビット オペレーティング システムが WOW64 エミュレーターで 32 ビット プロセスを開けるように、バイナリを変更します。 ライブラリ (DLL) の場合、既存の 64 ビット プロセスに読み込まれたときに失敗する場合があります。 この警告はユーザーに依存関係を知らせるものです。|  
 |**VSP2014**|結果となるインストルメント化されたイメージは無効であり、実行されない可能性があります。<br /><br /> このメッセージは、インストルメント化された最終的なアセンブリに無効な PE ヘッダーがある場合に発生します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [VSInstr](../profiling/vsinstr.md)
-
-
-

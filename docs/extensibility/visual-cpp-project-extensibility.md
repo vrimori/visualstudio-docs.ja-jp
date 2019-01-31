@@ -1,6 +1,6 @@
 ---
 title: ビジュアルの C++ プロジェクト機能拡張
-ms.date: 09/12/2018
+ms.date: 01/25/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -10,12 +10,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 499e3776e81fcde3e89eb3436e3938f2feafb137
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: e38ff6cf2912ccc18c27f517a35c7a543325a8eb
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55013705"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55232053"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
@@ -274,6 +274,8 @@ Microsoft.Cpp.Common.Tasks.dll は、これらのタスクを実装します。
 
 - `SetEnv`
 
+- `GetOutOfDateItems`
+
 ツールがある場合、既存のツールと同じアクションを実行して (clang cl および CL は、次の操作) と同様のコマンド ライン スイッチが、それらの両方に対して同じタスクを使用することができます。
 
 ビルド ツールの新しいタスクを作成する必要がある場合は、次のオプションから選択できます。
@@ -294,11 +296,14 @@ Microsoft.Cpp.Common.Tasks.dll は、これらのタスクを実装します。
 
 既定の MSBuild のインクリメンタル ビルドの使用を対象と`Inputs`と`Outputs`属性。 それらを指定する場合、MSBuild は、すべての出力より新しいタイムスタンプを持つ、入力のいずれかの場合にのみ、ターゲットを呼び出します。 ソース ファイルが多くの場合、含めるまたはその他のファイルをインポートし、ビルド ツールの生成ツール オプションによって別の出力、ため、すべての可能な入力を指定するが難しいと、MSBuild ターゲットを出力します。
 
-この問題を管理するには、C++ のビルドはインクリメンタル ビルドをサポートするために、さまざまな方法を使用します。 ほとんどのターゲットは、入力と出力を指定して、その結果、ビルド時に常に実行しないでください。 ターゲットによって呼び出されるタスクすべてに関する情報が入力されに出力を書き込む*tlog* .tlog 拡張子を持つファイル。 変更され、再構築する必要がある内容を確認する .tlog ファイルは以降のビルドで使用と最新の状態。
+この問題を管理するには、C++ のビルドはインクリメンタル ビルドをサポートするために、さまざまな方法を使用します。 ほとんどのターゲットは、入力と出力を指定して、その結果、ビルド時に常に実行しないでください。 ターゲットによって呼び出されるタスクすべてに関する情報が入力されに出力を書き込む*tlog* .tlog 拡張子を持つファイル。 変更され、再構築する必要がある内容を確認する .tlog ファイルは以降のビルドで使用と最新の状態。 IDE の既定のビルド最新チェックの唯一のソースがも .tlog ファイル。
 
 ネイティブ ツールのタスクをすべての入力と出力を確認するには、tracker.exe を使用して、 [FileTracker](/dotnet/api/microsoft.build.utilities.filetracker) MSBuild によって提供されるクラス。
 
 Microsoft.Build.CPPTasks.Common.dll 定義、`TrackedVCToolTask`パブリックの抽象基本クラス。 ほとんどのネイティブ ツール タスクは、このクラスから派生されます。
+
+Visual Studio 2017 update 15.8 以降を使えば、 `GetOutOfDateItems` .tlog ファイルは、既知の入力と出力のカスタム ターゲットを生成する Microsoft.Cpp.Common.Tasks.dll で実装されたタスク。
+使用して作成する代わりに、`WriteLinesToFile`タスク。 参照してください、`_WriteMasmTlogs`ターゲット`$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets*など。
 
 ## <a name="tlog-files"></a>.tlog ファイル。
 
@@ -314,7 +319,6 @@ MSBuild では、読み取りと書き込み .tlog ファイル。 これらの�
 
 コマンド ライン .tlog ファイルには、ビルドで使用されるコマンドラインに関する情報が含まれます。 内部の形式が生成する MSBuild タスクによって決まりますが、最新ではないチェックは、インクリメンタル ビルドにのみ使用されます。
 
-.Tlog ファイルは、タスクによって作成する場合は、これらのヘルパー クラスを使用して、それらを作成することをお勧めします。 ただし、既定の最新の状態のチェックはようになりました .tlog ファイルのみに依存している、ため場合があります方が便利ですせず、タスクのターゲットの作成に必要です。 使用して書き込むことができます、`WriteLinesToFile`タスク。 参照してください、`_WriteMasmTlogs`ターゲット`$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets*など。
 
 ### <a name="read-tlog-format"></a>読み取り .tlog 形式
 

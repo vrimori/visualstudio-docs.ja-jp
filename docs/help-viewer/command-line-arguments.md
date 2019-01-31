@@ -6,15 +6,15 @@ ms.topic: reference
 ms.assetid: 3aa9890a-1147-42ba-adea-17935d184038
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e25e213f168739f6fe98d60a6ffbf00237a970b6
-ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
+ms.openlocfilehash: 83482a7bd3529d6efc4fed1f738f7e11205707cf
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "54406100"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55023825"
 ---
 # <a name="command-line-arguments-for-the-help-content-manager"></a>ヘルプ コンテンツ マネージャーのコマンド ライン引数
 
@@ -46,8 +46,8 @@ hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us /sou
 
 |切り替え|必須?|引数|
 |------------|---------------|---------------|
-|/operation|○|-   **Install** -- 指定されたインストール ソースからローカル コンテンツ ストアにブックを追加します。<br />     このスイッチには、/booklist 引数、/sourceURI 引数、または両方が必要です。 /sourceURI 引数を指定しない場合、Visual Studio の既定の URI がインストール ソースとして使用されます。 /booklist 引数を指定しない場合、/sourceUri のすべてのブックがインストールされます。<br />-   **Uninstall** -- 指定するブックをローカル コンテンツ ストアから削除します。<br />     このスイッチには、/booklist 引数または /sourceURI 引数が必要です。  /sourceURI 引数を指定すると、すべてのブックが削除され、/booklist 引数は無視されます。<br />-   **Move** -- 指定するパスにローカル ストアを移動します。 既定のローカル ストア パスは、*%ProgramData%* 下のディレクトリとして設定されます。<br />     このスイッチには、/locationPath 引数と /catalogName 引数が必要です。 有効でないパスを指定した場合、またはドライブにコンテンツを保持するのに十分な空き領域がない場合は、エラー メッセージがイベント ログに記録されます。<br />-   **Refresh** -- インストール後または最近の更新後に変更されたトピックを更新します。<br />     このスイッチには /sourceURI 引数が必要です。|
-|/catalogName|○|コンテンツ カタログの名前を指定します。|
+|/operation|はい|-   **Install** -- 指定されたインストール ソースからローカル コンテンツ ストアにブックを追加します。<br />     このスイッチには、/booklist 引数、/sourceURI 引数、または両方が必要です。 /sourceURI 引数を指定しない場合、Visual Studio の既定の URI がインストール ソースとして使用されます。 /booklist 引数を指定しない場合、/sourceUri のすべてのブックがインストールされます。<br />-   **Uninstall** -- 指定するブックをローカル コンテンツ ストアから削除します。<br />     このスイッチには、/booklist 引数または /sourceURI 引数が必要です。  /sourceURI 引数を指定すると、すべてのブックが削除され、/booklist 引数は無視されます。<br />-   **Move** -- 指定するパスにローカル ストアを移動します。 既定のローカル ストア パスは、*%ProgramData%* 下のディレクトリとして設定されます。<br />     このスイッチには、/locationPath 引数と /catalogName 引数が必要です。 有効でないパスを指定した場合、またはドライブにコンテンツを保持するのに十分な空き領域がない場合は、エラー メッセージがイベント ログに記録されます。<br />-   **Refresh** -- インストール後または最近の更新後に変更されたトピックを更新します。<br />     このスイッチには /sourceURI 引数が必要です。|
+|/catalogName|はい|コンテンツ カタログの名前を指定します。|
 |/locale|×|ヘルプ ビューアーの現在のインスタンスのコンテンツを表示および管理するために使用される製品ロケールを指定します。 たとえば、英語-米国の場合は `EN-US` を指定します。<br /><br /> ロケールを指定しない場合、オペレーティング システムのロケールが使用されます。 そのロケールを特定できない場合、`EN-US` が使用されます。<br /><br /> 有効でないロケールを指定した場合は、エラー メッセージがイベント ログに記録されます。|
 |/e|×|現在のユーザーに管理者資格情報がある場合は、ヘルプ コンテンツ マネージャーを管理特権に昇格させます。|
 |/sourceURI|×|コンテンツのインストール元の URL (サービス API)、またはコンテンツ インストール ファイル (*.msha*) へのパスを指定します。 URL は、Visual Studio 2010 スタイルのエンドポイントの製品グループ (最上位のノード)、または製品ブック (リーフ レベル ノード) を指すことができます。 URL の最後にスラッシュ (/) を含める必要はありません。 後続のスラッシュを含めた場合も適切に処理されます。<br /><br /> 見つからないファイルや有効でないファイル、アクセスできないファイルを指定した場合、またはインターネットへの接続が使用できないか、コンテンツの管理中に中断した場合は、エラー メッセージがイベント ログに記録されます。|

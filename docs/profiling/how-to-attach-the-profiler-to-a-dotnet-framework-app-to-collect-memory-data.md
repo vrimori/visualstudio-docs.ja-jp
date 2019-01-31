@@ -5,15 +5,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5130f6ea19112e5bb629f09ac7cd4171770653
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 435141ce8b01c2c486dd9b856c173895237a4906
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53821294"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54954814"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、メモリ データを収集する
 
@@ -34,7 +34,7 @@ ms.locfileid: "53821294"
 
 2. プロファイル環境変数を初期化します。 型:
 
-     **VSPerfClrEnv** {**/samplegc** &#124; **/samplegclife**} **[/samplelineoff]**
+     **VSPerfClrEnv** {**/samplegc** &#124; **/samplegclife**} [**/samplelineoff**]
 
     - **/samplegc** オプションと **/samplegclife** オプションは、メモリの割り当てデータのみを収集するか、メモリの割り当てデータとオブジェクトの有効期間データの両方を収集するかを指定します。 1 つのオプションのみを指定する必要があります。
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 82155004-8d9e-4875-b7db-237a3cffb530
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 156629fdce19dfe4e503f4af67ca31f99041e231
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 9114b9e442f4a6cb8525120d24ba59be99891fef
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53855593"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54940103"
 ---
 # <a name="spy-help"></a>Spy++ ヘルプ
 Spy++ ユーティリティのに関するドキュメントでを使用して spy++ と spy++ ビューでの一般的なトピックの 2 つのグループが含まれています。 後の各使用可能なメニュー コマンドやダイアログ ボックスの詳細な情報を提供します。 spy++ リファレンスでは。  

@@ -1,25 +1,20 @@
 ---
 title: コード分析に関する問題のトラブルシューティング | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: troubleshooting
 ms.assetid: 61c7e44d-2780-4df5-9bcb-49e40c1152fc
 caps.latest.revision: 7
 author: erickson-doug
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 1b21666094d2a13054be49980028afcc7a7e39a3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 04eac41c65f00e27251a492ff503bb28a2cd9dac
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49229789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779521"
 ---
 # <a name="troubleshooting-code-analysis-issues"></a>コード分析に関する問題のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,10 +32,7 @@ ms.locfileid: "49229789"
   
 3.  規則セットを再度開き、変更を元に戻し、規則セットを再度保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [アプリケーション品質の分析](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)   
  [マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [規則セットを使用したコード分析規則のグループ化](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-
-
-

@@ -1,26 +1,21 @@
 ---
-title: 'Excel 拡張機能のサンプル: Element クラス | Microsoft Docs'
-ms.custom: ''
+title: Excel 拡張子のサンプル:要素クラス |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 7c251098-00aa-49cf-9e37-5717c0c6b3f1
 caps.latest.revision: 11
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: fb5085bdd9a79330f7c4f73fb39993af63eb0a78
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 052ef261270b2cd6e66d71bbbb0c9cc3d12696eb
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54796042"
 ---
-# <a name="sample-excel-extension-element-classes"></a>Excel 拡張子のサンプル: 要素クラス
+# <a name="sample-excel-extension-element-classes"></a>Excel 拡張子のサンプル:要素クラス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 この拡張機能は、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> から派生し、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 内の Worksheet コントロールと Cell コントロールを表すクラスを使用します。  
@@ -54,10 +49,7 @@ ms.locfileid: "49811947"
   
  `Utilities` クラスには、UI に関するさまざまな情報を返すヘルパー メソッドがあります。 一部のメソッドは、**USER32.DLL** や **OLEACC.DLL** などの外部システム DLL への直接呼び出しを使用して、UI のウィンドウ ハンドルを取得します<strong>。</strong>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>   
  [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-

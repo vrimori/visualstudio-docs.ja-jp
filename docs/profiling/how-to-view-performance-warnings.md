@@ -5,15 +5,15 @@ ms.topic: conceptual
 ms.assetid: c6ce4e9c-4677-40cc-b1af-d68e9f3249f2
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b926403efb968a111bd535da75e3a269bb9bb63f
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 8aa5f9f9ba05972895fd356b4e00287e05403d83
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53914476"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55040152"
 ---
 # <a name="how-to-view-performance-warnings"></a>方法: パフォーマンスに関する警告の表示
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイル ツールのパフォーマンスの警告は、プロファイリング対象のアプリケーションにおいてプログラムの実行速度が低下する可能性のある問題を示します。 警告は、より有用なデータを収集するために収集方法を変更する必要があることを示している場合もあります。 パフォーマンスの警告は、プロファイル セッションで自動的に生成され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE でプロファイル データ ファイルを開いたときに、**[エラー一覧]** ウィンドウに表示されます。  

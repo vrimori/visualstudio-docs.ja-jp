@@ -1,14 +1,9 @@
 ---
 title: 行ビュー | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.lines
 helpviewer_keywords:
@@ -19,13 +14,13 @@ ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
 caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 829db9b1f8e4826ea9761a4433e6ee1adaab49e2
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e27194d830e880fd9ae28065e69fa140d9201dc2
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51749981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54762014"
 ---
 # <a name="lines-view"></a>行ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,10 +45,7 @@ ms.locfileid: "51749981"
   
 -   ステートメントが終了するソース行の文字。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [行ビュー](../profiling/lines-view-sampling-data.md)   
  [行ビュー - サンプリング](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [行 ビュー](../profiling/lines-view-contention-data.md)
-
-
-

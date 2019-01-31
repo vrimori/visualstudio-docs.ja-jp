@@ -6,17 +6,17 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96921c3b711fa1f2d01bee343d68891cf246bc6b
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: cd0e2079edde74155d38646fa5e22b6a11c1c7fd
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54315632"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55032424"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -323,7 +323,7 @@ Python プロジェクトと C++ プロジェクトが同じソリューショ�
 
     setup(
         name = 'superfastcode2',
-        version = '1.0',    
+        version = '1.0',
         description = 'Python package with superfastcode2 C++ extension (PyBind11)',
         ext_modules = [sfc_module],
     )
@@ -409,7 +409,7 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
 | cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](https://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分あり。 |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | C++ を使用する場合の cffi と似ている。 | 新しく、VS 2017 では問題が発生する可能性がある。 |  
+| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | C++ を使用する場合の cffi と似ている。 | 新しく、VS 2017 では問題が発生する可能性がある。 |
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,14 +1,9 @@
 ---
 title: '方法: タスクで発生したエラーを無視する | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, ignoring errors
 - ContinueOnError attribute [MSBuild]
@@ -16,15 +11,15 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 72f638a17fd6d49157f13d54a6ec1deba0e2bf27
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4bac63523829c47b17821ff5905687bd76bbc57e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49891194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54777032"
 ---
-# <a name="how-to-ignore-errors-in-tasks"></a>方法 : タスクで発生したエラーを無視する
+# <a name="how-to-ignore-errors-in-tasks"></a>方法: タスクで発生したエラーを無視する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
   
@@ -47,7 +42,7 @@ ms.locfileid: "49891194"
   
 #### <a name="to-ignore-an-error-in-a-task"></a>タスクのエラーを無視するには  
   
--   タスクの `ContinueOnError` 属性を使用します。 例えば:  
+-   タスクの `ContinueOnError` 属性を使用します。 次に例を示します。  
   
      `<Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>`  
   
@@ -70,9 +65,7 @@ ms.locfileid: "49891194"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>「
 [MSBuild](msbuild.md)  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)
-
-

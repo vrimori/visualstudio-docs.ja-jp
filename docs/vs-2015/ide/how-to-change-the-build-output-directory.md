@@ -1,29 +1,24 @@
 ---
-title: '方法 : ビルド出力ディレクトリを変更する | Microsoft Docs'
-ms.custom: ''
+title: '方法: ビルド出力ディレクトリの変更 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - output directory, changing
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: cc0f6b30abd8c737db018bbc2bb761afc996d6c6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0d8ee4bac6f04515439f5703fe2f98546e011af4
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49263563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54777366"
 ---
-# <a name="how-to-change-the-build-output-directory"></a>方法 : ビルド出力ディレクトリを変更する
+# <a name="how-to-change-the-build-output-directory"></a>方法: ビルド出力ディレクトリを変更する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 プロジェクトによって生成された (デバッグ、リリース、またはその両方の) 構成ごとに出力の場所を指定できます。  
@@ -46,10 +41,7 @@ ms.locfileid: "49263563"
 > [!NOTE]
 >  セットアップ プロジェクトの **[出力ファイル名]** ボックスは、プロジェクト ファイルの場所ではなく、Setup.exe ファイルの場所のみを変更します。 詳細については、「 **配置プロジェクトの [プロパティ ページ] ダイアログ ボックス ([構成プロパティ] - [ビルド])**」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[ビルド] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-page-project-designer-csharp.md)   
  [[全般] プロパティ ページ (プロジェクト)](http://msdn.microsoft.com/library/593b383c-cd0f-4dcd-ad65-9ec9b4b19c45)   
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
-
-
-

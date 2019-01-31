@@ -1,14 +1,9 @@
 ---
 title: CvReleaseMarkerSeries 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvReleaseMarkerSeries
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 3b4711ee-e534-411d-9128-f69cd7932a48
 caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: cf62ece61be25ef92866a9b761819c842d9154c3
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: 6bfa9952a834110ef0fea36568ea210b637547aa
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51801525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54794136"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +40,8 @@ HRESULT CvReleaseMarkerSeries(
 ## <a name="return-value"></a>戻り値  
  マーカー系列がリリースされると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
-
-
-

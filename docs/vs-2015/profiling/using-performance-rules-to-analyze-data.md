@@ -1,25 +1,20 @@
 ---
 title: パフォーマンス規則を使用したデータの分析 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 1deed23e-b31b-4714-982f-08ceebfc3096
 caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: a64457cc0ca33295e5d3d572ddb88481dfa2125d
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7aacae0d5432af6a28e6f134e84d613774b82978
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51784365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54791980"
 ---
 # <a name="using-performance-rules-to-analyze-data"></a>パフォーマンス規則を使用したデータの分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51784365"
 >  プロファイラーのパフォーマンス警告はプログラム実行のダイナミック分析によって生成され、コード分析警告との関連はありません。 コード分析で、マネージド コードに対するパフォーマンス警告をソース コードのスタティック分析に基づいて生成することもできます。 詳細については、「[マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)」および「[パフォーマンスの警告](../code-quality/performance-warnings.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: パフォーマンスの警告を表示する](../profiling/how-to-view-performance-warnings.md)  
+ [方法: パフォーマンスに関する警告の表示](../profiling/how-to-view-performance-warnings.md)  
  **[エラー一覧]** ウィンドウを開いて、プロファイラーのパフォーマンス警告を表示する方法について説明します。  
   
  [方法: パフォーマンス規則を構成する](../profiling/how-to-configure-performance-rules.md)  
@@ -38,6 +33,3 @@ ms.locfileid: "51784365"
   
  [パフォーマンス規則リファレンス](../profiling/performance-rules-reference.md)  
  プロファイラーのパフォーマンス警告について詳しく説明します。
-
-
-

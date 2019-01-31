@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: b4f7ceab-3653-4069-bb74-c309aec62866
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70e6fd49e72b3cb6ffdb1ade70dcd1ffb562bdd9
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 84cdc938320be106ffa230595448fa0ffb332cee
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53824212"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54924124"
 ---
 # <a name="utilization-view"></a>使用状況ビュー
 **使用状況ビュー**には、現在のプロセスによって使用されている CPU、GPU、その他のシステム リソースに関する情報が表示されます (**[分析]** > **[コンカレンシー ビジュアライザー]** の順に選択して、コンカレンシー ビジュアライザーを開始します)。 このビューには、分析対象のプロセス、アイドル プロセス、システム プロセス、一定期間システム上で実行中のその他のプロセスによる平均コア使用状況が表示されます。 任意の時点でどのコアがアクティブなのかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。 このビューは、プロファイル時間を短い時間セグメントに分割して生成されます。 セグメントごとに、その期間中、論理コアで実行されているプロセス スレッドの平均数がグラフに示されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "53824212"
  C++ AMP または DirectX を使用して GPU を使用している場合、使用中の GPU エンジンの数や、予想に反して GPU がアイドル状態である領域を特定することが必要になる可能性があります。  
   
 ## <a name="zoom"></a>ズーム  
- CPU 使用状況グラフまたは GPU アクティビティ グラフをズームするには、セクションを選択するか、グラフ上部のズーム スライダー ツールを使用します。 ズーム設定は、他のビューに切り替えてもそのままになります。 また縮小するには、ズーム スライダー ツールを使用します。 **Ctrl** + **Scroll** キーでズームすることもできます。  
+ CPU 使用状況グラフまたは GPU アクティビティ グラフをズームするには、セクションを選択するか、グラフ上部のズーム スライダー ツールを使用します。 ズーム設定は、他のビューに切り替えてもそのままになります。 また縮小するには、ズーム スライダー ツールを使用します。 **Ctrl **+** Scroll** キーでズームすることもできます。  
   
 ## <a name="see-also"></a>関連項目  
  [コンカレンシー ビジュアライザー](../profiling/concurrency-visualizer.md)   

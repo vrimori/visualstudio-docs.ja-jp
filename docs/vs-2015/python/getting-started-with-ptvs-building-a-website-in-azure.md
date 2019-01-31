@@ -1,27 +1,22 @@
 ---
-title: 'PTVS の概要: Azure での Web サイトの作成 | Microsoft Docs'
-ms.custom: ''
+title: PTVS の概要。Azure で web サイトの構築 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-python
+ms.topic: conceptual
 ms.assetid: 3bdbda36-14d2-4fde-ba42-d91042777ff6
 caps.latest.revision: 5
 author: kraigb
 ms.author: kraigb
-manager: ghogen
-ms.openlocfilehash: 1c4f0d0a1bf963857cde5dc0c6aa36e2aa04ca7f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 61f8748a3874f32db9c235d03b6b7464bc5cecf1
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49282751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54783197"
 ---
-# <a name="getting-started-with-ptvs-building-a-website-in-azure"></a>PTVS の概要: Azure での Web サイトの作成
+# <a name="getting-started-with-ptvs-building-a-website-in-azure"></a>PTVS の概要。Azure で web サイトの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Azure での Python Web サイトの構築をすばやく開始できます。  
@@ -38,7 +33,6 @@ Azure での Python Web サイトの構築をすばやく開始できます。
   
  これらの手順は、非常に短い [youtube ビデオ](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)で視聴できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Wiki ドキュメント](https://github.com/Microsoft/PTVS/wiki/Web-Project)   
  [PTVS の概要と詳細に関するビデオ](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
-

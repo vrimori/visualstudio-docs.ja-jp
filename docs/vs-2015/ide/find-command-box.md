@@ -1,14 +1,9 @@
 ---
 title: '[検索/コマンド] ボックス | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.findcommandbox
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: c81736dd-7a26-4e11-95c8-c2a2e56d7a41
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0e818df222e9b7343facc989c1b61be30c098b64
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b8bddc27eb4a59b65796c7837ae4561e5d56a5d5
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49172576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54801226"
 ---
 # <a name="findcommand-box"></a>[検索/コマンド] ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -41,7 +36,8 @@ ms.locfileid: "49172576"
  既定では、**[検索]** ボックスにテキストを指定して Enter キーを押すと、Visual Studio によって、**[フォルダーを指定して検索]** ダイアログ ボックスで指定したオプションが使用され、現在のドキュメント ウィンドウまたはツール ウィンドウで検索されます。 詳細については、「 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)」を参照してください。  
   
 ## <a name="entering-commands"></a>コマンドの入力  
- **[検索]** ボックスを使用して、文字列の検索ではなく、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の単一のコマンドまたはエイリアスを実行するには、先頭に不等号 (&amp;gt;) を付けて [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] コマンドを入力します。 例えば:  
+ 
+  **[検索]** ボックスを使用して、文字列の検索ではなく、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の単一のコマンドまたはエイリアスを実行するには、先頭に不等号 (&gt;) を付けて [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] コマンドを入力します。 次に例を示します。  
   
 ```  
 >File.NewFile c:\temp\MyFile /t:"General\Text File"  
@@ -58,9 +54,6 @@ ms.locfileid: "49172576"
   
  カレットは、引用符の前後のどちらに置かれた場合でも同じ働きをします。 行の最後の文字がカレットの場合は無視されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [コマンド ウィンドウ](../ide/reference/command-window.md)   
  [テキストの検索と置換](../ide/finding-and-replacing-text.md)
-
-
-

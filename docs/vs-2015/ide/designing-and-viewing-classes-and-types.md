@@ -1,14 +1,9 @@
 ---
 title: クラスと型のデザインおよび表示 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.diagram
 helpviewer_keywords:
@@ -21,13 +16,13 @@ ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 559702f41f2694a6042e26b2760251e775c9cad3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: b4d9636a29485430be92ab622ae8ce56712f22aa
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49191623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54756860"
 ---
 # <a name="designing-and-viewing-classes-and-types"></a>クラスと型のデザインおよび表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +35,7 @@ Visual Studio のクラス デザイナーでは、コード内のクラスと�
   
 -   **視覚化**: プロジェクト内のクラスをダイアグラムに表示して、プロジェクトの構造を理解します。 プロジェクトの中で最も重要な部分に集中できるように、ダイアグラムをカスタマイズします。 ダイアグラムを保存すると、後からデモやドキュメントに使用できます。  
   
--   **リファクター**: メソッドのオーバーライド、識別子の名前変更、パラメーターのリファクター、およびインターフェイスと抽象クラスの実装を行います。  
+-   **リファクター**: メソッドのオーバーライド、識別子の名前変更、パラメーターのリファクター、インターフェイスと抽象クラスの実装を行います。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クラスと他の型の使用 (クラス デザイナー)](../ide/working-with-classes-and-other-types-class-designer.md)  
@@ -61,6 +56,3 @@ Visual Studio のクラス デザイナーでは、コード内のクラスと�
  [コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
   
  [ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)
-
-
-

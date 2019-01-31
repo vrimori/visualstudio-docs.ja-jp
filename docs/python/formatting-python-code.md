@@ -6,17 +6,17 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b830640284fe5b44a76b5f7d2424e2c1ccd24ea0
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 49733b4a63ccffef64ca2fca3ba1f969eca2609b
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53850217"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55012522"
 ---
 # <a name="format-python-code"></a>Python コードの書式を設定する
 
@@ -44,8 +44,8 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 さまざまなオプションの例を以下の表に示します。
 
 | クラス定義のオプション | チェック済み | オフにした場合 |
-| --- | --- | --- | 
-| **Insert space between a class declaration's name and bases list \(クラス宣言の名前と基底クラス リストの間に空白を挿入する\)** | `class X (object): pass` | `class X(object): pass` | 
+| --- | --- | --- |
+| **Insert space between a class declaration's name and bases list \(クラス宣言の名前と基底クラス リストの間に空白を挿入する\)** | `class X (object): pass` | `class X(object): pass` |
 | **基本リストのかっこ内に空白を挿入する** | `class X( object ): pass` | `class X(object): pass` |
 | **空の基本リストのかっこ内に空白を挿入する** | `class X( ): pass` | `class X(): pass` |
 
@@ -53,7 +53,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 | 関数定義のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| **Insert space between a function declaration's name and parameter list \(関数宣言の名前とパラメーター リストの間に空白を挿入する\)** | `def X (): pass` | `def X(): pass` | 
+| **Insert space between a function declaration's name and parameter list \(関数宣言の名前とパラメーター リストの間に空白を挿入する\)** | `def X (): pass` | `def X(): pass` |
 | **パラメーター リストのかっこ内にスペースを挿入する** | `def X( a, b ): pass` | `def X(a, b): pass` |
 | **空のパラメーター リストのかっこ内にスペースを挿入する** | `def X( ): pass` | `def X(): pass` |
 | **Insert spaces around '=' in default parameter values \(既定のパラメーター値の '=' の前後にスペースを挿入する\)** | `includes X(a = 42): pass` | `includes X(a=42): pass` |

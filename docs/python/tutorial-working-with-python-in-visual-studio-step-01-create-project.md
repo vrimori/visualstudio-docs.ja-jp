@@ -2,22 +2,22 @@
 title: Visual Studio での Python チュートリアル、手順 1、プロジェクトの作成
 titleSuffix: ''
 description: 前提条件や新しい Python プロジェクトの作成など、Visual Studio での Python 機能の中核となるチュートリアルの概要と手順 1。
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2741d98eff02fd17be67213ab1069bdd43476475
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: bc6f831d30f578cb03bbb760da410aefff312e99
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53916047"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231871"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>チュートリアル: Visual Studio での Python の使用
 
@@ -61,7 +61,7 @@ Visual Studio は、Python 言語の最上のサポートを提供していま�
 
     (1) **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの *.pyproj* ファイルに該当します。
 
-    (2) 最上位レベルにあるのは、*ソリューション*です。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。 たとえば、Python アプリケーション用に C++ の拡張機能を記述した場合、その C++ プロジェクトは同じソリューション内に存在します。 ソリューションには、専用のテスト プログラム用のプロジェクトと共に、Web サービス用のプロジェクトも含まれる可能性があります。 
+    (2) 最上位レベルにあるのは、*ソリューション*です。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。 たとえば、Python アプリケーション用に C++ の拡張機能を記述した場合、その C++ プロジェクトは同じソリューション内に存在します。 ソリューションには、専用のテスト プログラム用のプロジェクトと共に、Web サービス用のプロジェクトも含まれる可能性があります。
 
     (3) プロジェクトの下には、ソース ファイルがあります。この場合は、*.py* ファイルが 1 つだけあります。 ファイルを選択すると、**[プロパティ]** ウィンドウにそのプロパティが表示されます。 ファイルをダブルクリックすると、そのファイルに適した方法でファイルが開きます。
 

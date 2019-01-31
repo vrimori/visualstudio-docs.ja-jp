@@ -6,19 +6,19 @@ ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: c156993bf2fe425368a2cfebcaca8ac18ea790f2
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 83a4f4ea1add79ce0317ff5823066a0070a407c1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53944627"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55024098"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の概要
 
-R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installing-r-tools-for-visual-studio.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。 
+R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installing-r-tools-for-visual-studio.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。
 
 ## <a name="create-an-r-project"></a>R プロジェクトの作成
 
@@ -93,7 +93,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 > [!Tip]
 > すばやくコードを実行するために、編集を行って **Ctrl**+**Enter** キーを押す (または、**Ctrl**+**A** キーですべてを選択して **Ctrl**+**Enter** キーを押す) パターンについて説明します。 これは、同じ操作のためにマウスを使用するよりもはるかに効率的です。
-> 
+>
 > さらに、Visual Studio フレームの外部にあるプロット ウィンドウにドラッグ アンド ドロップし、ディスプレイ上の他の目的の場所に配置できます。 配置後は、必要なサイズにプロット ウィンドウのサイズを簡単に変更し、画像または PDF ファイルに保存できます。
 
 1. 追加のコード行を少し追加して、2 つ目のプロットを含めます。

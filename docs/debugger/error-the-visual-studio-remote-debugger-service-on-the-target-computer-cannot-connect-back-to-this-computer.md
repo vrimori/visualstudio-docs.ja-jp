@@ -13,15 +13,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 202d4f8f62aeb19836c30e76751d8a2c5b6f3033
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: f2d2d637dfb74a6d3a0e4c8b4ae346aa8236f28a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53963288"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55018892"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>エラー :対象コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 このエラーは、Visual Studio リモート デバッガー サービスがデバッグを開始したコンピューターに接続するときに、このサービスを実行しているユーザー アカウントを認証できないことを示します。  
@@ -31,10 +31,10 @@ ms.locfileid: "53963288"
 |||||  
 |-|-|-|-|  
 ||LocalSystem アカウント|ドメイン アカウント|両方のコンピューターに同じユーザー名とパスワードを持つローカル アカウント|  
-|両方のコンピューターが同じドメインにある場合|[はい]|[はい]|[はい]|  
-|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|×|×|[はい]|  
-|一方または両方のコンピューターがワークグループにある場合|×|×|[はい]|  
-|コンピューターが異なるドメインにある場合|×|×|[はい]|  
+|両方のコンピューターが同じドメインにある場合|はい|[はい]|はい|  
+|両方のコンピューターが双方向の信頼関係を持つドメインにある場合|×|×|はい|  
+|一方または両方のコンピューターがワークグループにある場合|×|×|はい|  
+|コンピューターが異なるドメインにある場合|×|×|はい|  
   
  さらに:  
   

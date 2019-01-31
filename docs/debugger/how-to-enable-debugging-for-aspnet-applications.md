@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3beed819-cece-4864-8184-bd410000973a
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: c8723a97f5751b790c946055693064c3b7d12237
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b87a8415bf2df2b8848b4fb619964d981e31ffcf
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53881102"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55035251"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio での ASP.NET または ASP.NET Core アプリをデバッグします。
 
@@ -116,7 +116,7 @@ ASP.NET プロジェクトが*web.config*両方アプリの構成と起動につ
 
 1. Visual Studio で開き、ASP.NET プロジェクトの*web.config*ファイル。  
   
-2. *Web.config* XML ファイルは、タグでマークされた入れ子のセクションを格納するためです。 検索、`configuration/system.web/compilation`セクション。 (場合、`compilation`要素の存在は作成しません)。
+2. *Web.config* XML ファイルは、タグでマークされた入れ子のセクションを格納するためです。 `configuration/system.web/compilation` セクションを見つけます。 (場合、`compilation`要素の存在は作成しません)。
   
 3. 確認、`debug`属性、`compilation`要素に設定されて`true`します。 (場合、`compilation`要素が含まれていない、`debug`属性、追加しに設定`true`)。 
   

@@ -1,14 +1,9 @@
 ---
-title: '方法 : エディターで URL をリンクとして表示する | Microsoft Docs'
-ms.custom: ''
+title: '方法: エディターでリンクとして Url を表示 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - URLs, opening
 - Code Editor, displaying URLs
@@ -17,15 +12,15 @@ ms.assetid: 7c673953-476e-4897-9c2d-1fc15556c172
 caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: a61794e036ff4ba5b107c085be1779e2ba79f35f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: d5842f0f931eecd822dcaeba5eb6b3e33bd826c9
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54758842"
 ---
-# <a name="how-to-display-urls-as-links-in-the-editor"></a>方法 : エディターで URL をリンクとして表示する
+# <a name="how-to-display-urls-as-links-in-the-editor"></a>方法: エディターで URL をリンクとして表示する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
   
@@ -38,7 +33,7 @@ ms.locfileid: "49292358"
 -   **Ctrl** キーを押しながらリンクを左クリックすると、示されている Web サイトが表示されます。 既定では、Web サイトは内部 Web ブラウザーに表示されます。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -56,10 +51,7 @@ ms.locfileid: "49292358"
   
 4.  **[表示]** の **[シングル クリックでの URL ナビゲーションを有効にする]** をオンにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [エディターのカスタマイズ](../../ide/customizing-the-editor.md)   
  [[テキスト エディター] ([オプション] ダイアログ ボックス)](../../ide/reference/text-editor-options-dialog-box.md)   
  [コードの作成](../../ide/writing-code-in-the-code-and-text-editor.md)
-
-
-

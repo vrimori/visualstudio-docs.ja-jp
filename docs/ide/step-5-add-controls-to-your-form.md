@@ -6,20 +6,20 @@ ms.topic: conceptual
 ms.assetid: dc2746f4-0b5c-4674-9ef7-f40f94150f52
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd07924f98c969340fbe2c7ccb88f4227a61026b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: c6c26af81045723e8986db4dffafb012fb850a82
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968431"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54997443"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>手順 5: フォームへのコントロールの追加
 この手順では、<xref:System.Windows.Forms.PictureBox> コントロールや <xref:System.Windows.Forms.CheckBox> コントロールなどのコントロールをフォームに追加します。 さらに、フォームに <xref:System.Windows.Forms.Button> コントロールを追加します。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、次をご覧ください。「[Tutorial 1:Create a picture viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211)」(チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 2) または「[Tutorial 1:Create a picture viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200)」(チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 2) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、「[Tutorial 1:Create a picture viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211)」(チュートリアル 1: Visual Basic でピクチャ ビューアーを作成する - ビデオ 2) または「[Tutorial 1:Create a picture viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200)」(チュートリアル 1: C# でピクチャ ビューアーを作成する - ビデオ 2) をご覧ください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。
 
 ## <a name="to-add-controls-to-your-form"></a>フォームにコントロールを追加するには
 

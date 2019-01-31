@@ -1,14 +1,9 @@
 ---
 title: UI 処理時間 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.timeline.uiprocessing
 helpviewer_keywords:
@@ -17,13 +12,13 @@ ms.assetid: 0ddb05a3-8c6b-448b-8488-2751c1e5abcc
 caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: ecf2c33b2af2e57c964e145a334f6dd0d7161a92
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4bbed9d8c4725b6bd497377d4a9dee22f2f8573d
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51738431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54783445"
 ---
 # <a name="ui-processing-time"></a>UI 処理時間
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,8 +29,5 @@ ms.locfileid: "51738431"
   
  UI 処理カテゴリは、GUI アプリケーションの応答性を理解するのに重要であり、UI の応答性に依存するアプリケーションにはこのカテゴリが適しています。 たとえば、アプリケーション内の UI スレッドが UI 処理で 100% の時間を達成した場合、非常に応答性が高いと思われます。 ただし、UI スレッドが他のカテゴリで長時間を費やしている場合は、根本的な原因を見つけて、そのスレッドでの UI 以外のカテゴリを減らすためのオプションを検討してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)
-
-
-

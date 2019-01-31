@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: fbd99736-9ea8-47d2-af51-7e3a4e9c29c1
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be23f8bd454790065f7d30bc283c52089e964692
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 82385221988a0a2eb9ed562742abc16c8552f9d3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53912611"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54967272"
 ---
 # <a name="measure-mode-onoff"></a>測定モード オン/オフ
 このツールを使用すると、タイムラインの時間の長さを正確に測定できます。 測定モードを有効にするには、測定ボタン (ルーラー アイコン付き) をクリックし、タイムラインにドラッグします。 ドラッグすると、ポインターの下の領域が黄色で強調表示され、測定された時間は、ボタンの右側にあるツール バーに表示されます。 この値は、ドラッグ時に動的に計算されるため、特定のイベントにかかる時間がすぐにわかります。 マウス ボタンを離しても、時間の値は表示されたままです。  

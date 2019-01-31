@@ -1,14 +1,9 @@
 ---
 title: HTML UI の応答性 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -24,13 +19,13 @@ ms.assetid: da13070a-ba40-47dd-a846-ad72eed70d0b
 caps.latest.revision: 52
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 63027ccfffde0aa3b62bae6c1529826fd9b26c71
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+manager: jillfra
+ms.openlocfilehash: b3e5a1ce334f0d5cb567eb8c4cefd27f1bca408b
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "51760718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54752967"
 ---
 # <a name="html-ui-responsiveness"></a>HTML UI の応答性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -121,7 +116,7 @@ ms.locfileid: "51760718"
   
      ![CPU 使用状況グラフ](../profiling/media/js-htmlvizprof-cpu-util.png "JS_HTMLVizProf_CPU_Util")  
   
-11.  [タイムライン グラフの表示](#TimelineDetails) 」 を使用すると、あまりに頻繁に実行されるイベントまたは完了に多くの時間がかかっているイベントに関する詳細情報を取得できます。 たとえば、次のものを探します。  
+11. [タイムライン グラフの表示](#TimelineDetails) 」 を使用すると、あまりに頻繁に実行されるイベントまたは完了に多くの時間がかかっているイベントに関する詳細情報を取得できます。 たとえば、次のものを探します。  
   
     -   イベント リスナー、タイマー、およびアニメーション フレームのコールバック。 特定のイベントに応じて、提供されるデータには変更された DOM 要素の ID、変更された CSS プロパティの名前、ソースの場所へのリンク、関連付けられたイベントまたはコールバック関数の名前が含まれる場合があります。  
   
@@ -369,6 +364,3 @@ if (performance.mark && performance.measure) {
   
 ## <a name="see-also"></a>「  
  [アプリのパフォーマンスの分析](http://msdn.microsoft.com/library/58acb30b-8428-41a6-b195-b0fdedb89575)
-
-
-

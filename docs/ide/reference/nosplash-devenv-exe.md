@@ -10,15 +10,15 @@ helpviewer_keywords:
 - NoSplash Devenv switch
 author: DennisLee-DennisLee
 ms.author: v-dele
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 794934ab0bddcc90a36accf639b26e5ecc6bab30
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: f11b44833ae54c6982cc4df9e2dbd6cb03e7fcd1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54233146"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927894"
 ---
 # <a name="nosplash-devenvexe"></a>/NoSplash (devenv.exe)
 
@@ -34,7 +34,7 @@ devenv /NoSplash [File1[ FileN]...]
 
 - *File1*
 
-  任意。 Visual Studio の既存のインスタンスで開くファイル。 Visual Studio のインスタンスが存在してない場合は、簡略化されたウィンドウ レイアウトで新しいインスタンスが作成され、その新しいインスタンスで *File1* が開かれます。
+  任意。 Visual Studio の既存のインスタンスで開くファイル。 Visual Studio のインスタンスが存在していない場合は、簡略化されたウィンドウ レイアウトで新しいインスタンスが作成され、その新しいインスタンスで *File1* が開かれます。
 
 - *FileN*
 

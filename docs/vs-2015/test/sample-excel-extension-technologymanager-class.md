@@ -1,26 +1,21 @@
 ---
-title: 'Excel 拡張機能のサンプル: TechnologyManager クラス | Microsoft Docs'
-ms.custom: ''
+title: Excel 拡張子のサンプル:TechnologyManager クラス |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
 caps.latest.revision: 11
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: b23c3e735aba74d86b31afb4b83862d83bcd2bdb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4ab353f9c42eebe4af10f56f6ee4cda533069121
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779571"
 ---
-# <a name="sample-excel-extension-technologymanager-class"></a>Excel 拡張子のサンプル: TechnologyManager クラス
+# <a name="sample-excel-extension-technologymanager-class"></a>Excel 拡張子のサンプル:TechnologyManager クラス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このクラスは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> クラスを拡張します。また、[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 拡張機能用のコア サービスを提供する役割があります。 基底クラスには多くのメソッドがありますが、このサンプルではそのサブセットのみを使用します。  
@@ -65,13 +60,10 @@ ms.locfileid: "49190581"
 ## <a name="getexcelelement-internal-method"></a>GetExcelElement 内部メソッド  
  この内部メソッドは、ウィンドウ ハンドルと Excel 要素についての情報を受け取り、要求された Excel 要素を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager>   
  <xref:System.NotSupportedException>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>   
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
  [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-
-
-

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1590bbbe53a164ff9e59b887f7161b45a7d62361
-ms.sourcegitcommit: a715de2ba8c703f37aa2102567b1aa2c0f05a117
+ms.openlocfilehash: 3e3936af89d7f59a47f01a68d17a672e67a5752e
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53442050"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54988962"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>チュートリアル: Visual Studio を使用した C# のデバッグについて理解する
 
@@ -93,7 +93,7 @@ ms.locfileid: "53442050"
         public int Y { get; private set; }
         public int Height { get; set; }
         public int Width { get; set; }
-   
+
         // Virtual method
         public virtual void Draw()
         {
@@ -192,7 +192,7 @@ ms.locfileid: "53442050"
 
     ブレークポイントを設定した場所に赤い円が表示されます。
 
-    ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行コードを中断する場所を示します。これにより、変数の値またはメモリの動作を確認したり、コードの分岐が実行されるかどうかを確認したりすることができます。 
+    ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行コードを中断する場所を示します。これにより、変数の値またはメモリの動作を確認したり、コードの分岐が実行されるかどうかを確認したりすることができます。
 
 2. **F5** キーを押すか、**[デバッグの開始]** ボタン ![デバッグの開始](../../debugger/media/dbg-tour-start-debugging.png "デバッグの開始") をクリックします。アプリが起動され、デバッガーが実行されてブレークポイントを設定したコード行まで進みます。
 
@@ -218,7 +218,7 @@ ms.locfileid: "53442050"
 
      ![F10 キーを使用してコードをステップ オーバーする](../csharp/media/get-started-step-over.png "F10 キーによるステップ オーバー")
 
-     今回は、デバッガーが基本クラス (`Shape`) の `Draw` メソッドにステップ インしていないことに注目してください。 **F10** キーを押すと、ご利用のアプリのコード内の関数またはメソッドにステップ インすることなく、デバッガーが進められます (コードはまだ実行されています)。 `base.Draw` メソッド呼び出し上で **F10** キーを押すことによって (**F11** キーではなく)、`base.Draw` 用の実装コードをスキップしました (現時点で関係ないと思われるため)。
+     今回は、デバッガーが基本クラス (`Shape`) の `Draw` メソッドにステップ インしていないことに注目してください。 **F10** キーを押すと、ご利用のアプリのコード内の関数またはメソッドにステップ インすることなく、デバッガーが進められます (コードはまだ実行されています)。 `base.Draw` メソッド呼び出し上で (**F11** キーではなく) **F10** キーを押して、`base.Draw` 用の実装コードをスキップしました (現時点で関係ないと思われるため)。
 
 ## <a name="navigate-code-using-run-to-click"></a>[クリックで実行] を使用してコード内を移動する
 

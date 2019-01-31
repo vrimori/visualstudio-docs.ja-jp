@@ -1,14 +1,9 @@
 ---
 title: CvWriteFlag 関数 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteFlagExVA
 - cvmarkers/CvWriteFlagExW
@@ -23,13 +18,13 @@ ms.assetid: ee9da1e2-7b34-4cba-81e2-215d25d32e4d
 caps.latest.revision: 9
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 83dde7f6dfa465cc56a208ae041f52c7caf50682
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
+manager: jillfra
+ms.openlocfilehash: bea5e2acea9a89c5a3b2fdfba441530a74ad8515
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51802981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779150"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,15 +84,12 @@ HRESULT CvWriteFlagExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvWriteFlagExW、CvWriteFlagExVW  
   
  <strong>ANSI:</strong>CvWriteFlagExA、CvWriteFlagExVA  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
-
-
-

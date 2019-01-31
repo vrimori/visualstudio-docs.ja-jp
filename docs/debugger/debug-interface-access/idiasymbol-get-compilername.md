@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 66eaaf72-68d4-40ee-b132-97bea9fe395c
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fc86d2fb5e1453f3585555dedf1dd26b9d40b31
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 5cd72f9ce9b38d6c349d0c3592dac16eab0344f8
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53847141"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55031134"
 ---
 # <a name="idiasymbolgetcompilername"></a>IDiaSymbol::get_compilerName
 生成するために使用するコンパイラの名前を返します、[コンパイル単位](../../debugger/debug-interface-access/compiland.md)します。  

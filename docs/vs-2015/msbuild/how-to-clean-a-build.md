@@ -1,14 +1,9 @@
 ---
-title: '方法 : ビルドをクリーンする | Microsoft Docs'
-ms.custom: ''
+title: '方法: ビルドをクリーンする | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: msbuild
+ms.topic: conceptual
 helpviewer_keywords:
 - Exec task [MSBuild]
 - MSBuild, cleaning a build
@@ -18,15 +13,15 @@ ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
 caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 6c7b9811785808204fdd776617eec9cdeeaad317
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: aa90a0d10b06559b3f4f46fd8dc0c5da4cef981e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49229672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54780748"
 ---
-# <a name="how-to-clean-a-build"></a>方法 : ビルドをクリーンする
+# <a name="how-to-clean-a-build"></a>方法: ビルドをクリーンする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
   
@@ -41,7 +36,7 @@ ms.locfileid: "49229672"
   
      `<builtdir>BuiltApp</builtdir>`  
   
-2.  ディレクトリが存在しない場合、[MakeDir](../msbuild/makedir-task.md) タスクを理使用してディレクトリを作成します。 例えば:  
+2.  ディレクトリが存在しない場合、[MakeDir](../msbuild/makedir-task.md) タスクを理使用してディレクトリを作成します。 次に例を示します。  
   
      `<MakeDir Directories = "$(builtdir)"`  
   
@@ -52,14 +47,14 @@ ms.locfileid: "49229672"
   
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>ディレクトリとそのディレクトリに含まれるすべてのファイルを削除するには  
   
--   `RemoveDir` タスクを利用してディレクトリを削除します。 例えば:  
+-   `RemoveDir` タスクを利用してディレクトリを削除します。 次に例を示します。  
   
      `<RemoveDir Directories="$(builtdir)" />`  
   
 ## <a name="example"></a>例  
  次のコード例プロジェクトには、新しいターゲット、`Clean` が含まれています。このターゲットは `RemoveDir` タスクを使用し、ディレクトリとそのディレクトリに含まれるすべてのファイルを削除します。 この例ではまた、`Compile` ターゲットは、ビルドのクリーン時に削除される出力項目に対して別個のディレクトリを作成します。  
   
- `Compile` は既定のターゲットとして定義されます。そのため、別のターゲットを指定しない限り、自動的に使用されます。 コマンド ライン スイッチ **/target** を使用し、別のターゲットを指定します。 例えば:  
+ `Compile` は既定のターゲットとして定義されます。そのため、別のターゲットを指定しない限り、自動的に使用されます。 コマンド ライン スイッチ **/target** を使用し、別のターゲットを指定します。 次に例を示します。  
   
  `msbuild <file name>.proj /target:Clean`  
   
@@ -107,12 +102,9 @@ ms.locfileid: "49229672"
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Exec タスク](../msbuild/exec-task.md)   
  [MakeDir タスク](../msbuild/makedir-task.md)   
  [RemoveDir タスク](../msbuild/removedir-task.md)   
  [Csc タスク](../msbuild/csc-task.md)   
  [ターゲット](../msbuild/msbuild-targets.md)
-
-
-
