@@ -1,14 +1,9 @@
 ---
 title: '&lt;loc&gt; (JavaScript) |Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - <loc> JavaScript XML tag
 - loc JavaScript XML tag
@@ -16,13 +11,13 @@ ms.assetid: 0d3349b6-4bdd-418f-bc11-73665305baae
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9314453b5e75e31f98d6989efa274278706bc5a4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 8029dc6282e7b5a4ff9075257bcb1b6213a4a6b4
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49244011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54758526"
 ---
 # <a name="ltlocgt-javascript"></a>&lt;loc&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,7 +38,7 @@ ms.locfileid: "49244011"
  `format`  
  任意。 ローカリゼーションに使用するサイドカー ファイルの種類。 `messagebundle` を使用して、Open Ajax メタデータによって定義されるメッセージ バンドルの使用を指定します。 `messagebundle` は推奨される形式です。 ただし、この形式は Microsoft Ajax または .winmd ファイルではサポートされません。 `vsdoc` を使用して、Microsoft Ajax および Windows ランタイムで使用される標準の .NET Framework のローカリゼーション形式を指定します。 この属性は省略できます。 `vsdoc` は既定の形式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `<loc>` 要素は、`<reference>` 要素と同じセクションのファイルの先頭に記述する必要があります。 `<loc>` 要素の使い方の規則は `<reference>` 要素と同じです。 詳細については、「参照ディレクティブ」セクションを参照してください。 [JavaScript IntelliSense](../ide/javascript-intellisense.md)します。  
   
  Visual Studio は、.js ファイルごとに 1 つの `<loc>` 要素を処理します。 複数の `<loc>` 要素が存在する場合は、1 つの `<loc>` 要素だけが使用されます。 どの `<loc>` 要素を使用するかを決めるための動作は定義されていません。  
@@ -108,8 +103,5 @@ function illuminate(a)
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [XML ドキュメント コメント](../ide/xml-documentation-comments-javascript.md)
-
-
-

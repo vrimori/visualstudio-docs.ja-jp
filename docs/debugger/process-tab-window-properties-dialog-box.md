@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: bb464429-4e7c-4919-98b5-1aaafe89bb5f
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 557f471a841aa549ecb67fbe99a40b69465fb4b3
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: afa1d17b31a75945392dd5bc49f5a1979e265180
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968022"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54924861"
 ---
 # <a name="process-tab-window-properties-dialog-box"></a>[プロセス] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 使用して、**プロセス**タブを選択したウィンドウのプロセスを識別します。 表示する、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

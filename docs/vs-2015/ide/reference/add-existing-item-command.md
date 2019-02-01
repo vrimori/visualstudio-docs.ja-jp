@@ -1,14 +1,9 @@
 ---
 title: 既存項目の追加コマンド | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - project.addexistingitem
 helpviewer_keywords:
@@ -18,13 +13,13 @@ ms.assetid: 41f56131-d4c7-4f81-83b7-bdac713ea870
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c27c548ae4eff4f2087050060f5bcf51d8e86755
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 7686c4db4984188a4f8c4a52343f1386e9edd909
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49197133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54797838"
 ---
 # <a name="add-existing-item-command"></a>AddExistingSolutionItem コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -40,7 +35,7 @@ File.AddExistingItem filename [/e:editorname]
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 必須。 現在のソリューションに追加する項目の完全なパスとファイル名 (拡張子付き)。 ファイル パスまたはファイル名にスペースが含まれている場合は、パス全体を引用符で囲みます。  
+ 必須です。 現在のソリューションに追加する項目の完全なパスとファイル名 (拡張子付き)。 ファイル パスまたはファイル名にスペースが含まれている場合は、パス全体を引用符で囲みます。  
   
 ## <a name="switches"></a>スイッチ  
  /e: `editorname`  
@@ -52,7 +47,7 @@ File.AddExistingItem filename [/e:editorname]
 /e:"Source Code (text) Editor"  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  オート コンプリートでは、入力された正しいパスとファイル名の検索を試みます。  
   
 ## <a name="example"></a>例  
@@ -62,11 +57,8 @@ File.AddExistingItem filename [/e:editorname]
 >File.AddExistingItem "C:\public\solution files\Form1.frm"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
-
-
-

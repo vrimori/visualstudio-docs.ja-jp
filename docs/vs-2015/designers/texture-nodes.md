@@ -1,25 +1,20 @@
 ---
 title: テクスチャ ノード | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: b7df5ef3-dd4f-4964-9d96-34e0e180515e
 caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: bda107323b24940ed8cab18a61f9e491f8392f53
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: e43329cb15eaf41ccb8859521bd45eff6f749c10
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49252357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54779841"
 ---
 # <a name="texture-nodes"></a>テクスチャ ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,6 +34,3 @@ ms.locfileid: "49252357"
 |**テクスチャの大きさ**|2D テクスチャ マップの幅と高さを出力します。<br /><br /> テクスチャの大きさを使用して、シェーダー内のテクスチャの幅と高さを検討することができます。<br /><br /> **出力:**<br /><br /> `Output`: `float2`<br /> ベクターとして表される、テクスチャの幅と高さ。 幅は、ベクターの最初の要素に格納されます。 高さは、2 番目の要素に格納されます。|**テクスチャ**<br /> テクスチャの大きさに関連付けられているテクスチャ レジスタ。|  
 |**テクセル デルタ**|2D テクスチャ マップのテクセル間のデルタ (間隔) を出力します。<br /><br /> テクセル デルタを使用して、シェーダー内の隣接するテクセル値をサンプリングすることができます。<br /><br /> **出力:**<br /><br /> `Output`: `float2`<br /> 正規化されたテクスチャ空間でのベクターとして表した、あるテクセルから次のテクセルまで (正の方向に斜めに移動) のデルタ (間隔)。 デルタの U 座標または V 座標を選択的に無視または否定することで、隣接するすべてのテクセルの位置を導出できます。|**テクスチャ**<br /> テクセル デルタに関連付けられているテクスチャ レジスタ。|  
 |**テクスチャ サンプル**|指定した座標で、2D テクスチャ マップから色のサンプルを取得します。<br /><br /> テクスチャ マップでは、オブジェクトの表面に適用される色の詳細を指定できます。<br /><br /> **入力:**<br /><br /> `UV`: `float2`<br /> サンプルを取得する位置の座標。<br /><br /> **出力:**<br /><br /> `Output`: `float4`<br /> 色のサンプル。|**テクスチャ**<br /> サンプラーに関連付けられているテクスチャ レジスタ。|
-
-
-

@@ -1,27 +1,22 @@
 ---
 title: Android Native Activity アプリの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: tgt-pltfrm-cross-plat
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
 caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: f6bc8d96c6207889f07ec6bf1257be3d620855fc
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 045955ff33cc4c4e745e0c844f1b2cca80e62955
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51731425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54773872"
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity アプリの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,4 +84,3 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
 5.  Shift キーを押しながら F5 キーを押してデバッグを停止します。  
   
      エミュレーターは実行され続ける独立したプロセスです。 同じエミュレーターに対して、コードを何度も編集、コンパイル、配置できます。
-

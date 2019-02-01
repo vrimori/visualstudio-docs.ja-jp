@@ -1,14 +1,9 @@
 ---
 title: -Setup (devenv.exe) | Microsoft ドキュメント
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - setup Devenv switch
 - /setup Devenv switch
@@ -17,13 +12,13 @@ ms.assetid: 87608b7f-a156-400c-80f5-fc823f843e61
 caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f57de02f0d46a14574ef3f34d47f2f5e4018096b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 0df3b74b6c5acc4b8630dcf5759dd3fd6e7a1afe
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49230622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805366"
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -37,10 +32,10 @@ ms.locfileid: "49230622"
 devenv /setup  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このスイッチは引数を取りません。 `devenv /setup` コマンドは、一般的にインストール処理の最後の手順として提示されます。 `/setup` スイッチを使用しても、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]は起動しません。  
   
- `devenv` スイッチおよび [devenv](../../ide/reference/setup-devenv-exe.md) スイッチを使用するには、管理者として [devenv](../../ide/reference/installvstemplates-devenv-exe.md) を実行する必要があります。  
+  `devenv` スイッチおよび [devenv](../../ide/reference/setup-devenv-exe.md) スイッチを使用するには、管理者として [devenv](../../ide/reference/installvstemplates-devenv-exe.md) を実行する必要があります。  
   
 ## <a name="example"></a>例  
  この例は、VSPackages が含まれるバージョンの [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインストールの最後の手順を示しています。  
@@ -49,8 +44,5 @@ devenv /setup
 devenv /setup  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
-
-
-
