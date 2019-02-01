@@ -1,27 +1,22 @@
 ---
 title: iOS を使用してビルドするためのツールのインストールおよび構成 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: tgt-pltfrm-cross-plat
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
 caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: 6a5d5543ace2087db4ed5349e72fcaf53228d8ec
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c1eaa934c83676ee11854701f372b972f3045e66
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51787810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54792864"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Install and Configure Tools to Build using iOS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +25,7 @@ ms.locfileid: "51787810"
 Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドと実行は、リモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェント [vcremote](http://go.microsoft.com/fwlink/p/?LinkId=534988)をセットアップして構成する必要があります。 このリモート エージェントが、Visual Studio からのビルド要求を処理し、Mac に接続された iOS デバイスまたは Mac 上の iOS シミュレーターでアプリを実行します。  
   
 > [!NOTE]
->  Mac ではなくクラウド ホスト型 Mac サービスを使用する場合の詳細については、「 [Build and Simulate iOS in the Cloud](https://taco.visualstudio.com/en-us/docs/build_ios_cloud/)」を参照してください。 ここでは、Visual Studio Tools for Apache Cordova を使用してビルドする場合の手順を説明します。 Visual C++ for Cross-Platform Mobile Development を使用してビルドする場合は、vcremote を vs-mda-remote に置き換えて手順に従ってください。  
+>  Mac ではなくクラウド ホスト型 Mac サービスを使用する場合の詳細については、「 [Build and Simulate iOS in the Cloud](https://taco.visualstudio.com/docs/build_ios_cloud/)」を参照してください。 ここでは、Visual Studio Tools for Apache Cordova を使用してビルドする場合の手順を説明します。 Visual C++ for Cross-Platform Mobile Development を使用してビルドする場合は、vcremote を vs-mda-remote に置き換えて手順に従ってください。  
   
  iOS を使用してビルドするためのツールをインストールしたら、このトピックを参照して、Visual Studio と Mac で iOS 開発を行うためにリモート エージェントを素早く構成して更新する方法を確認してください。  
   
@@ -53,7 +48,7 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 -   OS X Mavericks 以降を実行する Mac コンピューター  
   
--   [Apple ID](https://appleid.apple.com/)  
+-    [Apple ID](https://appleid.apple.com/)  
   
 -   Apple のアクティブな [iOS Developer Program](https://developer.apple.com/programs/ios/) アカウント  
   
@@ -245,6 +240,5 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
      ここで *config_file_path* は JSON 形式の構成ファイルのパスです。 スタートアップ オプションとその値にダッシュを含めることはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Install Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
-

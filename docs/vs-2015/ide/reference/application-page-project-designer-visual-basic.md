@@ -1,14 +1,9 @@
 ---
 title: '[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic) | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesApplicationWPF
 - vb.ProjectPropertiesApplication
@@ -19,13 +14,13 @@ ms.assetid: 8cec9fea-cd92-47ff-88dd-7c928f0b4a74
 caps.latest.revision: 68
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 9d2b23b5570a6372b727906a63ffb51513019df7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 21f94323fbfa7369e3fef93b0f95a8db2ea46ce2
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49175488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54774861"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -65,7 +60,7 @@ ms.locfileid: "49175488"
 > [!NOTE]
 >  [[必須コンポーネント] ダイアログ ボックス](../../ide/reference/prerequisites-dialog-box.md)にリストされている必須コンポーネントのパッケージは、ダイアログ ボックスを初めて開いたときに自動的に設定されます。 その後、プロジェクトのターゲット フレームワークを変更した場合は、新しいターゲット フレームワークに合わせて必須コンポーネントを手動で指定する必要があります。  
   
- 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../../ide/how-to-target-a-version-of-the-dotnet-framework.md)」と「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」を参照してください。  
+ 詳細については、「[方法 : .NET Framework のバージョンをターゲットにする](../../ide/how-to-target-a-version-of-the-dotnet-framework.md)」と「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」を参照してください。  
   
  **アプリケーションの種類**  
  ビルドするアプリケーションの種類を指定します。 [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリの場合は、**[Windows ストア アプリ]**、**[クラス ライブラリ]**、または **[WinMD ファイル]** を指定できます。 他のほとんどのアプリケーションの種類では、**[Windows アプリケーション]**、**[コンソール アプリケーション]**、**[クラス ライブラリ]**、**[Windows サービス]**、または **[Web コントロール ライブラリ]** を指定できます。  
@@ -87,7 +82,7 @@ ms.locfileid: "49175488"
   
  **[アプリケーション フレームワークを有効にする]** が選択されている場合 (既定)、この一覧のタイトルは **[スタートアップ フォーム]** となり、フォームのみが表示されます。これは、アプリケーション フレームワークでは、オブジェクトではなく、スタートアップ フォームのみがサポートされるためです。  
   
- プロジェクトが WPF ブラウザー アプリケーションの場合、この一覧のタイトルは **[スタートアップ URI]** となり、既定値は **Page1.xaml** となります。 **[スタートアップ URI]** 一覧では、アプリケーションの起動時に表示されるユーザー インターフェイス リソース (XAML 要素) を指定できます。 詳細については、「 <xref:System.Windows.Application.StartupUri%2A> 」を参照してください。  
+ プロジェクトが WPF ブラウザー アプリケーションの場合、この一覧のタイトルは **[スタートアップ URI]** となり、既定値は **Page1.xaml** となります。 **[スタートアップ URI]** 一覧では、アプリケーションの起動時に表示されるユーザー インターフェイス リソース (XAML 要素) を指定できます。 詳細については、「<xref:System.Windows.Application.StartupUri%2A>」を参照してください。  
   
  **[アプリケーション フレームワークを有効にする]** の選択を解除すると、この一覧は **[スタートアップ オブジェクト]** になり、フォームと、`Sub Main` を含むクラスまたはモジュールの両方が表示されます。  
   
@@ -116,7 +111,7 @@ ms.locfileid: "49175488"
  次の設定は、**[Windows アプリケーション フレームワーク プロパティ]** セクションで使用できます。 これらのオプションは、**[アプリケーション フレームワークを有効にする]** チェック ボックスがオンになっている場合にのみ使用できます。 この後に続くセクションでは、Windows Presentation Foundation (WPF) アプリケーションの **Windows アプリケーション フレームワーク プロパティ**の設定について説明します。  
   
  **XP Visual スタイルを有効にする**  
- Windows XP Visual スタイル (*Windows XP テーマ*ともいう) を有効または無効にします。 Windows XP Visual スタイルを有効にすると、角が丸いコントロールや色が動的に切り替わるコントロールなどを使用できます。 既定ではオンです。 Windows XP Visual スタイルの詳細については、「[Windows XP の機能と Windows フォーム コントロール](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)」を参照してください。  
+ Windows XP Visual スタイル (*Windows XP テーマ*ともいう) を有効または無効にします。 Windows XP Visual スタイルを有効にすると、角が丸いコントロールや色が動的に切り替わるコントロールなどを使用できます。 既定ではオンです。 Windows XP Visual スタイルの詳細については、「[Windows XP の機能と Windows フォーム コントロール](http://msdn.microsoft.com/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)」を参照してください。  
   
  **単一インスタンスのアプリケーションを作成する**  
  このチェック ボックスをオンにすると、ユーザーはアプリケーションの複数のインスタンスを実行できなくなります。 既定では、このチェック ボックスはオフになっています。 この設定により、アプリケーションの複数のインスタンスを実行できるようになります。  
@@ -164,8 +159,5 @@ ms.locfileid: "49175488"
   
  特定のアプリケーション状態が変化すると (アプリケーション スタートアップやシャットダウンなどで)、<xref:System.Windows.Application> オブジェクトでイベントが発生します。 このクラスで公開されるイベントの完全な一覧については、「<xref:System.Windows.Application>」を参照してください。 これらのイベントは、`Application` 部分クラスのユーザー コード セクションで処理されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
 [アプリケーション プロパティの管理](../../ide/application-properties.md) [Office ソリューションのコードの記述](http://msdn.microsoft.com/library/2d4d8fd0-e881-4829-976f-0d1a9221dec0)
-
-
-

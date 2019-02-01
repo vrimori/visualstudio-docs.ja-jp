@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b8eca0d-122f-4eda-848a-cf0945f207d0
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdbcefe1e0878ef6bf2520edb90ce904e414f211
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 88deb9957766b4e4e0802a1eded352a6ccb04f98
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54269762"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231572"
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>リモート Visual Studio での Visual C プロジェクトのデバッグ
 別のコンピューター上の Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続して、デプロイして、アプリを実行するプロジェクトを構成します。
@@ -96,9 +96,11 @@ ms.locfileid: "54269762"
 11. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
   
     > [!TIP]
-    >  また、これらのファイルは別の手順でも配置できます。 **ソリューション エクスプローラー**で、**[mymfc]** ノードを右クリックして **[配置]** を選択します。  
+    > また、これらのファイルは別の手順でも配置できます。 **ソリューション エクスプローラー**で、**[mymfc]** ノードを右クリックして **[配置]** を選択します。
   
-    アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加のファイル用のプロジェクト フォルダーを作成します (**ソリューション エクスプローラー**で、**[追加] > [新しいフォルダー]** をクリックします)。次にファイルをそのフォルダーに追加します (**ソリューション エクスプローラー**で、**[追加] > [既存の項目]** の順にクリックしてからファイルを選択します)。 ファイルごとの **[プロパティ]** ページで、**[出力ディレクトリにコピー]** を **[常にコピーする]** に設定します。
+    場合は、アプリケーションで必要な非コード ファイルがある場合は、それらを指定できます**配置する追加ファイル**上、**リモート Windows デバッガー**ページ。
+
+    また、ファイルをプロジェクトに含めるし、設定、**コンテンツ**プロパティを**はい**で、**プロパティ**各ファイルのページ。 これらのファイルをコピー、**配置ディレクトリ**で指定された、**リモート Windows デバッガー**ページ。 変更することも、**項目の種類**に**ファイルのコピー**のサブフォルダーにコピーするファイルが必要な場合は、追加のプロパティがありますを指定し、**配置ディレクトリ**します。
   
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ 
 

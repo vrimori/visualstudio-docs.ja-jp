@@ -1,27 +1,22 @@
 ---
-title: 'チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成 | Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: Visual c# または Visual Basic での単純なアプリケーションの作成 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
+ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
 caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 51fc073046833165097a8a9a4fb2f169ed3a04e7
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 6c45b62e2fb1d6e104621a7fdc285ca208364a22
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49851687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54802617"
 ---
-# <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成
+# <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>チュートリアル: Visual c# または Visual Basic による簡単なアプリケーションを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションを開発する際に使用できるさまざまなツール、ダイアログ ボックス、およびデザイナーの使用方法を習得できます。 簡単な "Hello, World" スタイルのアプリケーションの作成、UI の設計、コードの追加、およびエラーのデバッグを行いながら、統合開発環境 (IDE) での作業方法について学習します。  
@@ -35,14 +30,14 @@ ms.locfileid: "49851687"
  [アプリケーションのデバッグとテスト](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)  
   
 > [!NOTE]
->  このチュートリアルでは、Visual Studio Professional の WPF アプリケーション テンプレートに基づいて、チュートリアル用のプロジェクトを作成します。 このテンプレートは Visual Studio Express for Windows Desktop には用意されていますが、Visual Studio Express for Windows と Visual Studio Express for Web には用意されていません。 Visual Studio Express for Windows の使用方法の概要については、デベロッパー センターの「 [Windows ストア アプリの開発](http://msdn.microsoft.com/windows/apps/br229519)」を参照してください。 Visual Studio Express for Web の使用方法の概要については、「 [Get Started with ASP.NET](http://www.asp.net/get-started)」 (ASP.NET の概要) を参照してください。 さらに、使用する Visual Studio のエディションと設定によって、ユーザー インターフェイスの一部の要素の名前や場所は異なります。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
+>  このチュートリアルでは、Visual Studio Professional の WPF アプリケーション テンプレートに基づいて、チュートリアル用のプロジェクトを作成します。 このテンプレートは Visual Studio Express for Windows Desktop には用意されていますが、Visual Studio Express for Windows と Visual Studio Express for Web には用意されていません。 Visual Studio Express for Windows の使用方法の概要については、デベロッパー センターの「 [Windows ストア アプリの開発](http://msdn.microsoft.com/windows/apps/br229519)」を参照してください。 Visual Studio Express for Web の使用方法の概要については、「 [Get Started with ASP.NET](http://www.asp.net/get-started)」 (ASP.NET の概要) を参照してください。 さらに、使用する Visual Studio のエディションと設定によって、ユーザー インターフェイスの一部の要素の名前や場所は異なります。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE の構成  
  Visual Studio を初めて起動すると、Visual Studio から、Microsoft サービス アカウント (MSA) でサインイン ( [Visual Studio にサインイン](http://blogs.msdn.com/b/visualstudio/archive/2013/06/28/welcome-sign-in-to-visual-studio.aspx)) するように求められます。 サインインは必須ではなく、後で実行することもできます。  
   
  Visual Studio が起動すると、次に IDE に定義済みの一連のカスタマイズを適用する設定の組み合わせを選択する必要があります。 各設定の組み合わせは、アプリケーションを簡単に開発できるように設計されています。  
   
- このチュートリアルは、 **[全般的な開発設定]** を適用したと想定しています。この場合、最小限のカスタマイズが IDE に適用されます。 すでに C# か Visual Basic を選択済みの場合は (両方とも適切な選択です)、設定を変更する必要はありません。  設定を変更する場合は、 **設定のインポートとエクスポート ウィザード**を使用できます。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
+ このチュートリアルは、 **[全般的な開発設定]** を適用したと想定しています。この場合、最小限のカスタマイズが IDE に適用されます。 すでに C# か Visual Basic を選択済みの場合は (両方とも適切な選択です)、設定を変更する必要はありません。  設定を変更する場合は、 **設定のインポートとエクスポート ウィザード**を使用できます。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
   
  Visual Studio を開くと、ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域を確認できます。 ツール ウィンドウは、アプリケーション ウィンドウの左側および右側にドッキングされており、上部には **クイック起動**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **スタート ページ**が表示されます。 ソリューションかプロジェクトが読み込まれると、 **[スタート ページ]** がある領域にエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
   
@@ -52,7 +47,7 @@ ms.locfileid: "49851687"
   
  **[オプション]** ダイアログ ボックスを使用すると、Visual Studio をさらにカスタマイズできます。たとえば、エディターのテキストのフォント フェイスとサイズや IDE の配色テーマを変更できます。 適用した設定の組み合わせによっては、そのダイアログ ボックスに自動的に表示されない項目があります。 **[すべての設定を表示]** チェック ボックスをオンにすると、使用可能なすべてのオプションを表示できます。  
   
- 図 3: [オプション] ダイアログ ボックス  
+ 図 3:[オプション] ダイアログ ボックス  
   
  ![[すべての設定を表示] オプションをオンにした [オプション] ダイアログ ボックス](../ide/media/exploreide-optionsdialogbox.png "ExploreIDE-Optionsdialogbox")  
   
@@ -72,7 +67,7 @@ ms.locfileid: "49851687"
   
    ![ダーク テーマを適用した IDE](../ide/media/exploreide-darkthemeide.png "ExploreIDE-DarkThemeIDE")  
   
-   このチュートリアルの残りの画像で使用する配色テーマは淡色テーマです。 IDE のカスタマイズの詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+   このチュートリアルの残りの画像で使用する配色テーマは淡色テーマです。 IDE のカスタマイズの詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ##  <a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
   
@@ -97,9 +92,9 @@ ms.locfileid: "49851687"
   
     ![Visual C&#35; WPF プロジェクトの作成、HelloWPFApp](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
-   Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、 **ソリューション エクスプローラー** は各種ファイルを表示します。 WPF デザイナーは、MainWindow.xaml のデザイン ビューと XAML ビューを分割ビューに表示します。 分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「 [Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください)。 次の項目が **ソリューション エクスプローラー**に表示されます。  
+   Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、 **ソリューション エクスプローラー** は各種ファイルを表示します。 WPF デザイナーは、MainWindow.xaml のデザイン ビューと XAML ビューを分割ビューに表示します。 分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「 [Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください)。 次の項目が **ソリューション エクスプローラー**に表示されます。  
   
-   図 5: プロジェクト項目  
+   図 5:プロジェクト項目  
   
    ![HelloWPFApp ファイルを読み込んだソリューション エクスプローラー](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
@@ -137,7 +132,7 @@ ms.locfileid: "49851687"
   
    ウィンドウは次の図のようになります。  
   
-   図 7: TextBlock コントロールが配置されている Greetings ウィンドウ  
+   図7TextBlock コントロール greetings ウィンドウ  
   
    ![グリーティング フォームの TextBlock コントロール](../ide/media/exploreide-greetingswithtextblockonly.png "ExploreIDE-GreetingswithTextblockonly")  
   
@@ -167,7 +162,7 @@ ms.locfileid: "49851687"
   
     ウィンドウは、次のようになります。  
   
-    図 8: Greetings ウィンドウの RadioButton  
+    図 8-20。Greetings ウィンドウの Radiobutton です。  
   
     ![テキストブロックと 2 つのオプション ボタンのあるグリーティング フォーム](../ide/media/exploreide-greetingswithradiobuttons.png "ExploreIDE-Greetingswithradiobuttons")  
   
@@ -264,7 +259,7 @@ ms.locfileid: "49851687"
   
     ![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
-    ダイアログ ボックスが表示され、IOException が発生し、リソース 'mainwindow.xaml' を見つけることができないことが示されます。  
+    IOException が発生したことを示すダイアログ ボックスが表示されます。リソース 'mainwindow.xaml' が見つけられないことが示されます。  
   
 2. **[OK]** を選択し、デバッガーを停止します。  
   
@@ -336,10 +331,7 @@ ms.locfileid: "49851687"
   
    このチュートリアルは完了しました。 ビルドした .exe は、ソリューションとプロジェクトのディレクトリ (…\HelloWPFApp\HelloWPFApp\bin\Release\\) の下にあります。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio 2015 の新機能](../what-s-new-in-visual-studio-2015.md)   
  [Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)   
  [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)
-
-
-

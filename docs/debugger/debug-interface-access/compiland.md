@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c798eb2b-664a-41ec-ae90-5e9d292507ca
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4dc9e8ef259c67abe0b972584153c7eba8e80b4
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b3f30d9724346686a980fc139ff48474557145a5
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53956661"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55042974"
 ---
 # <a name="compiland"></a>コンパイル単位
 1 つである`SymTagCompiland`の .exe ファイルにリンクされた各コンパイル単位シンボルします。 コンパイル単位の情報を使用したシンボルに分割されて、`SymTagCompiland`タグで、追加のコンパイル単位シンボルを読み込むことがなく取得できます、および記号を`SymTagCompilandDetails`タグで、追加のシンボルを読み込む必要があります。  

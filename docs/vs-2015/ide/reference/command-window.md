@@ -1,14 +1,9 @@
 ---
 title: コマンド ウィンドウ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.CommandWindow
 helpviewer_keywords:
@@ -21,13 +16,13 @@ ms.assetid: 48711628-1909-4713-a73e-d7b714c77f8a
 caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: b83a9e86aea02e27242a0c1f02ca3f8459152214
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c7ec3911496c5106d53f90a281452df2c8a128f6
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49870186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54788348"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -119,7 +114,7 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
   複数の短い形式のスイッチがグループ化され、値が指定された場合、その値はすべてのスイッチに適用されます。 たとえば、`/pgm:123` は `/p:123 /g:123 /m:123` と同等です。 グループ内のいずれかのスイッチが値を受け付けない場合は、エラーになります。  
   
 ## <a name="escape-characters"></a>エスケープ文字  
- コマンド ラインにカレット (^) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 例えば以下のようにします。  
+ コマンド ラインにカレット (^) 文字があると、その直後の文字は制御文字としてではなくリテラル文字として解釈されます。 したがって、引用符 (")、スペース、先頭のスラッシュ、カレット、その他の任意のリテラル文字をパラメーターまたはスイッチの値に直接埋め込むことができます。ただし、スイッチ名には埋め込むことができません。 たとえば、オブジェクトに適用された  
   
 ```  
 >Edit.Find ^^t /regex  
@@ -130,9 +125,6 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 ## <a name="use-quotes-for-path-names-with-spaces"></a>スペースを含むパス名には引用符を使用する  
  たとえば、スペースを含むパスを持つファイルを開く場合は、スペースを含むパスまたはパス セグメントを二重引用符で囲む必要があります (**C:\\"Program Files"** または **"C:\Program Files"**)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)   
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
-
-
-

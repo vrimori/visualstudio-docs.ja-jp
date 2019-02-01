@@ -1,13 +1,9 @@
 ---
 title: 移植、移行、およびプロジェクトのアップグレード |Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Win8ExpressDesktopBlock
 - w8trefactor
@@ -22,13 +18,13 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 caps.latest.revision: 108
 author: kraigb
 ms.author: kraigb
-manager: ghogen
-ms.openlocfilehash: 6c73910b3866546ae0b8c169bfab489dfc3d55f8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+manager: jillfra
+ms.openlocfilehash: 3b76154db0d85cba745ffe1c694b18a1fb9dde26
+ms.sourcegitcommit: c496a77add807ba4a29ee6a424b44a5de89025ea
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53966600"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54805554"
 ---
 # <a name="porting-migrating-and-upgrading-visual-studio-projects"></a>Porting, Migrating, and Upgrading Visual Studio Projects
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -86,7 +82,7 @@ Visual Studio の新しいバージョンに移行するかどうかを考慮す
 |その他|その他のほとんどのプロジェクトの種類は、 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]、および Visual Studio 2010 SP1 で開くことができます。|
 |FrontPage Web サイト|[!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] では、プロジェクトの種類がサポートされていないため、このプロジェクトを開くことができません。|
 |ポータブル クラス ライブラリ|Visual Studio でプロジェクトを自動的に更新することを許可した場合は、 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]、 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]、または Visual Studio 2010 SP1 で開くことができます。<br /><br /> -   Silverlight 4 を対象としていたプロジェクトは、Silverlight 5 を対象とするようになります。<br />-   Windows Phone 7.0 または Windows Phone 7.5 を対象としていたプロジェクトは、Windows Phone 8 を対象とするようになります。<br />-   Xbox 360 を対象としていたプロジェクトは、もう Xbox 360 を対象にしなくなります。|
-|クラウド サービス プロジェクト (.ccproj 拡張子) などの Azure プロジェクト、および .deployproj 拡張子の Azure Resource Manager プロジェクト (クラウド配置プロジェクト)|これらの種類のプロジェクトを開くには、最初に [Azure SDK for .NET](http://azure.microsoft.com/en-us/downloads/)をインストールした後、プロジェクトを開きます。|
+|クラウド サービス プロジェクト (.ccproj 拡張子) などの Azure プロジェクト、および .deployproj 拡張子の Azure Resource Manager プロジェクト (クラウド配置プロジェクト)|これらの種類のプロジェクトを開くには、最初に [Azure SDK for .NET](http://azure.microsoft.com/downloads/)をインストールした後、プロジェクトを開きます。|
 
 ## <a name="troubleshooting-project-compatibility-issues"></a>プロジェクトの互換性の問題のトラブルシューティング
  ここでは、プロジェクトが [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] または [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]で開かない場合に実行できるいくつかの対処方法を示します。

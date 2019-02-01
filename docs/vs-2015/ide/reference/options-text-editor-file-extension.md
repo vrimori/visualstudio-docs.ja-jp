@@ -1,14 +1,9 @@
 ---
 title: '[オプション]、[テキスト エディター]、[ファイル拡張子] | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.toolsoptionspages.text_editor.file_extension
 helpviewer_keywords:
@@ -20,13 +15,13 @@ ms.assetid: 05298fc5-fc4e-4bb2-b942-1f7d2dcdff0f
 caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 953417bf6d3c89df452878a3070937f29112c67c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 2b81d4f2341f9ddca3468bd77f0f79940dba3d29
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54755007"
 ---
 # <a name="options-text-editor-file-extension"></a>[オプション]、[テキスト エディター]、[ファイル拡張子]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -37,7 +32,7 @@ ms.locfileid: "49204127"
  "エンコードあり" オプションを選択すると、その種類の文書を開くときにダイアログが表示され、その文書のエンコード スキームを選択できます。 これは、さまざまなプラットフォームで、あるいはさまざまなターゲット言語で使用できるようにプロジェクト文書の各種バージョンを用意している場合に便利です。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
  **拡張機能**  
@@ -61,8 +56,5 @@ ms.locfileid: "49204127"
  **[拡張子のないファイルのオプション]**  
  **[エディター]** と同じ一覧を提供します。 ファイル拡張子のない文書を開く IDE のエディターまたはデザイナーを選択します。  
   
-## <a name="see-also"></a>関連項目  
- [方法 : エディター モードを管理する](../../ide/how-to-manage-editor-modes.md)
-
-
-
+## <a name="see-also"></a>「  
+ [方法: エディター モードを管理する](../../ide/how-to-manage-editor-modes.md)

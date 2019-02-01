@@ -1,14 +1,9 @@
 ---
 title: Devenv コマンド ライン スイッチ | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - switches, Devenv
 - builds [Team System], command-line
@@ -25,13 +20,13 @@ ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 7ee1596cf59fb4ba9b21772cdabc0c875ef8779a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: c3e6a888a5f904c194bcdb6f5c844dbed3084449
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54754972"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -107,8 +102,5 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 |[/Updateconfiguration (devenv.exe)](../../ide/reference/updateconfiguration-devenv-exe.md)|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] にシステム上の [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] パッケージをマージさせ、MEF キャッシュに変更がないかを確認することを通知します。|  
 |[/Upgrade (devenv.exe)](../../ide/reference/upgrade-devenv-exe.md)|指定されたソリューション ファイルとそのすべてのプロジェクト ファイル、または指定されたプロジェクト ファイルを、そのファイルに対応する現在の [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の形式にアップグレードします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-

@@ -1,27 +1,22 @@
 ---
 title: プロファイリング ツール | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.diagnosticshub.overview
 ms.assetid: 0fb6cd5d-e16a-4526-84a5-19e63c625bc5
 caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
-manager: ghogen
-ms.openlocfilehash: 380e98a8cd52fe77486dae245eee910a65a41057
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 93ef837da86056acc720abff9ad33cbf457a108f
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51782103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54780845"
 ---
 # <a name="profiling-tools"></a>プロファイリング ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,7 +79,7 @@ ms.locfileid: "51782103"
  [IntelliTrace](../debugger/intellitrace.md) では、特定のイベントを記録したり、デバッガー イベントや関数呼び出しの間に **[ローカル]** ウィンドウでデータを調べたり、再現が難しいエラーをデバッグしたりできます。  IntelliTrace は主にデバッグ ツールですが、パフォーマンス調査に利用できる情報も提供します。 このツールはデスクトップ、Windows ユニバーサル、ASP.NET C# アプリで使用できますが、Visual Studio Enterprise 専用です。 IntelliTrace にはデバッグ中に **[診断ツール]** ウィンドウからアクセスできます (**[デバッグ]、[Windows]、[診断ツールの表示]**)。  
   
 ## <a name="profiling-in-production"></a>実稼働のプロファイリング  
- 実稼働プロファイリングの推奨方法は、 [vsperf.exe を利用し、コマンド ライン](../profiling/using-the-profiling-tools-from-the-command-line.md) からプロファイリングし、CPU プロファイルを集めることです。 Azure App Service のリモート プロファイリング サポートの場合、 [サーバー エクスプローラーまたは Kudu ポータル](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)からプロファイルできます。  
+ 実稼働プロファイリングの推奨方法は、 [vsperf.exe を利用し、コマンド ライン](../profiling/using-the-profiling-tools-from-the-command-line.md) からプロファイリングし、CPU プロファイルを集めることです。 Azure App Service のリモート プロファイリング サポートの場合、 [サーバー エクスプローラーまたは Kudu ポータル](https://azure.microsoft.com/blog/remote-profiling-support-in-azure-app-service/)からプロファイルできます。  
   
 ## <a name="which-tool-should-i-use"></a>使用するツール  
  次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。  
@@ -101,8 +96,5 @@ ms.locfileid: "51782103"
 |[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
 |[JavaScript メモリ](../profiling/javascript-memory.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [Visual Studio IDE](../ide/visual-studio-ide.md)
-
-
-

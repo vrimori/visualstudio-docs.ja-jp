@@ -1,14 +1,9 @@
 ---
 title: タスク一覧の使用 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - TaskListWindow
 - VS.TaskList
@@ -20,13 +15,13 @@ ms.assetid: f46a75a8-47b3-4cb6-bb59-b72e3356a664
 caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: d5662aebeb0e7b8da36c52c0c9fd727c860a4221
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: f912b17e235e92496fa8ffc573429b7708d9198d
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49172030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54801171"
 ---
 # <a name="using-the-task-list"></a>タスク一覧の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +47,7 @@ ms.locfileid: "49172030"
   
 #### <a name="to-open-the-task-list"></a>[タスク一覧] を開くには  
   
--   **[表示]** メニューで、**[タスク一覧]** をクリックします (キーボード: Ctrl + \\、T)。  
+-   **ビュー** ] メニューの [選択**タスク一覧**(キーボード。Ctrl+\\T)。  
   
      ![[タスク一覧] ウィンドウ](../ide/media/vs2015-task-list.png "vs2015_task_list")  
   
@@ -91,7 +86,7 @@ ms.locfileid: "49172030"
  `TODO` が事前に定義されたトークンであるため、このコメントは `TODO` タスクとして一覧に表示されます。  
   
 ###  <a name="customTokens"></a> カスタム トークン  
- 既定で、Visual Studio には、HACK、TODO、UNDONE、NOTE のトークンが含まれます。 大文字と小文字は区別されません。  
+ 既定では、Visual Studio には次のトークンが含まれます。HACK、TODO、元に戻すに注意してください。 大文字と小文字は区別されません。  
   
  カスタム トークンを独自に作成することもできます。  
   
@@ -127,12 +122,9 @@ ms.locfileid: "49172030"
   
 #### <a name="to-create-a-shortcut"></a>ショートカットを作成するには  
   
--   ショートカットを配置するコードにポインターを挿入します。 **[編集 &#124; ブックマーク &#124; タスク一覧へのショートカットの追加]** を選択するか、キーボードで Ctrl + K、Ctrl + H を押します。  
+-   ショートカットを配置するコードにポインターを挿入します。 選択**編集&#124;ブックマーク&#124;タスク一覧ショートカットの追加**またはキーを押します (キーボード。Ctrl + K、Ctrl + H  
   
      コード内のショートカットをナビゲートしていくには、一覧でショートカットを選択し、ショートカット メニューから **[次のタスク]** か **[前のタスク]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/task-list-environment-options-dialog-box.md)
-
-
-

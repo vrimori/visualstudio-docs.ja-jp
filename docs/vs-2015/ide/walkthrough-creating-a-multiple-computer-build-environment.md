@@ -1,14 +1,9 @@
 ---
-title: 'チュートリアル: 複数のコンピューターを使用するビルド環境の作成 | Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: ビルド環境の複数のコンピューターを作成する |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, building on multiple computers
 - build environment, MSBuild
@@ -16,15 +11,15 @@ ms.assetid: ae5391b1-3eec-42f5-beb3-f28630615a9e
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1422a126f88e72d0eca662aaa5348a6af500b8bb
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4dff468ff42173e61c2f7006802c96a11120bd30
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49820695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54769075"
 ---
-# <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
+# <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターのビルド環境の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 組織内でビルド環境を作成するには、ホスト コンピューターに Visual Studio をインストールし、ビルドに参加できるように各種のファイルおよび設定を別のコンピューターにコピーします。 別コンピューターの方に Visual Studio をインストールする必要はありません。  
@@ -428,9 +423,6 @@ ms.locfileid: "49820695"
   
          ネイティブ 64 ビットのビルドの場合は、64 ビットの MSBuild が指定されるように調整します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](http://msdn.microsoft.com/library/f0400989-cc2e-4dce-9788-6bdbe91c6f5a)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)
-
-
-

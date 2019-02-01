@@ -1,27 +1,22 @@
 ---
 title: ゲームとアプリケーション用の 3D アセットの操作 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics
 ms.assetid: 910d673b-c884-4eeb-9928-0e89f3d38cb6
 caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: bdf19958ec7b3cfe72ee00ea84e0e23724a51458
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 90bf88beafee6f263695b3614cf6385419b33efe
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49265236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54797596"
 ---
 # <a name="working-with-3-d-assets-for-games-and-apps"></a>ゲームとアプリケーション用の 3D アセットの操作
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +24,7 @@ ms.locfileid: "49265236"
 このドキュメントでは、DirectX ベースのゲームおよびアプリケーション向けの 3-D モデル、テクスチャ、シェーダーの作成または変更に使用できる、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のツールについて説明します。  
   
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio における DirectX アプリケーションの開発  
- DirectX アプリケーションは、通常、プログラミング ロジック、DirectX API、および HLSL (High Level Shading Language) プログラムを、オーディオおよび 3-D ビジュアル アセットと組み合わせることによって、リッチで対話型のマルチメディア エクスペリエンスを提供します。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] には、イメージとテクスチャ、3-D モデル、シェーダーなどの操作を行うために使用できるツールが用意されています。そのため、別のツールを使用するために IDE を終了する必要がありません。 Visual Studio のツールは、*プレースホルダー* アセットの作成に特に適しています。プレースホルダーを使用すると、稼動準備のできたアセットをコミッションする前にコードのテストやプロトタイプの構築を行ったり、稼動準備のできたアセットをアプリケーションのデバッグ時に検査および変更したりすることができます。  
+ DirectX アプリケーションは、通常、プログラミング ロジック、DirectX API、および HLSL (High Level Shading Language) プログラムを、オーディオおよび 3-D ビジュアル アセットと組み合わせることによって、リッチで対話型のマルチメディア エクスペリエンスを提供します。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]  には、イメージとテクスチャ、3-D モデル、シェーダーなどの操作を行うために使用できるツールが用意されています。そのため、別のツールを使用するために IDE を終了する必要がありません。 Visual Studio のツールは、*プレースホルダー* アセットの作成に特に適しています。プレースホルダーを使用すると、稼動準備のできたアセットをコミッションする前にコードのテストやプロトタイプの構築を行ったり、稼動準備のできたアセットをアプリケーションのデバッグ時に検査および変更したりすることができます。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で使用できるアセットの種類に関する詳細を以下に示します。  
   
@@ -56,12 +51,9 @@ ms.locfileid: "49265236"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[テクスチャおよびイメージの使用](../designers/working-with-textures-and-images.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を使用してイメージとテクスチャを操作する方法について説明します。|  
 |[3-D モデルの操作](../designers/working-with-3-d-models.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を使用して 3-D モデルを操作する方法について説明します。|  
 |[シェーダーの操作](../designers/working-with-shaders.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のシェーダー デザイナーを使用してカスタム シェーダー効果を作成および変更する方法について説明します。|  
 |[ゲームまたはアプリでの 3-D アセットの使用](../designers/using-3-d-assets-in-your-game-or-app.md)|イメージ エディター、モデル エディター、またはシェーダー デザイナーを使用して作成したアセットをゲームまたはアプリケーションで使用する方法について説明します。|
-
-
-
