@@ -310,6 +310,8 @@ items:
         href: generatetrustinfo-task.md
       - name: GetAssemblyIdentity タスク
         href: getassemblyidentity-task.md
+      - name: GetFileHash タスク
+        href: getfilehash-task.md
       - name: GetFrameworkPath タスク
         href: getframeworkpath-task.md
       - name: GetFrameworkSdkPath タスク
@@ -362,6 +364,8 @@ items:
         href: updatemanifest-task.md
       - name: Vbc タスク
         href: vbc-task.md
+      - name: VerifyFileHash タスク
+        href: verifyfilehash-task.md
       - name: Warning タスク
         href: warning-task.md
       - name: WriteCodeFragment タスク
@@ -429,9 +433,9 @@ items:
       href: updating-an-existing-application.md
   - name: MSBuild 用語集
     href: msbuild-glossary.md
-ms.openlocfilehash: f5b1a327a1f7ebb2d654c74ef04159f0a1f6ba4c
-ms.sourcegitcommit: 935e341a02dba1c2aa3b6e89469388aa6e626f7f
+ms.openlocfilehash: d177a19b3fce1e7ebdd182dd09e9c8bbd05709c5
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53684614"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483745"
