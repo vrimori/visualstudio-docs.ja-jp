@@ -1,14 +1,9 @@
 ---
-title: '方法 : Web テンプレートを手動で作成する | Microsoft Docs'
-ms.custom: ''
+title: '方法: Web テンプレートを手動で作成する |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, Web
 - templates [Visual Studio], Web
@@ -18,15 +13,15 @@ ms.assetid: 731c4027-a152-48c5-bfc4-93490bf1949f
 caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 23d810c6bbb460f01528d5f9fb55bb8ca482e383
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 4884ef313d969ae59b8aea704490eeb2e4e5a91c
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49880755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54782211"
 ---
-# <a name="how-to-manually-create-web-templates"></a>方法 : Web テンプレートを手動で作成する
+# <a name="how-to-manually-create-web-templates"></a>方法: Web テンプレートを手動で作成する」を参照してください。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Web テンプレートの作成方法は、他の種類のテンプレートを作成する場合と異なります。 Web プロジェクト テンプレートは **[新しい Web サイトの追加]** ダイアログ ボックスに表示され、Web プロジェクトの項目はプログラミング言語によって分類されるので、.vstemplate ファイルではテンプレートを Web テンプレートとして指定し、プログラミング言語を示す必要があります。  
@@ -52,7 +47,7 @@ Web テンプレートの作成方法は、他の種類のテンプレートを�
   
    - VisualBasic  
   
-     例えば:  
+     次に例を示します。  
   
    ```  
    <TemplateData>  
@@ -91,9 +86,6 @@ Web テンプレートの作成方法は、他の種類のテンプレートを�
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
-
-
-

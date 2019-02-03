@@ -1,32 +1,27 @@
 ---
 title: ジェネリック メソッドの単体テスト | Microsoft Docs
-ms.custom: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - generics, and unit tests
 - unit tests, and generics
 ms.assetid: ffc89814-a7df-44fc-aef5-dd3dfeb28a9b
 caps.latest.revision: 49
 ms.author: gewarren
-manager: douge
-ms.openlocfilehash: 3657c3ea41af2aa85177ff47a28797ef7f55cc41
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 1b419568490e41b135c2c7c801154f6550c546e9
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49914399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54771466"
 ---
 # <a name="unit-tests-for-generic-methods"></a>ジェネリック メソッドの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ジェネリック メソッドには、他のメソッドと同様に、単体テストを生成できます。詳細については、「[方法: 単体テストを作成して実行する](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)」を参照してください。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。  
+」の説明に従っては、ジェネリック メソッドの単体テストには、他のメソッドとを生成することができます[方法。作成し、単体テストを実行](http://msdn.microsoft.com/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)します。 次のセクションでは、ジェネリック メソッドの単体テストの作成に関する情報と例を示します。  
   
 ## <a name="type-arguments-and-type-constraints"></a>型引数と型制約  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、`MyList<T>` など、ジェネリック クラスの単体テストが生成されると、ジェネリック ヘルパー メソッドとテスト メソッドの 2 つのメソッドが生成されます。 `MyList<T>` に 1 つ以上の型制約がある場合、型引数はすべての型制約を満たす必要があります。 テスト対象のジェネリック コードが許容されたすべての入力に対して予想どおりに動作することを確認するには、テスト メソッドで、テストするすべての制約を指定して、ジェネリック ヘルパー メソッドを呼び出します。  
@@ -38,7 +33,7 @@ ms.locfileid: "49914399"
   
 -   [型制約の使用](#TypeConstraintNotSatisfied)。 この例では、型制約を使用するジェネリック メソッドの単体テストを示します。 この例では、型制約が満たされていません。  
   
-###  <a name="EditingGeneratedTestCode"></a> 例 1: 生成されたテスト コードの編集  
+###  <a name="EditingGeneratedTestCode"></a> 例 1:生成されたテスト コードの編集  
  このセクションのテスト コードでは、`SizeOfLinkedList()` という名前のテスト対象コードのメソッドをテストします。 このメソッドは、リンク リスト内のノード数を示す整数を返します。  
   
  「生成後のテスト コード」にある最初のコード例では、Visual Studio Enterprise で生成された編集前のテスト コードを示しています。 「編集後のテスト コード」にある 2 番目のコード例では、2 つのデータ型 `int` と `char` に対して SizeOfLinkedList メソッドの機能をテストする方法を示しています。  
@@ -116,15 +111,15 @@ public void SizeOfLinkedListTestHelper<T>()
 [TestMethod()]  
 public void SizeOfLinkedListTest()   
 {  
-    SizeOfLinkedListTestHelper<int>();  // step 6  
+    SizeOfLinkedListTestHelper<int>();  // step 6  
     SizeOfLinkedListTestHelper<char>(); // step 7  
 }  
 ```  
   
 > [!NOTE]
->  SizeOfLinkedListTest テストを実行するたびに、TestHelper メソッドは 2 回呼び出されます。 テストを成功させるには、アサート ステートメントが毎回 true と評価される必要があります。 テストが失敗した場合、`<int>` を指定した呼び出しと `<char>` を指定した呼び出しのどちらが原因でテストが失敗したかはっきりしないことがあります。 これをはっきりさせるには、コール スタックを調べるか、テスト メソッドにブレークポイントを設定してテスト実行時にデバッグします。 詳細については、「[方法 : ASP.NET ソリューションでのテスト中にデバッグする](http://msdn.microsoft.com/library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b)」を参照してください。  
+>  SizeOfLinkedListTest テストを実行するたびに、TestHelper メソッドは 2 回呼び出されます。 テストを成功させるには、アサート ステートメントが毎回 true と評価される必要があります。 テストが失敗した場合、`<int>` を指定した呼び出しと `<char>` を指定した呼び出しのどちらが原因でテストが失敗したかはっきりしないことがあります。 これをはっきりさせるには、コール スタックを調べるか、テスト メソッドにブレークポイントを設定してテスト実行時にデバッグします。 詳細については、「[方法 :方法 : ASP.NET ソリューションでのテスト中にデバッグする](http://msdn.microsoft.com/library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b)」を参照してください。  
   
-###  <a name="TypeConstraintNotSatisfied"></a> 例 2: 型制約の使用  
+###  <a name="TypeConstraintNotSatisfied"></a> 例 2:型制約の使用  
  この例では、満たされていない型制約を使用するジェネリック メソッドの単体テストを示します。 最初のセクションでは、テスト対象コード プロジェクトのコードを示します。 型制約が強調表示されています。  
   
  2 番目のセクションでは、テスト プロジェクトのコードを示します。  
@@ -202,9 +197,6 @@ namespace ClassLibrary2
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [単体テストの構造](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)   
+## <a name="see-also"></a>「  
+ [単体テストの構造](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)   
  [コードの単体テスト](../test/unit-test-your-code.md)
-
-
-

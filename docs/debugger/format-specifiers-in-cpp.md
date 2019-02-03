@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5732c7bd4f1c2fec8b7b3349d0985a2f7cbf896b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 83e1d56c14ff4659c681ae2aadd0c6f1b88bec50
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53968340"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55009896"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで C++ の書式指定子
 値を表示する形式を変更することができます、**ウォッチ**書式指定子を使用してウィンドウ。  
@@ -67,16 +67,16 @@ int main() {
 |x<br /><br /> **h**|16 進整数|102|0xcccccccc|  
 |x<br /><br /> **H**|16 進整数|102|0xcccccccc|  
 |c|単一文字|0x0065, c|101 'e'|  
-|s|const char * 文字列 (引用符)|\<場所 >"hello world"|"hello world"|  
-|**sb**|const char* 文字列 (引用符なし)|\<場所 >"hello world"|hello world|  
+|s|const char * 文字列 (引用符)|\<location> "hello world"|"hello world"|  
+|**sb**|const char* 文字列 (引用符なし)|\<location> "hello world"|hello world|  
 |s8|UTF-8 文字列|\<場所 >「これは、utf-8 のコーヒー カップ â˜•」|「これは、utf-8 のコーヒー カップ ☕」|
-|**s8b**|UTF-8 文字列 (引用符なし)|\<場所 >"hello world"|hello world|  
-|su|Unicode (utf-16 エンコーディング) 文字列 (引用符)|\<位置 > L"hello world"|L"hello world"<br /><br /> u"hello world"|  
-|sub|Unicode (UTF-16 エンコード) 文字列 (引用符なし)|\<位置 > L"hello world"|hello world|  
-|bstr|BSTR バイナリ文字列 (引用符)|\<位置 > L"hello world"|L"hello world"|  
-|env|環境ブロック (2 つの null で終了する文字列)|\<位置 > L"=:: =::\\\\"|L"=:: =::\\\\\\0 = C: = C:\\\\windows\\\\system32\\0ALLUSERSPROFILE =…|
-|**s32**|Utf-32 文字列 (引用符)|\<位置 > U"hello world"|u"hello world"|  
-|**s32b**|UTF-32 文字列 (引用符なし)|\<位置 > U"hello world"|hello world|  
+|**s8b**|UTF-8 文字列 (引用符なし)|\<location> "hello world"|hello world|  
+|su|Unicode (utf-16 エンコーディング) 文字列 (引用符)|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
+|sub|Unicode (UTF-16 エンコード) 文字列 (引用符なし)|\<location> L"hello world"|hello world|  
+|bstr|BSTR バイナリ文字列 (引用符)|\<location> L"hello world"|L"hello world"|  
+|env|環境ブロック (2 つの null で終了する文字列)|\<位置 > L"=:: =::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
+|**s32**|Utf-32 文字列 (引用符)|\<location> U"hello world"|u"hello world"|  
+|**s32b**|UTF-32 文字列 (引用符なし)|\<location> U"hello world"|hello world|  
 |**en**|enum|Saturday(6)|土曜日|  
 |**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<位置>{\<最初のメンバー>}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
 |**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<位置>, {member=value...}|{member=value...}|  
