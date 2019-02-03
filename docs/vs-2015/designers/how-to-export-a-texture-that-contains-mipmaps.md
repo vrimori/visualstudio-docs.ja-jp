@@ -1,25 +1,20 @@
 ---
-title: '方法: ミップマップを含むテクスチャをエクスポートする | Microsoft Docs'
-ms.custom: ''
+title: '方法: Mipmap を含むテクスチャをエクスポートする |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-designers
+ms.topic: conceptual
 ms.assetid: 3d1ad14b-44fb-4cf0-a995-5e2f60026524
 caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 847655d04359fa795f878ea921e69b1b5cd16460
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: 732fa9a5d32916545b281a006cbeeaa93771f3ec
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49811738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54754337"
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>方法: ミップマップを含むテクスチャをエクスポートする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +32,7 @@ ms.locfileid: "49811738"
   
 #### <a name="to-export-a-texture-that-has-mipmaps"></a>MIPMAP を含むテクスチャをエクスポートするには  
   
-1. 基本的なテクスチャを作成します。 既存のイメージ ファイルを読み込むか、「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従ってイメージ ファイルを作成します。 MIPMAP をサポートするには、テクスチャの幅と高さを 2 の累乗の同じサイズ (64x64、256x256、512x512 など) に指定します。  
+1. 基本的なテクスチャを作成します。 既存のイメージ ファイルを読み込むか、「[方法:基本的なテクスチャを作成する](../designers/how-to-create-a-basic-texture.md) MIPMAP をサポートするには、テクスチャの幅と高さを 2 の累乗の同じサイズ (64x64、256x256、512x512 など) に指定します。  
   
 2. イメージ コンテンツ パイプラインによって処理されるように、前の手順で作成したテクスチャ ファイルを構成します。 **ソリューション エクスプローラー**で、先ほど作成したテクスチャ ファイルのショートカット メニューを開き、**[プロパティ]** をクリックします。 **[構成プロパティ]** の **[全般]** ページで、**[項目の種類]** を **[Image Content Pipeline]** (イメージ コンテンツ パイプライン) に設定します。 **[コンテンツ]** が **[はい]** に、**[ビルドから除外]** が **[いいえ]** に設定されていることを確認し、**[適用]** ボタンをクリックします。 **[イメージ コンテンツ パイプライン]** の構成プロパティ ページが表示されます。  
   
@@ -46,6 +41,3 @@ ms.locfileid: "49811738"
 4. **[OK]** を選択します。  
   
    プロジェクトをビルドすると、イメージ コンテンツ パイプラインによってソース イメージは作業形式から、指定した出力形式に変換されます。同時に、MIPMAP レベルが生成されます。結果はプロジェクトの出力ディレクトリにコピーされます。
-
-
-
