@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 423a153c42b8ca07cd3a78e7ab78721fa6fd67e3
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 2a4b94a26b8f22ee87e42a1f890c58ab1299524f
+ms.sourcegitcommit: 612f8c21d1448f1a013c30100cdecfbec5ddb24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54935671"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55571084"
 documentType: LandingData
 title: Visual Studio を使用した Azure 開発
 metadata:
@@ -19,7 +19,7 @@ metadata:
   ms.author: ghogen
   ms.custom: seodec18
 sections:
-- title: Azure に発行する
+- title: Azure App Service に配置する
   items:
   - type: paragraph
     text: Visual Studio を使用した Azure のアプリのステージング環境または運用環境へのデプロイ、または継続的インテグレーション/デプロイ (CI/CD) の設定を行います。
@@ -32,17 +32,12 @@ sections:
       html: <p></p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_NETcore.svg
-      title: Azure に ASP.NET Core アプリを発行する
+      title: Azure に ASP.NET Core アプリをデプロイする
     - href: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet-framework
       html: <p></p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_NET.svg
-      title: Azure に ASP.NET Web アプリを発行する
-    - href: https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio
-      html: <p></p>
-      image:
-        src: https://docs.microsoft.com/azure/media/index/AzureFunctions.svg
-      title: Azure Functions を発行する
+      title: Azure に ASP.NET Web アプリをデプロイする
     - href: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment?view=aspnetcore-2.1
       html: <p></p>
       image:
@@ -57,8 +52,8 @@ sections:
       html: <p></p>
       image:
         src: https://docs.microsoft.com/media/common/i_vmm-cloud.svg
-      title: Azure VM に ASP.NET Web アプリを発行する
-- title: Azure App Services と Azure Functions
+      title: Azure VM に ASP.NET Web アプリをデプロイする
+- title: Azure App Services、Logic Apps、Azure Functions
   items:
   - type: paragraph
     text: Azure でホストされる Web アプリとサーバーレス機能を作成するためのチュートリアル
@@ -72,7 +67,12 @@ sections:
       image:
         src: https://docs.microsoft.com/azure/media/index/AppService.svg
       title: ASP.NET Core
-    - href: /azure/azure-functions/functions-develop-vs
+    - href: /azure/logic-apps/quickstart-create-logic-apps-with-visual-studio
+      html: <p>Azure Logic Apps を使用して、自動化されたスケーラブルなワークフローを構築します。</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/LogicApp.svg
+      title: Azure Logic Apps
+    - href: /azure/azure-functions/functions-create-your-first-function-visual-studio
       html: <p>サーバーレス コードでのプロセス イベント</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/AzureFunctions.svg
@@ -95,8 +95,8 @@ sections:
       href: /visualstudio/containers
     - image:
         src: https://docs.microsoft.com/media/logos/logo_docker.svg
-      text: Visual Studio の Docker ツール
-      href: /visualstudio/docker/vs-azure-tools-docker-setup
+      text: Visual Studio のコンテナー ツール
+      href: /visualstudio/docker/docker-tools
     - image:
         src: https://docs.microsoft.com/media/logos/logo_kubernetes.svg
       text: Kubernetes のツール
@@ -178,10 +178,10 @@ sections:
         src: https://docs.microsoft.com//media/common/i_code-performance.svg
       title: パフォーマンスを分析する
     - href: vs-azure-tools-publishing-a-cloud-service.md
-      html: <p>Azure にクラウド サービスを発行する</p>
+      html: <p>Azure にクラウド サービスをデプロイする</p>
       image:
         src: https://docs.microsoft.com//media/common/i_deploy.svg
-      title: 公開
+      title: デプロイ
     - href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
       html: <p>Azure で実行されているクラウド サービスと仮想マシンの監視と診断を行う</p>
       image:
