@@ -162,7 +162,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |[Visual Studio Tools for Unity 2.0 Preview の紹介ビデオを見る](http://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (ビデオ)|
 |[Unity について学習する](http://unity3d.com/) (Unity Web サイト)|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio プロジェクトに Office 365 API を追加する](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
 - [Azure App Services - モバイル アプリ](https://azure.microsoft.com/services/app-service/mobile/)
