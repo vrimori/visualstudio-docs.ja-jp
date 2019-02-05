@@ -36,7 +36,7 @@ ms.locfileid: "54916460"
   
 -   セキュリティ上の考慮から、デバッガーが、スタック、スレッド、レジスタ、またはその他のコンテキスト情報をデバッグ中のプログラムから読み取れない可能性があります。 これは、Web アプリケーションをデバッグしていて、仮想ディレクトリの適切なアクセス権がない場合によく発生します。 仮想ディレクトリのセキュリティを匿名に設定して再試行します。  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)  
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
