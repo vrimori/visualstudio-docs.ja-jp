@@ -6,23 +6,23 @@ ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 739426d5d93628c90638fef32526484f27eef3e8
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: ea5b321169253202c397d09b9d6daac439213b55
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53828499"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089212"
 ---
 # <a name="features-of-visual-studio-2017"></a>Visual Studio 2017 の機能
 
-Visual Studio の基礎については、「[Visual Studio IDE の概要](../get-started/visual-studio-ide.md)」の記事で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者に適した機能について説明します。
+Visual Studio の基礎については、「[Visual Studio IDE の概要](../get-started/visual-studio-ide.md)」の記事で説明しています。 この記事では、経験を積んだ開発者または Visual Studio を使い慣れている開発者により適している機能について説明します。
 
 ## <a name="modular-installation"></a>モジュール式インストール
 
-Visual Studio のモジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 この方法により、Visual Studio のインストールのフットプリントが小さくなり、インストールと更新に要する時間が短縮されました。
+Visual Studio のモジュール式インストーラーを使用すると、"*ワークロード*" を選択してインストールすることができます。 ワークロードは、任意のプログラミング言語またはプラットフォームで必要とされる機能のグループです。 この方法により、Visual Studio のインストールのフットプリントが小さくなり、インストールと更新に要する時間が短縮されました。
 
 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
@@ -72,23 +72,23 @@ Visual Studio を使用して、macOS、Linux、Windows 用のアプリおよび
 
 - [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) を使用して、C# で 2D および 3D ゲームをビルドします。
 
-- [C++ for Cross-Platform Development](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md) を使用することによって、iOS、Android、および Windows デバイス対応のネイティブ C++ アプリをビルドし、iOS、Android、および Windows 用にビルドされたライブラリ内で共通コードを共有します。
+- iOS、Android、および Windows デバイス用のネイティブ C++ アプリをビルドします。 [C++ for Cross-Platform Development](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md) を使用することによって、iOS、Android、および Windows 用にビルドされたライブラリ内で共通コードを共有します。
 
 - [Android エミュレーター](../cross-platform/visual-studio-emulator-for-android.md)で、Android アプリを展開、テスト、およびデバッグします。
 
 ## <a name="connect-to-databases"></a>データベースへの接続
 
-**サーバー エクスプローラー**は、ローカル、リモートで、また Azure、Salesforce.com、Office 365、および Web サイトで SQL Server インスタンスとアセットを参照および管理するのに役立ちます。 **サーバー エクスプローラー**を開くには、メイン メニューで **[表示]** > **[サーバー エクスプローラー]** の順に選択します。 サーバー エクスプローラーの使用方法について詳しくは、「[Add new connections](../data-tools/add-new-connections.md)」 (新しい接続の追加) をご覧ください。
+**サーバー エクスプローラー**は、ローカル、リモートで、また Azure、Salesforce.com、Office 365、および Web サイトで SQL Server インスタンスとアセットを参照および管理するのに役立ちます。 **サーバー エクスプローラー**を開くには、メイン メニューで **[表示]** > **[サーバー エクスプローラー]** の順に選択します。 サーバー エクスプローラーの使用方法の詳細については、「[新しい接続を追加する](../data-tools/add-new-connections.md)」をご覧ください。
 
 [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) は、SQL Server、Azure SQL Database、Azure SQL Data Warehouse 用の強力な開発環境です。 データベースを構築、デバッグ、管理、およびリファクターできます。 データベース プロジェクトを操作したり、オンプレミスまたはオフプレミスで接続されたデータベース インスタンスを直接操作したりすることができます。
 
-Visual Studio の **SQL Server オブジェクト エクスプローラー**では、SQL Server Management Studio と同様のデータベース オブジェクトのビューを提供します。 SQL Server オブジェクト エクスプローラーを使用すると、軽いデータベース管理と設計作業を実行できます。これには、SQL Server オブジェクト エクスプローラーのコンテキスト メニューを使用したテーブル データの編集、スキーマの比較、クエリの実行などが含まれます。
+Visual Studio の **SQL Server オブジェクト エクスプローラー**では、SQL Server Management Studio と同様のデータベース オブジェクトのビューを提供します。 SQL Server オブジェクト エクスプローラーを使用すると、データベースの簡易的な管理作業および設計作業を行うことができます。 作業の例としては、SQL Server オブジェクト エクスプローラーから直接表示するコンテキスト メニューを使用したクエリの実行、テーブル データの編集、スキーマの比較などが挙げられます。
 
 ![SQL Server オブジェクト エクスプローラー](../ide/media/vs2015_sqlobjectexplorer.png)
 
 ## <a name="debug-test-and-improve-your-code"></a>デバッグとテストによるコードの改善
 
-コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、または[デバイス エミュレーター](../cross-platform/visual-studio-emulator-for-android.md)で実行されるコードをデバッグできます。 一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 指定した条件が True の場合にのみヒットするブレークポイントを設定することができます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。 Visual Studio でのデバッグの詳細については、[デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)に関するページをご覧ください。
+コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、または[デバイス エミュレーター](../cross-platform/visual-studio-emulator-for-android.md)で実行されるコードをデバッグできます。 一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 指定した条件が True の場合にのみヒットするブレークポイントを設定することができます。 デバッグ オプションはコード エディター自体で管理できるため、コードを離れる必要はありません。 Visual Studio でのデバッグの詳細については、[デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)に関するページをご覧ください。
 
 アプリのパフォーマンスを改善する方法の詳細については、Visual Studio の[プロファイリング](../profiling/profiling-feature-tour.md)に関するページを参照してください。
 
@@ -96,13 +96,13 @@ Visual Studio の **SQL Server オブジェクト エクスプローラー**で�
 
 ## <a name="deploy-your-finished-application"></a>完成したアプリケーションを配置する
 
-アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio で配置するためのツールが提供されます。Microsoft ストアや SharePoint サイトに配置する場合でも、InstallShield または Windows インストーラー テクノロジを利用する場合でも提供されます。 これはすべて、IDE を使用してアクセスできます。 詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
+アプリケーションをユーザーまたは顧客に展開する準備ができたら、Visual Studio に用意されているツールを使用してそれを行うことができます。 展開オプションには、Microsoft Store への展開、SharePoint サイトへの展開、InstallShield または Windows インストーラー テクノロジを使用した展開などがあります。 これはすべて、IDE を使用してアクセスできます。 詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>ソース コードの管理および他のユーザーとの共同作業
 
 GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Azure DevOps Services](/azure/devops/index) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、「[Get started with Git and Azure Repos](/azure/devops/repos/git/gitquickstart?tabs=visual-studio)」(Git および Azure Repos の使用を開始する) を参照してください。 Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能の詳細については、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/devops/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
 
-Azure DevOps Services は、チームでのコラボレーションを可能にする、ソフトウェアのプランニング、ホスティング、自動化、およびデプロイのためのクラウド ベースのサービスです。 Azure DevOps Services では、Git リポジトリ (分散型バージョン管理) と Team Foundation バージョン管理 (集中型バージョン管理) の両方をサポートする他に、バージョン管理システムに格納されているコードの継続的なビルドとリリース (CI/CD) のパイプラインもサポートしています。 Azure DevOps Services では、スクラム、CMMI、アジャイル開発方法もサポートしています。
+Azure DevOps Services はクラウド ベースのサービスであり、ソフトウェアのプランニング、ホスティング、自動化、およびデプロイを行うことができるほか、チームでのコラボレーションが可能になります。 Azure DevOps Services では、Git リポジトリ (分散型バージョン管理) と Team Foundation バージョン管理 (集中型バージョン管理) の両方がサポートされています。 また、バージョン管理システムに格納されたコードを継続的にビルドおよびリリース (CI/CD) できるようにパイプラインがサポートされています。 Azure DevOps Services では、スクラム、CMMI、アジャイル開発方法もサポートしています。
 
 Team Foundation Server (TFS) は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが 1 つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
 
@@ -110,7 +110,7 @@ Azure DevOps 組織または Team Foundation Server がネットワーク上に�
 
 次の図は、Azure DevOps Services でホストされているソリューションの **[チーム エクスプローラー]** ウィンドウを示しています。
 
-![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)
+![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer_devops.png)
 
 チームの開発者がバージョン管理にチェックインしたコードをビルドするように、ビルド プロセスを自動化することもできます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」を参照してください。
 
@@ -127,4 +127,5 @@ Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機�
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio IDE の概要](../get-started/visual-studio-ide.md)
-- [Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)
+- [Visual Studio 2017 の新機能](../ide/whats-new-visual-studio-2017.md)
+- [Visual Studio 2019 Preview の新機能](../ide/whats-new-visual-studio-2019.md)

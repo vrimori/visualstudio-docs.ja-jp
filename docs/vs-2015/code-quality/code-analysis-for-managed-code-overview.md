@@ -1,14 +1,9 @@
 ---
-title: コード分析をマネージ コードの概要の |Microsoft Docs
-ms.custom: ''
+title: マネージド コードに対するコード分析の概要 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: overview
 f1_keywords:
 - vs.projectpropertypages.codeanalysis
 helpviewer_keywords:
@@ -19,12 +14,12 @@ caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: b2d84ba17fb3fd866dcd73cd2821289c40153b6d
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
-ms.translationtype: MT
+ms.openlocfilehash: a38909eb0917b3ad5b02d5e953c17c950c7c819e
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49872669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54782841"
 ---
 # <a name="code-analysis-for-managed-code-overview"></a>マネージド コードに対するコード分析の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,29 +31,27 @@ ms.locfileid: "49872669"
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (統合開発環境) の統合  
  開発者は、プロジェクトに対してコード分析を自動的に実行できるだけでなく、手動で実行することもできます。  
   
- 選択したプロジェクトをビルドするたびにコード分析を実行する**を有効にするビルドに対するコード分析 (CODE_ANALYSIS 定数を定義します)** プロジェクトのプロパティ ページ。 詳細については、次を参照してください。[方法: 有効にすると、自動コード分析を無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)します。  
+ プロジェクトをビルドするたびにコード分析を実行するには、プロジェクトのプロパティ ページで **[ビルドに対するコード分析の有効化 (定数 CODE_ANALYSIS を定義)]** をオンにします。 詳細については、「[方法 :自動コード分析を有効/無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)」を参照してください。  
   
- プロジェクトでコード分析を手動で実行する、**分析** メニューのをクリックして**でコード分析を実行**_ProjectName_します。 詳細については、次を参照してください。[方法: 有効にすると、自動コード分析を無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)します。  
+ プロジェクトに対してコード分析を手動で実行するには、**[分析]** メニューの **[_ProjectName_ でコード分析を実行]** をクリックします。 詳細については、「[方法 :自動コード分析を有効/無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)」を参照してください。  
   
 ## <a name="rule-sets"></a>規則セット  
- マネージ コードのコード分析規則にグループ化*ルール セット*します。 Microsoft の標準の規則セットのいずれかを使用するか、特定のニーズを満たす独自の規則セットを作成することができます。 詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)します。  
+ マネージド コード用のコード分析規則は、*規則セット*にグループ化されています。 Microsoft の標準の規則セットのいずれかを使用するか、特定のニーズを満たす独自の規則セットを作成することができます。 詳細については、「[規則セットを使用したコード分析規則のグループ化](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)」を参照してください。  
   
 ## <a name="in-source-suppression"></a>ソース内抑制  
  警告が適用されないことを示すと役に立つことがよくあります。 これによって、開発者や、そのコードを後でレビューする担当者は、その警告が既に調査済みであり、抑制されるのかまたは無視されるのかがわかります。  
   
  警告のソース内抑制は、カスタム属性を使用して実装します。 警告を抑制するには、次の例のように、属性 `SuppressMessage` をソース コードに追加します。  
   
- `[System.Diagnosis.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`  
+ ```csharp
+ [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]
+ Public class MyClass
+ {
+     // code
+ }
+ ```
   
- `Public class MyClass`  
-  
- `{`  
-  
- `// code`  
-  
- `}`  
-  
- 詳細については、次を参照してください。 [SuppressMessage 属性使用での警告を抑制する](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)します。  
+ 詳細については、「[SuppressMessage 属性を使用した警告の抑制](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)」を参照してください。  
   
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としてのコード分析の実行  
  組織的な取り決めとして、チェックインされるすべてのコードが、特定のポリシーを満たしていることが必要な場合があります。 たとえば、次のようなポリシーが考えられます。  
@@ -67,14 +60,11 @@ ms.locfileid: "49872669"
   
 - 最近のビルドでコード分析が実行されていること。  
   
-  これは、チェックイン ポリシーを指定することにより実現できます。 詳細については、次を参照してください。[チーム プロジェクト チェックイン ポリシーによるコード品質の向上](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)します。  
+  これは、チェックイン ポリシーを指定することにより実現できます。 詳細については、「[チーム プロジェクト チェックイン ポリシーによるコード品質の向上](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)」を参照してください。  
   
 ## <a name="team-build-integration"></a>チーム ビルドの統合  
  ビルド システムの統合機能を使用すると、分析ツールをビルド プロセスの一環として実行できます。 詳細については、「[アプリケーションのビルド](http://msdn.microsoft.com/library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [コード分析規則のグループに規則を使用して設定します。](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)   
+## <a name="see-also"></a>「  
+ [規則セットを使用したコード分析規則のグループ化](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)   
  [方法: 自動コード分析を有効/無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
-
-
-

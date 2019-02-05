@@ -1,5 +1,5 @@
 ---
-title: データ ドリブンのコード化された UI テストの作成
+title: データ ドリブンのコード化された UI テストのチュートリアル
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - coded UI tests, data-driven
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 120ca4ac409641af7b3a2b303830288cbcb0d20a
-ms.sourcegitcommit: 38db86369af19e174b0aba59ba1918a5c4fe4a61
+ms.openlocfilehash: 28ebaad835888577a8616aab771ba30e4e29c61b
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270246"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231988"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
 
@@ -59,7 +59,8 @@ ms.locfileid: "54270246"
    [TestMethod]
    public void CodedUITestMethod1()
    {
-       // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+       // To generate code for this test, select "Generate Code for Coded UI Test"
+       // from the shortcut menu and select one of the menu items.
        this.UIMap.AddNumbers();
    }
    ```
@@ -87,7 +88,6 @@ ms.locfileid: "54270246"
    ```csharp
    public void CodedUITestMethod1()
    {
-       // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
        this.UIMap.AddNumbers();
        this.UIMap.ValidateSum();
    }
@@ -131,7 +131,6 @@ ms.locfileid: "54270246"
     [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\data.csv", "data#csv", DataAccessMethod.Sequential), DeploymentItem("data.csv"), TestMethod]
     public void CodedUITestMethod1()
     {
-        // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
         this.UIMap.AddNumbers();
         this.UIMap.ValidateSum();
     }
@@ -150,7 +149,7 @@ ms.locfileid: "54270246"
 
 ### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>ステップ 4 - コード化された UI テストでデータを使用する
 
-1.  *CodedUITest.cs* ファイルの先頭に `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` を追加します。
+1. *CodedUITest.cs* ファイルの先頭に `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` を追加します。
 
     ```csharp
     using System;
@@ -166,16 +165,16 @@ ms.locfileid: "54270246"
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     ```
 
-2.  データ ソースからの値を適用する `TestContext.DataRow[]` メソッドに `CodedUITestMethod1()` を追加します。 データ ソースの値は、コントロール `SearchProperties` を使用して UIMap コントロールに割り当てられている定数をオーバーライドします。
+2. データ ソースからの値を適用する `TestContext.DataRow[]` メソッドに `CodedUITestMethod1()` を追加します。 データ ソースの値は、コントロール `SearchProperties` を使用して UIMap コントロールに割り当てられている定数をオーバーライドします。
 
-    ```csharp
-    public void CodedUITestMethod1()
-    {
-        // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        this.UIMap.UICalculatorWindow.UIItemWindow.UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();this.UIMap.UICalculatorWindow.UIItemWindow21.UIItem2Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num2"].ToString();
-        this.UIMap.AddNumbers();
-        this.UIMap.ValidateSumExpectedValues.UIItem2TextDisplayText = TestContext.DataRow["Sum"].ToString();
-        this.UIMap.ValidateSum();
+   ```csharp
+   public void CodedUITestMethod1()
+   {
+       this.UIMap.UICalculatorWindow.UIItemWindow.UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();
+       this.UIMap.UICalculatorWindow.UIItemWindow2.UIItem2Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num2"].ToString();
+       this.UIMap.AddNumbers();
+       this.UIMap.ValidateSumExpectedValues.UIItem3TextDisplayText = TestContext.DataRow["Sum"].ToString();
+       this.UIMap.ValidateSum();
     }
     ```
 
@@ -197,15 +196,15 @@ ms.locfileid: "54270246"
 
 ### <a name="step-5---run-the-data-driven-test"></a>ステップ 5 - データ ドリブン テストを実行する
 
-1.  テストを再実行して、テストがデータ ドリブンになったことを確認します。
+テストを再実行して、テストがデータ ドリブンになったことを確認します。
 
-     テストでは、*.csv* ファイル内の値を使用して、3 つのイテレーションが実行されます。 検証も機能し、テストはテスト エクスプローラーで渡されたとおりに表示されます。
+テストでは、*.csv* ファイル内の値を使用して、3 つのイテレーションが実行されます。 検証も機能し、テストはテスト エクスプローラーで渡されたとおりに表示されます。
 
 ## <a name="q--a"></a>Q & A
 
-###  <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express や XML など他のデータ ソースの種類のデータ ソースの属性とは何ですか。
+### <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express や XML など他のデータ ソースの種類のデータ ソースの属性とは何ですか。
 
-次の表に示したサンプルのデータ ソース文字列を使用できます。コードにコピーし、必要なカスタマイズを行ってください。
+**A:** 次の表に示したサンプルのデータ ソース文字列を使用できます。コードにコピーし、必要なカスタマイズを行ってください。
 
 **データ ソースの型と属性**
 

@@ -1,4 +1,19 @@
 ---
+title: リポジトリを複製する
+author: lisawong19
+ms.author: liwong
+manager: routlaw
+ms.date: 11/13/2017
+ms.topic: conceptual
+ms.service: multiple
+ms.workload:
+- multiple
+ms.openlocfilehash: fd0c71e9f426c5591f9ac3ecd135c1b230ca5e20
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54986060"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio で Python コードのリポジトリを複製する
 
@@ -10,9 +25,9 @@
 
 2. Visual Studio を起動します。
 
-3. **[表示] > [チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Azure DevOps に接続したり、リポジトリを複製したりすることができます。
+3. **[表示] > [チーム エクスプローラー]** の順に選択して、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Azure DevOps に接続したり、リポジトリを複製したりすることができます。
 
-    ![Azure DevOps、GitHub、リポジトリの複製を示すチーム エクスプローラー ウィンドウ](media/create-project-repo/team-explorer.png)
+    ![Azure DevOps、GitHub、リポジトリの複製を示すチーム エクスプローラー ウィンドウ](media/create-project-repo/team-explorer-devops.png)
 
 4. **[Local Git Repositories]\(ローカル Git リポジトリ\)** の下の [URL] フィールドに、`https://github.com/Microsoft/samples-for-ai` と入力し、複製されたファイル用のフォルダーを入力し、**[複製]** を選択します。
 
@@ -29,7 +44,7 @@
 
 8. ソリューション エクスプローラーで `TensorFlow Examples> MNIST` ノードを展開し、`convolutional.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
 
-9. **Ctrl**+**F5** キーを押すか、**[デバッグ]、[デバッグなしで開始]** の順に選択し、プログラムを実行します。 ` が表示される場合、前の手順の作業ディレクトリの設定を再確認します。
+9. **Ctrl**+**F5** キーを押すか、**[デバッグ]、[デバッグなしで開始]** の順に選択し、プログラムを実行します。 エラーが表示された場合は、前の手順の作業ディレクトリの設定を再確認します。
 
 10. プログラムが正常に実行されると、そのプログラムによってトレーニングとテスト データセットのダウンロードが開始され、モデルのトレーニングが実行され、エラー発生率が表示されるのがわかります。 時間の経過と共にエラー発生率が低下するようにします。
 

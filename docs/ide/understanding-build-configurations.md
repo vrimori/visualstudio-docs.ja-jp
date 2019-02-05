@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 934c727d-3a22-429c-bd13-3552cecf2e24
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a3e361b407d013f27f3cf76d1ff0da98aa36c3c8
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 84a2b89bb6479c88de61ec0a0071858522a34e82
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349050"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54927907"
 ---
 # <a name="understand-build-configurations"></a>ビルド構成について
 
@@ -42,9 +42,9 @@ ms.locfileid: "51349050"
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac でのビルド構成](/visualstudio/mac/configurations)に関するページを参照してください。
 
 > [!NOTE]
-> ツール バーでソリューション構成設定を見つけることができず、**[構成マネージャー]** にアクセスできないときは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 開発設定を適用できます。 詳細については、「[方法: Visual Basic 開発者設定が適用された構成を管理する](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md)」を参照してください。
+> ツール バーでソリューション構成設定を見つけることができず、**[構成マネージャー]** にアクセスできないときは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 開発設定を適用できます。 詳細については、「[方法 :Visual Basic 開発者設定が適用された構成を管理する](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md)」を参照してください。
 
-既定では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレートを使用して作成されたプロジェクトには、デバッグ構成とリリース構成が含まれます。 デバッグ構成ではアプリのデバッグがサポートされ、リリース構成では展開可能なバージョンのアプリがビルドされます。 詳細については、「[方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。 カスタム ソリューション構成とプロジェクト構成を作成することもできます。 詳細については、「[方法 : 構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)」を参照してください。
+既定では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレートを使用して作成されたプロジェクトには、デバッグ構成とリリース構成が含まれます。 デバッグ構成ではアプリのデバッグがサポートされ、リリース構成では展開可能なバージョンのアプリがビルドされます。 詳細については、「[方法 :デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。 カスタム ソリューション構成とプロジェクト構成を作成することもできます。 詳細については、「[方法 :構成を作成および編集する](../ide/how-to-create-and-edit-configurations.md)」を参照してください。
 
 ## <a name="solution-configurations"></a>ソリューション構成
 
@@ -90,7 +90,7 @@ ms.locfileid: "51349050"
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)
+- [チュートリアル: アプリケーションを構築する](../ide/walkthrough-building-an-application.md)
 - [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
 - [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
 - [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)

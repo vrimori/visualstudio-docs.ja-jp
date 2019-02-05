@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f34f686b91d6a140e975c13eec72e8703a1b47ef
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 91e32cdae7310a99021946315279736bddb094a8
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54945252"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690139"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>方法: コード メトリックス データを生成します。
 
@@ -49,46 +49,58 @@ ms.locfileid: "54945252"
 
 ## <a name="command-line-code-metrics"></a>コマンド ライン コード メトリックス
 
-コード メトリックス データを生成するにはコマンドラインからC#および .NET Framework、.NET Core、および .NET Standard のアプリの Visual Basic プロジェクト。 コマンド ライン コード メトリックスのツールと呼ばれる*Metrics.exe*します。
+コード メトリックス データを生成するにはコマンドラインからC#および .NET Framework、.NET Core、および .NET Standard のアプリの Visual Basic プロジェクト。 コード メトリックスをコマンドラインから実行するインストール、 [Microsoft.CodeAnalysis.Metrics NuGet パッケージ](#microsoftcodeanalysismetrics-nuget-package)またはビルド、 [Metrics.exe](#metricsexe)実行可能ファイル自分でします。
 
-取得する、 *Metrics.exe*あります実行可能ファイル、[自分で生成](#generate-the-executable)します。 近い将来に、[の発行済みバージョン*Metrics.exe*できる](https://github.com/dotnet/roslyn-analyzers/issues/1756)のため、自分でビルドする必要はありません。
+### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Microsoft.CodeAnalysis.Metrics NuGet パッケージ
 
-### <a name="generate-the-executable"></a>実行可能ファイルを生成します。
-
-実行可能ファイルを生成する*Metrics.exe*、これらの手順に従います。
-
-1. 複製、 [dotnet/roslyn アナライザー](https://github.com/dotnet/roslyn-analyzers)リポジトリ。
-2. Visual Studio の開発者コマンド プロンプトを管理者として開きます。
-3. ルートから、 **roslyn アナライザー**リポジトリでは、次のコマンドを実行します。 `Restore.cmd`
-4. ディレクトリに*src\Tools*します。
-5. ビルドするには、次のコマンドを実行、 **Metrics.csproj**プロジェクト。
-
-   ```shell
-   msbuild /m /v:m /p:Configuration=Release Metrics.csproj
-   ```
-
-   実行可能ファイルという*Metrics.exe*で生成される、 *artifacts\bin*リポジトリのルート ディレクトリ。
-
-   > [!TIP]
-   > 構築する*Metrics.exe*で[レガシ モード](#legacy-mode)、次のコマンドを実行します。
-   >
-   > ```shell
-   > msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
-   > ```
-
-### <a name="usage"></a>使用法
-
-実行する*Metrics.exe*ソリューションと、出力 XML ファイルを引数として、プロジェクトを指定します。 例:
+コマンドラインからのコード メトリックス データを生成する最も簡単な方法は、インストールすることによって、 [Microsoft.CodeAnalysis.Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet パッケージ。 パッケージをインストールした後、実行`msbuild /t:Metrics`プロジェクト ファイルを含むディレクトリから。 例:
 
 ```shell
-C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml
-Loading ConsoleApp20.csproj...
-Computing code metrics for ConsoleApp20.csproj...
-Writing output to 'report.xml'...
-Completed Successfully.
+C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
+Microsoft (R) Build Engine version 16.0.360-preview+g9781d96883 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 1/22/2019 4:29:57 PM.
+Project "C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj" on node 1 (Metrics target(s))
+.
+Metrics:
+  C:\source\repos\ClassLibrary3\packages\Microsoft.CodeMetrics.2.6.4-ci\build\\..\Metrics\Metrics.exe /project:C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj /out:ClassLibrary3.Metrics.xml
+  Loading ClassLibrary3.csproj...
+  Computing code metrics for ClassLibrary3.csproj...
+  Writing output to 'ClassLibrary3.Metrics.xml'...
+  Completed Successfully.
+Done Building Project "C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj" (Metrics target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
 ```
 
-### <a name="output"></a>出力
+出力ファイル名を指定して上書きできます`/p:MetricsOutputFile=<filename>`します。 取得することも[レガシ スタイル](#previous-versions)メトリック データを指定することによってコード`/p:LEGACY_CODE_METRICS_MODE=true`します。 例:
+
+```shell
+C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
+Microsoft (R) Build Engine version 16.0.360-preview+g9781d96883 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 1/22/2019 4:31:00 PM.
+The "MetricsOutputFile" property is a global property, and cannot be modified.
+Project "C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj" on node 1 (Metrics target(s))
+.
+Metrics:
+  C:\source\repos\ClassLibrary3\packages\Microsoft.CodeMetrics.2.6.4-ci\build\\..\Metrics.Legacy\Metrics.Legacy.exe /project:C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj /out:Legacy.xml
+  Loading ClassLibrary3.csproj...
+  Computing code metrics for ClassLibrary3.csproj...
+  Writing output to 'Legacy.xml'...
+  Completed Successfully.
+Done Building Project "C:\source\repos\ClassLibrary3\ClassLibrary3\ClassLibrary3.csproj" (Metrics target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+```
+
+### <a name="code-metrics-output"></a>コード メトリックの出力
 
 生成された XML 出力は、次の形式を取ります。
 
@@ -124,7 +136,7 @@ Completed Successfully.
                   <Metric Name="LinesOfCode" Value="7" />
                 </Metrics>
                 <Members>
-                  <Method Name="void Program.Main(string[] args)" File="C:\Users\mavasani\source\repos\ConsoleApp20\ConsoleApp20\Program.cs" Line="7">
+                  <Method Name="void Program.Main(string[] args)" File="C:\source\repos\ConsoleApp20\ConsoleApp20\Program.cs" Line="7">
                     <Metrics>
                       <Metric Name="MaintainabilityIndex" Value="100" />
                       <Metric Name="CyclomaticComplexity" Value="1" />
@@ -143,27 +155,55 @@ Completed Successfully.
 </CodeMetricsReport>
 ```
 
-### <a name="tool-differences"></a>ツールの相違点
+### <a name="metricsexe"></a>Metrics.exe
 
-など、Visual Studio 2015、Visual Studio の以前のバージョンには、というコマンド ライン コード メトリックス ツールが含まれている*Metrics.exe*します。 このツールの以前のバージョンは、アセンブリに基づく分析は、バイナリ分析を行いました。 新しいツールでは、代わりにソース コードを分析します。 新しい*Metrics.exe*はソース コードに基づいて、結果が以前のバージョンのによって生成されたものに異なる*Metrics.exe*と Visual Studio 2017 IDE 内で。
+NuGet パッケージをインストールしない場合は、生成および使用して、 *Metrics.exe*直接実行可能ファイルです。 生成する、 *Metrics.exe*実行可能ファイル。
 
-新しい*Metrics.exe*ソリューションとプロジェクトを読み込むことがあれば、ツールはソース コードのエラーがある場合でも、メトリックを計算できます。
+1. 複製、 [dotnet/roslyn アナライザー](https://github.com/dotnet/roslyn-analyzers)リポジトリ。
+2. Visual Studio の開発者コマンド プロンプトを管理者として開きます。
+3. ルートから、 **roslyn アナライザー**リポジトリでは、次のコマンドを実行します。 `Restore.cmd`
+4. ディレクトリに*src\Tools*します。
+5. ビルドするには、次のコマンドを実行、 **Metrics.csproj**プロジェクト。
 
-#### <a name="metric-value-differences"></a>メトリック値の相違点
+   ```shell
+   msbuild /m /v:m /p:Configuration=Release Metrics.csproj
+   ```
 
-`LinesOfCode`メトリックがより正確で信頼性の高い、新しい*Metrics.exe*します。 Codegen の違いに依存しないし、ツールセットやランタイムの変更されたときに変更されません。 新しい*Metrics.exe*空白行とコメントを含め、コードの実際の行数をカウントします。
+   実行可能ファイルという*Metrics.exe*で生成される、 *artifacts\bin*リポジトリのルート ディレクトリ。
 
-などの他のメトリック`CyclomaticComplexity`と`MaintainabilityIndex`として以前のバージョンのと同次数式を使用して*Metrics.exe*が、新しい*Metrics.exe*の数をカウント`IOperations`(論理指示をソース) 中間言語 (IL) 命令ではなく。 数値が以前のバージョンの若干異なる場合があります*Metrics.exe*と Visual Studio 2017 IDE のコード メトリックスの結果から。
+#### <a name="metricsexe-usage"></a>Metrics.exe 使用状況
 
-### <a name="legacy-mode"></a>レガシ モード
+実行する*Metrics.exe*ソリューションと、出力 XML ファイルを引数として、プロジェクトを指定します。 例:
 
-ビルドを選択することもできます。 *Metrics.exe*で*レガシ モード*します。 ツールのレガシ モード バージョンは、どのような以前のバージョンのツールによって生成されたに近いメトリックの値を生成します。 レガシ モードでさらに、 *Metrics.exe*メソッドの同じセットの型を以前のバージョンのツールによって生成されたコード メトリックスのコード メトリックスを生成します。 たとえば、フィールドおよびプロパティの初期化子のコード メトリックス データが生成されないこと。 レガシ モードは、下位互換性またはゲート チェックインがコードがあるかどうかはメトリックに基づくコード番号に役立ちます。 ビルドするコマンド*Metrics.exe*レガシ モードでは。
+```shell
+C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml
+Loading ConsoleApp20.csproj...
+Computing code metrics for ConsoleApp20.csproj...
+Writing output to 'report.xml'...
+Completed Successfully.
+```
+
+#### <a name="legacy-mode"></a>レガシ モード
+
+ビルドすることもできます*Metrics.exe*で*レガシ モード*します。 ツールのレガシ モード バージョンは、何に近いメトリックの値を生成します。[以前のバージョンのツールによって生成された](#previous-versions)します。 レガシ モードでさらに、 *Metrics.exe*メソッドの同じセットの型を以前のバージョンのツールによって生成されたコード メトリックスのコード メトリックスを生成します。 たとえば、フィールドおよびプロパティの初期化子のコード メトリックス データが生成されないこと。 レガシ モードは、下位互換性またはゲート チェックインがコードがあるかどうかはメトリックに基づくコード番号に役立ちます。 ビルドするコマンド*Metrics.exe*レガシ モードでは。
 
 ```shell
 msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
 ```
 
 詳細については、次を参照してください。[レガシ モードでのコード メトリックスの生成を有効にする](https://github.com/dotnet/roslyn-analyzers/pull/1841)します。
+
+### <a name="previous-versions"></a>以前のバージョン
+
+など、Visual Studio 2015、Visual Studio の以前のバージョンにも呼び出されたコマンド ライン コード メトリックス ツールが含まれている*Metrics.exe*します。 このツールの以前のバージョンは、アセンブリに基づく分析は、バイナリ分析を行いました。 新しいツールでは、代わりにソース コードを分析します。 結果はの以前のバージョンによって生成されたものにさまざまな新しいコマンド ライン コード メトリックス ツールは、ソース コード ベースであるため*Metrics.exe*と Visual Studio 2017 IDE 内で。
+
+コマンド ライン コード メトリックスの新しいツールは、ソリューションとプロジェクトを読み込むことがあれば、ソース コードのエラーがある場合でも、メトリックを計算します。
+
+#### <a name="metric-value-differences"></a>メトリック値の相違点
+
+`LinesOfCode`メトリックが正確と新しいコマンド ライン コード メトリックス ツールで信頼性が向上します。 Codegen の違いに依存しないし、ツールセットやランタイムの変更されたときに変更されません。 新しいツールでは、空白行とコメントを含め、コードの実際の行数をカウントします。
+
+などの他のメトリック`CyclomaticComplexity`と`MaintainabilityIndex`として以前のバージョンのと同次数式を使用して*Metrics.exe*、新しいツールの数をカウントするが、 `IOperations` (論理ソース命令) 中間の代わりに言語 (IL) の手順です。 数値が以前のバージョンの若干異なる場合があります*Metrics.exe*と Visual Studio 2017 IDE のコード メトリックスの結果から。
 
 ## <a name="see-also"></a>関連項目
 

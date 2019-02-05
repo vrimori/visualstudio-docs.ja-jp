@@ -1,22 +1,22 @@
 ---
-title: 'チュートリアル: アプリケーションをビルドする'
+title: 'チュートリアル: アプリケーションを構築する'
 ms.date: 09/25/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2987df6c8ed8a26c2cf95020e26f67c36721d676
-ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
+ms.openlocfilehash: adf3ef6be32b36d0bb033486dfb846c55c1fad34
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50672783"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54926677"
 ---
-# <a name="walkthrough-build-an-application"></a>チュートリアル: アプリケーションをビルドする
+# <a name="walkthrough-build-an-application"></a>チュートリアル: アプリケーションを構築する
 
 このチュートリアルを完了すると、Visual Studio を使用してアプリケーションをビルドする際に構成できるオプションの使用方法を習得できます。 サンプル アプリケーション用に、カスタムのビルド構成の作成、特定の警告メッセージの非表示設定、ビルド出力情報の拡張を行います。
 
@@ -26,7 +26,7 @@ ms.locfileid: "50672783"
 
 ## <a name="create-a-custom-build-configuration"></a>カスタム ビルド構成を作成する
 
-ソリューションを作成すると、デバッグ ビルド構成およびリリース ビルド構成と、これらの既定のプラットフォーム ターゲットがソリューションに対して自動的に定義されます。 これらの構成をカスタマイズすることも、独自に作成することもできます。 ビルド構成では、ビルドの種類を指定します。 ビルド プラットフォームでは、その構成でアプリケーションが対象とするオペレーティング システムを指定します。 詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」、「[ビルド プラットフォームについて](../ide/understanding-build-platforms.md)」、「[方法 : デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
+ソリューションを作成すると、デバッグ ビルド構成およびリリース ビルド構成と、これらの既定のプラットフォーム ターゲットがソリューションに対して自動的に定義されます。 これらの構成をカスタマイズすることも、独自に作成することもできます。 ビルド構成では、ビルドの種類を指定します。 ビルド プラットフォームでは、その構成でアプリケーションが対象とするオペレーティング システムを指定します。 詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」、「[ビルド プラットフォームについて](../ide/understanding-build-platforms.md)」、「[方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)」を参照してください。
 
 **[構成マネージャー]** ダイアログ ボックスを使用すると、構成とプラットフォームの設定を変更または作成できます。 この手順では、テスト用のビルド構成を作成します。
 
@@ -130,7 +130,7 @@ ms.locfileid: "50672783"
 
    ![出力ウィンドウ、Visual Basic ビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png)
 
-   詳細については、「[方法: コンパイラ警告を非表示にする](../ide/how-to-suppress-compiler-warnings.md)」を参照してください。
+   詳細については、「[方法 :コンパイラ警告の非表示](../ide/how-to-suppress-compiler-warnings.md)」を参照してください。
 
 ## <a name="display-additional-build-details-in-the-output-window"></a>出力ウィンドウに追加のビルド詳細を表示する
 
@@ -162,13 +162,13 @@ ms.locfileid: "50672783"
     > [!TIP]
     > **Ctrl**+**F** キーを押して **[検索]** ダイアログ ボックスを表示すると、**[出力]** ウィンドウの内容を検索できます。
 
-詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」を参照してください。
+詳細については、「[方法 :ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。
 
 ## <a name="create-a-release-build"></a>リリース ビルドを作成する
 
 出荷用に最適化されたバージョンとしてサンプル アプリケーションをビルドすることができます。 リリース ビルドでは、ビルドの開始前に実行可能ファイルをネットワーク共有にコピーすることを指定します。
 
-詳細については、「[方法 : ビルド出力ディレクトリを変更する](../ide/how-to-change-the-build-output-directory.md)」と[Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)に関するページを参照してください。
+詳細については、「[方法 :ビルド出力ディレクトリを変更する](../ide/how-to-change-the-build-output-directory.md)」と「[Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)」を参照してください。
 
 ### <a name="specify-a-release-build-for-visual-basic"></a>Visual Basic 用にリリース ビルドを指定する
 

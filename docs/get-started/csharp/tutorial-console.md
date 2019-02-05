@@ -1,32 +1,32 @@
 ---
-title: 'チュートリアル: C# コンソール アプリの概要'
+title: 'チュートリアル: シンプルな C# コンソール アプリを作成する'
 description: Visual Studio で C# コンソール アプリを作成する方法について、ステップ バイ ステップで説明します。
 ms.custom: seodec18, get-started
-ms.date: 01/10/2019
+ms.date: 01/25/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-dev15
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6114910f8c4cbeebc0301cc0c2167a49742823a5
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.openlocfilehash: 856c20175fd444c7acf83bdf02526c907a28b92f
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204432"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54936958"
 ---
-# <a name="tutorial-get-started-with-a-c-console-app-in-visual-studio"></a>チュートリアル:Visual Studio での C# コンソール アプリの概要
+# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>チュートリアル: Visual Studio でシンプルな C# コンソール アプリを作成する
 
-この C# 用のチュートリアルでは、Visual Studio を使用して、コンソール アプリを作成および実行しながら、[Visual Studio の統合開発環境 (IDE)](../visual-studio-ide.md) の一部の機能を検討します。
+この C# 用のチュートリアルでは、Visual Studio を使用して、コンソール アプリを作成および実行しながら、Visual Studio の統合開発環境 (IDE) の一部の機能を検討します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -42,19 +42,58 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ### <a name="add-a-workgroup-optional"></a>ワークグループを追加する (省略可能)
 
-**コンソール アプリ (.NET Core)** プロジェクト テンプレートが表示されない場合は、**.NET Core クロスプラットフォームの開発**ワークロードを追加して取得できます。 これを行う方法については、FAQ の「[ワークロードとは何で、どのようにして追加するのですか](#workload)」 セクションをご覧ください。
+**コンソール アプリ (.NET Core)** プロジェクト テンプレートが表示されない場合は、**.NET Core クロスプラットフォームの開発**ワークロードを追加して取得できます。 ここではその方法を説明します。
+
+#### <a name="option-1-use-the-new-project-dialog-box"></a>オプション 1:[新しいプロジェクト] ダイアログ ボックスを使用する
+
+1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクを選択します。
+
+   ![[新しいプロジェクト] ダイアログ ボックスから [Visual Studio インストーラーを開く] リンクを選択する](./media/csharp-open-visual-studio-installer-generic-dark.png)
+
+1. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
+
+   ![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](./media/dot-net-core-xplat-dev-workload.png)
+
+#### <a name="option-2-use-the-tools-menu-bar"></a>オプション 2:[ツール] メニュー バーを使用する
+
+1. **[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーから **[ツール]** > **[ツールと機能を取得]** の順に選択します。
+
+1. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
 ## <a name="create-the-app"></a>アプリを作成する
 
-まず、基本的な電卓を作成するコードを追加します。 次に、機能を追加するコードを調整します。 その後を、アプリをデバッグし、エラーを発見して修正します。 最後に、コードを修正していっそう効率的にします。
+まず、C# での基本的な整数計算を見ていきます。 次に、基本的な電卓を作成するコードを追加します。 次に、機能を追加するコードを調整します。 その後を、アプリをデバッグし、エラーを発見して修正します。 最後に、コードを改良していっそう効率的にします。
 
-まず、基本的な電卓のコードをプロジェクトに追加してみましょう。
+C# での整数計算を始めましょう。
 
 1. コード エディターで、既定の "Hello World" のコードを削除します。
 
     ![新しい電卓アプリから既定の Hello World コードを削除する](./media/csharp-console-calculator-deletehelloworld.png)
 
-   具体的には、コード エディターに表示されているすべてのコードを削除します。
+   具体的には、`Console.WriteLine("Hello World!");` と記述された行を削除します。
+
+1. その場所に、次のコードを入力します。
+
+    ```csharp
+            int a = 42;
+            int b = 119;
+            int c = a + b;
+            Console.WriteLine(c);
+            Console.ReadKey();
+    ```
+1. **[Calculator]** を選択してプログラムを実行するか、**F5** キーを押します。
+
+   ![[Calculator] ボタンを選択して、ツールバーからアプリを実行する](./media/csharp-console-calculator-button.png)
+
+   コンソール ウィンドウが開き、42 + 119 の合計が表示されます。
+
+1. 今度は別の演算子 (減算の場合は `-`、乗算の場合は `*`、除算の場合は */*) を使用して、コードの `int c = a + b;` 行を変更します。
+
+    演算子を変更してプログラムを実行すると、結果も変わることに注目してください。
+
+次に、より複雑な一連の電卓コードをプロジェクトに追加してみましょう。
+
+1. コード エディターに表示されているすべてのコードを削除します。
 
 1. コード エディターに次の新しいコードを入力するか貼り付けます。
 
@@ -165,7 +204,10 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 たとえば、0 で数値を割ったり、数値が必要なときにアルファベット文字を入力したりすると (またはその逆)、アプリは動作を停止し、エラーが返されます。
 
-いくつかの一般的なユーザー入力エラーを行い、[デバッガー](../../debugger/debugger-feature-tour.md)でそれを見つけて、コードを修正してみましょう。
+いくつかの一般的なユーザー入力エラーを行い、デバッガーでそれを検索して、コードを修正を行ってみましょう。
+
+>[!TIP]
+>デバッガーとそのしくみの詳細については、「[最初に Visual Studio デバッガーを見る](../../debugger/debugger-feature-tour.md)」を参照してください。
 
 ### <a name="fix-the-divide-by-zero-error"></a>"0 除算" エラーを修正する
 
@@ -209,7 +251,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 #### <a name="revise-the-code"></a>コードを修正する
 
-`program` クラスに依存してすべてのコードを処理するのではなく、アプリを 2 つのクラス `calculator` と `program` に分割します。  
+`program` クラスに依存してすべてのコードを処理するのではなく、アプリを 2 つのクラス `calculator` と `program` に分割します。
 
 `calculator` クラスでは計算作業をまとめて処理し、`program` クラスではユーザー インターフェイスとエラー キャプチャの作業を処理します。
 
@@ -483,48 +525,6 @@ namespace Calculator
 
 ```
 
-## <a name="quick-answers-faq"></a>FAQ に対する簡単な回答
-
-以下の簡単な FAQ で、主な概念をいくつか示します。 FAQ には、チュートリアルの手順に従ったときに発生する可能性がある質問への回答も含まれています。
-
-### <a name="what-is-c"></a>C# とは何ですか?
-
-C# は、.NET Framework と .NET Core 上で実行される、タイプ セーフなプログラミング言語です。 C# を使用すると、Windows アプリケーション、クライアント/サーバー アプリケーション、データベース アプリケーション、XML Web サービス、分散コンポーネントなど、さまざまなアプリケーションを作成できます。
-
-### <a name="what-is-visual-studio"></a>Visual Studio とは何ですか?
-
-Visual Studio は、開発者向け生産性向上ツールの統合開発スイートです。 プログラムやアプリケーションを作成するために使用できるプログラムのようなものと考えてください。
-
-### <a name="what-is-a-console-app"></a>コンソール アプリとは何ですか?
-
-コンソール アプリは、コマンドライン ウィンドウ (コンソールともいう) で入力を取得して、 出力を表示します。
-
-### <a name="what-is-net-core"></a>.NET Core とは何ですか?
-
-.NET Core は、.NET Framework の次の進化段階です。 .NET Framework ではプログラミング言語間でコードを共有できましたが、.NET Core ではプラットフォーム間でコードを共有する機能が追加されました。 さらに良い点は、オープン ソースであるという点です 
-
-(.NET Framework と .NET Core には、両方とも事前構築済み機能のライブラリが含まれています。 これらには共通言語ランタイム (CLR) も含まれています。これは、コードを実行する仮想マシンのように動作します。)
-
-### <a id="workload"></a>ワークロードとは何で、どのようにして追加するのですか?
-
-Visual Studio でのワークロードは、Visual Studio のインストールをカスタマイズするために使用できるプログラミング オプションとテンプレートのセットを表します。 ワークロードでは、選択したプログラミング言語とプラットフォームに必要なツールのみがインストールされます。 そのインストール方法を次に示します。
-
-#### <a name="option-1-use-the-new-project-dialog-box"></a>オプション 1:[新しいプロジェクト] ダイアログ ボックスを使用する
-
-1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクを選択します。
-
-   ![[新しいプロジェクト] ダイアログ ボックスから [Visual Studio インストーラーを開く] リンクを選択する](./media/csharp-open-visual-studio-installer-generic-dark.png)
-
-1. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
-
-   ![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](./media/dot-net-core-xplat-dev-workload.png)
-
-#### <a name="option-2-use-the-tools-menu-bar"></a>オプション 2:[ツール] メニュー バーを使用する
-
-1. **[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーから **[ツール]** > **[ツールと機能を取得]** の順に選択します。
-
-1. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
-
 ## <a name="next-steps"></a>次の手順
 
 これでこのチュートリアルは完了です。 さらに詳しく学習するには、引き続き以下のチュートリアルをご覧ください。
@@ -534,4 +534,5 @@ Visual Studio でのワークロードは、Visual Studio のインストール�
 
 ## <a name="see-also"></a>関連項目
 
-* [超初心者向けの C# の基本ビデオ コース](https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169)
+* [ビデオ コース: 全くの初心者向けの C# の基本](https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169)
+* [Visual Studio での C# コードのデバッグについて理解する](tutorial-debugger.md)

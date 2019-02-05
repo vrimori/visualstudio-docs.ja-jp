@@ -7,15 +7,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15facda7bcb2b07dd071aaf0e40c44d265a01826
-ms.sourcegitcommit: 59c48e1e42b48ad25a4e198af670faa4d8dae370
+ms.openlocfilehash: 1ff3f2552f2334d87bc329bab41501570bd67864
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54204509"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54918204"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者でもわかるデバッグ方法
 
@@ -64,7 +64,7 @@ ms.locfileid: "54204509"
 
 デバッガー内でアプリを実行すると ("*デバッグ モード*" とも呼ばれます)、プログラムの実行中に発生するすべてのことをデバッガーが能動的に監視します。 また、いつでもアプリを一時停止して状態を調べた後、コードを 1 行ずつステップ実行して発生するすべてのことを詳しく確認できます。
 
-Visual Studio でデバッグ モードに入るには、デバッグ ツール バーで **F5** キーを使用します (または、**[デバッグ]** > **[デバッグの開始]** メニュー コマンドか、**[デバッグの開始]** ボタン ![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始"))。 例外が発生した場合、Visual Studio の例外ヘルパーによって、例外が発生した正確な地点に移動し、他の有用な情報が提供されます。 コードの例外を処理する方法の詳細については、「[より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)」を参照してください。
+Visual Studio でデバッグ モードに入るには、デバッグ ツール バーで **F5** キーを使用します (または、**[デバッグ]** > **[デバッグの開始]** メニュー コマンドか、**[デバッグの開始]** ボタン ![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始"))。 例外が発生した場合、Visual Studio の例外ヘルパーによって、例外が発生した正確な地点に移動し、他の有用な情報が提供されます。 コード内で例外を処理する方法の詳細については、[デバッグのテクニックとツール](../debugger/write-better-code-with-visual-studio.md)に関するページを参照してください。
 
 例外が発生しなかった場合は、おそらく、コード内で問題を探すべき場所について、開発者によい考えがあることでしょう。 その場合は、デバッガーで "*ブレークポイント*" を使用して、コードをより注意深く調べることができます。 ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行中のコードを一時停止する場所を示します。これにより、変数の値、メモリの動作、コード実行のシーケンスなどを確認できます。
 

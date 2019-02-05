@@ -1,5 +1,5 @@
 ---
-title: '方法 : プロジェクトを構成して対象プラットフォームを設定する'
+title: '方法: プロジェクトを構成してターゲット プラットフォームを設定する'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-compile
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 845302fc-273d-4f81-820a-7296ce91bd76
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2152f90d244ed283250bf8ea6a42a39b545f9c09
-ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
+ms.openlocfilehash: 4cb76611e7259b5cbee88f9ffe4da2dd222b56ec
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49847982"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55017748"
 ---
-# <a name="how-to-configure-projects-to-target-platforms"></a>方法 : プロジェクトを構成して対象プラットフォームを設定する
+# <a name="how-to-configure-projects-to-target-platforms"></a>方法: プロジェクトを構成してターゲット プラットフォームを設定する
 
 Visual Studio では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 Visual Studio での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](/dotnet/framework/64-bit-apps)」を参照してください。
 

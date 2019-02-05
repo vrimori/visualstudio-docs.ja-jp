@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e5da1b-cda1-4545-b46c-0440fba27485
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f813f9181d54ab3363c5643710b5434457d1959
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 2a9dabddaddaa6d19bbf6e73e2ddcb0011c559ea
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425362"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55012226"
 ---
 # <a name="understand-build-platforms"></a>ビルド プラットフォームについて
 
@@ -31,12 +31,12 @@ ms.locfileid: "32425362"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
- [方法: プロジェクトを構成して対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md) プロジェクトを構成して特定の対象プラットフォームを設定する方法について説明します。
+ [方法: プロジェクトを構成してターゲット プラットフォームを設定する](../ide/how-to-configure-projects-to-target-platforms.md) プロジェクトを構成して特定のターゲット プラットフォームを設定する方法について説明します。
 
- [方法: プロジェクトを構成して複数の対象プラットフォームを設定する](../ide/how-to-configure-projects-to-target-multiple-platforms.md) プロジェクトを構成して複数の対象プラットフォームを設定する方法について説明します。
+ [方法: プロジェクトを構成して複数のターゲット プラットフォームを設定する](../ide/how-to-configure-projects-to-target-multiple-platforms.md) プロジェクトを構成して複数のターゲット プラットフォームを設定する方法について説明します。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)
+- [チュートリアル: アプリケーションを構築する](../ide/walkthrough-building-an-application.md)
 - [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

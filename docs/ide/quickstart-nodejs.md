@@ -1,5 +1,5 @@
 ---
-title: 'クイック スタート: Visual Studio を使用して初めての Node.js アプリを作成する'
+title: 'クイック スタート: Visual Studio を使用して初めての Node.js Web アプリを作成する'
 description: このクイック スタートでは、Visual Studio で Node.js アプリを作成します
 ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
@@ -9,19 +9,19 @@ ms.devlang: javascript
 ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e18f1e2063fd4007eba13d76473d634265b6a51f
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: f11396527208862428483744bc1ac3b02583f4c8
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131857"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54955493"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>クイック スタート: Visual Studio を使用して初めての Node.js アプリを作成する
+# <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>クイック スタート: Visual Studio を使用して初めての Node.js Web アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な Node.js Web アプリケーションを作成します。 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 

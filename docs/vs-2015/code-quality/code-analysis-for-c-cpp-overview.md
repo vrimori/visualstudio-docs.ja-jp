@@ -1,14 +1,9 @@
 ---
-title: コード分析を使用した C++ の概要について |Microsoft Docs
-ms.custom: ''
+title: C/C++ のコード分析の概要 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-code-analysis
+ms.topic: overview
 helpviewer_keywords:
 - annotations, code analysis
 - build integration, code analysis
@@ -26,13 +21,13 @@ ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
 caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: f7261b0bab423aa851b44ec725ca1c2818da9319
-ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
-ms.translationtype: MT
+manager: jillfra
+ms.openlocfilehash: bc84b3f89aa819755a689a0798aea7fbb8147510
+ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51763576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805638"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,24 +35,21 @@ ms.locfileid: "51763576"
 C/C++ コード分析ツールは、C/C++ ソース コードの障害に関する情報を開発者に提供します。 このツールによってレポートされる一般的なコーディング エラーとしては、バッファー オーバーラン、初期化されていないメモリ、null ポインターの逆参照、メモリ リーク、リソース リークなどがあります。  
   
 ## <a name="ide-integrated-development-environment-integration"></a>IDE (統合開発環境) の統合  
- 開発者分析ツールを使用する自然に完全に統合内で、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE。 ビルド プロセス中には、ソース コードの生成された警告がエラー一覧に表示されます。 警告の原因となったソース コードに移動して、原因と問題の考えられる解決策に関する追加情報を表示できます。  
+ 開発者が分析ツールを自然に使用できるように、分析ツールは [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE に完全に統合されています。 ビルド プロセス中は、ソース コードに対して生成された警告がエラー一覧に表示されます。 警告の原因となったソース コードに移動して、問題の原因と考えられる解決策に関する追加情報を表示できます。  
   
-## <a name="pragma-support"></a>#pragma サポート  
- 開発者が使用できる、`#pragma`ディレクティブは警告をエラーとして扱う; 有効または警告を無効にする個々 の行のコードの警告を非表示にします。 詳細については、次を参照してください。[方法: 有効にすると特定の警告を C と C++ のコード分析を無効にする](http://msdn.microsoft.com/en-us/910b8518-71f1-4b2e-b012-70647795642a)します。  
+## <a name="pragma-support"></a>#pragma のサポート  
+ 開発者は `#pragma` ディレクティブを使用して、警告をエラーとして扱うか、警告を有効または無効にするか、個々のコード行の警告を非表示にすることができます。 詳細については、「[方法 :Enable and Disable Code Analysis for Specific C/C++ Warnings](http://msdn.microsoft.com/910b8518-71f1-4b2e-b012-70647795642a)」(特定の C/C++ の警告についてコード分析を有効または無効にする) を参照してください。  
   
 ## <a name="annotation-support"></a>注釈のサポート  
- 注釈には、コード分析の精度が向上します。 注釈は、関数のパラメーターの前と後の状態に関する追加情報を提供し、型を返します。 詳細については、次を参照してください[方法: _analysis_assume を使用して追加のコード情報の指定。](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)  
+ 注釈によってコード分析の精度が向上します。 注釈には、関数のパラメーターと戻り値の型について、事前および事後の状態に関する追加情報を指定します。 詳細については、「[方法 :__analysis_assume を使用して追加のコード情報を指定する](../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md)」を参照してください。  
   
-## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>分析ツールでは、チェックイン ポリシーの一部として実行します。  
- すべて元のコードのチェックインが特定のポリシーを満たすことを要求する可能性があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されているかどうかを確認します。 コード分析チェックイン ポリシーを有効にする方法の詳細については、次を参照してください[の作成とコード分析チェックイン ポリシーの使用。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)  
+## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としての分析ツールの実行  
+ チェックインされるすべてのソース コードが、特定のポリシーを満たしていることが必要な場合があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されたことを確認する必要があります。 コード分析チェックイン ポリシーを有効にする方法の詳細については、「[コード分析を用いたチェックイン ポリシーの作成と使用](../code-quality/creating-and-using-code-analysis-check-in-policies.md)」を参照してください。  
   
 ## <a name="team-build-integration"></a>チーム ビルドの統合  
- 手順として、コード分析ツールを実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../includes/esprtfs-md.md)]プロセスを構築します。 詳細については、「[アプリケーションのビルド](http://msdn.microsoft.com/library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)」をご覧ください。  
+ ビルド システムの統合機能を使用すると、コード分析ツールを [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] ビルド プロセスのステップとして実行できます。 詳細については、「[アプリケーションのビルド](http://msdn.microsoft.com/library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)」をご覧ください。  
   
-## <a name="command-line-support"></a>コマンド ライン サポート  
- 開発環境内で完全な統合、に加えて開発者できますも分析ツールを使用、コマンドラインから次の例に示すように。  
+## <a name="command-line-support"></a>コマンド ラインのサポート  
+ 開発環境内への完全な統合に加えて、次の例に示すように、開発者はコマンド ラインから分析ツールを使用することもできます。  
   
  `C:\>cl /analyze Sample.cpp`
-
-
-
