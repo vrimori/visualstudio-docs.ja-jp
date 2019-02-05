@@ -34,6 +34,6 @@ ms.locfileid: "53837850"
   
  デバッグ中にコンテナーのコードにステップ インする必要がある場合は、デバッグ バージョンのコンテナーを使用するか、デバッグ バージョンの ActiveX テスト コンテナーを使用します。 詳細については、次を参照してください。 [TSTCON サンプル。ActiveX コントロール テスト コンテナー。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
  [ActiveX コントロール](/cpp/mfc/activex-controls)
