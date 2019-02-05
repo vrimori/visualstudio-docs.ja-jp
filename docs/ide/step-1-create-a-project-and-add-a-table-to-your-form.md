@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da8d951c7bbb96d1c955d9254756ea80925d4969
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: b9ae3bcb27e86a4646aa345d4cfd010f8d34dd56
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53882777"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231806"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 
@@ -69,7 +69,7 @@ ms.locfileid: "53882777"
 
    5.  **Font** プロパティをクリックします。 省略記号 (**…**) ボタンが表示されます。
 
-   6.  省略記号ボタンをクリックし、**Font** を **Webdings** に、**Font Style** を **Bold** に、**Size** を **72** に設定します。
+   6.  省略記号ボタンを選択し、**Font** を **Webdings** に、**Font Style** を **Bold** に、**Size** を **48** に設定します。
 
    7.  ラベルの **Text** プロパティを **c** という文字に設定します。
 

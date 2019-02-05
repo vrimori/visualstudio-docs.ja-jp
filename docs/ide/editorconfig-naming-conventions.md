@@ -7,16 +7,16 @@ helpviewer_keywords:
 - EditorConfig naming conventions
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.prod: visual-studio-dev15
 ms.workload:
 - multiple
-ms.openlocfilehash: 60bffcf458e96a5e224493ac9a33b8fa9fb72541
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 50fe9249baae6d881c2d67ebc0a65a0c6335cbd3
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53898662"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54935359"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig での .NET の名前付け規則
 
@@ -85,7 +85,7 @@ ms.locfileid: "53898662"
 
 `dotnet_naming_symbols.<symbolTitle>.required_modifiers = <values>`
 
-許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
+許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。 名前付け規則は、`required_modifiers` で指定されたすべての修飾子が含まれている署名とのみ一致します。 このプロパティを省略した場合は、既定値である空のリストが使用されます。すなわち、一致のために特定の修飾子は必要ありません。 このことは、この規則が適用されるかどうかに、シンボルの修飾子が影響を及ぼさないことを意味します。
 
 - `abstract` または `must_inherit`
 - `async`

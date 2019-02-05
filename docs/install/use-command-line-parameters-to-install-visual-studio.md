@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb4ab50f5b5b699d2cbb8fa800705f4ed218c588
-ms.sourcegitcommit: a8c841648d862c83a0f0d654df1b367c159adc5e
+ms.openlocfilehash: a83b3c1be5beeeb2ea40fb9d27089a4b559f758a
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403968"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089143"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -37,7 +37,7 @@ ms.locfileid: "54403968"
 - [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
 - [Visual Studio 2017 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
 
-## <a name="list-of-command-line-parameters"></a>コマンド ライン パラメーターの一覧
+## <a name="command-line-parameters"></a>コマンド ライン パラメーター
 
  Visual Studio のコマンド ライン パラメーターでは、大文字と小文字は区別されません。
 
@@ -46,7 +46,7 @@ ms.locfileid: "54403968"
 (`vs_enterprise.exe` は、インストールする製品エディションに適宜置き換えてください。)
 
 >[!TIP]
-> コマンドラインを使用して Visual Studio 2017 をインストールする方法の例については、[コマンド ライン パラメーターの例](command-line-parameter-examples.md)に関するページをご覧ください。
+> コマンドラインを使用して Visual Studio 2017 をインストールする方法の他の例については、[コマンド ライン パラメーターの例](command-line-parameter-examples.md)に関するページをご覧ください。
 
 | **コマンド** | **説明** |
 | ----------------------- | --------------- |
@@ -56,6 +56,8 @@ ms.locfileid: "54403968"
 | `repair` | インストールされている製品を修復します。 |
 | `uninstall` | インストールされている製品をアンインストールします。 |
 | `export` | **15.9 の新機能**:インストールの選択をインストール構成ファイルにエクスポートします。 **注**:vs_installer.exe でのみ使用できます。 |
+
+## <a name="install-options"></a>インストール オプション
 
 | **インストール オプション** | **説明** |
 | ----------------------- | --------------- |
@@ -79,6 +81,8 @@ ms.locfileid: "54403968"
 
 > [!IMPORTANT]
 > 複数のワークロードとコンポーネントを指定する場合、項目ごとに `--add` または `--remove` コマンド ライン スイッチを繰り返す必要があります。
+
+## <a name="layout-options"></a>レイアウト オプション
 
 | **レイアウト オプション** | **説明** |
 | ----------------------- | --------------- |

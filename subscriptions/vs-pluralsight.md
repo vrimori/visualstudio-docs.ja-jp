@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの Pluralsight 特典 | Microso
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 12/19/2018
+ms.date: 01/25/2019
 ms.topic: Get-Started-Article
 description: 一部の Visual Studio サブスクリプションに含まれる Pluralsight トレーニング サブスクリプションについて説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 8e077db1aa369198f015f68e0e61efbc30697659
-ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
+ms.openlocfilehash: 197e162df314e039bbf748a7afc208c0639531d1
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54380317"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089241"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -71,17 +71,17 @@ ms.locfileid: "54380317"
 
 |                          サブスクリプション レベル                          |     チャネル      |    特長    |   更新可能かどうか   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
-|          Visual Studio Enterprise (Standard)           | VL、Azure、リテール |   6 か月    | ×<sup>2</sup> |
-|         Visual Studio Professional (Standard)          | VL、Azure、リテール |   3 か月    | ×<sup>2</sup> |
-|              Visual Studio Test Professional (標準)              |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
-|                      MSDN Platforms (標準)                       |    VL、リテール     |   3 か月    | ×<sup>2</sup> |
-|                     Visual Studio Dev Essentials                     |        N/A         |   1 か月    |       ×       |
+|          Visual Studio Enterprise (Standard)           | VL、Azure、リテール |   6 か月    | はい<sup>2</sup> |
+|         Visual Studio Professional (Standard)          | VL、Azure、リテール |   3 か月    | はい<sup>2</sup> |
+|              Visual Studio Test Professional (標準)              |    VL、リテール     |   3 か月    | いいえ  |
+|                      MSDN Platforms (標準)                       |    VL、リテール     |   3 か月    | いいえ  |
+|                     Visual Studio Dev Essentials                     |        N/A         |   1 か月    |       いいえ        |
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) |       Azure       | 使用できません |       N/A       |
 |             Visual Studio Enterprise (NFR<sup>1</sup>)              |      プログラム      | 使用できません |       N/A       |
 
-<sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
+<sup>1</sup>  *内容:Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Most Valuable Professional (MVP)、Regional Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
-<sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。*
+<sup>2</sup>  *選択した Visual Studio サブスクリプションの Pluralsight 特典は、ご利用のサブスクリプションが更新されると、更新されます。たとえば、毎年更新する年間サブスクリプションをお持ちの場合、毎年更新すると特典を利用できるようになります。複数年のサブスクリプションをお持ちの場合、Pluralsight 特典はサブスクリプションの有効期間中に 1 回使用できます。複数年のサブスクリプションを更新した場合、更新後に特典が再度利用できるようになります。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。
@@ -106,9 +106,6 @@ A:はい。Visual Studio サブスクライバーは、Pluralsight トレーニ�
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q:Pluralsight サブスクリプションがなくなるとどうなりますか。
 A:Pluralsight 無料サブスクリプションの終了時、Pluralsight から直接、サブスクリプションを購入できます。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
-
-### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q:自分の会社で Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?
-A:いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。  これは、小売店、クラウド、ボリューム ライセンス (VL) の購入など、すべての購入チャネルに当てはまります。
 
 ## <a name="support-resources"></a>サポート リソース
 -  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。

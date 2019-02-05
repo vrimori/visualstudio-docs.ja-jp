@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるテクニ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: be2fcf753c73055d647e9a924dfec306d49ce202
-ms.sourcegitcommit: 8c4267540c0ac39664f6902c423516f408f3cbd4
+ms.openlocfilehash: de53a94bd8ab0513e27f7c62461165d9ff8e865c
+ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54380247"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55089225"
 ---
 # <a name="activate-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
@@ -27,7 +27,7 @@ ms.locfileid: "54380247"
 > ![テクニカル サポート特典タイル](_img/vs-tech-support/vs-tech-support-tile.png)
 
 
-1. テクニカル サポート特典の使用を開始するには、テクニカル サポート タイルで **[Chat to activate]\(アクティブ化のためのチャット\)** をクリックします。 
+1. テクニカル サポート特典の使用を開始するには、 https://my.visualstudio.com/Benefits に進み、[サポート] セクションまで下方にスクロールし、[テクニカル サポート] タイル上で **[Chat to activate]\(アクティブ化のためのチャット\)** をクリックします。 
 2. これで、契約 ID とアクセス ID を作成してユーザーに提供できる担当者とのチャット セッションが開始されます。 
 3. プロセスを完了するには、担当者に以下のものを提供する必要があります。
    - 自分のサブスクリプションへのサインインに使用するメール アドレス
@@ -92,14 +92,14 @@ Azure に関連する問題がある場合に Visual Studio サブスクリプ�
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  はい|
-| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |はい         |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  はい         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | はい         |
+| Visual Studio Enterprise (Standard)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  [はい]|
+| Visual Studio Professional (Standard) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |[はい]         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  [はい]         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | [はい]         |
 | Visual Studio Dev Essentials | N/A | 使用できません |N/A|
 | Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
 
-<sup>1</sup> *Imagine Premium が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine Standard、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup> *Imagine Premium が含まれます除外:Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine Standard、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
 
 <sup>2</sup> *Imagine Standard が含まれます。*
 

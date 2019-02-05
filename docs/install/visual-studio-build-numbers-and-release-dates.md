@@ -5,20 +5,20 @@ description: Visual Studio 2017 以降のリリース済みバージョンおよ
 keywords: ''
 author: TerryGLee
 ms.author: tglee
-manager: douge
-ms.date: 01/09/2019
+manager: jillfra
+ms.date: 01/24/2019
 ms.topic: reference
 helpviewer_keywords: ''
 ms.prod: visual-studio-dev15
 ms.custom: seodec18
 ms.workload:
 - multiple
-ms.openlocfilehash: 15738554ca658a337f187f554b07786569f95ea3
-ms.sourcegitcommit: 73861cd0ea92e50a3be1ad2a0ff0a7b07b057a1c
+ms.openlocfilehash: 886dcff968f5fcb25a3c7c69808b2811fffa6f5a
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54154509"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54929037"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio のビルド番号とリリース日
 
@@ -28,6 +28,7 @@ ms.locfileid: "54154509"
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.6 | Release | 2019 年 1 月 24 日 | 15.9.28307.344 |
 | 15.9.5 | Release | 2019 年 1 月 8 日 | 15.9.28307.280 |
 | 15.9.4 | Release | 2018 年 12 月 11 日 | 15.9.28307.222 |
 | 15.0.20 | Release | 2018 年 12 月 11 日 | 15.0.26228.64 |
@@ -175,6 +176,7 @@ ms.locfileid: "54154509"
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.0.0 | Preview 2 | 2019 年 1 月 23 日 | 16.0.28522.59 |
 | 16.0.0 | プレビュー 1.1 | 2018 年 12 月 10 日 | 16.0.28408.50 |
 | 16.0.0 | Preview 1 | 2018 年 12 月 4 日 | 16.0.28329.73 |
 

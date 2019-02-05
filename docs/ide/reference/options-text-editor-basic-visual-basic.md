@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8014ad72978a4b3ee37547a6660f739973ae4e46
-ms.sourcegitcommit: 8bfabab73b39b3b3e68a3e8dc225515e8b310fed
+ms.openlocfilehash: ccf0e8d76aeaf1f6982d7b776abfd32609e1b3e1
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398248"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54998262"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>[オプション]、[テキスト エディター]、[基本] (Visual Basic)、[詳細]
 **[オプション]** (**[ツール]** メニュー) ダイアログ ボックスの **[テキスト エディター]** フォルダーにある **[Basic]** フォルダーの **[VB 固有]** プロパティ ページでは、次のプロパティを指定します。
@@ -40,18 +40,18 @@ ms.locfileid: "54398248"
 - using を並べ替える際に、'System' ディレクティブを先頭に配置する
 
    選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって `using` ディレクティブが並べ替えられ、'System' 名前空間が一覧の先頭に置かれます。
-   
+
 - ディレクティブ グループを使用して分離します
 
    選択した場合、右クリック メニューの **[using の削除と並べ替え]** コマンドによって、同じルート名前空間を持つディレクティブのグループの間に空の行を挿入することで、`using` ディレクティブが分離されます。
-   
-- 参照アセンブリの型に using を提案する 
-- NuGet パッケージの型に using を提案する 
+
+- 参照アセンブリの型に using を提案する
+- NuGet パッケージの型に using を提案する
 
    これらのオプションを選択した場合、[クイック アクション](../quick-actions.md)を使用して NuGet パッケージをインストールし、参照されていない型の `using` ディレクティブを追加できます。
 
    ![Visual Studio に NuGet パッケージをインストールするためのクイック アクション](media/nuget-lightbulb.png)
-  
+
 
 ## <a name="highlighting"></a>強調表示
 
@@ -77,7 +77,7 @@ ms.locfileid: "54398248"
 
 ## <a name="block-structure-guides"></a>ブロック構造のガイド
 
-コードの中かっこ (**{}**) の間に垂直の点線を表示するには、このチェック ボックスをオンにします。 これによって、宣言レベルとコード レベルのコンストラクト用のコード ブロックを簡単に確認できます。
+選択した場合、構造化されたコード ブロックに合う垂直線がエディターに表示され、個々のコード ブロックを簡単に識別できます。 たとえば、`Sub` ステートメントの `Sub` と `EndSub` の間に線が表示されます。
 
 ## <a name="editor-help"></a>エディターのヘルプ
 

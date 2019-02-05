@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6363149165c9718300eec1074fdfc006709b3d3
-ms.sourcegitcommit: 01185dadd2fa1f9a040d2a366869f1a5e1d18e0f
+ms.openlocfilehash: 638e49a2e2146503186eb26f25e67ff68bb4a354
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54227890"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55042063"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>最初に Visual Studio デバッガーを見る
 
@@ -185,7 +185,7 @@ F10 キーを押すと、アプリ コード内の関数またはメソッドに
 
 この例では、`DirectoryInfo` 呼び出しによって、`value` 変数に格納されている空の文字列にエラーが発生しました。
 
-例外ヘルパーは、エラーのデバッグに役立つ優れた機能です。 エラーの詳細を表示したり、例外ヘルパーからウォッチ式を追加したりすることもできます。 あるいは、必要であれば、特定の例外をスローするための条件を変更できます。 コードの例外を処理する方法の詳細については、「[より良い C# コードを書くことでバグを修正する](../debugger/write-better-code-with-visual-studio.md)」を参照してください。
+例外ヘルパーは、エラーのデバッグに役立つ優れた機能です。 エラーの詳細を表示したり、例外ヘルパーからウォッチ式を追加したりすることもできます。 あるいは、必要であれば、特定の例外をスローするための条件を変更できます。 コード内で例外を処理する方法の詳細については、[デバッグのテクニックとツール](../debugger/write-better-code-with-visual-studio.md)に関するページを参照してください。
 
 > [!NOTE]
 > 例外ヘルパーは [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の例外アシスタントに取って代わるものです。
