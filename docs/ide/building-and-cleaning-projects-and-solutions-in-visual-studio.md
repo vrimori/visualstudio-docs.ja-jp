@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c96a3b6699428b156a23ad643eb7958cb438b994
-ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
+ms.openlocfilehash: 25d9f278ab63ddfa4ffbbf72a4899ce99828b720
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51349271"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "54942754"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
 
@@ -118,7 +118,7 @@ ms.locfileid: "51349271"
 - [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)
 - [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
 - [ビルド構成について](../ide/understanding-build-configurations.md)
-- [方法 : デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)
+- [方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)
 - [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)
 - [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)

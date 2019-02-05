@@ -33,12 +33,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b0a9f28da48582ac562f08e3327fb3d80375c3b
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 4ee8e68cea1a4f6b708b304b6ca889d29eff0bad
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53835293"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690315"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 マルチ スレッド プログラムでの同時実行のバグを回避するには、以下の適切なロック作業分野と SAL 注釈を使用して常に。
@@ -105,6 +105,19 @@ ms.locfileid: "53835293"
 |`_Interlocked_`|変数に注釈を付けます、等価`_Guarded_by_(_Global_interlock_)`します。|
 |`_Interlocked_operand_`|注釈付きの関数パラメーターは、さまざまな Interlocked 関数の 1 つのターゲットのオペランドです。  これらのオペランドは、特定の追加プロパティを持つ必要があります。|
 |`_Write_guarded_by_(expr)`|変数に注釈を付けますするたびに、変数を変更、ロックのロック オブジェクトによって指定される数を示します`expr`は少なくとも 1 つです。|
+
+
+## <a name="smart-lock-and-raii-annotations"></a>Smart Lock と RAII 注釈
+ スマート ロックは通常ネイティブ ロックをラップし、その有効期間を管理します。 次の表に、スマート ロックと RAII コード対応のパターンで使用できる注釈`move`セマンティクスです。
+
+|注釈|説明|
+|----------------|-----------------|
+|`_Analysis_assume_smart_lock_acquired_`|スマート ロックが取得されたことを想定するアナライザーを指示します。 この注釈では、そのパラメーターとして参照ロックの種類が必要です。|
+|`_Analysis_assume_smart_lock_released_`|スマート ロックが解放されたことを想定するアナライザーを指示します。 この注釈では、そのパラメーターとして参照ロックの種類が必要です。|
+|`_Moves_lock_(target, source)`|説明`move constructor`からロックの状態を転送する操作、`source`オブジェクトを`target`します。 `target`前に、紛失してに置き換え、すべての状態のためには、新しく構築されたオブジェクトと見なされますが、`source`状態。 `source`はでもないロックの数またはエイリアスのターゲットがそれを指すエイリアスのクリーンな状態にリセットも変更します。|
+|`_Replaces_lock_(target, source)`|説明`move assignment operator`セマンティクスは元の状態を転送する前にターゲット ロックを解放する場所。 組み合わせとして見なされるこの`_Moves_lock_(target, source)`前に、`_Releases_lock_(target)`します。|
+|`_Swaps_locks_(left, right)`|標準について説明します`swap`オブジェクトと仮定動作`left`と`right`の状態を交換します。 交換される状態には、存在する場合、ロックの数とエイリアスのターゲットが含まれます。 指すエイリアス、`left`と`right`オブジェクトは変更されません。|
+|`_Detaches_lock_(detached, lock)`|ロックのラッパー型によりが含まれているリソースとの関連付けを解除するシナリオについて説明します。 これは、方法に似ています`std::unique_ptr`その内部ポインターと連携: これにより、プログラマは、ポインターを抽出し、クリーンな状態で、スマート ポインターのコンテナーのままにします。 同様のロジックではサポートされて`std::unique_lock`カスタム ロックのラッパーで実装することができます。 デタッチされたロック (ロック数とエイリアス ターゲット、存在する場合)、その状態を保持するラッパーをリセットする独自のエイリアスを維持しながら、ロック カウントが 0 とありませんエイリアス ターゲットを格納するためです。 ロック数 (解放および獲得) に対する操作はありません。 この注釈は、まったく同様に機能`_Moves_lock_`がデタッチされた引数は`return`なく`this`します。|
 
 ## <a name="see-also"></a>関連項目
 
