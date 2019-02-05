@@ -23,7 +23,7 @@ ms.locfileid: "54956169"
 
 次の方法があります。
 
--   [Visual Studio 拡張機能](../extensibility/shipping-visual-studio-extensions.md) これを使用すると、ディレクティブ プロセッサを自分のコンピューターと他のコンピューターの両方でインストールおよびアンインストールできます。 通常は、他の機能も同じ VSIX にパッケージ化します。
+-   [Visual Studio 拡張機能](../extensibility/shipping-visual-studio-extensions.md) これを使用すると、ディレクティブ プロセッサを自分のコンピューターと他のコンピューターの両方でインストールおよびアンインストールできます。通常は、他の機能も同じ VSIX にパッケージ化します。
 
 -   [VSPackage](../extensibility/internals/vspackages.md) ディレクティブ プロセッサ以外の機能も含む VSPackage を定義する場合は、ディレクティブ プロセッサの便利な登録方法を利用できます。
 
@@ -33,7 +33,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX でのディレクティブ プロセッサの配置
 
-カスタム ディレクティブ プロセッサを、[Visual Studio Extension (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md)に追加することができます。 
+カスタム ディレクティブ プロセッサを、[Visual Studio 拡張機能 (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md) に追加することができます。 
 
  .vsix ファイルに次の 2 つのアイテムが格納されていることを確認する必要があります。
 
@@ -53,7 +53,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 2.  **Source.extension.vsixmanifest** のコンテンツの種類をサポートされているエディションに設定します。
 
-    1.  Vsix マニフェスト エディターで、**Assets** タブで、**New** を選択し、新しい項目のプロパティを設定します。
+    1.  VSIX マニフェスト エディターの **Assets** タブで、**New** を選択し、新しい項目のプロパティを設定します。
 
          **Content Type** = **VSPackage**
 
@@ -104,7 +104,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 #### <a name="to-install-the-custom-directive-processor"></a>カスタム ディレクティブ プロセッサをインストールするには
 
-1.  Windows エクスプ ローラーで、ビルド ディレクトリ (通常は bin\Debug または bin\Release) を開きます。
+1.  エクスプローラーで、ビルド ディレクトリ (通常は bin\Debug または bin\Release) を開きます。
 
 2.  別のコンピューターにディレクティブ プロセッサをインストールする場合は、そのコンピューターに .vsix ファイルをコピーします。
 
@@ -116,9 +116,9 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>カスタム ディレクティブ プロセッサをアンインストールするか、一時的に無効にするには
 
-1.  Visual Studio で**ツール** メニューの中の**拡張機能マネージャー**をクリックします。
+1.  Visual Studio の **[ツール]** メニューで、**[拡張機能マネージャー]** をクリックします。
 
-2.  ディレクティブ プロセッサを含む VSIX を選択し、**アンインストール**または**無効化**をクリックします。
+2.  ディレクティブ プロセッサを含む VSIX を選択し、**[アンインストール]** または **[無効化]** をクリックします。
 
 ### <a name="troubleshooting-a-directive-processor-in-a-vsix"></a>VSIX に含まれるディレクティブ プロセッサのトラブルシューティング
  ディレクティブ プロセッサが機能しない場合は、次のヒントを参考にしてください。
@@ -127,9 +127,9 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 -   `IsDirectiveSupported` メソッドは、`true` の名前が渡されたときに `CustomDirective` を返す必要があります。
 
--   拡張機能マネージャーで拡張機能が表示されない場合、システムはインストールを許可していません。**%localappdata%\Microsoft\VisualStudio\\\*.0\Extensions\\** から拡張機能を削除してください。
+-   拡張機能マネージャーで拡張機能が表示されず、システムがインストールを許可しない場合、**%localappdata%\Microsoft\VisualStudio\\\*.0\Extensions\\** から拡張機能を削除してください。
 
--   .vsix ファイルを開き、そのコンテンツを調べます。 .vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。 このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。 extension.vsixmanifest ファイルには、SupportedProducts ノードに適切なリストが含まれ、かつ Content ノードに VsPackage ノードが含まれている必要があります。
+-   .vsix ファイルを開き、そのコンテンツを調べます。.vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。extension.vsixmanifest ファイルには、SupportedProducts ノードに適切なリストが含まれ、かつ Content ノードに VsPackage ノードが含まれている必要があります。
 
      `<Content>`
 
@@ -188,7 +188,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 |名前|型|データ|
 |-|-|-|
 |(既定)|REG_SZ|(値の設定なし)|
-|クラス|REG_SZ|**\<Namespace 名>\<クラス名>**|
+|クラス|REG_SZ|**\<Namespace 名>.<クラス名>**|
 |CodeBase|REG_SZ|**\<パス>\\<アセンブリ名\>**|
 
  アセンブリが GAC に含まれている場合は、レジストリ サブキーを次の表に従って設定します。
