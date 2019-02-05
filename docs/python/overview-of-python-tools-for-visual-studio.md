@@ -7,17 +7,17 @@ ms.prod: visual-studio-dev15
 ms.topic: overview
 author: kraigb
 ms.author: kraigb
-manager: douge
+manager: jillfra
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8e37648be6bb9f78aa80027b50b2fea6592d7c9e
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 699578e564999db55562abaad764cde80fc8b618
+ms.sourcegitcommit: a916ce1eec19d49f060146f7dd5b65f3925158dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53927338"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55232066"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -40,7 +40,7 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 
 ![[Python 環境] ウィンドウを広げた表示](media/environments-expanded-view.png)
 
-**[対話型ウィンドウを開く]** コマンドを使用して、Visual Studio のコンテキスト内で Python を対話的に実行します。 **[PowerShell で開く]** コマンドを使用して、選択した環境のフォルダー内に独立したコマンド ウィンドウを開きます。 そのコマンド ウィンドウから、任意の Python スクリプトを実行できます。 
+**[対話型ウィンドウを開く]** コマンドを使用して、Visual Studio のコンテキスト内で Python を対話的に実行します。 **[PowerShell で開く]** コマンドを使用して、選択した環境のフォルダー内に独立したコマンド ウィンドウを開きます。 そのコマンド ウィンドウから、任意の Python スクリプトを実行できます。
 
 詳細情報
 
@@ -140,7 +140,7 @@ Visual Studio **テスト エクスプローラー**でテストを検出、実�
 
 Python ワークロードに含まれる Azure SDK for Python を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
 
-詳細については、「[Azure SDK for Python](azure-sdk-for-python.md)」を参照してください。
+詳細については、[Python 用 Azure SDK](/python/azure/?view=azure-python) に関するページを参照してください。
 
 ## <a name="python-training-on-microsoft-virtual-academy"></a>Microsoft Virtual Academy の Python トレーニング
 
