@@ -365,5 +365,5 @@ int addNewRecord(struct RecStruct *prevRecord,
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
