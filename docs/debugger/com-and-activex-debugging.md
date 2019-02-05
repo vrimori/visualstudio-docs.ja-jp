@@ -45,7 +45,7 @@ ms.locfileid: "55013998"
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)  
  デバッグに関連するドキュメントのより広範囲なリンクを提供します。 デバッガーの新機能、設定と準備、ブレークポイント、例外の処理、エディット コンティニュ、マネージド コードのデバッグ、Visual C++ プロジェクトのデバッグ、COM および ActiveX のデバッグ、DLL のデバッグ、SQL のデバッグ、ユーザー インターフェイス リファレンスなどの情報へのリンクを提供します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [COM の概要](/cpp/atl/introduction-to-com)   
  [ActiveX コントロール](/cpp/mfc/activex-controls)   
