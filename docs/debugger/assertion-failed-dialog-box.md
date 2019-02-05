@@ -36,5 +36,5 @@ ms.locfileid: "54941815"
 |Ignore|アサーションを無視してプログラムを引き続き実行します。|  
 |[中止]|プログラムの実行を停止し、デバッグ セッションを終了します。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [C/C++ アサーション](../debugger/c-cpp-assertions.md)
