@@ -39,5 +39,5 @@ if ( nBlockUse == _CRT_BLOCK )
   
  ランタイム ライブラリのソース ファイルを調べる場合、既定の割り当て用のフック関数 **CrtDefaultAllocHook** (これは単に **TRUE** を返します) が独自の個別のファイル (DBGHOOK.C) の中にあることがわかります。 アプリケーションの **main** 関数の前に実行されるランタイムのスタートアップ コードによる割り当て時にも割り当てのフックが呼び出されるようにするには、[_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) を使用する代わりに、この既定の関数を独自の関数に置き換えることができます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   
