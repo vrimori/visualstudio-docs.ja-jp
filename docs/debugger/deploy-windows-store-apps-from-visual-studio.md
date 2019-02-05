@@ -51,7 +51,7 @@ Visual Studio の配置機能は、ビルドし、ターゲット デバイス�
 
 **必須コンポーネント**
 
-Windows 10 のリモート デバイスで有効にする必要があります[開発者モード](/windows/uwp/get-started/enable-your-device-for-development)します。 Creator の更新プログラムを実行する Windows 10 デバイスで以降、リモート ツールが自動的にインストールされているアプリを展開するときにします。 詳細については、次を参照してください。 [、インストールされているアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)します。
+Windows 10 のリモート デバイスで有効にする必要があります[開発者モード](/windows/uwp/get-started/enable-your-device-for-development)します。 Creator の更新プログラムを実行する Windows 10 デバイスで以降、リモート ツールが自動的にインストールされているアプリを展開するときにします。 詳細については、次を参照してください。 [インストールされているアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)します。
 
 > [!NOTE]
 > Windows 10 の以前の作成者の更新プログラムのバージョンでは、Remote Tools for Visual Studio は、リモート デバイスにインストールする必要があり、リモート デバッガーを実行する必要があります。
@@ -114,7 +114,7 @@ Windows 10 のリモート デバイスで有効にする必要があります[�
 
 - JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]** に設定します。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [高度なリモート配置オプション](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [インストールされているアプリケーション パッケージをデバッグする](../debugger/debug-installed-app-package.md)
