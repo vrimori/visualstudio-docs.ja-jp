@@ -33,12 +33,12 @@ ms.locfileid: "54991633"
 
 | データ ソース | **Windows フォーム デザイナー**でのドラッグ アンド ドロップのサポート | **WPF デザイナー**でのドラッグ アンド ドロップのサポート | **Silverlight デザイナー**でのドラッグ アンド ドロップのサポート |
 | - | - | - | - |
-| データセット | はい | [はい] | × |
+| データセット | はい | はい | × |
 | エンティティ データ モデル | ○<sup>1</sup> | はい | はい |
 | LINQ to SQL クラス | ×<sup>2</sup> | ×<sup>2</sup> | ×<sup>2</sup> |
-| サービス ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む) | はい | [はい] | はい |
-| Object | はい | [はい] | はい |
-| SharePoint | はい | [はい] | はい |
+| サービス ([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む) | はい | はい | はい |
+| Object | はい | はい | はい |
+| SharePoint | はい | はい | はい |
 
 1. 使用して、モデルの生成、 **Entity Data Model**ウィザード、デザイナーにそれらのオブジェクトをドラッグします。
 
