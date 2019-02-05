@@ -37,7 +37,7 @@ Visual Studio のテキスト テンプレートは、あらゆる種類のテ�
 
      パラメーターをこれらのテンプレートに渡すには \<#@parameter#> ディレクティブを使用します。 詳細については、次を参照してください。 [T4 パラメーター ディレクティブ](../modeling/t4-parameter-directive.md)
 
-### <a name="read-another-project-file-from-a-template"></a>テンプレートから別のプロジェクト ファイルの読み取り
+### <a name="read-another-project-file-from-a-template"></a>テンプレートから別のプロジェクト ファイルを読み取る
  テンプレートと同じ Visual Studio プロジェクトからのファイルを読み取るには次のようにします。
 
 -   `hostSpecific="true"` ディレクティブに `<#@template#>` を挿入します。
@@ -68,7 +68,7 @@ Visual Studio のテキスト テンプレートは、あらゆる種類のテ�
 
 -   ディレクティブ プロセッサを記述することを検討します。 これにより、アセンブリの複数のステートメントを置換して、単一のカスタム ディレクティブを持つ各テンプレート内でステートメントをインポートすることができます。 ディレクティブ プロセッサはモデル ファイルを読み込み、解析できます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)
 
-### <a name="generate-files-from-a-complex-model"></a>複雑なモデルからファイルの生成
+### <a name="generate-files-from-a-complex-model"></a>複雑なモデルからファイルを生成する
 
 -   ドメイン固有言語 (DSL) を表すモデルを作成することを検討してください。 これによって、モデル内の要素の名前を反映した型とプロパティを使用するため、テンプレートの記述が簡単になります。 ファイルを解析したり、XML ノードを巡回したりする必要はありません。 例:
 
@@ -114,7 +114,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ### <a name="what-is-the-benefit-of-using-text-templates"></a>テキスト テンプレートを使用する利点は何ですか?
  通常、1 つのモデルから複数のコードやその他のファイルを生成します。 モデルは、生成されるコードよりも直接的に要件を表しています。 実装の詳細を省略し、コードではなく、要件の観点から記述されます。 （あなたにもよくある）要件変更のとき、モデルの更新は、プログラム コードのさまざまな部分の更新よりも、より簡単かつより確実にできます。
 
- すなわち、コード生成は、アジャイル開発手法の観点からの貴重なツールです。
+  すなわち、コード生成は、アジャイル開発手法の観点から貴重なツールです。。
 
 ### <a name="what-best-practices-are-there-for-text-templates"></a>テキスト テンプレートには、どのような「ベスト プラクティス」がありますか?
 
