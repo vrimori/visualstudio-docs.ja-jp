@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 294f3efe5e541a316a8bb90da07d75e9319e7983
-ms.sourcegitcommit: 5c049194fa256b876ad303f491af11edd505756c
+ms.openlocfilehash: 09fede64aee943d7c3160a5e9be449752d4f2c68
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53027375"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484213"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity で.NET 4.x を使用する
 
@@ -24,7 +24,7 @@ Unity には、Unity 2017.1 のリリースで、.NET 4.6 にアップグレー�
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * [Unity 2017.1 以上](https://unity3d.com/) (2018.2 推奨)
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ## <a name="enabling-the-net-4x-scripting-runtime-in-unity"></a>Unity で .NET 4.x スクリプティング ランタイムを有効にする
 
