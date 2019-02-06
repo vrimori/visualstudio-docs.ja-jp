@@ -53,8 +53,8 @@ Visual Studio でのデータ バインド コントロールを作成する方�
 
 | データ ソース | コントロールをデータ ソースにバインドする XAML の生成 | データ ソースにデータを読み込むコードの生成 |
 | - | - | - |
-| データセット | はい | [はい] |
-| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | [はい] | はい |
+| データセット | はい | はい |
+| [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | はい | はい |
 | サービス | はい | × |
 | Object | はい | × |
 

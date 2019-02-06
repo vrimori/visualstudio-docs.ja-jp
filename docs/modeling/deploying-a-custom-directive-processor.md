@@ -19,7 +19,7 @@ ms.locfileid: "54956169"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
 
-Visual Studio でカスタム ディレクティブ プロセッサを使用して、任意のコンピューターで、このトピックで説明する方法のいずれかによって登録する必要があります。
+任意のコンピューターで Visual Studio のカスタム ディレクティブ プロセッサを使用するには、このトピックで説明する方法のいずれかによって登録する必要があります。
 
 次の方法があります。
 
@@ -33,7 +33,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX でのディレクティブ プロセッサの配置
 
-カスタム ディレクティブ プロセッサを追加することができます、 [Visual Studio Extension (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md)します。
+カスタム ディレクティブ プロセッサを、[Visual Studio 拡張機能 (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md) に追加することができます。
 
  .vsix ファイルに次の 2 つのアイテムが格納されていることを確認する必要があります。
 
@@ -51,15 +51,15 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
     -   **新しいプロジェクト** ダイアログ ボックスで、展開**Visual Basic**または**Visual c#** の順に展開**Extensibility**します。 クリックして**VSIX プロジェクト**します。
 
-2.  **Source.extension.vsixmanifest**コンテンツの種類を設定し、サポートされているエディションです。
+2.  **Source.extension.vsixmanifest** のコンテンツの種類をサポートされているエディションに設定します。
 
     1.  Vsix マニフェスト エディターで、**資産** タブで、選択**新規**し、新しい項目のプロパティを設定します。
 
-         **コンテンツの種類** = **VSPackage**
+         **Content Type** = **VSPackage**
 
-         **プロジェクトをソース** = \<*現在のプロジェクト*>
+         **Source Project** = \<*現在のプロジェクト*>
 
-    2.  をクリックして**選択されたエディション**ディレクティブ プロセッサを使用できるようにインストールの種類を確認します。
+    2.  **Selected Editions** をクリックして、ディレクティブ プロセッサを使用できるようにしたいインストールの種類を確認します。
 
 3.  .pkgdef ファイルを追加し、そのプロパティが VSIX に含まれるように設定します。
 
@@ -118,7 +118,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 1.  Visual Studio で**ツール** メニューのをクリックして**拡張機能マネージャー**します。
 
-2.  ディレクティブ プロセッサを含む VSIX を選択し、クリックして**アンインストール**または**を無効にする**します。
+2.  ディレクティブ プロセッサを含む VSIX を選択し、**[アンインストール]** または **[無効化]** をクリックします。
 
 ### <a name="troubleshooting-a-directive-processor-in-a-vsix"></a>VSIX に含まれるディレクティブ プロセッサのトラブルシューティング
  ディレクティブ プロセッサが機能しない場合は、次のヒントを参考にしてください。
@@ -129,7 +129,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 -   拡張機能マネージャーでは、拡張機能が表示されない、システムでは、インストールを許可がない場合は、削除、拡張機能から **%localappdata%\Microsoft\VisualStudio\\\*. 0\Extensions\\** .
 
--   .vsix ファイルを開き、そのコンテンツを調べます。 .vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。 このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。 extension.vsixmanifest ファイルでは、SupportedProducts ノードに適切なリストが含まれ、なおかつ Content ノードに VsPackage ノードが含まれている必要があります。
+-   .vsix ファイルを開き、そのコンテンツを調べます。 .vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。 このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。 extension.vsixmanifest ファイルには、SupportedProducts ノードに適切なリストが含まれ、かつ Content ノードに VsPackage ノードが含まれている必要があります。
 
      `<Content>`
 
@@ -153,7 +153,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
  .pkgdef ファイルがビルド フォルダー (通常は bin\Debug か bin\Release) に表示されることを確認します。 このフォルダーに表示されない場合は、テキスト エディターで .csproj ファイルを開き、`<GeneratePkgDefFile>false</GeneratePkgDefFile>` ノードを削除します。
 
- 詳細については、「 [VSPackages](../extensibility/internals/vspackages.md)」を参照してください。
+ 詳細については、「[VSPackages](../extensibility/internals/vspackages.md)」を参照してください。
 
 ## <a name="setting-a-registry-key"></a>レジストリ キーの設定
  これは、カスタム ディレクティブ プロセッサをインストールする方法としては、最も優先順位の低い方法です。 この方法では、ディレクティブ プロセッサを簡単に有効化および無効化できないうえに、ディレクティブ プロセッサを他のユーザーに配布することもできません。
@@ -169,15 +169,15 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
 
-    Visual Studio の実験的なバージョンでディレクティブ プロセッサをインストールする場合は、「11.0」後"Exp"を挿入します。
+    Visual Studio の実験的なバージョンでディレクティブ プロセッサをインストールする場合は、"11.0" の後に "Exp" を挿入します。
 
 3. ディレクティブ プロセッサ クラスと同じ名前のレジストリ キーを追加します。
 
    -   レジストリ ツリー内を右クリックし、 **DirectiveProcessors**に**新規**、 をクリックし、**キー**します。
 
-4. 新しいノードで、クラスとコードベース、またはクラスとアセンブリの文字列値を次の表に従って追加します。
+4. 新しいノードで、次の表に従って Class および CodeBase または Assembly に文字列値を追加します。
 
-   1.  作成したノードを右クリックし、[**新規**、] をクリックし、**文字列値**します。
+   1.  作成したノードを右クリックし、**[新規]** をポイントし、**[文字列値]** をクリックします。
 
    2.  値の名前を編集します。
 
@@ -187,7 +187,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 |名前|型|データ|
 |-|-|-|
-|(既定)|REG_SZ|(値が設定されていません)|
+|(既定)|REG_SZ|(値の設定なし)|
 |クラス|REG_SZ|**\<Namespace 名 >。\<クラス名 >**|
 |CodeBase|REG_SZ|**\<パス >\\< アセンブリ名\>**|
 
@@ -195,9 +195,9 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 |名前|型|データ|
 |-|-|-|
-|(既定)|REG_SZ|(値が設定されていません)|
+|(既定)|REG_SZ|(値の設定なし)|
 |クラス|REG_SZ|\<**完全修飾クラス名**>|
-|Assembly|REG_SZ|\<**GAC にアセンブリ名**>|
+|Assembly|REG_SZ|\<**GAC におけるアセンブリ名**>|
 
 ## <a name="see-also"></a>関連項目
 

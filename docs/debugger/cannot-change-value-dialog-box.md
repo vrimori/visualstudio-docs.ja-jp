@@ -34,5 +34,5 @@ ms.locfileid: "55009675"
 ## <a name="solution"></a>ソリューション  
  デバッグ用ウィンドウや [クイック ウォッチ] ダイアログ ボックスに入力した内容が、設定する変数に対して有効な値を表していることを確認します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [デバッガー内の式](../debugger/expressions-in-the-debugger.md)

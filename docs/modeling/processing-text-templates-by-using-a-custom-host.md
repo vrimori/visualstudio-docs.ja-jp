@@ -18,19 +18,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "54962002"
 ---
-# <a name="process-text-templates-by-using-a-custom-host"></a>カスタム ホストを使用してテキスト テンプレートを処理する
+# <a name="process-text-templates-by-using-a-custom-host"></a>カスタム ホストを使用したテキスト テンプレートの処理
 
-*テキスト テンプレート変換*処理は、*テキスト テンプレート*ファイルとして入力し、テキスト ファイルを出力として生成します。 テキスト変換エンジンは、Visual Studio の拡張機能、または Visual Studio がインストールされているマシンで実行されているスタンドアロンのアプリケーションから呼び出すことができます。 ただし、提供する必要があります、*テキスト テンプレート ホスト*します。 このクラスは、テンプレートを環境に接続し、アセンブリやインクルード ファイルなどのリソースの検索と、出力およびエラー メッセージの処理を行います。
+*テキスト テンプレート変換*処理は、*テキスト テンプレート*ファイルを入力とし、テキスト ファイルを出力として生成します。 テキスト変換エンジンは、Visual Studio の拡張機能、または Visual Studio がインストールされているマシンで実行されているスタンドアロンのアプリケーションから呼び出すことができます。 ただし、*テキスト テンプレート ホスト*を提供する必要があります。 このクラスは、テンプレートを環境に接続し、アセンブリやインクルード ファイルなどのリソースの検索と、出力およびエラー メッセージの処理を行います。
 
 > [!TIP]
 > パッケージまたは Visual Studio 内で実行される拡張機能を記述する場合は、独自のホストを記述する代わりに、テキスト テンプレート サービスを使用することを検討します。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。
 
 > [!NOTE]
-> サーバー アプリケーションでテキスト テンプレート変換を使用することはお勧めしません。 また、シングル スレッド以外でテキスト テンプレート変換を使用することはお勧めしません。 テキスト テンプレート エンジンでは、単一の AppDomain を再利用して、テンプレートを変換、コンパイル、および実行するためです。 変換されたコードは、スレッド セーフになるように設計されているわけではありません。 エンジンが順番に処理するファイル、デザイン時に Visual Studio プロジェクトでは設計されています。
+> サーバー アプリケーションでテキスト テンプレート変換を使用することはお勧めしません。 また、シングル スレッド以外でテキスト テンプレート変換を使用することはお勧めしません。 テキスト テンプレート エンジンでは、単一の AppDomain を再利用して、テンプレートを変換、コンパイル、および実行するためです。 変換されたコードは、スレッド セーフになるように設計されているわけではありません。 エンジンは、Visual Studio プロジェクトのデザイン時のように、順番に処理するように設計されています。
 >
 > 実行時のアプリケーションでは、前処理されたテキスト テンプレートの使用を検討してください。 を参照してください[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
 
-コンパイル時に決定されるテンプレートのセットをアプリケーションで使用する場合は、前処理されたテキスト テンプレートを使用する方が簡単です。 アプリケーションは、Visual Studio がインストールされていないコンピューターで実行される場合は、アプローチを使用することもできます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
+コンパイル時に決定されるテンプレートのセットをアプリケーションで使用する場合は、前処理されたテキスト テンプレートを使用する方が簡単です。 Visual Studio がインストールされていないコンピューターで実行されるアプリケーションでも、このアプローチを使用することができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
 ## <a name="execute-a-text-template-in-your-application"></a>テキスト テンプレートをアプリケーションを実行します。
 
@@ -47,7 +47,7 @@ string output = engine.ProcessTemplate(templateString, host);
 
  `host` パラメーターでは、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を実装するクラスを指定する必要があります。 これはエンジンによってコールバックされます。
 
- ホストは、エラーのログ記録、アセンブリとインクルード ファイルへの参照の解決、テンプレートを実行できるアプリケーション ドメインの指定、各ディレクティブの適切なプロセッサの呼び出しを実行できる必要があります。
+ ホストは、エラーのログの記録、アセンブリとインクルード ファイルへの参照の解決、テンプレートを実行できるアプリケーション ドメインの指定、各ディレクティブの適切なプロセッサの呼び出しを実行できる必要があります。
 
  <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 定義されている**Microsoft.VisualStudio.TextTemplating。\*します。0 dll**、および<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>で定義されている**Microsoft.VisualStudio.TextTemplating.Interfaces。\*します。0 dll**します。
 
@@ -59,5 +59,5 @@ string output = engine.ProcessTemplate(templateString, host);
 
 ## <a name="related-sections"></a>関連項目
 
-- [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)テキスト変換のしくみについて説明します、部分をカスタマイズできます。
-- [カスタム T4 テキスト テンプレート ディレクティブ プロセッサを作成する](../modeling/creating-custom-t4-text-template-directive-processors.md)テンプレート ディレクティブ プロセッサのテキストの概要を説明します。
+- [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)は、テキスト変換のしくみと、どの部分がカスタマイズ可能かを説明します。
+- [カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)は、テンプレート ディレクティブ プロセッサのテキストの概要を説明します。

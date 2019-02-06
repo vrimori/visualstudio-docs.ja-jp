@@ -37,7 +37,7 @@ DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataV
  テーブル  
  このドロップダウン リスト ボックスを使用して、視覚化するデータセット内のテーブルを選択します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)   

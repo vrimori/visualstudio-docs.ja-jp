@@ -59,7 +59,7 @@ Visual Studio デバッガーには、ASP.NET ページ内のクライアント�
   
  [Debugging and Tracing Ajax Applications Overview](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)で、任意のスクリプト ドキュメントを開くことができます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [ASP.NET アプリケーションおよび AJAX アプリケーションのデバッグ](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)   
  [スクリプト デバッグの制約](../debugger/limitations-on-script-debugging.md)   
  [[変数] ウィンドウ](../debugger/debugger-windows.md)   
