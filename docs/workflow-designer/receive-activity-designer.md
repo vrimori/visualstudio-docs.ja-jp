@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f984a9f7207a8eec77468a3360e2caec5d9400d4
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: c75b635cbdce7662c9e3a30237edb3e004ab7d0c
+ms.sourcegitcommit: 0342f99120fbd603b8f06f7e9166c39f2896827a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55036096"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742444"
 ---
 # <a name="receive-activity-designer"></a>Receive アクティビティ デザイナー
 
@@ -52,7 +52,7 @@ ms.locfileid: "55036096"
 | <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> | False | この <xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作の既知の型のコレクションを指定します。 このプロパティは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> に設定された <xref:System.Runtime.Serialization.DataContractSerializer> プロパティと共に使用する必要があり、 <xref:System.Xml.Serialization.XmlSerializer> が使用されている場合は無視されます。<br /><br /> 横にある省略記号ボタンを選択して、 **KnownTypes**プロパティ グリッドでフィールド、**型コレクション エディター**  ダイアログ ボックスの関連する型を追加できます。 詳細については、このボックスを使用して、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピック。 |
 | <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> | False | メッセージの <xref:System.Net.Security.ProtectionLevel> を指定します。<br /><br /> 1。<xref:System.Net.Security.ProtectionLevel>認証のみを意味します。<br />2。<xref:System.Net.Security.ProtectionLevel>署名データ送信されるデータの整合性を確保することを意味します。<br />3。<xref:System.Net.Security.ProtectionLevel>手段の暗号化と機密性と送信されるデータの整合性を確保するデータに署名します。 |
 | <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> | False | <xref:System.ServiceModel.Activities.Receive> アクティビティによって実装されるサービス操作に使用するシリアライザーの型を指定します。 既定値は <xref:System.Runtime.Serialization.DataContractSerializer> です。この場合、ある型のインスタンスが、提供されたデータ コントラクトを使用する XML ストリームまたはドキュメントへとシリアル化または逆シリアル化されます。 XML をより厳密に制御する必要がある場合は、<xref:System.Xml.Serialization.XmlSerializer> も使用できます。 |
-| <xref:System.ServiceModel.Activities.Receive.Action%2A> | False | メッセージのアクション ヘッダーを指定します。 明示的に設定されていない場合、既定の値: [https://tempuri.org/{service](https://tempuri.org/{service) コントラクトの名前空間} サービス コントラクト名}/操作 {name} です。 |
+| <xref:System.ServiceModel.Activities.Receive.Action%2A> | False | メッセージのアクション ヘッダーを指定します。 明示的に設定されていない場合に、既定値:`https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}`します。 |
 
 ## <a name="see-also"></a>関連項目
 
