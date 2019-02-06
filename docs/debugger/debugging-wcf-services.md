@@ -34,6 +34,6 @@ ms.locfileid: "55008700"
  [方法: セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)  
  IIS または [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 開発サーバーの外部で実行している WCF サービスをデバッグする方法について説明します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
