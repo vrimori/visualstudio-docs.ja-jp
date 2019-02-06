@@ -48,6 +48,6 @@ IIS Lockdown ツールが実行され、URLScan がインストールされて�
   
 7.  サーバーまたは IIS を再起動します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
  [エラー: Web サーバーでは要求されたリソースを見つけられませんでした](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)
