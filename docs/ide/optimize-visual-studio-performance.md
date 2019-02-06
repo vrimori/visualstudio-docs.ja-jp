@@ -13,12 +13,12 @@ f1_keywords:
 ms.prod: visual-studio-dev15
 ms.workload:
 - multiple
-ms.openlocfilehash: c56bd7bbfdd162a354432814decb2450eff6f360
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: e8ed42160d6bdbcc6b68a1652ff725c7e1d75e3a
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55070462"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690316"
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio のパフォーマンスの最適化
 
@@ -26,7 +26,7 @@ ms.locfileid: "55070462"
 
 ## <a name="upgrade-to-visual-studio-2017-version-156-or-later"></a>Visual Studio 2017 バージョン 15.6 以降にアップグレードする
 
-Visual Studio 2015 を現在使用している場合、[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を無料でダウンロードし、パフォーマンスの改善をご確認ください。 Visual Studio 2017 では、ソリューションの読み込みが 2 ～ 3 倍速くなります。その他の面でもパフォーマンスが改善されます。 Visual Studio 2017 と Visual Studio 2015 の間には並行互換性があるので、試しても失うものはありません。
+Visual Studio 2015 を現在使用している場合、[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) を無料でダウンロードし、パフォーマンスの改善をご確認ください。 Visual Studio 2017 では、ソリューションの読み込みが 2 ～ 3 倍速くなります。その他の面でもパフォーマンスが改善されます。 Visual Studio 2017 と Visual Studio 2015 の間には並行互換性があるので、試しても失うものはありません。
 
 Visual Studio 2017 を現在使用している場合、15.6 以降のバージョンを実行していることを確認してください。 バージョン 15.6 ではソリューションの読み込みが最大 2 ～ 3 倍速くなることがデータによって示されています。 [ここから](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)ダウンロードしてください。
 

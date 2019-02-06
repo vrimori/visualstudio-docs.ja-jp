@@ -12,19 +12,19 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 573a4fcfa9d9889f4fc6eaaeaf01ce0b1a478651
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: d46c26881c07e066ba57afba8e648f5b81325b49
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55021180"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483821"
 ---
 # <a name="learn-to-use-the-code-editor"></a>コード エディターを使用方法について学習する
 
 この 10 分間の Visual Studio のコード エディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
 
 > [!TIP]
-> Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+> Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 この記事では、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../get-started/csharp/tutorial-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: カスタム ディレクティブ プロセッサの作成'
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -89,7 +89,7 @@ End Property
 
     - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
-3. **Class1** のコードを次のコードに置き換えます。このコードによって、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> クラスを継承し、必要なメソッドを実装する CustomDirectiveProcessor クラスが定義されます。
+3. **Class1** のコードを次のコードに置き換えます。 このコードによって、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> クラスを継承し、必要なメソッドを実装する CustomDirectiveProcessor クラスが定義されます。
 
     ```csharp
     using System;
@@ -623,7 +623,7 @@ End Property
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\*.0\TextTemplating\DirectiveProcessors
 ```
 
-64 ビット システムの場合、レジストリの次の場所にあります。
+64 ビット システムの場合、レジストリの場所は次のとおりです。
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplating\DirectiveProcessors
@@ -636,7 +636,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 ### <a name="to-add-a-registry-key-for-the-directive-processor"></a>ディレクティブ プロセッサのレジストリ キーを追加するには
 
-1. [スタート] メニューまたはコマンドラインを使用して、`regedit` コマンドを実行します。
+1. [スタート] メニューまたはコマンド ラインを使用して、`regedit` コマンドを実行します。
 
 2. **\software\microsoft\visualstudio\\\*.0\TextTemplating\DirectiveProcessors** を参照し、ノードをクリックします。
 
@@ -678,7 +678,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 ディレクティブ プロセッサをテストするには、それを呼び出すテキスト テンプレートを記述する必要があります。
 
-この例のテキスト テンプレートでは、ディレクティブを呼び出し、クラス ファイルのドキュメントを含む XML ファイルの名前を渡します。テキスト テンプレートは、XML をナビゲートしたり、ドキュメントのコメントを印刷したりするためにディレクティブが作成する <xref:System.Xml.XmlDocument> プロパティを使います。
+この例のテキスト テンプレートでは、ディレクティブを呼び出し、クラス ファイルのドキュメントを含む XML ファイルの名前を渡します。 テキスト テンプレートは、XML をナビゲートしたり、ドキュメントのコメントを印刷したりするためにディレクティブが作成する <xref:System.Xml.XmlDocument> プロパティを使います。
 
 ### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>ディレクティブ プロセッサのテストに使用する XML ファイルを作成するには
 
@@ -878,7 +878,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 ### <a name="to-add-html-to-the-generated-text"></a>生成されたテキストに HTML を追加するには
 
-1.  *TestDP.tt* の中のコードを次のように置き換えます。HTML は強調表示されています。文字列 `YOUR PATH` を *DocFile.xml* ファイルへのパスに確実に置換します。
+1. *TestDP.tt* の中のコードを次のように置き換えます。 HTML は強調表示されています。 文字列 `YOUR PATH` を *DocFile.xml* ファイルへのパスに確実に置換します。
 
     > [!NOTE]
     > 追加された開くタグ (<#) および閉じるタグ (#>) は HTML タグからステートメントのコードを分離しています。
@@ -967,4 +967,4 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 3. 出力をブラウザーで表示するには、**ソリューション エクスプローラー**で TestDP.htm を右クリックし、**[ブラウザーで表示する]** をクリックします。
 
-   出力は HTML の書式が適用されているもの以外は、元のテキストと同じであるはずです。各項目の名前は太字で表示されます。
+   出力は HTML の書式が適用されているもの以外は、元のテキストと同じであるはずです。 各項目の名前は太字で表示されます。

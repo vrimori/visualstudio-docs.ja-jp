@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ADO.NET, data access
 author: gewarren
 ms.author: gewarren
-manager: douge
+manager: jillfra
 ms.prod: visual-studio-dev15
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9a13efa2335cd0721b71dd61e270e5331d78dede
-ms.sourcegitcommit: 37fb7075b0a65d2add3b137a5230767aa3266c74
+ms.openlocfilehash: 7bd87013245bd1c9a28ea093433687009f9c35e8
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53936387"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484148"
 ---
 # <a name="access-data-in-visual-studio"></a>Visual Studio でのデータへのアクセス
 
@@ -28,7 +28,7 @@ Visual Studio では、事実上すべてのデータベース製品またはサ
 
 JavaScript、Python、PHP、Ruby、または C++ でのアプリケーションでのデータに接続するライブラリを取得し、コードの記述によって、何も行うようにします。 .NET アプリケーションでは、Visual Studio には、データ ソースの探索、格納、メモリ内のデータを操作し、ユーザー インターフェイスにデータをバインドしてオブジェクト モデルの作成を使用できるツールが用意されています。 Microsoft Azure は、Azure Storage に接続するため、.NET、Java、Node.js、PHP、Python、Ruby、およびモバイル アプリ、および Visual Studio のツールの Sdk を提供します。
 
-次の表は、Visual Studio から使用できる多くのデータベースとストレージ システムのほんの一部を示します。 [Microsoft Azure](https://azure.microsoft.com/)サービス/データはすべてのプロビジョニングと、基になるデータ ストアの管理を含むデータ サービス。 **Azure 開発**ワークロード[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Visual Studio から直接 Azure データ ストアを操作することができます。
+次の表は、Visual Studio から使用できる多くのデータベースとストレージ システムのほんの一部を示します。 [Microsoft Azure](https://azure.microsoft.com/)サービス/データはすべてのプロビジョニングと、基になるデータ ストアの管理を含むデータ サービス。 **Azure 開発**ワークロード[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) Visual Studio から直接 Azure データ ストアを操作することができます。
 
 ![Azure 開発ワークロード](media/azure-development-workload.png)
 

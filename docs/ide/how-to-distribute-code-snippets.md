@@ -13,18 +13,18 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 890bec08c29491bbd867c9c8380172cced71d2fe
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: b00cf69a949dcd5ad73120c9ce1fccb2b7af9040
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54985709"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690370"
 ---
 # <a name="how-to-distribute-code-snippets"></a>方法: コード スニペットを配布する
 
 コード スニペットは友人に配布することができます。友人は**コード スニペット マネージャー**を使用して、そのスニペットを自分のコンピューターにインストールできます。 ただし、配布するスニペットが複数ある場合や、スニペットをより広範に配布する場合は、スニペット ファイルを Visual Studio 拡張機能に含めます。 Visual Studio ユーザーはこの拡張機能をインストールできます。
 
-Visual Studio 拡張機能を作成するには、Visual Studio SDK をインストールする必要があります。 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)で、Visual Studio のインストールと一致する VSSDK のバージョンを見つけます。
+Visual Studio 拡張機能を作成するには、Visual Studio SDK をインストールする必要があります。 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)で、Visual Studio のインストールと一致する VSSDK のバージョンを見つけます。
 
 ## <a name="set-up-the-extension"></a>拡張機能を設定する
 

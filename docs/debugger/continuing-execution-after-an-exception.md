@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外の後に実行を継続 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
