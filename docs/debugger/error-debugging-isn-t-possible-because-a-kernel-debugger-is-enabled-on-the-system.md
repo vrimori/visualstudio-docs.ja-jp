@@ -98,6 +98,6 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
      `gn`  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
