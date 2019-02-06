@@ -31,7 +31,7 @@ DebugBreak Win32 関数または [__debugbreak](/cpp/intrinsics/debugbreak) 組�
   
  `DebugBreak` はシステム関数の呼び出しであるため、システム デバッグ シンボルをインストールして、中断の後に正しい呼び出し履歴情報が表示されるようにする必要があります。 そうしなかった場合、デバッガーによって表示される呼び出し履歴情報は、1 フレームずれて表示されることがあります。 `__debugbreak` を使用した場合、シンボルは不要です。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [コンパイラの組み込み](/cpp/intrinsics/compiler-intrinsics)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
