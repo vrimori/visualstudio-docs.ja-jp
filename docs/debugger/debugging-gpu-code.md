@@ -79,7 +79,7 @@ ms.locfileid: "54964263"
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>エラー :リモート サイトでは、タイムアウト検出と復旧 (TDR) を無効にする必要があります。  
  Windows のタイムアウト検出と復旧 (TDR) で設定されている既定の時間間隔より、C++ AMP の計算が長くかかっている可能性があります。 その場合、計算は取り消され、データは失われます。 詳細については、「[Handling TDRs in C++ AMP](http://go.microsoft.com/fwlink/p/?LinkId=249154)」 (C++ AMP での TDR の処理) を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [Visual Studio で GPU デバッグを開始する](http://go.microsoft.com/fwlink/p/?LinkId=255381)
