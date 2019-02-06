@@ -1,4 +1,4 @@
----
+﻿---
 title: カスタム ディレクティブ プロセッサの配置
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -129,7 +129,7 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
 -   拡張機能マネージャーで拡張機能が表示されず、システムがインストールを許可しない場合、**%localappdata%\Microsoft\VisualStudio\\\*.0\Extensions\\** から拡張機能を削除してください。
 
--   .vsix ファイルを開き、そのコンテンツを調べます。.vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。extension.vsixmanifest ファイルには、SupportedProducts ノードに適切なリストが含まれ、かつ Content ノードに VsPackage ノードが含まれている必要があります。
+-   .vsix ファイルを開き、そのコンテンツを調べます。 .vsix ファイルを開くには、ファイル名拡張子を .zip に変更します。 このファイルに .dll、.pkgdef、および extension.vsixmanifest の各ファイルが含まれていることを確認します。 extension.vsixmanifest ファイルには、SupportedProducts ノードに適切なリストが含まれ、かつ Content ノードに VsPackage ノードが含まれている必要があります。
 
      `<Content>`
 
@@ -175,9 +175,9 @@ Visual Studio または MSBuild でテキスト テンプレートを変換す�
 
    -   レジストリ ツリーの **DirectiveProcessors** ノードで右クリックし、**新規**をポイントし、**キー**をクリックします。
 
-4. 新しいノードで、Class および CodeBase あるいは Assembly のために、次の表に従って文字列値を追加します。
+4. 新しいノードで、次の表に従って Class および CodeBase または Assembly に文字列値を追加します。
 
-   1.  作成したノードを右クリックし、[**新規**] をポイントし、**文字列値**をクリックします。
+   1.  作成したノードを右クリックし、**[新規]** をポイントし、**[文字列値]** をクリックします。
 
    2.  値の名前を編集します。
 

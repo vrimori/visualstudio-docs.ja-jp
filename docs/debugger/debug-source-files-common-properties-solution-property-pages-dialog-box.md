@@ -1,4 +1,4 @@
----
+﻿---
 title: ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックスのデバッグ |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference

@@ -1,5 +1,5 @@
----
-title: 'テキスト テンプレートでどうやって ... をする'
+﻿---
+title: テキスト テンプレートでどうやって ... をする
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -114,7 +114,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ### <a name="what-is-the-benefit-of-using-text-templates"></a>テキスト テンプレートを使用する利点は何ですか?
  通常、1 つのモデルから複数のコードやその他のファイルを生成します。 モデルは、生成されるコードよりも直接的に要件を表しています。 実装の詳細を省略し、コードではなく、要件の観点から記述されます。 （あなたにもよくある）要件変更のとき、モデルの更新は、プログラム コードのさまざまな部分の更新よりも、より簡単かつより確実にできます。
 
-  すなわち、コード生成は、アジャイル開発手法の観点から貴重なツールです。。
+ すなわち、コード生成は、アジャイル開発手法の観点から貴重なツールです。
 
 ### <a name="what-best-practices-are-there-for-text-templates"></a>テキスト テンプレートには、どのような「ベスト プラクティス」がありますか?
 

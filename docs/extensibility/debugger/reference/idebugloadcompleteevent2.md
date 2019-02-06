@@ -12,12 +12,12 @@ ms.author: gregvanl
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 276c2a6bc2d03bb03337404b4ae38bd0a9451fca
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 0071203200cea00671743fe167ba566ece75d1b2
+ms.sourcegitcommit: 0342f99120fbd603b8f06f7e9166c39f2896827a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55029158"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742393"
 ---
 # <a name="idebugloadcompleteevent2"></a>IDebugLoadCompleteEvent2
 このインターフェイスは、プログラムが読み込まれるときに、すべてのコードが実行される前に、セッション デバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
@@ -33,10 +33,7 @@ IDebugLoadCompleteEvent2 : IUnknown
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  デは作成し、プログラムが正常に読み込まれたことを報告するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
-  
-## <a name="remarks"></a>Remarks  
- このイベントは stopping イベントで、必要があります、`EVENT_STOPPING`フラグがイベントの属性を設定します。  
-  
+   
 ## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   

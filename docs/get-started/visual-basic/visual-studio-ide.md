@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 113a333c7a1ca100b6572f730ec9291ffc20ff87
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 2b9777fc9bbe22e394c06152808d35b3f0a549d4
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54939180"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690529"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Visual Studio IDE へようこそ | Visual Basic
 
@@ -98,7 +98,7 @@ Community、Professional、Enterprise という 3 つのエディションの Vi
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
 
-この概要記事では、簡単なプロジェクトを作成し、Visual Studio の機能をいくつか試します。Visual Studio では、配色テーマを変更したり、コーディング補助として [IntelliSense](../../ide/using-intellisense.md) を使用したり、アプリをデバッグしてプログラム実行中の変数の値を参照したりできます。 まず、[Visual Studio 2017 をダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)してシステムにインストールします。
+この概要記事では、簡単なプロジェクトを作成し、Visual Studio の機能をいくつか試します。Visual Studio では、配色テーマを変更したり、コーディング補助として [IntelliSense](../../ide/using-intellisense.md) を使用したり、アプリをデバッグしてプログラム実行中の変数の値を参照したりできます。 まず、[Visual Studio 2017 をダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)してシステムにインストールします。
 
 モジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 [プログラムの作成](#create-a-program)手順に従う場合は、インストール時に必ず、**[.NET Core クロスプラットフォームの開発]** ワークロードを選択します。
 
