@@ -28,5 +28,5 @@ ms.locfileid: "54959045"
   
  <xref:Microsoft.VisualStudio.Debugger.VsDebugPresentationExtension>  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ダンプ ファイルの使用](../debugger/using-dump-files.md)
