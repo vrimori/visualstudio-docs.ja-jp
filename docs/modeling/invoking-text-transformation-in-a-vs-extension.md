@@ -37,7 +37,7 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 ## <a name="passing-parameters-to-the-template"></a>テンプレートへのパラメーターの引き渡し
  パラメーターをテンプレートに渡すことができます。 テンプレート内で、`<#@parameter#>` ディレクティブを使用してパラメーター値を取得できます。
 
- パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。 **System.String**、**System.Int32** といったすべての組み込み型はシリアル化可能です。
+ パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。**System.String**、**System.Int32** といったすべての組み込み型はシリアル化可能です。。
 
  パラメーター値を渡すために、呼び出し元のコードでは `Session` ディクショナリまたは <xref:System.Runtime.Remoting.Messaging.CallContext> に値を配置できます。
 
@@ -77,7 +77,7 @@ string result = t4.ProcessTemplate("",
 ## <a name="error-reporting-and-the-output-directive"></a>エラー報告と出力ディレクティブ
  処理中に発生するエラーは、Visual Studio のエラー ウィンドウに表示されます。 また、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplatingCallback> を実装したコールバックを指定することにより、エラーの通知を受けることもできます。
 
- 結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。 この情報は、コールバックにも渡されます。 詳細については、次を参照してください。 [T4 出力ディレクティブ](../modeling/t4-output-directive.md)
+ 結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。この情報は、コールバックにも渡されます。詳細については、「[T4 出力ディレクティブ](../modeling/t4-output-directive.md)」をご覧ください。
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -136,6 +136,6 @@ Sample text.
 ## <a name="related-topics"></a>関連トピック
  前処理されたテキスト テンプレートからテキストを生成するには生成されたクラスの `TransformText()` メソッドを呼び出します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)
 
- Visual Studio 拡張機能の範囲外でテキストを生成するには、カスタム ホストを定義します。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)
+ Visual Studio 拡張機能の範囲外でテキストを生成するには、カスタム ホストを定義します。詳細については、「[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)」をご覧ください。
 
  後でコンパイルして実行できるソース コードを生成するには、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> の `t4.PreprocessTemplate()` メソッドを呼び出します。
