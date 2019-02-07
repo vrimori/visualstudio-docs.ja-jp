@@ -48,6 +48,6 @@ ms.locfileid: "54916616"
 |逆アセンブリ|Ctrl + Alt + D|[方法: [逆アセンブル] ウィンドウを使用する](../debugger/how-to-use-the-disassembly-window.md)|
 |レジスタ|Ctrl + Alt + G|[方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

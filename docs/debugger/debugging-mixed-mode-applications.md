@@ -54,6 +54,6 @@ C++ のエディット コンティニュを有効にする、次を参照して
 
    ネイティブな呼び出し履歴とマネージド呼び出し履歴は異なるため、デバッガーでは、混合コードに対して常に完全な呼び出し履歴を表示できるとは限りません。 ネイティブ コードがマネージド コードを呼び出したときに、不一致が生じていることがわかります。 詳細については、「[Mixed Code and Missing Information in the Call Stack Window](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)」 ([呼び出し履歴] ウィンドウの混合コードと不足情報) を参照してください。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

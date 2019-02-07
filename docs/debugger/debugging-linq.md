@@ -107,7 +107,7 @@ End Function
 ##  <a name="BKMK_EditandContinueNotSupportedforLINQ"></a>LINQ でサポートされないエディット コンティニュ  
  エディット コンティニュを LINQ クエリの制限事項と変更をサポートしています。 詳細については、次を参照してください[EnC サポートされている変更](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))。
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [SQL のデバッグ](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
 - [デバッガーでの例外の管理](../debugger/managing-exceptions-with-the-debugger.md)

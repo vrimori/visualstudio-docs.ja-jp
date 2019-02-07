@@ -33,5 +33,5 @@ ms.locfileid: "55025502"
 | [方法: WPF ツリー ビジュアライザーを使用する](../debugger/how-to-use-the-wpf-tree-visualizer.md) | WPF ツリー ビジュアライザーを使用すると、WPF オブジェクトのビジュアル ツリーを調べたり、ツリーに含まれるオブジェクトの WPF 依存関係プロパティを表示したりすることができます。 このトピックでは、WPF ツリー ビジュアライザーのユーザー インターフェイスについて説明します。 |
 | [方法: WPF トレース情報を表示する](../debugger/how-to-display-wpf-trace-information.md) | [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、WPF アプリケーションからデバッグ トレース情報を受け取り、その情報を **[出力]** ウィンドウに表示することができます。 このトピックでは、WPF トレース情報の表示を有効にする方法およびカスタマイズする方法について説明します。 |
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

@@ -38,7 +38,7 @@ ms.locfileid: "55009519"
 > [!NOTE]
 >  多くの [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションは、ビジネス ロジックまたはその他の有用なコードが格納されている DLL を参照します。 このような参照は、アプリを展開するときに、DLL をローカル コンピューターから、Web アプリケーションの仮想ディレクトリの \bin フォルダーにコピーします。 デバッグ時には、Web アプリケーションが、ローカル コンピューターの DLL ではなく、仮想ディレクトリにある DLL のコピーを参照している点に注意してください。 
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [ASP.NET アプリケーションをデバッグする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
  [方法: ASP.NET アプリケーションのデバッグを有効にする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
  [方法: ASP.NET プロセスの名前を見つける](../debugger/how-to-find-the-name-of-the-aspnet-process.md)   

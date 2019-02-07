@@ -109,7 +109,7 @@ ms.locfileid: "54979167"
   
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [実行中のプログラムまたは複数のプログラムへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   

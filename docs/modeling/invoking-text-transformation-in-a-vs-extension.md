@@ -16,7 +16,7 @@ ms.lasthandoff: 01/25/2019
 ms.locfileid: "55002324"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 拡張機能内でのテキスト変換の呼び出し
-メニュー コマンドなどの Visual Studio 拡張機能を記述しているかどうかまたは[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。
+メニュー コマンドや[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)などの Visual Studio 拡張機能を記述しているならば、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。
 
 ## <a name="getting-the-text-templating-service"></a>テキスト テンプレート サービスの取得
 
@@ -37,7 +37,7 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 ## <a name="passing-parameters-to-the-template"></a>テンプレートへのパラメーターの引き渡し
  パラメーターをテンプレートに渡すことができます。 テンプレート内で、`<#@parameter#>` ディレクティブを使用してパラメーター値を取得できます。
 
- パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。 などのすべての組み込み型**System.String**と**System.Int32**はシリアル化します。
+ パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。 **System.String**、**System.Int32** といったすべての組み込み型はシリアル化可能です。
 
  パラメーター値を渡すために、呼び出し元のコードでは `Session` ディクショナリまたは <xref:System.Runtime.Remoting.Messaging.CallContext> に値を配置できます。
 
@@ -128,7 +128,7 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
- コンパイラの警告が Visual Studio のエラー ウィンドウに表示されへの呼び出しも生成されます`ErrorCallback`します。
+ コンパイラの警告が Visual Studio のエラー ウィンドウに表示され、`ErrorCallback` への呼び出しも生成されます。
 
 ## <a name="reference-parameters"></a>参照パラメーター
  <xref:System.MarshalByRefObject> から派生したパラメーター クラスを使用して、テキスト テンプレートの外部に値を渡すことができます。

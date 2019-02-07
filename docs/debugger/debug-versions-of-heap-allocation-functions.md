@@ -47,5 +47,5 @@ C ランタイム ライブラリには、デバッグ バージョンの特殊�
   
   _DEBUG が定義されていないと呼び出しを`malloc`が影響を受けません、呼び出し`_malloc_dbg`に解決される`malloc`の定義[_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc)は無視され、ソース ファイルの情報に関連する、割り当て要求が指定されていません。 `malloc` にはブロック型を指定するパラメーターがないため、`_CLIENT_BLOCK` 型への割り当て要求は標準の割り当てとして扱われます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)
