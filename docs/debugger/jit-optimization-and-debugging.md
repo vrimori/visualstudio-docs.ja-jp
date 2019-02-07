@@ -46,7 +46,7 @@ ms.locfileid: "54959292"
 1. 既に実行中のプロセスにデバッガーを接続している場合、このオプションは影響しません、デバッガーのアタッチ時に既に読み込まれたモジュールにします。
 2. このオプションはされている Dll への影響を与えません (別名、ngen'ed) をネイティブ コードをプリコンパイルします。 ただし、環境変数 'COMPlus_ZapDisable' が '1' に設定と、プロセスを開始して事前コンパイル済みコードの使用状況を無効にできます。
 
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   
  [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
