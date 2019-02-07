@@ -40,7 +40,7 @@ ms.locfileid: "55017111"
   
 5. ブレークポイントまで実行した後、ステップ実行を開始します。 デバッガーがサービスに自動的にステップ インします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)   
  [WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)   
  [方法: セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
