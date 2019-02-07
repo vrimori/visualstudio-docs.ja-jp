@@ -64,7 +64,7 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
   
 4. 説明した手法を使用してデバッグ[デバッガーでのはじめ](../debugger/debugger-feature-tour.md)します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [方法: デバッグ構成とリリース構成を設定する](../debugger/how-to-set-debug-and-release-configurations.md)   
