@@ -38,7 +38,7 @@ ms.locfileid: "55007922"
   
 2.  **ツリー**  メニューの 展開 のいずれかを選択するか折りたたみコマンド。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)
