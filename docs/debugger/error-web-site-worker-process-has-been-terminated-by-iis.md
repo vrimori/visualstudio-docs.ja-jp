@@ -56,5 +56,5 @@ ms.locfileid: "54946127"
   
 8. IIS マネージャーと **[管理ツール]** ウィンドウを閉じます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)
