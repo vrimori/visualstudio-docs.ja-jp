@@ -51,7 +51,7 @@ ms.locfileid: "55069201"
   
 7.  次に、[呼び出し履歴] ウィンドウを使用して呼び出し元の関数を見つけ、その関数のソース コードに移動します。 詳細については、「[方法 :[呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ブレークポイント](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
