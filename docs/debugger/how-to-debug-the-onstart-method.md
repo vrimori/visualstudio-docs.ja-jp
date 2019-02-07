@@ -52,6 +52,6 @@ Windows サービスをデバッグするには、サービスを起動し、デ
   
 5.  Visual Studio の新しいインスタンスが開始し、 `Debugger.Launch()` メソッドで実行が停止します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
