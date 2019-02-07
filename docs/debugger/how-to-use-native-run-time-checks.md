@@ -77,7 +77,7 @@ Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-c
   
 -   `runtime_checks` プラグマを使用します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)   
  [runtime_checks](/cpp/preprocessor/runtime-checks)   
