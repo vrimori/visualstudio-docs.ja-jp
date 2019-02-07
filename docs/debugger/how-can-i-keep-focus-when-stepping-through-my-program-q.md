@@ -35,7 +35,7 @@ ms.locfileid: "55009493"
 ## <a name="solution"></a>ソリューション  
  コンピューターがもう 1 台ある場合は、リモート デバッグを行います。 リモート コンピューター上でプログラムを操作し、ホスト上でデバッガーを実行します。 詳細については、「[方法 :リモート コンピューターを選択する](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100))」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
