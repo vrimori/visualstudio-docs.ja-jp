@@ -45,5 +45,5 @@ ms.locfileid: "54983808"
   
      クライアント側スクリプト ファイルがソース ウィンドウに表示されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
