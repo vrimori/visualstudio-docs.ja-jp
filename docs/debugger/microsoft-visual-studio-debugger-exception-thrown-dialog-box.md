@@ -44,7 +44,7 @@ ms.locfileid: "54954372"
  **無視**  
  実行が継続されますが、例外ハンドラーは起動されません。 例外ハンドラーが起動されないため、例外やエラーなどが続けて発生することがあります。 このオプションは、特定の種類の例外に対しては使用できません。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーでの例外の管理](../debugger/managing-exceptions-with-the-debugger.md)   
  [例外の推奨事項](/dotnet/standard/exceptions/best-practices-for-exceptions)   
  [例外処理](/cpp/windows/exception-handling-cpp-component-extensions)
