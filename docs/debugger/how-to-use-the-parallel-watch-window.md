@@ -84,7 +84,7 @@ ms.locfileid: "55021469"
   
 -   **[ブール式でフィルター]** ボックスにブール式を入力します。 デバッガーは、スレッド コンテキストの式を評価します。 値が `true` である行だけが表示されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [方法: [GPU スレッド] ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)   
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
