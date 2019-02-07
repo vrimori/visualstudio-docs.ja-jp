@@ -29,5 +29,5 @@ ms.locfileid: "54916526"
   
 -   参照してください[SQL デバッグ セットアップ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [SQL のデバッグ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))
