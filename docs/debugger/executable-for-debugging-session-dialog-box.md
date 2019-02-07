@@ -39,7 +39,7 @@ ms.locfileid: "55018752"
   
  入力した後、後続のデバッグ セッションを再入力する必要はありませんので、これらの設定がプロジェクト プロパティ ページに格納されます。 設定変更が必要な場合は [プロパティ ページ] を開いて値を変更できます。 デバッグ セッションで実行可能ファイルを指定する方法の詳細については、「[DLL のデバッグ](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)
