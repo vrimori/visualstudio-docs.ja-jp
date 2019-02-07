@@ -47,6 +47,6 @@ ms.locfileid: "55019193"
   
 4. 場合、 `maxConnection` IIS での制限が小さすぎる、接続が多すぎますがあるとする必要があります、[接続制限を増やす](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)します。
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
  [Web アプリケーションのデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
