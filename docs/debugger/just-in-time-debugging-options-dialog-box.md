@@ -55,6 +55,6 @@ ms.locfileid: "55014862"
   
  **アクセスが拒否されました。管理者に Just-In-Time デバッグを有効にしてもらうか、または Visual Studio のインストールを修復してください。**  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [[デバッグ] ([オプション] ダイアログ ボックス)](../debugger/debugging-options-dialog-box.md)   
  [方法: デバッガー設定を指定する](../debugger/how-to-specify-debugger-settings.md)
