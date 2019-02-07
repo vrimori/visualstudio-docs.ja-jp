@@ -44,6 +44,6 @@ ms.locfileid: "54947089"
   
 2.  ブレークポイントにヒットしたら、**[メモリ]** ウィンドウを使用して、0x00408000 から始まるメモリの内容を表示します。 詳細については、次を参照してください。[メモリ Windows](../debugger/memory-windows.md)します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
