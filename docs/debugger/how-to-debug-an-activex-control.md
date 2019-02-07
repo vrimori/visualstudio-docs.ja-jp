@@ -56,7 +56,7 @@ ActiveX コントロールをデバッグするには、そのコントロール
 
      **[プロジェクト プロパティ ページ]** ダイアログ ボックスでコンテナーを指定しなかった場合でも、デバッグを開始するときにコンテナーを指定できます。 実行コマンドを選択してデバッグを開始するときに、[[デバッグ セッションで実行可能] ダイアログ ボックス](../debugger/executable-for-debugging-session-dialog-box.md)が表示されます。 ダイアログ ボックスにコンテナーのパス名を指定します。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [ActiveX コントロール](/cpp/mfc/activex-controls)
 - [テスト コンテナーでのプロパティとイベントのテスト](/cpp/mfc/testing-properties-and-events-with-test-container)
