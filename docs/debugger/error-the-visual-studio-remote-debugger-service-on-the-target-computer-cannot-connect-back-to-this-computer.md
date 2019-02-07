@@ -74,6 +74,6 @@ ms.locfileid: "55018892"
   
 -   リモート デバッグ モニターをサービスとして実行する代わりに、アプリケーションとして実行します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)
