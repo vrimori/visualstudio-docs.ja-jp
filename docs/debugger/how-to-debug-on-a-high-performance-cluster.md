@@ -97,7 +97,7 @@ ms.locfileid: "54228046"
 `(MachineName = marvin) & (ThreadName = fourier1)`  
 
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [リモート デバッグ](../debugger/remote-debugging.md)   
  [方法: [プロセス] ウィンドウを使用します。](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))   
