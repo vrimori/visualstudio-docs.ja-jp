@@ -41,7 +41,7 @@ ms.locfileid: "54947726"
   
 4.  目的のオプションをオンまたはオフにします。 F1 キーを押すとオプションについてのヘルプが表示されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [[全般] ([オプション] ダイアログ ボックス - [デバッグ])](../debugger/general-debugging-options-dialog-box.md)   
  [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](https://msdn.microsoft.com/library/bcew296c.aspx)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
