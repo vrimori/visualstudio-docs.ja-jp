@@ -44,6 +44,6 @@ ms.locfileid: "54965537"
   
 4.  デバッグ セッションを再開します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
  [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)
