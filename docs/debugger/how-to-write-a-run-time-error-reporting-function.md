@@ -122,5 +122,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ ランタイム チェックのカスタマイズ](../debugger/native-run-time-checks-customization.md)
