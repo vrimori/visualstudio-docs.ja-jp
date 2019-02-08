@@ -47,7 +47,7 @@ ms.locfileid: "54999081"
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返します`SymTagFuncDebugEnd`(の 1 つ、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)値)。|  
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|この関数を実行可能イメージ内の位置。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)   
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)
