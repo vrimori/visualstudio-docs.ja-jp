@@ -36,6 +36,6 @@ ms.locfileid: "54944749"
  **続けて実行する**  
  このコントロールは、**[メッセージを表示する]** が選択されている場合にだけ有効になります。 このコントロールを選択すると、ブレークポイントにヒットしたときに、これを中断するポイントとしてではなく、プログラムの実行をトレースするためのトレースポイントとして使用できます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ブレークポイントの使用](../debugger/using-breakpoints.md)   
  [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)
