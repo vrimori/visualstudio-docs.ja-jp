@@ -129,6 +129,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [クイック スタート: JavaScript をデバッグする](../debugger/quickstart-debug-javascript-using-the-console.md)   
  [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)
