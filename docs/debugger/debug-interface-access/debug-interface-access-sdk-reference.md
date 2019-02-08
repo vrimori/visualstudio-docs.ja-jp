@@ -38,5 +38,5 @@ ms.locfileid: "55042869"
  [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
  シンボルの概要と型を識別する方法について説明します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)
