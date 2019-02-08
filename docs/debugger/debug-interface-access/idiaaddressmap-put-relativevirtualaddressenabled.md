@@ -44,7 +44,7 @@ HRESULT put_relativeVirtualAddressEnabled ( 
   
  `put_relativeVirtualAddress`に成功した呼び出しの後の Rva を有効にするメソッドを呼び出す必要があります、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドが新しいイメージのヘッダーを確立します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
  [IDiaAddressMap::get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
  [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)
