@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
 author: mikejo5000
 ms.author: mikejo
-manager: douge
+manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 621e7c44592eb94adbc02644af62920b8b95aa24
-ms.sourcegitcommit: 5a65ca6688a2ebb36564657d2d73c4b4f2d15c34
+ms.openlocfilehash: b6bb89772cf013b27d7f7cfd512d79144ffe235d
+ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
 ms.translationtype: MTE95
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "53829197"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55023955"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>リモートの IIS コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。
@@ -48,7 +48,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターでアプリケーション
   
-1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、 <strong>Visual C# > Web > ASP.NET Web アプリケーション。**ASP.NET 4.5.2 で</strong>テンプレート セクション**MVC**します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、 <strong>Visual C# > Web > ASP.NET Web アプリケーション。[ASP.NET 4.5.2 テンプレート]</strong> セクションで、 **[MVC]** を選択します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
@@ -206,7 +206,7 @@ IIS にアプリをデプロイする必要があります問題が解決する�
 
     Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports">トラブルシューティング</a>Windows Server で必要なポートを開く
+## <a name="bkmk_openports"></a> トラブルシューティングWindows Server で必要なポートを開く
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
