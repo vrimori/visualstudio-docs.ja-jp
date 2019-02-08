@@ -39,5 +39,5 @@ ms.locfileid: "54992556"
   
   上の 2 つの不具合はめったに発生しません。 ネイティブ コードによるマネージド コードの呼び出しでは、ほとんどの場合、正しい呼び出し履歴が表示されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [方法: [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)
