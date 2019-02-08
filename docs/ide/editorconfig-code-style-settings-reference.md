@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9cbcdb26b333bc0d4ba0d96d5a81d652666c6c86
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 8d7d07efa862e619961c21962dca20303efed97e
+ms.sourcegitcommit: 0342f99120fbd603b8f06f7e9166c39f2896827a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54956091"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742522"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -1390,6 +1390,7 @@ Visual Studio で使用可能な書式規則のルールを以下にリストし
 - .NET 書式設定
     - [using の整理](#usings)
         - dotnet_sort_system_directives_first
+        - dotnet_separate_import_directive_groups
 - C# 書式設定
     - [改行オプション](#newline)
         - csharp_new_line_before_open_brace
@@ -1432,6 +1433,7 @@ Visual Studio で使用可能な書式規則のルールを以下にリストし
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ---------------- |
 | dotnet_sort_system_directives_first | C# および Visual Basic | true | 15.3 |
+| dotnet_separate_import_directive_groups | C# および Visual Basic | true | 15.5 |
 
 **dotnet\_sort\_system\_directives_first**
 
@@ -1458,6 +1460,34 @@ using System.Threading.Tasks;
 # .NET formatting settings:
 [*.{cs,vb}]
 dotnet_sort_system_directives_first = true
+```
+
+**dotnet\_separate\_import\_directive\_groups**
+
+- このルールが **true** に設定されている場合、using ディレクティブ グループの間に空の行を置きます。
+- このルールが **false** に設定されている場合、using ディレクティブ グループの間に空の行を置かないでください。
+
+コード例:
+
+```csharp
+// dotnet_separate_import_directive_groups = true
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using Octokit;
+
+// dotnet_separate_import_directive_groups = false
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Octokit;
+```
+
+*.editorconfig* ファイルの例:
+
+```EditorConfig
+# .NET formatting settings:
+[*.{cs,vb}]
+dotnet_separate_import_directive_groups = true
 ```
 
 ### <a name="c-formatting-settings"></a>C# 書式設定
@@ -2193,6 +2223,7 @@ charset = utf-8-bom
 [*.{cs,vb}]
 # Organize usings
 dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
 
 # this. preferences
 dotnet_style_qualification_for_field = false:none

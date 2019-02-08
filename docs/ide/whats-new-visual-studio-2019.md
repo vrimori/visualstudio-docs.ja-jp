@@ -2,7 +2,7 @@
 title: Visual Studio 2019 の新機能
 titleSuffix: ''
 description: Visual Studio 2019 の新機能について説明します。
-ms.date: 01/24/2019
+ms.date: 01/29/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: '>= vs-2017'
-ms.openlocfilehash: 9f1d2ba67739dd5349a1a361744543089900a371
-ms.sourcegitcommit: 447f2174bdecdd471d8a8e11c19554977db620a0
+ms.openlocfilehash: 88fe1f9a4f1f3d1d21af2d7d00dee677cab11fc5
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55090108"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483706"
 ---
 # <a name="whats-new-in-visual-studio-2019-preview"></a>Visual Studio 2019 Preview の新機能
 
@@ -40,7 +40,7 @@ Visual Studio が提供する機能の基本的な概要を次に示します。
 * **[継続的なイノベーション](#continuous-innovation)**。 インテリジェントなクラウドを利用したサポートによるコード スマート。
 
 > [!NOTE]
-> Visual Studio 2019 Preview の新機能の一覧については、[リリース ノート](/visualstudio/releases/2019/release-notes-preview?context=visualstudio/default&contextView=vs-2017)をご覧ください。
+> Visual Studio 2019 Preview の新機能の一覧については、[リリース ノート](/visualstudio/releases/2019/release-notes-preview?context=visualstudio/default&contextView=vs-2017)をご覧ください。 2 番目のプレビューの新機能のまとめについては、「[Visual Studio 2019 Preview 2 is now available](https://blogs.msdn.microsoft.com/visualstudio/2019/01/24/visual-studio-2019-preview-2-is-now-available/)」(Visual Studio 2019 Preview 2 を利用できるようになりました) ブログ投稿をご覧ください。
 
 ## <a name="personal-and-team-productivity"></a>個人およびチームの生産性
 
@@ -82,6 +82,8 @@ Visual Studio 2019 を開いてまず気付くことは、新しいスタート 
 
    ![Visual Studio 2019 の新しいウォッチ ウィンドウと値の書式設定機能](media/search-watch-window.png)
 
+詳細については、「[Enhanced in Visual Studio 2019:Search for Objects and Properties in the Watch, Autos, and Locals Windows](https://blogs.msdn.microsoft.com/visualstudio/2019/01/28/enhanced-in-visual-studio-2019-search-for-objects-and-properties-in-the-watch-autos-and-locals-windows/)」(Visual Studio 2019 での機能拡張: [ウォッチ]、[自動変数]、[ローカル] ウィンドウでオブジェクトとプロパティを検索する) ブログ投稿をご覧ください。
+
 ### <a name="visual-studio-live-share"></a>Visual Studio Live Share
 
 [Visual Studio Live Share](https://visualstudio.microsoft.com/services/live-share/) は、コードベースとそのコンテキストをチームメイトと共有し、Visual Studio 内で直接、双方向のインスタント コラボレーションができるようにする開発者サービスです。 Live Share では自分が共有したプロジェクトをチームメイトがシームレスかつ安全に読み取り、移動、編集、デバッグすることができます。
@@ -110,7 +112,7 @@ Visual Studio 2019 のプレビュー リリースでは、任意のプラット
 
 異なる表示倍率で構成されているモニターを使用する場合、またはご使用のメイン デバイスとは異なる表示倍率を持つマシンにリモートで接続する場合、Visual Studio がぼやけて見えたり、間違ったスケールでレンダリングされる場合があります。
 
-Visual Studio 2019 Preview 1 のリリースにより、Visual Studio を Per-monitor aware (PMA) アプリケーションにする一歩を踏み出しました。 使用している表示倍率に関係なく、Visual Studio が正しくレンダリングできるようにする基礎的な作業を行っています。
+Visual Studio 2019 Preview のリリースにより、Visual Studio を Per-monitor aware (PMA) アプリケーションにする一歩を踏み出しました。 使用している表示倍率に関係なく、Visual Studio が正しくレンダリングできるようにする基礎的な作業を行っています。
 
    ![Visual Studio 2019 の Per-monitor aware (PMA) レンダリング](media/per-monitor-aware-dpi-scaling.png)
 

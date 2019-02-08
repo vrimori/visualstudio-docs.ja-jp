@@ -11,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4625d8c4b6bce3235fe07682cb6a0e977258adf6
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: a9a3a72a9b02d51407bf8a1c06c900596ded4ab4
+ms.sourcegitcommit: 0342f99120fbd603b8f06f7e9166c39f2896827a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54948181"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742431"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>型からファイル名への同期またはファイル名から型への同期リファクタリング
 
@@ -31,6 +31,9 @@ ms.locfileid: "54948181"
 **条件:** ファイルまたは型の名前を変更したが、対応するファイルまたは型を一致するようにまだ更新していないとき。
 
 **理由:** 型が別の名前のファイルに (またはその逆に) 配置されていると、検索が困難になります。 型またはファイルどちらかの名前を変更することで、コードが読みやすくナビゲートしやすくなります。
+
+> [!NOTE]
+> このリファクタリングは、.NET Standard プロジェクトと .NET Core プロジェクトではまだ利用できません。
 
 ## <a name="how-to"></a>方法
 
@@ -62,8 +65,6 @@ ms.locfileid: "54948181"
    - Visual Basic: 次の例で、ファイル **Employee.vb** は型名と一致する **Person.vb** に名前が変更されました。
 
        ![インラインの結果 Visual Basic](media/synctype-result-vb.png)
-
-> ![注] このリファクタリングは、.NET Standard プロジェクトと .NET Core プロジェクトではまだ利用できません。
 
 ## <a name="see-also"></a>関連項目
 

@@ -11,18 +11,18 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 6c46c0094985e8b84e546ef64fbdd268689c5296
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: cd80a7d29ae62cac691775e85cc432ac65a6eded
+ms.sourcegitcommit: 9866740aec05d1a3a5dc3b4b6d2ceaeecbd3fc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54935021"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55424448"
 ---
 # <a name="template-parameters"></a>テンプレート パラメーター
 
 テンプレートがインスタンス化されるとき、テンプレートの値を置換できます。 この機能を設定するには、*テンプレート パラメーター*を使用します。 テンプレート パラメーターは、テンプレートのクラス名や名前空間など、値を置換するために使用できます。 ユーザーが新しい項目やプロジェクトを追加したときにバックグラウンドで実行されるテンプレート ウィザードによってこれらのパラメーターが置換されます。
 
-## <a name="declaring-and-enabling-template-parameters"></a>テンプレート パラメーターの宣言と有効化
+## <a name="declare-and-enable-template-parameters"></a>テンプレート パラメーターを宣言して有効にする
 
 テンプレート パラメーターは、$*parameter*$ という形式で宣言されます。 次に例を示します。
 
@@ -32,7 +32,7 @@ ms.locfileid: "54935021"
 
 - $guid5$
 
-### <a name="to-enable-parameter-substitution-in-templates"></a>テンプレートでパラメーター置換を有効にするには
+### <a name="enable-parameter-substitution-in-templates"></a>テンプレートでパラメーター置換を有効にする
 
 1. テンプレートの *.vstemplate* ファイル内で、パラメーター置換を有効にする項目に対応する `ProjectItem` 要素を見つけます。
 
@@ -51,6 +51,7 @@ ms.locfileid: "54935021"
 |パラメーター|説明|
 |---------------|-----------------|
 |clrversion|共通言語ランタイム (CLR: Common Language Runtime) の現在のバージョン。|
+|ext_*|親テンプレートの変数を参照するには、パラメーターに `ext_` プレフィックスを追加します。 たとえば、`ext_safeprojectname` のようにします。|
 |guid[1-10]|プロジェクト ファイルでプロジェクト GUID を置き換えるために使用される GUID。 最大 10 個の一意 GUID を指定できます (例: `guid1`)。|
 |itemname|**[新しい項目の追加]** ダイアログ ボックスでユーザーが指定した名前。|
 |machinename|現在のコンピューター名 (たとえば、Computer01)。|
@@ -118,6 +119,7 @@ namespace $safeprojectname$
 
 ## <a name="see-also"></a>関連項目
 
+- [方法: テンプレート内のパラメーターを置き換える](how-to-substitute-parameters-in-a-template.md)
 - [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)
 - [方法: プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)
 - [テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

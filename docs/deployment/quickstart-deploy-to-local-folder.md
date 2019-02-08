@@ -1,6 +1,6 @@
 ---
 title: ローカル フォルダーに配置する
-ms.date: 06/22/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, local folder
@@ -10,18 +10,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd0260be91e89a8ed1f9ce0cef89a5e361933ecc
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 5627cd0f5ad37a7f92408e887b87d5eda14706eb
+ms.sourcegitcommit: 612f8c21d1448f1a013c30100cdecfbec5ddb24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55007712"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55571228"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Visual Studio を使用してアプリをローカル フォルダーに配置する
 
 Visual Studio からローカル フォルダーに ASP.NET、ASP.NET Core、.NET Core、および Python アプリを発行するには、**[発行]** ツールを使用します。 Node.js では、この手順はサポートされていますが、ユーザー インターフェイスが異なります。
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
+
+> [!NOTE]
+> ローカル フォルダーに Windows デスクトップ アプリケーションを発行する必要がある場合、[ClickOnce を使用したデスクトップ アプリの配置](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)に関するページ (C# または Visual Basic) を参照してください。 C++/CLR については、[ClickOnce を使用したネイティブ アプリの配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)に関するページを、C/C++ については、[セットアップ プロジェクトを使用したネイティブ アプリの配置](/cpp/ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)に関するページを参照してください。
 
 ## <a name="deploy-to-a-local-folder"></a>ローカル フォルダーに配置する
 

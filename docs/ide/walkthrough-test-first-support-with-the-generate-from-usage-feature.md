@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 115ffb5c22b45a8cdae1f404556d9aab3ed38bad
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 2e90993a6600adaa7f14242289ecb91cf2e74634
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54964614"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484109"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファースト開発
 
@@ -64,7 +64,7 @@ ms.locfileid: "54964614"
    > [!NOTE]
    >  現在、IntelliSense では、IntelliSense のステートメント入力候補に対して、 *完了モード* と *提案モード*の 2 つの方法を提供しています。 まだ定義していないクラスやメンバーを使用する場合は、提案モードを使用します。 **IntelliSense** ウィンドウが開いているときに、**Ctrl**+**Alt**+**Space** キーを押すと、完了モードと提案モードを切り替えることができます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページを参照してください。 提案モードは、次の手順で「 `Automobile` 」と入力する際に役立ちます。
 
-3. `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次のスクリーンショットに示されているように、このメソッド内に `Automobile` というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、[クイック アクション](../ide/quick-actions.md) (電球) が左の余白に表示される (C# のみ) か、カーソルを移動すると波線の下に直接表示されます。
+3. `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次のスクリーンショットに示されているように、このメソッド内に `Automobile` というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、[クイック アクション](../ide/quick-actions.md)のエラー電球が左の余白に表示されるか、カーソルを移動すると波線の下に直接表示されます。
 
     ![Visual Basic のクイック アクション](../ide/media/genclass_underlinevb.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "54964614"
      [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
      [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]
 
-2. コードは `Automobile` の 2 つの未定義プロパティを参照するため、`Model` と `TopSpeed` の下に波下線が表示されます。 `Model` にカーソルを移動し、**クイック アクション** (電球) を選択してから、**[プロパティ 'Automobile.Model' を生成します]** を選択します。
+2. コードは `Automobile` の 2 つの未定義プロパティを参照するため、`Model` と `TopSpeed` の下に波下線が表示されます。 `Model` にカーソルを移動し、**クイック アクション**のエラー電球を選択してから、**[プロパティ 'Automobile.Model' を生成します]** を選択します。
 
 3. `TopSpeed` プロパティのプロパティ スタブも同様に生成します。
 
@@ -104,12 +104,12 @@ ms.locfileid: "54964614"
      [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
      [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]
 
-2.  赤い波線の下にある**クイック アクション** (電球) をクリックしてから、**['Automobile' にコンストラクターを生成します]** をクリックします。
+2.  赤い波線の下にある**クイック アクション**のエラー電球をクリックしてから、**['Automobile' にコンストラクターを生成します]** をクリックします。
 
      `Automobile` クラス ファイルで、新しいコンストラクターがコンストラクター呼び出しで使用されているローカル変数の名前を調べ、 `Automobile` クラスで同じ名前のプロパティを見つけ、 `Model` および `TopSpeed` プロパティに引数値を格納するためのコードをコンストラクター本体に指定に指定したことがわかります
 
 
-3.  新しいコンストラクターを生成すると、 `DefaultAutomobileIsInitializedCorrectly`の既定のコンストラクター呼び出しの下に波線が表示されます。 `Automobile` クラスには、0 個の引数を受け取るコンストラクターがないことを示すエラー メッセージが表示されます。 パラメーターを持たない明示的な既定のコンストラクターを生成するには、**クイック アクション** (電球) をクリックし、**['Automobile' にコンストラクターを生成します]** をクリックします。
+3.  新しいコンストラクターを生成すると、 `DefaultAutomobileIsInitializedCorrectly`の既定のコンストラクター呼び出しの下に波線が表示されます。 `Automobile` クラスには、0 個の引数を受け取るコンストラクターがないことを示すエラー メッセージが表示されます。 パラメーターを持たない明示的な既定のコンストラクターを生成するには、**クイック アクション**のエラー電球をクリックし、**['Automobile' にコンストラクターを生成します]** をクリックします。
 
 ### <a name="generate-a-stub-for-a-method"></a>メソッドのスタブを生成する
 仕様で、`Model` および `TopSpeed` プロパティが既定値以外に設定されている場合は、新しい `Automobile` を `IsRunning` 状態にできることが示されているとします。
@@ -119,7 +119,7 @@ ms.locfileid: "54964614"
      [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
      [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
 
-2.  `myAuto.Start` メソッド呼び出しの**クイック アクション** (電球) をクリックしてから、**[メソッド 'Automobile.Start' を生成します]** をクリックします。
+2.  `myAuto.Start` メソッド呼び出しの**クイック アクション**のエラー電球をクリックしてから、**[メソッド 'Automobile.Start' を生成します]** をクリックします。
 
 3.  `IsRunning` プロパティの**クイック アクション** (電球) をクリックしてから、**[プロパティ 'Automobile.IsRunning' を生成します]** をクリックします。
 

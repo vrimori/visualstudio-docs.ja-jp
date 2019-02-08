@@ -1,6 +1,6 @@
 ---
 title: Azure App Service に発行する
-ms.date: 06/22/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
@@ -10,16 +10,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 3bad335fe9781cbd039f17a1a78c51bfa63775d7
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 114c6aca7ec7ed05858868b22f7547b0a071420f
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54970644"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483758"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に Web アプリを発行する
 
-**発行**ツールを使用して、ASP.NET、ASP.NET Core、Node.js、および .NET Core アプリを Azure App Service や Azure App Service Linux (コンテナーを使用) に発行することができます。 Python アプリの場合は、[Python - Azure App Service への発行](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)に関するページの手順に従います。
+ASP.NET、ASP.NET Core、Node.js、および .NET Core アプリの場合、次のいずれかの方法を使用して、Azure App Service または Azure App Service Linux (コンテナーを使用) に発行します。
+
+* アプリの継続的 (または自動的) なデプロイの場合は、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops) で Azure DevOps を使用します。
+
+* アプリの 1 回限り (または手動) のデプロイの場合は、Visual Studio の**発行**ツールを使用して、Azure App Service または App Service for Linux (コンテナーを使用) に ASP.NET、ASP.NET Core、Node.js、および .NET Core アプリをデプロイします。 Python アプリの場合は、[Python - Azure App Service への発行](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)に関するページの手順に従います。
+
+この記事では、1 回限りのデプロイに**発行**ツールを使用する方法について説明します。
 
 [!INCLUDE [quickstart-prereqs-azure](includes/quickstart-prereqs-azure.md)]
 

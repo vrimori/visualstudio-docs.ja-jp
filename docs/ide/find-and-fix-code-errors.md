@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bab4485953203c9f3b19947b89f76329b6bc277b
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 99b84e02c4ca63d80d6ef80637fcce042c869bcf
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55017098"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483771"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio でコードを機能させる
 
@@ -89,9 +89,9 @@ C++ コードを分析するには、[静的コード分析](../code-quality/qui
 
 ![Visual Studio の警告を含むエラー一覧](../ide/media/cpp-code-analysis-warning.png)
 
-## <a name="use-light-bulbs-to-fix-or-refactor-code"></a>電球を使用したコードの修正またはリファクタリング
+## <a name="use-quick-actions-to-fix-or-refactor-code"></a>クイック アクションを使用してコードを修正またはリファクタリングする
 
-電球またはねじ回しアイコンから使用できる[クイック アクション](../ide/quick-actions.md)では、コードをインラインでリファクタリングできます。 これは、C#、C++、Visual Basic コードで一般的な警告を迅速かつ効率的に修正する簡単な方法です。 アクセスするには、警告の波線を右クリックして **[Quick Actions and refactorings]\(クイック アクションとリファクタリング\)** を選択します。 または、カーソルが色付きの波線のある行にある場合に、**Ctrl**+ **キーを押します。** もしくは、余白にある電球またはねじ回しアイコンを選択します。 そのコード行に適用できる修正またはリファクタリングの一覧が表示されます。
+電球またはねじ回しアイコンから使用できる[クイック アクション](../ide/quick-actions.md)では、コードをインラインでリファクタリングできます。 これは、C#、C++、Visual Basic コードで一般的な警告を迅速かつ効率的に修正する簡単な方法です。 アクセスするには、警告の波線を右クリックして **[Quick Actions and refactorings]\(クイック アクションとリファクタリング\)** を選択します。 または、カーソルが色付きの波線のある行にある場合に、**Ctrl**+ **キーを押します。** または、余白にある電球、エラー電球、またはねじ回しアイコンを選択します。 そのコード行に適用できる修正またはリファクタリングの一覧が表示されます。
 
 ![Visual Studio 電球のプレビュー](../ide/media/quick-actions-options.png)
 

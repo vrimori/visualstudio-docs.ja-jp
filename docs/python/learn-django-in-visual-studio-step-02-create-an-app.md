@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ee615f688b80ae02bf7986c18e0b05a5c94bc4ce
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: e2e3a734f78a11a4657899eda58ee3a4fe3ff2c6
+ms.sourcegitcommit: 612f8c21d1448f1a013c30100cdecfbec5ddb24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55020569"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55571188"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "55020569"
 
 ## <a name="step-2-1-create-an-app-with-a-default-structure"></a>手順 2-1: 既定の構造を備えたアプリを作成する
 
-Django アプリは、特定の目的のために関連ファイルのセットを含む別個の Python パッケージです。 Django プロジェクトには、任意の数のアプリを含めることができます。このことは、Web ホストが単一のドメイン名から任意の数の別箇のエントリ ポイントを提供できるという事実を表しています。 たとえば、contoso.com のようなドメインに対する Django プロジェクトには、support.contoso.com に 1 つ目のアプリ、support.contoso.com に 2 つ目のアプリ、docs.contoso.com に 3 つ目のアプリを含めることが可能です。 この場合、Django プロジェクトがサイトレベル URL のルーティングと設定 (プロジェクトの *urls.py* および *settings.py* ファイル内) を処理する一方で、各アプリは内部ルーティング、ビュー、モデル、静的ファイル、管理インターフェイスを使って、そのアプリ独自の個々のスタイル設定や動作を保持します。
+Django アプリは、特定の目的のために関連ファイルのセットを含む別個の Python パッケージです。 Django プロジェクトには、任意の数のアプリを含めることができます。このことは、Web ホストが単一のドメイン名から任意の数の別箇のエントリ ポイントを提供できるという事実を表しています。 たとえば、contoso.com のようなドメインに対する Django プロジェクトには、`www.contoso.com` に 1 つ目のアプリ、support.contoso.com に 2 つ目のアプリ、docs.contoso.com に 3 つ目のアプリを含めることが可能です。 この場合、Django プロジェクトがサイトレベル URL のルーティングと設定 (プロジェクトの *urls.py* および *settings.py* ファイル内) を処理する一方で、各アプリは内部ルーティング、ビュー、モデル、静的ファイル、管理インターフェイスを使って、そのアプリ独自の個々のスタイル設定や動作を保持します。
 
 通常、Django アプリは、標準的なファイル セットから始まります。 次に示すように、Visual Studio では Django プロジェクト内にある Django アプリを初期化する項目テンプレートを提供しています。また、同様の目的を果たす統合メニュー コマンドもあります。
 

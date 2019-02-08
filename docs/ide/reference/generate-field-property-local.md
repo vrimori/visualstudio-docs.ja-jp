@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b62aca1b2d3fedb076b7554d5a83e4aba703f53a
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: d3b22f32669023666451f1981cf9c6fdf6f251e6
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54983964"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483602"
 ---
 # <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Visual Studio でフィールド、プロパティ、またはローカル変数を生成する
 
@@ -47,8 +47,8 @@ ms.locfileid: "54983964"
       - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
       - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 赤い波線をポイントし、表示された ![エラー電球](media/error-bulb.png) アイコンをクリックします。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![エラー電球](media/error-bulb.png) アイコンをクリックします。
 
       ![フィールド/プロパティ/ローカル生成のプレビュー](media/field-preview-cs.png)
 

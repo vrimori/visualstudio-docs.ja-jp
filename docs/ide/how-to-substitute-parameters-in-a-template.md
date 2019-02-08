@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 93e553338478bcdead9e283323348b02ac73eaac
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 19dcfbca8025ef73cea38e5b2b6e5768ab5e8a1f
+ms.sourcegitcommit: 9866740aec05d1a3a5dc3b4b6d2ceaeecbd3fc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55031761"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55424279"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>方法:テンプレート内のパラメーターを置き換える
 
@@ -25,7 +25,7 @@ ms.locfileid: "55031761"
 
 次のセクションでは、名前空間の名前を "安全なプロジェクト名" に置き換えるようにテンプレートを変更する方法を示します。
 
-## <a name="to-use-a-parameter-to-replace-the-namespace-name"></a>パラメーターを使って名前空間の名前を置き換えるには
+## <a name="example---namespace-name"></a>例 - 名前空間の名前
 
 1. テンプレートの 1 つ以上のコード ファイルにパラメーターを挿入します。 次に例を示します。
 

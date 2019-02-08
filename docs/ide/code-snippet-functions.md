@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d448111a9bac5d03fe3bc8e7ba35c0f9fed1d4a6
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: d4e09602ed62e21a4a5a80a8e6fee301eef30512
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55020465"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483719"
 ---
 # <a name="code-snippet-functions"></a>コード スニペットの関数
 
@@ -30,11 +30,11 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
 
 |関数|説明|言語|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。 `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のいずれかへの参照にする必要があります。|C#|
+|`GenerateSwitchCases(EnumerationLiteral)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。 `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のいずれかへの参照にする必要があります。|C#|
 |`ClassName()`|挿入されたスニペットを含むクラスの名前を返します。|C#|
-|`SimpleTypeName(` `TypeName` `)`|*TypeName* パラメーターを、スニペットが呼び出されたコンテキストで最も単純な形式に縮小します。|C#|
+|`SimpleTypeName(TypeName)`|*TypeName* パラメーターを、スニペットが呼び出されたコンテキストで最も単純な形式に縮小します。|C#|
 
-## <a name="example"></a>例
+## <a name="generateswitchcases-example"></a>GenerateSwitchCases の例
 
 次の例は、`GenerateSwitchCases` 関数の使用法を示しています。 このスニペットが挿入され、列挙体が `$switch_on$` リテラルに入力されると、`$cases$` リテラルによって列挙体の値ごとに `case` ステートメントが生成されます。
 
@@ -76,7 +76,7 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
 </CodeSnippets>
 ```
 
-## <a name="example"></a>例
+## <a name="classname-example"></a>ClassName の例
 
 次の例は、`ClassName` 関数の使用法を示しています。 このスニペットが挿入されると、`$classname$` リテラルは、コード ファイルでその位置にある外側のクラスの名前で置換されます。
 
@@ -123,7 +123,7 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
 </CodeSnippets>
 ```
 
-## <a name="example"></a>例
+## <a name="simpletypename-example"></a>SimpleTypeName の例
 
 この例では、`SimpleTypeName` 関数の使用方法を示します。 このスニペットがコード ファイルに挿入されると、`$SystemConsole$` リテラルは、このスニペットが呼び出されたコンテキストで最も単純な形式の <xref:System.Console> 型で置換されます。
 

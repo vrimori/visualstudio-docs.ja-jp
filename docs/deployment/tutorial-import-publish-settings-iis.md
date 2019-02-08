@@ -1,7 +1,7 @@
 ---
 title: 発行設定をインポートして IIS に発行する
 description: 発行プロファイルを作成してインポートし、Visual Studio から IIS にアプリケーションを配置します
-ms.date: 05/07/2018
+ms.date: 01/31/2019
 ms.topic: tutorial
 helpviewer_keywords:
 - deployment, publish settings
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 064eb9f57db538df4cae32777e9ac61359ddea4d
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: b38f9d951be37619c84095c379879e1acd51cf7b
+ms.sourcegitcommit: 0f7411c1a47d996907a028e920b73b53c2098c9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55026881"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690451"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Visual Studio で発行設定をインポートしてアプリケーションを IIS に発行する
 
@@ -38,11 +38,11 @@ ms.locfileid: "55026881"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 をインストールし、**ASP.NET** と **.NET Framework** の開発ワークロードをインストールしている必要があります。 .NET Core アプリの場合は、**.NET Core** のワークロードも必要です。
+* 開発用のコンピューターに Visual Studio 2017 をインストールし、**ASP.NET と Web 開発**ワークロードを用意しておきます。
 
-    Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
+    Visual Studio をまだインストールしていない場合は、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)  ページに移動し、無料試用版をインストールしてください。
 
-* IIS から発行設定ファイルを生成するには、Windows Server 2012 または Windows Server 2016 を実行しているコンピューターが必要です。また、IIS Web サーバー ロールが正しく構成されている必要があります。 ASP.NET 4.5 または ASP.NET Core もインストールする必要があります。 ASP.NET Core については、[IIS への発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)に関するセクションを参照してください。 ASP.NET 4.5 については、「[IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)」(ASP.NET 3.5 および ASP.NET 4.5 を使用する IIS 8.0) を参照してください。
+* サーバーでは Windows Server 2012 か Windows Server 2016 を実行している必要があります。また、発行設定ファイル (*\*.publishsettings*) を生成するには [IIS Web Server ロール](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)を正しく設定している必要があります。 ASP.NET 4.5 または ASP.NET Core もサーバーにインストールする必要があります。 ASP.NET 4.5 を設定する方法については、「[IIS 8.0 Using ASP.NET 3.5 and ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)」 (ASP.NET 3.5 および ASP.NET 4.5 を使用する IIS 8.0) を参照してください。 ASP.NET Core を設定する方法については、「[IIS を使用した Windows での ASP.NET Core のホスト](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)」を参照してください。 
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio で新しい ASP.NET プロジェクトを作成する
 
@@ -50,7 +50,9 @@ ms.locfileid: "55026881"
 
 1. **[Visual C#]** または **[Visual Basic]** で **[Web]** を選択し、中央のウィンドウで **[ASP.NET Web アプリケーション (.NET Framework)]** または (C# のみ) **[ASP.NET Core Web アプリケーション]** を選択し、**[OK]** をクリックします。
 
-    指定したプロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 インストールする必要がある Visual Studio ワークロードを特定するには、この記事の前提条件を参照してください。
+    指定したプロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **ASP.NET と Web 開発**ワークロードをインストールします。
+
+    選択したプロジェクト テンプレート (ASP.NET または ASP.NET Core) は次に対応している必要があります。 
 
 1. **[MVC]**.(.NET Framework) または **[Web アプリケーション (モデル ビュー コントローラー)]** (.NET Core の場合)、**[認証なし]** がオンであることを確認してから **[OK]** をクリックします。
 
