@@ -460,7 +460,7 @@ enum CV_HREG_e { 
 ## <a name="requirements"></a>要件:  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
  [IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
