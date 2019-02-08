@@ -34,6 +34,6 @@ ms.locfileid: "54919383"
 |[IDiaSymbol::get_upperBound](../../debugger/debug-interface-access/idiasymbol-get-upperbound.md)|`IDiaSymbol*`|FORTRAN 配列の次元の上限値です。|  
 |[IDiaSymbol::get_upperBoundId](../../debugger/debug-interface-access/idiasymbol-get-upperboundid.md)|`DWORD`|上限のシンボルの ID。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ArrayType](../../debugger/debug-interface-access/arraytype.md)   
  [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
