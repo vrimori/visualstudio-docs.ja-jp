@@ -34,6 +34,6 @@ ms.locfileid: "55024267"
 ## <a name="solution"></a>ソリューション  
  [[Just-In-Time デバッグ]](../debugger/just-in-time-debugging-in-visual-studio.md) オプションを設定し、アクセス違反が発生するまでプログラムをスタンドアロンで実行します。 その後、**[アクセス違反です]** ダイアログ ボックスが表示されたら、**[キャンセル]** をクリックしてデバッガーを起動します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

@@ -32,5 +32,5 @@ ms.locfileid: "54986086"
   
   - デバッグのため、32 ビット バージョンのアプリケーションをビルドします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

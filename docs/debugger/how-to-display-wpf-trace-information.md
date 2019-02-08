@@ -84,5 +84,5 @@ ms.locfileid: "54981039"
   
 8.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [WPF のデバッグ](../debugger/debugging-wpf.md)

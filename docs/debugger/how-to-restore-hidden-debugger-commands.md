@@ -72,6 +72,6 @@ Visual Studio をセット アップするときに、既定の IDE 設定で主
   
 9. **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

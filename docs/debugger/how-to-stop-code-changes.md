@@ -38,6 +38,6 @@ ms.locfileid: "55013265"
   
   このオプションを選択すると、コードの変更内容は一切コミットされません。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [エディット コンティニュ](../debugger/edit-and-continue.md)   
  [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](https://msdn.microsoft.com/library/bcew296c.aspx)

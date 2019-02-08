@@ -46,7 +46,7 @@ ms.locfileid: "55011222"
   
   - ネットワーク管理者またはデータベース管理者に問い合わせます。  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [SQL デバッグの設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))
 - [方法: デバッグ用の SQL Server のアクセス許可を設定します。](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)

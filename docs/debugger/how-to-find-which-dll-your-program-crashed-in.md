@@ -49,6 +49,6 @@ ms.locfileid: "54965342"
   
 6.  **[名前]** 列と **[パス]** 列で、DLL の名前とパスを確認します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [DLL プロジェクトをデバッグする](../debugger/debugging-dll-projects.md)   
  [方法: [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)

@@ -52,7 +52,7 @@ ms.locfileid: "54925535"
     > [!NOTE]
     >  Microsoft Windows Vista が実行されているリモート サーバーへの RPC ステップ実行は、そのリモート サーバーにネイティブ デバッガーがアタッチされている場合のみ機能します。 それ以外の場合、エラー メッセージが表示されることなく RPC 呼び出しが失敗します。 何らかの方法で RPC 呼び出しに成功したとしても、RPC 呼び出しへのステップ インは正常に機能しません。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [COM サーバーおよび COM コンテナーのデバッグ](../debugger/com-server-and-container-debugging.md)  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)

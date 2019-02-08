@@ -38,5 +38,5 @@ ms.locfileid: "54990824"
   
 3.  Windows 認証を復元するために、両方のコンピューターを再起動してみます。 Kerberos エラーがないかどうかローカル コンピューターとリモート コンピューターのイベント ログを確認し、既知の問題がないかどうかドメイン管理者に問い合わせてください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

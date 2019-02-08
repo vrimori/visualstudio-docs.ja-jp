@@ -60,7 +60,7 @@ WPF ツリー ビジュアライザーを使用すると、WPF オプション�
   
 -   ダイアログ ボックスの右上隅にある **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
  [WPF のツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)   
  [依存関係プロパティの概要](/dotnet/framework/wpf/advanced/dependency-properties-overview)

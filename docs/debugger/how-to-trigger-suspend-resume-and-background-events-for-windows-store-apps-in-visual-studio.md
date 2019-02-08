@@ -108,7 +108,7 @@ ms.locfileid: "55018580"
   
 4.  **診断** ログを選択します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での UWP アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)   
  [アプリケーションのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)   

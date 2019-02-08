@@ -108,7 +108,7 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
 }  
 ```  
 
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
  [方法: マネージド コードのスレッド名を設定する](../debugger/how-to-set-a-thread-name-in-managed-code.md)

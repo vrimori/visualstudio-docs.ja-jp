@@ -32,5 +32,5 @@ ms.locfileid: "55035485"
   
  IIS のトラブルシューティングの詳細については、「[IIS Management and Administration (IIS の管理)](/iis/manage/provisioning-and-managing-iis/iis-management-and-administration)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [エラー: Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

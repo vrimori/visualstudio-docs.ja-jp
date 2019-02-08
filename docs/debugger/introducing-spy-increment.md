@@ -51,7 +51,7 @@ Spy++ で実行できるタスクは以下のとおりです。
 > [!NOTE]
 >  Spy++ (64 ビット) のファイル名には "amd" が含まれますが、すべての x64 Windows オペレーティング システムで動作します。  
   
-## <a name="see-also"></a>「 
+## <a name="see-also"></a>関連項目 
  [方法: Spy++ の起動](../debugger/how-to-start-spy-increment.md)   
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   

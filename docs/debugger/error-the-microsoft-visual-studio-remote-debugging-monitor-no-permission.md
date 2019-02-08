@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 80db9cb0e29f2664a02ada17398d5dca8912a0f3
 ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
-ms.translationtype: MTE95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55002419"
@@ -43,6 +43,6 @@ ms.locfileid: "55002419"
   
   - コマンド プロンプトで `runas.exe` を実行します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

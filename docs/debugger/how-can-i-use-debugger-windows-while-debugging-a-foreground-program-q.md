@@ -36,6 +36,6 @@ ms.locfileid: "55069682"
 ## <a name="solution"></a>ソリューション  
  コンピューターがもう 1 台ある場合は、リモート デバッグを行います。 2 台のコンピューターをセットアップすると、リモート コンピューター上で画面の描画状態を観察しながら、ホスト上でデバッガーを実行できます。 リモート デバッグの詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

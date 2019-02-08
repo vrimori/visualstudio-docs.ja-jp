@@ -24,7 +24,7 @@ Spy++ システム テーブルの「スナップショット」を取得し、�
   
 -   選択**更新**から、**ウィンドウ** メニューの または をクリックして、**更新**ツールバーのボタンをクリックします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目  
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)
