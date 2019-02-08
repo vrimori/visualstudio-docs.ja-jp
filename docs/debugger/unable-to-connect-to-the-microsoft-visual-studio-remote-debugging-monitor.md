@@ -165,5 +165,5 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
 ## <a name="more-help"></a>その他のヘルプ  
  その他のリモート デバッガーのヘルプを取得するには、リモート デバッガーのヘルプ ページを開きます (**ヘルプ > 使用状況**リモート デバッガーで)。
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Remote Debugging](../debugger/remote-debugging.md)
