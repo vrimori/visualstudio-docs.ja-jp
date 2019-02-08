@@ -100,6 +100,6 @@ typedef enum CV_CPU_TYPE_e { 
 ## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)
