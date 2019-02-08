@@ -37,7 +37,7 @@ ms.locfileid: "54936425"
 |[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|`VARIANT`|定数のデータの値。|  
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|実行可能イメージ内には、この注釈の位置。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)   
  [シンボルの場所](../../debugger/debug-interface-access/symbol-locations.md)
