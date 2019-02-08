@@ -73,7 +73,7 @@ ms.locfileid: "55069331"
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|仮想関数テーブル内のオフセットし、仮想関数の場合。|  
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` 場合は、関数は、volatile としてマークされます。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)   
