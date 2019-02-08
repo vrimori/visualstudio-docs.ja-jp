@@ -52,5 +52,5 @@ ms.locfileid: "55001970"
 | **SQL Server デバッグ** | SQL Server データベース オブジェクトのデバッグを許可します。 |
 | **Silverlight デバッグ** | Silverlight コンポーネントをデバッグできます。 |
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)
