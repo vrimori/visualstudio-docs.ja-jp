@@ -41,7 +41,7 @@ Spy++ のメニュー バーで、ツールバーが表示されます。 ツー
 |![Spy&#43; &#43;プロパティ エクスプ ローラー ボタン](../debugger/media/icon_spy--_propexp.gif "Icon_Spy + _PropExp")|Windows のビューで選択されているウィンドウのプロパティを表示します。|  
 |![Spy&#43; &#43;更新ボタン](../debugger/media/icon_spy--_refresh.gif "Icon_Spy + 更新 (_r)")|システム ビューを更新します。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Spy++ の使用](../debugger/using-spy-increment.md)   
  [Spy++ ビュー](../debugger/spy-increment-views.md)   
  [Spy++ リファレンス](../debugger/spy-increment-reference.md)
