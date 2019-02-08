@@ -65,7 +65,7 @@ Visual Basic にはクローズ型の構文はないため、Visual Basic で同
 
 `"Namespace.TypeName'2"`
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 - [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)
 - [.managed オブジェクトのカスタム ビューの作成](../debugger/create-custom-views-of-dot-managed-objects.md)
