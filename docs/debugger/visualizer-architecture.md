@@ -85,7 +85,7 @@ ms.locfileid: "54922131"
 |---------------------|-------------------|  
 |<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A><br /><br /> または<br /><br /> <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferObject%2A>|<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A>|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
  [チュートリアル: C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
  [チュートリアル: Visual Basic でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)   
