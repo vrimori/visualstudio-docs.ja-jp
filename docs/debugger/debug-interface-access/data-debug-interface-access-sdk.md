@@ -61,7 +61,7 @@ ms.locfileid: "54999263"
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|実行可能ファイル内のデータの位置。|  
 |[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` 場合は、データは、volatile としてマークされます。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [DataKind 列挙型](../../debugger/debug-interface-access/datakind.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
