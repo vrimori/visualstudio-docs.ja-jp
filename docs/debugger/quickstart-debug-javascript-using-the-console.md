@@ -248,7 +248,7 @@ ms.locfileid: "55024917"
   
  `cd` コマンドを使用して実行コンテキストを切り替えることもできますが、別の実行コンテキストの名前を知っている必要があります。また、使用する参照がスコープ内になければなりません。 **[ターゲット]** リストを使用すると、別の実行コンテキストに簡単にアクセスできます。   
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Debug apps in Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)   
  [JavaScript Console commands](../debugger/javascript-console-commands.md)   
  [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
