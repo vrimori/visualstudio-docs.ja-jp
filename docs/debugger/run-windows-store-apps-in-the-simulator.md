@@ -148,5 +148,5 @@ UWP アプリ用の Visual Studio シミュレーターは、UWP アプリをシ
 
  シミュレーターを終了するには、キーを押して**CTRL + ALT + F4**します。
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
  [Visual Studio からアプリを実行](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
