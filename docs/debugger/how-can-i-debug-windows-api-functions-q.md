@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows API 関数のデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

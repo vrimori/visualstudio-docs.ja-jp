@@ -1,5 +1,5 @@
 ---
-title: UI の作成 - Blend for Visual Studio
+title: Blend for Visual Studio 機能ツアー
 titleSuffix: ''
 ms.date: 07/17/2017
 ms.prod: visual-studio-dev15
@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0a39bee4f44f0cf62c237ec9bb62135637a957
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 58b2e84a28a2d453eb109915bb9c38672b6bed98
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54923793"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484122"
 ---
-# <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio を使用して UI を作成する
+# <a name="blend-for-visual-studio-overview"></a>Blend for Visual Studio 概要
 
 Blend for Visual Studio を使用すると、XAML ベースの Windows および Web アプリケーションを設計できます。 Visual Studio と同じ基本的な XAML デザイン環境を提供しているほか、アニメーションやビヘイビアーなどの高度なタスクを視覚的にデザインする機能が追加されています。 Blend と Visual Studio の比較については、[Visual Studio と Blend for Visual Studio で XAML をデザインする](../designers/designing-xaml-in-visual-studio.md)方法に関するページを参照してください。
 

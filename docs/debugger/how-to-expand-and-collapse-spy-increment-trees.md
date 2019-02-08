@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: 展開し、spy++ ツリーを折りたたむ |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual

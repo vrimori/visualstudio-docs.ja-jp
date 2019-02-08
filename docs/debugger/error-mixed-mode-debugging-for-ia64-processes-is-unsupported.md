@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :IA64 プロセスの混合モードのデバッグはサポートされていません |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

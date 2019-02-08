@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: マネージ コードのスレッド名を設定 |Microsoft Docs'
 ms.date: 04/27/2017
 ms.topic: conceptual

@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: ネイティブ コードのスレッド名を設定 |Microsoft Docs'
 ms.date: 12/17/2018
 ms.topic: conceptual

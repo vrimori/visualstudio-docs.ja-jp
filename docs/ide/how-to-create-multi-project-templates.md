@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: cefeabffc42722b1fa574a19068eb45c5e850e86
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 0b1470620ce6640b3a287a5d86fc6922597258b3
+ms.sourcegitcommit: 9866740aec05d1a3a5dc3b4b6d2ceaeecbd3fc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54985917"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55424215"
 ---
 # <a name="how-to-create-multi-project-templates"></a>方法: 複数プロジェクトのテンプレートを作成する
 
@@ -69,17 +69,20 @@ ms.locfileid: "54985917"
     </TemplateContent>
     ```
 
-## <a name="to-create-a-multi-project-template-from-an-existing-solution"></a>既存のソリューションから複数プロジェクトのテンプレートを作成するには
+## <a name="create-a-multi-project-template-from-an-existing-solution"></a>既存のソリューションから複数プロジェクトのテンプレートを作成する
 
 1. ソリューションを作成して 2 つ以上のプロジェクトを追加します。
 
 1. テンプレートにエクスポートする準備ができるまで、プロジェクトをカスタマイズします。
 
+   > [!TIP]
+   > [テンプレート パラメーター](template-parameters.md)を使用していて、親テンプレートの変数を参照したい場合は、パラメーターの名前にプレフィックス `ext_` を付加します。 たとえば、`$ext_safeprojectname$` のようにします。
+
 1. **[プロジェクト]** メニューの **[テンプレートのエクスポート]** を選択します。
 
    **テンプレートのエクスポート ウィザード**が開きます。
 
-1. **[テンプレートの種類の選択]** ページで、**[プロジェクト テンプレート]** を選択します。 テンプレートにエクスポートするプロジェクトを選択し、**[次へ]** を選択します。
+1. **[テンプレートの種類の選択]** ページで、**[プロジェクト テンプレート]** を選択します。 テンプレートにエクスポートするプロジェクトを 1 つ選択し、**[次へ]** を選択します。 (ソリューション内のプロジェクトごとに、この手順を繰り返します。)
 
 1. **[テンプレート オプションの選択]** ページで、テンプレートの名前および省略可能な説明、アイコン、プレビュー画像を入力します。 **[完了]** を選択します。
 

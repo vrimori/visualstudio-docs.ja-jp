@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :リモート コンピューター上の SQL Server に接続できません |。Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

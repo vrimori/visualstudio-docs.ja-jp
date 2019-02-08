@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :ターゲット コンピューター上の Visual Studio リモート デバッガーが、このコンピューターに接続できません
 titleSuffix: ''
 ms.custom: seodec18

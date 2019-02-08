@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: ネイティブ ランタイム チェックの使用 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual

@@ -1,4 +1,4 @@
----
+﻿---
 title: デバッグ用ユーザー インターフェイス リファレンス |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference

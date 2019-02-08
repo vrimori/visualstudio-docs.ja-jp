@@ -1,4 +1,4 @@
----
+﻿---
 title: アプリのステップ実行時にフォーカスを保持 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

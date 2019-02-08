@@ -2,7 +2,7 @@
 title: 配置機能のツアー
 description: Visual Studio からアプリを配置する際の選択肢について説明します。
 ms.custom: mvc
-ms.date: 06/22/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 dev_langs:
 - FSharp
@@ -23,14 +23,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4046abd84443bd1cff6b6e618f2dfba2de5e09dd
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: dab79e4cbc9ab9b37a9052ee1337a5e9b94a6947
+ms.sourcegitcommit: 0342f99120fbd603b8f06f7e9166c39f2896827a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54974933"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742457"
 ---
-# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: Visual Studio での配置の概要
+# <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio での配置の概要
 
 他のコンピューター、デバイス、サーバー、クラウドにインストールする目的でアプリケーション、サービス、またはコンポーネントを配布する手法として配置が行われます。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (コマンド ラインによる配置や NuGet など、その他の配置ツールに対応しているアプリの種類はたくさんありますが、それらのツールについてはここでは触れていません。)
 
@@ -44,24 +44,32 @@ ms.locfileid: "54974933"
 
     ![[発行] を選択する](../deployment/media/quickstart-publish.png)
 
-- **Visual C++ ランタイム**:ローカル配置または静的リンクを利用して、Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
+- **Windows デスクトップ**: ClickOnce 配置を使用し、フォルダーに Windows デスクトップ アプリケーションを発行できます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、[ClickOnce を使用したデスクトップ アプリの配置](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)に関するページ (C# と Visual Basic) を参照してください。 C++/CLR については、[ClickOnce を使用したネイティブ アプリの配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)に関するページを、C/C++ については、[セットアップ プロジェクトを使用したネイティブ アプリの配置](/cpp/ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)に関するページを参照してください。
 
 ## <a name="publish-to-azure"></a>Azure に発行する
 
-- **ASP.NET**、**ASP.NET Core**、**Python**、**Node.js**:発行ツールを使用し、Azure App Service または Azure 仮想マシンにアプリを簡単に配置できます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)[発行] ダイアログ ボックスで、**[App Service]** または **[Azure Virtual Machines]** を選択し、構成手順に従います。
+- **ASP.NET**、**ASP.NET Core**、**Python**、**Node.js**:次のいずれかの方法を使用して、Azure App Service または Azure App Service Linux (コンテナーを使用) に発行します。
 
-    ![Azure App Service を選択する](../deployment/media/quickstart-publish-azure.png "Azure App Service を選択する")
+  - アプリの継続的 (または自動的) なデプロイの場合は、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops) で Azure DevOps を使用します。
 
-    Visual Studio 2017 バージョン 15.7 以降で、ASP.NET Core アプリを **Linux 用 App Service** に配置できます。
+  - アプリを一回だけ (手動で) 配置する場合、Visual Studio の **[発行]** ツールを使用します。
 
-    Python アプリについては、[Python で Azure App Service に発行する](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)方法に関するページも参照してください。
+  サーバー構成のカスタマイズ機能が多い配置の場合、**[発行]** ツールを使用し、Azure Virtual Machine にアプリを配置することもできます。
 
-    概要については、[Azure に発行する方法](quickstart-deploy-to-azure.md)に関するページと [Linux に発行する方法](quickstart-deploy-to-linux.md)に関するページを参照してください。 [Azure に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)方法に関するページも参照してください。 Git を使用した配置については、[Git を使用して Azure に ASP.NET Core を継続的に配置する](/aspnet/core/publishing/azure-continuous-deployment)方法に関するページを参照してください。
+  **[発行]** ツールを使用するには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[発行]** を選択します。 (発行プロファイルを以前に構成している場合、**[新しいプロファイルの作成]** をクリックする必要があります。)[発行] ダイアログ ボックスで、**[App Service]** または **[Azure Virtual Machines]** を選択し、構成手順に従います。
 
-    Azure App Service から Visual Studio に発行プロファイルをインポートする方法については、[発行設定のインポートと Azure へのデプロイ](../deployment/tutorial-import-publish-settings-azure.md)に関するページを参照してください。
+  ![Azure App Service を選択する](../deployment/media/quickstart-publish-azure.png "Azure App Service を選択する")
 
-    > [!NOTE]
-    > Azure アカウントをお持ちでない場合、[こちらから新規登録](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)できます。
+  Visual Studio 2017 バージョン 15.7 以降では、ASP.NET Core アプリを **Linux 用 App Service** に配置できます。
+
+  Python アプリについては、[Python で Azure App Service に発行する](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)方法に関するページも参照してください。
+
+  概要については、[Azure に発行する方法](quickstart-deploy-to-azure.md)に関するページと [Linux に発行する方法](quickstart-deploy-to-linux.md)に関するページを参照してください。 [Azure に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)方法に関するページも参照してください。 Git を使用した配置については、[Git を使用して Azure に ASP.NET Core を継続的に配置する](/aspnet/core/publishing/azure-continuous-deployment)方法に関するページを参照してください。
+
+  Azure App Service から Visual Studio に発行プロファイルをインポートする方法については、[発行設定のインポートと Azure へのデプロイ](../deployment/tutorial-import-publish-settings-azure.md)に関するページを参照してください。
+
+  > [!NOTE]
+  > Azure アカウントをお持ちでない場合、[こちらから新規登録](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)できます。
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Web に発行するか、ネットワーク共有に配置する
 
@@ -75,9 +83,7 @@ ms.locfileid: "54974933"
 
     ASP.NET のアプリケーションとサービスは他にもさまざまな方法で配置できます。 詳細については、[ASP.NET の Web アプリケーション/サービスを配置する](http://www.asp.net/aspnet/overview/deployment)方法に関するページをご覧ください。
 
-- **Visual C++ ランタイム**:集中配置を使用して Visual C++ ランタイムを配置できます。 詳細については、「[ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)」を参照してください。
-
-- **Windows デスクトップ**: ClickOnce 配置を使用し、Web サーバーまたはネットワーク ファイル共有に Windows デスクトップ アプリケーションを発行できます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、[ClickOnce でデスクトップ アプリを配置する](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)方法に関するページと [ClickOnce でネイティブ アプリを配置する](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)方法に関するページを参照してください。
+- **Windows デスクトップ**: ClickOnce 配置を使用し、Web サーバーまたはネットワーク ファイル共有に Windows デスクトップ アプリケーションを発行できます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、[ClickOnce を使用したデスクトップ アプリの配置](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)に関するページ (C# と Visual Basic) を参照してください。 C++/CLR については、[ClickOnce を使用したネイティブ アプリの配置](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)に関するページを、C/C++ については、[セットアップ プロジェクトを使用したネイティブ アプリの配置](/cpp/ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)に関するページを参照してください。
 
 ## <a name="publish-to-microsoft-store"></a>Microsoft Store に発行する
 
@@ -95,25 +101,25 @@ Visual Studio から、Microsoft Store に配置するためのアプリ パッ�
 
 デバイスでテストする目的で UWP アプリを配置する場合、[Visual Studio からリモート コンピューター上で UWP アプリを実行する](../debugger/run-windows-store-apps-on-a-remote-machine.md)方法に関するページを参照してください。
 
-## <a name="create-an-installer-package-windows-client"></a>インストーラー パッケージを作成する (Windows クライアント)
+## <a name="create-an-installer-package-windows-desktop"></a>インストーラー パッケージを作成する (Windows デスクトップ)
 
-デスクトップ アプリケーションを [ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) でできることよりも複雑な方法でインストールする必要がある場合、インストーラー パッケージ、セットアップ プロジェクト、またはカスタム ブートストラップを作成できます。
+デスクトップ アプリケーションを [ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) でできることよりも複雑な方法でインストールする必要がある場合、Windows インストーラー パッケージ (MSI または EXE インストール ファイル) またはカスタム ブートストラップを作成できます。
 
-- MSI ベースの WiX インストーラーを [WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension) を使用して作成できます。
+- MSI ベースのインストーラー パッケージを [WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension) を使用して作成できます。 これはコマンドライン ツールセットです。
 
-- Flexera Software の [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) を Visual Studio 2017 と共に使用することも場合によっては可能です (Community Edition はサポートされていません)。 InstallShield Limited Edition は現在 Visual Studio に付属しておらず、Visual Studio 2017 でサポートされていません。今後の可用性については、[Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) にお問い合わせください。
+- MSI または EXE インストーラー パッケージは Flexera Software の [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) を使用して作成できます。 InstallShield を Visual Studio 2017 と共に使用することも場合によっては可能です (Community Edition はサポートされていません)。 InstallShield Limited Edition は現在 Visual Studio に付属しておらず、Visual Studio 2017 でサポートされていません。今後の可用性については、[Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) にお問い合わせください。
 
-- セットアップ プロジェクト (vdproj) を作成する場合、[Visual Studio 2017 Installer Projects 拡張](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)をインストールしてください。
+- MSI または EXE インストーラー パッケージはセットアップ プロジェクト (vdproj) を使用して作成できます。 このオプションを使用するには、[Visual Studio 2017 Installer Projects 拡張機能](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)をインストールします。
 
-- ブートストラップと呼ばれる一般的なインストーラーを構成すると、デスクトップ アプリケーションの必須コンポーネントをインストールできます。 詳細については、「[Application Deployment Prerequisites](../deployment/application-deployment-prerequisites.md)」 (アプリケーション配置の必要条件) を参照してください。
+- ブートストラップと呼ばれる汎用インストーラーを構成する方法でデスクトップ アプリケーションの必須コンポーネントをインストールすることもできます。 詳細については、「[Application Deployment Prerequisites](../deployment/application-deployment-prerequisites.md)」 (アプリケーション配置の必要条件) を参照してください。
 
 ## <a name="deploy-to-test-lab"></a>テスト ラボに配置する
 
 アプリケーションを仮想環境に配置することで、より高度な開発と試験が可能になります。 詳細については、[ラボ環境のテスト](../test/lab-management/using-a-lab-environment-for-your-application-lifecycle.md)に関するページを参照してください。
 
-## <a name="devops-deployment"></a>DevOps 配置
+## <a name="continuous-deployment"></a>継続的配置
 
-チーム環境では、Azure Pipelines を使用し、アプリの継続的配置を有効にできます。 詳細については、[Azure Pipelines](/azure/devops/pipelines/index?view=vsts) に関するページと [Azure に配置する](/azure/devops/deploy-azure/index?view=vsts)方法に関するページを参照してください。
+Azure Pipelines を使用し、アプリの継続的配置を有効にできます。 詳細については、[Azure Pipelines](/azure/devops/pipelines/index?view=vsts) に関するページと [Azure に配置する](/azure/devops/deploy-azure/index?view=vsts)方法に関するページを参照してください。
 
 ## <a name="deployment-for-other-app-types"></a>他の種類のアプリを配置する
 

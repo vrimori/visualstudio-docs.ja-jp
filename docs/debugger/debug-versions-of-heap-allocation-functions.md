@@ -1,4 +1,4 @@
----
+﻿---
 title: ヒープ割り当て関数のデバッグ バージョン |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual

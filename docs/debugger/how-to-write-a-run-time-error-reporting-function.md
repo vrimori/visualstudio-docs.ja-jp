@@ -1,4 +1,4 @@
----
+﻿---
 title: 実行時のエラー レポート関数の記述 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

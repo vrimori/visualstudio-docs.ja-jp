@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c2de6f8608857d102454d03a98aacd175a22cef
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 86ade7bac365c5566c79d3cb1364670b23f0d3d9
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55024943"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483836"
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Visual Studio でメソッドを生成する
 
@@ -47,8 +47,8 @@ ms.locfileid: "55024943"
       - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
       - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 赤い波線をポイントし、表示された ![エラー電球](media/error-bulb.png) アイコンをクリックします。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![エラー電球](media/error-bulb.png) アイコンをクリックします。
 
       ![メソッド生成のプレビュー](media/method-preview-cs.png)
 

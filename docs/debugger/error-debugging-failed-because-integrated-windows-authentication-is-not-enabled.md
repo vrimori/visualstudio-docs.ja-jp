@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :統合 Windows 認証が有効になっていないため、デバッグに失敗しました |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: App Service on Linux に発行する
-ms.date: 07/23/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
@@ -9,18 +9,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 3e80f96e1af39747a6dfa9fb9737ec11bb5baf00
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 12d1df3874388f0c113600e20ca2dbd080d15d10
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54951938"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483966"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio を使用して App Service on Linux に ASP.NET Core アプリを発行する
 
-**発行**ツールを使用して、App Service on Linux に ASP.NET Core アプリを発行することができます。
+Visual Studio 2017 バージョン 15.7 以降では、次のいずれかの方法を使用して、ASP.NET Core アプリを (コンテナーを使用して) Azure App Service Linux に発行できます。
 
-**発行**ツールを使用して App Service on Linux にデプロイするには、Visual Studio 2017 バージョン 15.7 が必要です。
+* アプリの継続的 (または自動的) なデプロイの場合は、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops) で Azure DevOps を使用します。
+
+* アプリの 1 回限り (または手動) のデプロイの場合は、Visual Studio の**発行**ツールを使用して、App Service for Linux (コンテナーを使用) に ASP.NET Core アプリを発行します。
+
+この記事では、1 回限りのデプロイに**発行**ツールを使用する方法について説明します。
 
 [!INCLUDE [quickstart-prereqs-azure-linux](includes/quickstart-prereqs-azure-linux.md)]
 

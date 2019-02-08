@@ -14,12 +14,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 130cb83e078a0f7c2924349dcd13692d3fe9125a
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 12b232bf32be6802ccd82ecad647f2becc95addc
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54924601"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484200"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードの単体テストを作成し、実行する
 
@@ -82,6 +82,11 @@ public void Debit(double amount)
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
 1. **[ファイル]** メニューで **[追加]** > **[新しいプロジェクト]** の順に選択します。
+
+   > [!TIP]
+   > 既存のソリューションにプロジェクトを追加する方法は他にもいくつかあります。 **ソリューション エクスプローラー**でソリューションを右クリックし、**[追加]**、**[新しいプロジェクト]** の順に選択します。 あるいは、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択し、**[新しいプロジェクト]** ダイアログで **[ソリューションに追加する]** オプションを選択します。
+   >
+   > ![[新しいプロジェクト] ダイアログの [ソリューションに追加する] オプション](media/add-to-solution.png)
 
 2. **[新しいプロジェクト]** ダイアログ ボックスで、**[インストール済み]**、**[Visual C#]** の順に展開し、**[テスト]** を選択します。
 

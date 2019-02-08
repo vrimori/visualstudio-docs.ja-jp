@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :混合モード デバッグは Microsoft .NET Framework 2.0 を使用する場合にのみ以上サポート |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

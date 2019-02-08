@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6451b45f8bb98232ea0c3a1b3cb96d37cf303ccc
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 90a9ba0da2ee8c77b66d147c9af5fa560f50f3a0
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55010390"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484135"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 
@@ -41,7 +41,7 @@ Visual Studio には、スクリーン リーダーやその他の支援テク�
 
 ## <a name="use-annotations-to-reveal-useful-information-about-your-code"></a>注釈を使用してコードに関する有用な情報を表示する
 
-Visual Studio エディターには多くのテキスト "表示要素" が含まれています。これにより、電球、エラーおよび警告の "波線" 、ブックマークなど、コード行の特定のポイントで、特性や機能について知ることができます。 “行注釈の表示” コマンド セットを使用すると、これらの表示要素の検出およびこれらの表示要素間の移動が簡単になります。
+Visual Studio エディターには多くのテキスト "表示要素" が含まれています。これにより、ねじ回し、電球のアイコン、エラーおよび警告の "波線"、ブックマークなど、コード行の特定のポイントで、特性や機能について知ることができます。 "行注釈の表示" コマンド セットを使用すると、これらの表示要素の検出およびこれらの表示要素間の移動が簡単になります。
 
   ![行注釈の表示コマンド セットを使用する](media/show-line-annotations-command-set.png)
 

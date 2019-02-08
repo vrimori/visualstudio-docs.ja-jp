@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :IIS 管理サービスが応答しないために、セキュリティ チェックが失敗しました |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

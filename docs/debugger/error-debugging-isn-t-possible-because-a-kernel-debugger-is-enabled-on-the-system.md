@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :デバッグではありません&#39;Possible Because カーネル デバッガーがシステムで有効になっている t |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
