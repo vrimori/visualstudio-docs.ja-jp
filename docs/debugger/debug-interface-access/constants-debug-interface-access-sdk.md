@@ -55,7 +55,7 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 ## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [リファレンス](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
