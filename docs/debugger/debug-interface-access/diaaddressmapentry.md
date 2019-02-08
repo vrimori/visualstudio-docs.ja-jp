@@ -54,6 +54,6 @@ struct DiaAddressMapEntry { 
 ## <a name="requirements"></a>要件  
  ヘッダー: dia2.h  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)
