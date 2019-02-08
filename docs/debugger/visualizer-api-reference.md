@@ -40,7 +40,7 @@ ms.locfileid: "54945646"
   
 - <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource?displayProperty=fullName>  
   
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
  [チュートリアル: C# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
  [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
