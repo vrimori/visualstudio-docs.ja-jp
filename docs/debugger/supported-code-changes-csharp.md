@@ -104,6 +104,6 @@ ms.locfileid: "53878628"
   
 -   ビルド エラーによって新しいバージョンのビルドが失敗した後の旧バージョンのデバッグ
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [エディット コンティニュ (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)   
  [方法: エディット コンティニュを使用する (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
