@@ -59,5 +59,5 @@ ms.locfileid: "55042570"
   
 7.  すべてのウィンドウを閉じます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)
