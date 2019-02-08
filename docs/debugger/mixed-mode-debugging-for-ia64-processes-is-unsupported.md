@@ -49,5 +49,5 @@ Visual Studio では、IA64 プロセスでマネージド コードとネイテ
   
 2.  プロパティ ページで **[プラットフォーム]** をクリックし、プラットフォームの一覧の [Win32] をクリックします。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)
