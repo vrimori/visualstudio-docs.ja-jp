@@ -139,5 +139,5 @@ Visual C++ のエディット コンティニュは、大半の種類のコー�
 ##  <a name="BKMK_IDL_Attribute_Limitations"></a> IDL 属性に関する制限事項  
  エディット コンティニュでは、インターフェイス定義 (IDL) ファイルは再生成されません。 このため、デバッグ時に IDL 属性への変更は反映されません。 IDL 属性の変更結果を表示するには、デバッグを停止し、アプリをリビルドする必要があります。 エディット コンティニュでは、IDL 属性が変更されているとエラーや警告は生成されません。 詳細については、「 [IDL 属性](/cpp/windows/idl-attributes)」を参照してください。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)
