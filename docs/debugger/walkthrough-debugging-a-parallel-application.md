@@ -295,7 +295,7 @@ ms.locfileid: "55070709"
 ## <a name="summary"></a>まとめ  
  このチュートリアルでは、デバッガーの **[並列タスク]** ウィンドウと **[並列スタック]** ウィンドウについて説明しました。 マルチスレッド コードを使用する実際のプロジェクトでこれらのウィンドウを使用してみてください。 C++、C#、または Visual Basic で記述された並列コードを調べることができます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [マルチ スレッド アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [デバッガーでのはじめに](../debugger/debugger-feature-tour.md)  
  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
