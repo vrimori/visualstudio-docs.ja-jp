@@ -47,6 +47,6 @@ typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);
   
  フック関数でメッセージを完全に処理できたため、それ以上レポートを出力する必要がない場合は、**TRUE** を返すようにします。 **FALSE** を返した場合は、`_CrtDbgReport` は通常どおりにレポート メッセージを出力します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   
  [crt_dbg2 サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)
