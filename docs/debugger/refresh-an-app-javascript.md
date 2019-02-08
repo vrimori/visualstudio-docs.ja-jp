@@ -60,5 +60,5 @@ ms.locfileid: "54970917"
   
 8.  アプリに切り替えます。 アプリが再度読み込まれ、更新された HTML は、アプリを表示するために使用します。
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [クイック スタート:HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)
