@@ -87,7 +87,7 @@ if (FAILED(hr))
   
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
  [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)   
