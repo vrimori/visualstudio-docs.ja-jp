@@ -37,7 +37,7 @@ ms.locfileid: "54922013"
   
  このような脆弱性を軽減するために、ビジュアライザーによって公開されるインターフェイスに注意する必要があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ビジュアライザーのアーキテクチャ](../debugger/visualizer-architecture.md)   
  [方法: ビジュアライザーを記述する](/visualstudio/debugger/create-custom-visualizers-of-data)   
  [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)   
