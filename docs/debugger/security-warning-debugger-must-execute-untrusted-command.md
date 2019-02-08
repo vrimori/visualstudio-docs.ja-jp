@@ -42,7 +42,7 @@ ms.locfileid: "54982625"
  [実行しない]  
  コマンドの実行およびソース サーバーからのファイルのダウンロードを停止します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ソース サーバー](/windows/desktop/Debug/source-server-and-source-indexing)
