@@ -57,5 +57,5 @@ ms.locfileid: "55004735"
 | **定数 DEBUG の定義** | このシンボルを定義すると、[Debug クラス](/dotnet/api/system.diagnostics.debug)の出力関数の条件付きコンパイルが可能になります。 このシンボルを定義すると、Debug クラスのメソッドは[出力ウィンドウ](../ide/reference/output-window.md)に出力を生成します。 このシンボルを定義しない場合、Debug クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、デバッグ バージョンに定義します。リリース バージョンには定義しません。 リリース バージョンにこのシンボルを定義すると、不要なコードのためにプログラムの実行速度が低下します。 |
 | **定数 TRACE の定義** | このシンボルを定義すると、[Trace クラス](/dotnet/api/system.diagnostics.trace)の出力関数の条件付きコンパイルが可能になります。 このシンボルを定義すると、Trace クラスのメソッドは[出力ウィンドウ](../ide/reference/output-window.md)に出力を生成します。 このシンボルを定義しない場合、Trace クラスのメソッドはコンパイルされず、出力も生成されません。 このシンボルは、既定で、デバッグ バージョンとリリース バージョンの両方に定義されます。 |
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)
