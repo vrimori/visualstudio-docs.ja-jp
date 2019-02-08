@@ -57,5 +57,5 @@ ms.locfileid: "55069750"
   
 -   参照してください[SQL デバッグ セットアップ](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))します。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)
