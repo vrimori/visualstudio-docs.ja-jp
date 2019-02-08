@@ -45,7 +45,7 @@ ms.locfileid: "55039967"
 > [!NOTE]
 >  各シンボルはシンボルとその他のシンボルへの参照に関する情報を保持するプロパティを持つことができます。 これらのプロパティは、個々 のシンボルのトピックに表示されます。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
