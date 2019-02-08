@@ -44,5 +44,5 @@ BSTR    fileName;
 HRESULT errorCode = pSource->get_lastError( &fileName );  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
