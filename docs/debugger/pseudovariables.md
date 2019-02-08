@@ -65,6 +65,6 @@ ms.locfileid: "54925436"
 |`$` *N* `#`|*N* と等しいオブジェクト ID を持つオブジェクトを表示します。|  
 |`$dynamic`|`IDynamicMetaObjectProvider` を実装するオブジェクト用の特別な **[動的ビュー]** ノードを表示します。 インターフェイス。 構文は `$dynamic,` *オブジェクト*です。 この機能は、.NET Framework Version 4 を使用するコードにのみ適用されます。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [[変数] ウィンドウ](../debugger/debugger-windows.md)
