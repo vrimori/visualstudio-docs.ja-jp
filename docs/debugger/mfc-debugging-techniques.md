@@ -480,5 +480,5 @@ pMyPerson->Dump( afxDump );
 
    [このトピックの内容](#BKMK_In_this_topic)  
 
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [Visual C++ のデバッグ](../debugger/debugging-native-code.md)
