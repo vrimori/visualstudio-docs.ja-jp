@@ -30,7 +30,7 @@ ms.locfileid: "54991477"
 > [!IMPORTANT]
 >  次の潜在的なセキュリティの脅威は、移行元サーバーを使用する場合を考慮する必要があります。アプリケーションの .pdb ファイルには任意のコマンドを埋め込むことができるため、srcsrv.ini ファイルには実行するコマンドのみ配置するようにします。 srcsvr.ini ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告。デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)。 コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、cmd.exe を信頼した場合、悪意のあるユーザーが危険な動作を実行するようにコマンドにパラメーターを指定する可能性があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [シンボル (.pdb) とソース ファイルの指定](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ソース サーバー](/windows/desktop/Debug/source-server-and-source-indexing)
