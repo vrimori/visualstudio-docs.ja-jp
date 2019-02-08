@@ -33,6 +33,6 @@ WINERROR.H には、Win32 API 関数のエラー コード定義が含まれて�
 `0x80000004,hr` 
 
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [ネイティブ コードのデバッグに関する FAQ](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
