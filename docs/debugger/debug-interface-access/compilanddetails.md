@@ -53,6 +53,6 @@ ms.locfileid: "55033922"
 ## <a name="remarks"></a>コメント  
  コンパイラは、多くの場合、2 パス コンパイラ; と呼ばれる形式で付属します。一部のコンパイラ バージョンでは、各パスは別のプログラムによって処理されます。 これらは既知としてフロント エンドとバックエンドのコンパイラでは、それぞれ、ためバックエンドとフロント エンドのバージョン番号のシンボル プロパティ。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [コンパイル単位](../../debugger/debug-interface-access/compiland.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
