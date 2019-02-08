@@ -1,4 +1,4 @@
----
+﻿---
 title: トリガーの中断、再開、および UWP のデバッグ中にバック グラウンド イベント |Microsoft Docs
 ms.custom: seodec18
 ms.date: 01/16/2018

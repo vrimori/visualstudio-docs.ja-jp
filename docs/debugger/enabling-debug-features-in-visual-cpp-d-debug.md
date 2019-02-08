@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual C でのデバッグ機能 (-/d_debug) |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual

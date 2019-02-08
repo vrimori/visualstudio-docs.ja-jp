@@ -1,4 +1,4 @@
----
+﻿---
 title: ダンプ ファイル概要機能拡張 API |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual

@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターには、このコンピューターに接続するアクセス許可がありません
 titleSuffix: ''
 ms.custom: seodec18
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 80db9cb0e29f2664a02ada17398d5dca8912a0f3
 ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
-ms.translationtype: MTE95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/25/2019
 ms.locfileid: "55002419"

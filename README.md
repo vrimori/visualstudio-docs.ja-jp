@@ -1,6 +1,6 @@
-# <a name="visual-studio-2017-documentation"></a>Visual Studio 2017 ドキュメント
+# <a name="visual-studio-documentation"></a>Visual Studio ドキュメント
 
-ようこそ このリポジトリには、Visual Studio 2017 のテクニカル ドキュメント用のソース ファイルが含まれます。 このトピックは、[docs.microsoft.com](https://docs.microsoft.com/visualstudio) に公開されています。
+ようこそ このリポジトリには、Visual Studio のテクニカル ドキュメント用のソース ファイルが含まれます。 このトピックは、[docs.microsoft.com](https://docs.microsoft.com/visualstudio) に公開されています。
 
 このリポジトリは、2017 年 6 月 23 日に、 https://github.com/Microsoft/vsdocs から移動されました。 以前の URL 宛てのトラフィックはここにリダイレクトされます。
 

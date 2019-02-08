@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :Web サイトのワーカー プロセスが IIS によって停止されました |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :Web サーバーが正しく構成されていない |Microsoft Docs
 ms.date: 09/20/2017
 ms.topic: troubleshooting

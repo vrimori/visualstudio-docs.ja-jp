@@ -1,4 +1,4 @@
----
+﻿---
 title: 並列スレッドの変数にウォッチを設定 |Microsoft Docs
 ms.date: 04/25/2017
 ms.topic: conceptual

@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
 titleSuffix: ''
 ms.custom: seodec18

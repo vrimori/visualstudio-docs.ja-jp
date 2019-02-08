@@ -1,7 +1,7 @@
 ---
 title: C# に ASP.NET Core Web アプリを作成する
 description: Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。
-ms.date: 10/29/2018
+ms.date: 02/01/2019
 ms.prod: visual-studio-dev15
 ms.custom: mvc,seodec18
 ms.topic: quickstart
@@ -13,12 +13,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b30580db600b93464a7db377370ad49bd3a935a7
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 61bfe7dfa42542199f3773d1587d0e10ec315f98
+ms.sourcegitcommit: 612f8c21d1448f1a013c30100cdecfbec5ddb24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55021089"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55571149"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -28,11 +28,7 @@ Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック 
 
 ### <a name="install-visual-studio"></a>Visual Studio のインストール
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
-
-### <a name="update-visual-studio"></a>Visual Studio 2017 を更新する
-
-Visual Studio を既にインストールしている場合は、最新のリリースを実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio 2017 を最新リリースに更新する](../install/update-visual-studio.md)」ページを参照してください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ### <a name="choose-your-theme-optional"></a>テーマを選択する (省略可能)
 
@@ -46,7 +42,7 @@ Visual Studio を既にインストールしている場合は、最新のリリ
 
 1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択ます。 次に、ファイル名を「`HelloWorld`」にして、**[OK]** を選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択ます。 <br/><br/>次に、ファイル名を「`HelloWorld`」にして、**[OK]** を選択します。
 
    ![C# 用の新しい ASP.NET Core Web アプリケーション プロジェクトを作成する](../ide/media/csharp-aspnet-choose-template-name-file.png)
 
@@ -61,24 +57,22 @@ Visual Studio を既にインストールしている場合は、最新のリリ
    >
    > (新しいワークロードのインストールを続ける前に、Visual Studio を終了することが必要な場合があります。)
 
-1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューから **[ASP.NET Core 2.0]** 以降を選択します。
+1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューから **[ASP.NET Core 2.1]** を選択します。 次に、**[Web アプリケーション]** を選択し、**[OK]** を選択します。
+
+   ![[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス](../ide/media/aspnet-core-2dot1.png)
 
    > [!NOTE]
-   > **[ASP.NET Core 2.0]** 以降が表示されない場合は、最新リリースの Visual Studio を実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio 2017 を最新リリースに更新する](../install/update-visual-studio.md)」ページを参照してください。
-
-1. 次に、**[Web アプリケーション]** を選択し、**[OK]** を選択します。
-
-   ![[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス](../ide/media/quickstart-aspnet-core20.png)
+   > **[ASP.NET Core 2.1]** 以降が表示されない場合は、最新リリースの Visual Studio を実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio 2017 を最新リリースに更新する](../install/update-visual-studio.md)」ページを参照してください。
 
 すぐに、Visual Studio でプロジェクト ファイルが開きます。
 
-## <a name="create-the-app"></a>アプリを作成する
+## <a name="create-and-run-the-app"></a>アプリの作成と実行
 
 1. **ソリューション エクスプローラー**で、**Pages** フォルダーを展開し、**About.cshtml** を選択します。
 
    ![ソリューション エクスプローラーから About.cshtml ファイルを選択する](../ide/media/csharp-aspnet-about-page-html-file.png)
 
-   このファイルは、Web アプリの **About** という名前のページに対応します。
+   このファイルは、Web アプリの **About** という名前のページに対応します。これは Web ブラウザーで実行されます。
 
    ![Web アプリの About ページ](../ide/media/csharp-aspnet-about-page.png)
 
@@ -90,7 +84,7 @@ Visual Studio を既にインストールしている場合は、最新のリリ
 
    ![Visual Studio エディターに表示される既定の "additional information" 領域の HTML コードを変更する](../ide/media/csharp-aspnet-about-cshtml-page-hello-world.png)
 
-1. **ソリューション エクスプローラー**で、**About.cshtml** を展開し、**About.cshtml.cs** を選択します。 (このファイルも、Web アプリの **About** ページに対応しています。)
+1. **ソリューション エクスプローラー**で、**About.cshtml** を展開し、**About.cshtml.cs** を選択します。 (このファイルも、Web ブラウザーの **About** ページに対応しています。)
 
    ![ソリューション エクスプローラーから About.cshtml ファイルを選択する](../ide/media/csharp-aspnet-about-page-code-file.png)
 
@@ -102,22 +96,24 @@ Visual Studio を既にインストールしている場合は、最新のリリ
 
    ![Visual Studio エディターでアプリケーション説明領域の既定のメッセージ テキストを変更する](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
 
-## <a name="run-the-app"></a>アプリを実行する
+1. **IIS Express** を選択するか、**Ctrl**+**F5** キーを押してアプリを実行し、Web ブラウザーで開きます。
 
-1. **Ctrl** + **F5** キーを押してアプリを実行し、Web ブラウザーで開きます。
+   ![Visual Studio の [IIS Express] ボタンを選択する](../ide/media/csharp-aspnet-helloworld-iisbutton.png)
 
    > [!NOTE]
-   > **"Web サーバー 'IIS Express' に接続できませんでした"** というエラー メッセージ、または SSL 証明書に関するエラー メッセージが表示された場合は、Visual Studio を閉じます。 次に、右クリックするかコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
+   > **"Web サーバー 'IIS Express' に接続できませんでした"** というエラー メッセージ、または SSL 証明書に関するエラー メッセージが表示された場合は、Visual Studio を閉じます。 次に、右クリック コンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
 
-1. Web ページの上部で **[About]** を選択します。
+1. Web ブラウザーで、**About** ページに更新されたテキストが含まれていることを確認します。
 
-   ![Web ページで [About] を選択する](../ide/media/csharp-aspnet-home-page-about.png)
-
-1. **[About]** ページに追加した更新後のテキストが表示されます。
-
-   ![追加したテキストを含む更新後の [About] ページが表示される](../ide/media/csharp-aspnet-about-page-hello-world.png)
+   ![加えた変更が含まれる更新後の About ページを表示する](../ide/media/csharp-aspnet-about-page-hello-world.png)
 
 1. Web ブラウザーを閉じます。
+
+### <a name="review-your-work"></a>作業内容の確認
+
+次のアニメーションを見て、前のセクションで完了した作業を確認します。
+
+  ![Visual Studio で単純な C# ASP.NET Core Web アプリを作成して実行する方法を示すアニメーション .gif ファイルを表示](../ide/media/csharp-aspnet-animated-hello-world.gif)
 
 このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE (統合開発環境) について少しはご理解いただけたかと思います。
 

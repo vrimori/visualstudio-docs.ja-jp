@@ -1,4 +1,4 @@
----
+﻿---
 title: エディット コンティニュ (Visual C) |Microsoft Docs
 ms.date: 05/31/2017
 ms.topic: conceptual

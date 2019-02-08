@@ -1,5 +1,5 @@
 ---
-title: '方法: データ ドリブン単体テストを作成する'
+title: データ ドリブン単体テストを作成する
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -15,12 +15,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e8092663f7ccc0b6443f392358e7c487d0f6b63f
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 5166b2d4e7bc56ab61d8ca93b4d86019572554df
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54968139"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484018"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
 
@@ -36,7 +36,7 @@ ms.locfileid: "54968139"
 
 4.  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> インデクサー プロパティを使用して、テストで使用する値を取得します。
 
-##  <a name="BKMK_The_method_under_test"></a>テスト対象のメソッド
+## <a name="the-method-under-test"></a>テスト対象のメソッド
 
 たとえば、次が用意されています。
 
@@ -64,8 +64,9 @@ public int AddIntegers(int first, int second)
 }
 ```
 
-##  <a name="create-a-data-source"></a>データ ソースの作成
- `AddIntegers` メソッドをテストするには、パラメーターの値の範囲と返される必要のある合計を指定するデータ ソースを作成します。 この例では、`MathsData` という名前の Sql Compact データベースと、次の列の名前と値を含む `AddIntegersData` という名前のテーブルを作成します
+## <a name="create-a-data-source"></a>データ ソースの作成
+
+`AddIntegers` メソッドをテストするには、パラメーターの値の範囲と返される必要のある合計を指定するデータ ソースを作成します。 この例では、`MathsData` という名前の Sql Compact データベースと、次の列の名前と値を含む `AddIntegersData` という名前のテーブルを作成します
 
 |FirstNumber|SecondNumber|Sum|
 |-|------------------|-|
@@ -73,8 +74,9 @@ public int AddIntegers(int first, int second)
 |1|1|2|
 |2|-3|-1|
 
-##  <a name="add-a-testcontext-to-the-test-class"></a>テスト クラスへの TestContext の追加
- 単体テスト フレームワークは、データ ドリブン テストのデータ ソース情報を格納する `TestContext` オブジェクトを作成します。 次に、フレームワークは作成する `TestContext` プロパティの値としてこのオブジェクトを設定します。
+## <a name="add-a-testcontext-to-the-test-class"></a>テスト クラスへの TestContext の追加
+
+単体テスト フレームワークは、データ ドリブン テストのデータ ソース情報を格納する `TestContext` オブジェクトを作成します。 次に、フレームワークは作成する `TestContext` プロパティの値としてこのオブジェクトを設定します。
 
 ```csharp
 private TestContext testContextInstance;
@@ -85,10 +87,11 @@ public TestContext TestContext
 }
 ```
 
- テスト メソッドでは、`TestContext` の `DataRow` インデクサー プロパティを使用してデータにアクセスします。
+テスト メソッドでは、`TestContext` の `DataRow` インデクサー プロパティを使用してデータにアクセスします。
 
-##  <a name="write-the-test-method"></a>テスト メソッドの記述
- `AddIntegers` のテスト メソッドは非常に単純です。 データ ソース内の各行に対して、パラメーターとして **FirstNumber** 列値と **SecondNumber** 列値を持つ `AddIntegers` を呼び出して、**Sum** 列値に対して戻り値を確認します。
+## <a name="write-the-test-method"></a>テスト メソッドの記述
+
+`AddIntegers` のテスト メソッドは非常に単純です。 データ ソース内の各行に対して、パラメーターとして **FirstNumber** 列値と **SecondNumber** 列値を持つ `AddIntegers` を呼び出して、**Sum** 列値に対して戻り値を確認します。
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0; Data Source=C:\Data\MathsData.sdf;", "Numbers")]
@@ -110,8 +113,9 @@ public void AddIntegers_FromDataSourceTest()
 
 `Assert` メソッドには、失敗したイテレーションの `x` と `y` の値を表示するメッセージが含まれます。 既定では、アサートされた値である `expected` と `actual` が失敗したテストの詳細に既に含まれています。
 
-###  <a name="BKMK_Specifying_the_DataSourceAttribute"></a> DataSourceAttribute の指定
- `DataSource` 属性は、データ ソースの接続文字列とテスト メソッドで使用するテーブル名を指定します。 接続文字列の正確な情報は、使用しているデータ ソースの種類によって異なります。 この例では、SqlServerCe データベースを使用しました。
+### <a name="specify-the-datasourceattribute"></a>DataSourceAttribute の指定
+
+`DataSource` 属性は、データ ソースの接続文字列とテスト メソッドで使用するテーブル名を指定します。 接続文字列の正確な情報は、使用しているデータ ソースの種類によって異なります。 この例では、SqlServerCe データベースを使用しました。
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]
@@ -123,17 +127,17 @@ DataSource 属性には 3 つのコンストラクターがあります。
 [DataSource(dataSourceSettingName)]
 ```
 
- 1 つのパラメーターを持つコンストラクターは、ソリューションの *app.config* ファイルに格納されている接続情報を使用します。 *dataSourceSettingsName* は、接続情報を指定する構成ファイル内の Xml 要素の名前です。
+1 つのパラメーターを持つコンストラクターは、ソリューションの *app.config* ファイルに格納されている接続情報を使用します。 *dataSourceSettingsName* は、接続情報を指定する構成ファイル内の Xml 要素の名前です。
 
- *app.config* ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 *app.config* ファイルの作成および使用方法の詳細については、「[チュートリアル: データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください
+*app.config* ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 *app.config* ファイルの作成および使用方法の詳細については、「[チュートリアル: データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください
 
 ```csharp
 [DataSource(connectionString, tableName)]
 ```
 
- 2 つのパラメーターを持つ `DataSource` コンストラクターは、データ ソースの接続文字列とテスト メソッドのデータを含むテーブルの名前を指定します。
+2 つのパラメーターを持つ `DataSource` コンストラクターは、データ ソースの接続文字列とテスト メソッドのデータを含むテーブルの名前を指定します。
 
- 接続文字列は、データ ソースの種類によって異なりますが、データ プロバイダーの不変名を指定する Provider 要素を含んでいる必要があります。
+接続文字列は、データ ソースの種類によって異なりますが、データ プロバイダーの不変名を指定する Provider 要素を含んでいる必要があります。
 
 ```csharp
 [DataSource(
@@ -144,21 +148,26 @@ DataSource 属性には 3 つのコンストラクターがあります。
     )]
 ```
 
-###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> データにアクセスするための TestContext.DataRow の使用
- `AddIntegersData` テーブル内のデータにアクセスするには、`TestContext.DataRow` インデクサーを使用します。 `DataRow` は、<xref:System.Data.DataRow> オブジェクトであるため、インデックスまたは列の名前で列の値を取得します。 値はオブジェクトとして返されるため、適切な型に変換します。
+### <a name="use-testcontextdatarow-to-access-the-data"></a>データにアクセスするための TestContext.DataRow の使用
+
+`AddIntegersData` テーブル内のデータにアクセスするには、`TestContext.DataRow` インデクサーを使用します。 `DataRow` は、<xref:System.Data.DataRow> オブジェクトであるため、インデックスまたは列の名前で列の値を取得します。 値はオブジェクトとして返されるため、適切な型に変換します。
 
 ```csharp
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```
 
-##  <a name="run-the-test-and-view-results"></a>テストを実行して結果を表示する
- テスト メソッドの記述が完了したら、テスト プロジェクトを構築します。 **[テストを実行しない]** グループの**テスト エクスプローラー** ウィンドウに、テスト メソッドが表示されます。 テストを実行して、記述し、再実行すると、**テスト エクスプローラー**に **[失敗したテスト]**、**[成功したテスト]**、**[テストを実行しない]** のグループの結果が表示されます。 **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。
+## <a name="run-the-test-and-view-results"></a>テストを実行して結果を表示する
 
- テストの実行中は、エクスプローラーの上部にあるテスト結果バーがアニメーションで表示されます。 テストの実行の終了時に、すべてのテストが成功した場合はバーが緑色になり、いずれかのテストが失敗した場合は赤色になります。 **テスト エクスプローラー** ウィンドウの下部の詳細ウィンドウに、テストの実行の概要が表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。
+テスト メソッドの記述が完了したら、テスト プロジェクトを構築します。 **[テストを実行しない]** グループの**テスト エクスプローラー**に、テスト メソッドが表示されます。 テストを実行して、記述し、再実行すると、**テスト エクスプローラー**に **[失敗したテスト]**、**[成功したテスト]**、**[テストを実行しない]** のグループの結果が表示されます。 **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。
 
- この例で `AddIntegers_FromDataSourceTest` メソッドを実行した場合、結果バーが赤に変わり、テスト メソッドが **[失敗したテスト]** に移動されます。 データ ソースからの反復されたメソッドのいずれかが失敗した場合は、データ ドリブン テストは失敗します。 **テスト エクスプローラー** ウィンドウで、失敗したデータ ドリブン テストを選択すると、詳細ウィンドウにはデータ行インデックスによって識別される各イテレーションの結果が表示されます。 この例では、`AddIntegers` アルゴリズムが負の値を正しく処理していないことがわかります。
+テストの実行中は、**テスト エクスプローラー**の上部にあるテスト結果バーがアニメーションで表示されます。 テストの実行の終了時に、すべてのテストが成功した場合はバーが緑色になり、いずれかのテストが失敗した場合は赤色になります。 **テスト エクスプローラー** ウィンドウの下部の詳細ウィンドウに、テストの実行の概要が表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。
 
- テスト対象のメソッドを修正して、テストを再実行すると、結果バーが緑に変わり、テスト メソッドは **[成功したテスト]** グループに移動されます。
+> [!NOTE]
+> データの各行に対する結果と、1 つのサマリー結果もあります。 データの各行のテストが合格すると、サマリー実行は **[合格]** と表示されます。 いずれかのデータ行のテストが失敗すると、サマリー実行は **[失敗]** と表示されます。
+
+この例で `AddIntegers_FromDataSourceTest` メソッドを実行した場合、結果バーが赤に変わり、テスト メソッドが **[失敗したテスト]** に移動されます。 データ ソースからの反復されたメソッドのいずれかが失敗した場合は、データ ドリブン テストは失敗します。 **テスト エクスプローラー** ウィンドウで、失敗したデータ ドリブン テストを選択すると、詳細ウィンドウにはデータ行インデックスによって識別される各イテレーションの結果が表示されます。 この例では、`AddIntegers` アルゴリズムが負の値を正しく処理していないことがわかります。
+
+テスト対象のメソッドを修正して、テストを再実行すると、結果バーが緑に変わり、テスト メソッドは **[成功したテスト]** グループに移動されます。
 
 ## <a name="see-also"></a>関連項目
 

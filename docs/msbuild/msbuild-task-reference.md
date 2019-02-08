@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18ba71906b38fd889f1db42fcb69c689718107c6
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: aae170d2fb9b824d0c547dec7549ef2fdd8401ee
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54951288"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483979"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] をインストールすると、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  
@@ -130,7 +130,10 @@ ms.locfileid: "54951288"
  [GetAssemblyIdentity タスク](../msbuild/getassemblyidentity-task.md)  
  指定されたファイルからアセンブリ ID を取得し、その ID を出力します。  
 
- [GetFrameworkPath タスク](../msbuild/getframeworkpath-task.md)  
+ [GetFileHash タスク](../msbuild/getfilehash-task.md)  
+ 1 つのファイルまたはファイルのセットの内容のチェックサムを計算します。
+
+[GetFrameworkPath タスク](../msbuild/getframeworkpath-task.md)  
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アセンブリへのパスを取得します。  
 
  [GetFrameworkSdkPath タスク](../msbuild/getframeworksdkpath-task.md)  
@@ -210,6 +213,9 @@ ms.locfileid: "54951288"
 
  [Vbc タスク](../msbuild/vbc-task.md)  
  Visual Basic コンパイラを呼び出して、実行可能ファイル、ダイナミック リンク ライブラリ、またはコード モジュールを生成します。  
+
+ [VerifyFileHash タスク](../msbuild/verifyfilehash-task.md)  
+ ファイルが予想されるファイル ハッシュと一致することを確認します。
 
  [Warning タスク](../msbuild/warning-task.md)  
  条件付きステートメントの評価に基づいてビルド中の警告をログに記録します。  

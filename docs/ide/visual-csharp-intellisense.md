@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f352ac46b87fee66a491c178f5f11369eca7b7d7
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: d45501f4f8038daf0a891493286ab5f5835195b8
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54979063"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484187"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -99,7 +99,7 @@ IntelliSense の **using 追加**操作では、必須の `using` ディレク�
 
 ![using の追加、クイック アクションの展開イメージ](../ide/media/addusing-quickaction.png)
 
-電球アイコンをクリックし、**[using System.Xml;]** を選択すると using ディレクティブが自動的に追加されます。
+エラー電球アイコンをクリックし、**[using System.Xml;]** を選択すると using ディレクティブが自動的に追加されます。
 
 ### <a name="remove-and-sort-usings"></a>using の削除と並べ替え
 
@@ -123,7 +123,7 @@ IntelliSense には、コード エディターでの作業中、抽象基本ク
 
 未定義の識別子の下にそれぞれ、波状の赤い下線が表示されます。 識別子の上にマウス ポインターを置くと、ヒントにエラー メッセージが表示されます。 適切なオプションを表示するには、次の手順のいずれかを使用することができます。
 
-- 未定義の識別子をクリックします。 **クイック アクション**の電球が識別子の下に表示されます。 電球をクリックします。
+- 未定義の識別子をクリックします。 **クイック アクション**のエラー電球が識別子の下に表示されます。 エラー電球をクリックします。
 
 - 未定義の識別子をクリックし、**Ctrl**+**.**  (**Ctrl** + ピリオド) を押します。
 

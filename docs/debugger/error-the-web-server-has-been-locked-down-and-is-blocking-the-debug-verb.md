@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :Web サーバーがロックダウンされているし、DEBUG の動詞をブロックして |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

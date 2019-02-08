@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: レジスタ値を編集 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual

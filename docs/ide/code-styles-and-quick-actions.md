@@ -11,12 +11,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 065a4c21be596b409ed82718e0b38c38367612cc
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: f33c1edec4b4093e9157a59618befa2e1175be49
+ms.sourcegitcommit: e3d96b20381916bf4772f9db52b22275763bb603
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55039056"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55483992"
 ---
 # <a name="code-style-preferences"></a>コードのスタイル設定
 
@@ -31,7 +31,7 @@ C# プロジェクトおよび Visual Basic プロジェクトに対してコー
 
 ## <a name="preference-and-severity"></a>優先順位と重大度
 
-各行のドロップダウン リストを使って、項目ごとに **[優先順位]** と **[重大度レベル]** の値を設定できます。 重大度は、**なし**、**提案**、**警告**、または **エラー**に設定できます。 コード スタイルの[クイック アクション](../ide/quick-actions.md)を有効にする場合、**[重大度レベル]** の設定は**なし**以外に設定してください。 **クイック アクション**の電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png) は、優先されていないスタイルが使用されていて、**[クイック アクション]** 一覧のオプションを選ぶと優先されるスタイルにコードが自動的に再作成される場合に表示されます。
+各行のドロップダウン リストを使って、項目ごとに **[優先順位]** と **[重大度レベル]** の値を設定できます。 重大度は、**なし**、**提案**、**警告**、または **エラー**に設定できます。 コード スタイルの[クイック アクション](../ide/quick-actions.md)を有効にする場合、**[重大度レベル]** の設定は**なし**以外に設定してください。 **クイック アクション**の電球 ![電球](media/vs2015_lightbulbsmall.png)、エラー電球 ![エラー電球](media/error-bulb.png)、ねじ回し ![ねじ回し](media/screwdriver.png) アイコンは、優先されていないスタイルが使用されていて、**[クイック アクション]** 一覧のオプションを選ぶと優先されるスタイルにコードが自動的に再作成されると表示されます。
 
 ## <a name="editorconfig-files"></a>EditorConfig ファイル
 

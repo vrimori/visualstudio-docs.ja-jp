@@ -1,4 +1,4 @@
----
+﻿---
 title: ポインターを検索かどうか、破損しているメモリ アドレス |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows サービスをデバッグするための準備 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

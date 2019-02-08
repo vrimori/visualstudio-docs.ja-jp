@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :サーバーに自動的にステップ インできません |。Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

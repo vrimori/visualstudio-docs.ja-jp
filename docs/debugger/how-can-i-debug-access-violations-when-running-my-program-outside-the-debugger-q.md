@@ -1,4 +1,4 @@
----
+﻿---
 title: デバッガーの外部アプリケーションを実行するときに、アクセス違反をデバッグ |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

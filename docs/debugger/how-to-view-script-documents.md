@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: スクリプト ドキュメントを表示 |Microsoft Docs'
 ms.date: 01/08/2019
 ms.topic: conceptual

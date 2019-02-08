@@ -1,4 +1,4 @@
----
+﻿---
 title: デバッグ中に別のスレッドに切り替える
 ms.custom: seodec18
 ms.date: 04/27/2017

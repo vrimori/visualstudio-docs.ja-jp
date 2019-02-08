@@ -10,20 +10,23 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0ac3acc8b5addf02e510943b6b61ce1c5f0c5b1
-ms.sourcegitcommit: 2193323efc608118e0ce6f6b2ff532f158245d56
+ms.openlocfilehash: 52a0b5d046580e5d4dbf499e504cd0ea123ff5b2
+ms.sourcegitcommit: 9866740aec05d1a3a5dc3b4b6d2ceaeecbd3fc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "54999757"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55424383"
 ---
 # <a name="get-started-with-unit-testing"></a>単体テストの概要
 
-Visual Studio を使用して、単体テストを定義および実行してコードの正常性を維持し、コード カバレッジを保証し、事前にエラーとフォールトを見つけます。
+Visual Studio を使用して、単体テストを定義および実行してコードの正常性を維持し、コード カバレッジを保証し、事前にエラーとフォールトを見つけます。 単体テストを頻繁に実行し、コードが正しく動作していることを確認します。
 
 ## <a name="create-unit-tests"></a>単体テストの作成
 
-単体テストを作成し、コードが正しく動作していることを確認するために頻繁に実行します。
+このセクションでは、単体テスト プロジェクトの作成方法に関する概要を説明します。
+
+> [!TIP]
+> テスト対象のプロジェクト "HelloWorld" はプロジェクト例であり、コードを示すことは想定されていません。 テストする "HelloWorld" プロジェクトを作成したい場合は、[初めての C# コンソール アプリの作成](../ide/quickstart-csharp-console.md)に関する記事をご覧ください。 完全なチュートリアルの記事については、「[マネージド コードの単体テストを作成し、実行する](walkthrough-creating-and-running-unit-tests-for-managed-code.md)」をご覧ください。
 
 1. 単体テスト プロジェクトを作成します。
 
@@ -150,6 +153,7 @@ Boost、Google、NUnit など、サードパーティのテスト フレーム�
 
 ## <a name="see-also"></a>関連項目
 
+* [チュートリアル: マネージド コードの単体テストを作成し、実行する](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 * [単体テスト コマンドの作成](create-unit-tests-menu.md)
 * [IntelliTest でのテストの生成](generate-unit-tests-for-your-code-with-intellitest.md)
 * [テスト エクスプローラーを使用してテストを実行する](run-unit-tests-with-test-explorer.md)

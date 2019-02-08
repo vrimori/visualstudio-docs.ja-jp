@@ -1,4 +1,4 @@
----
+﻿---
 title: フォア グラウンド アプリのデバッグ中にデバッガー ウィンドウを使用して |Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016

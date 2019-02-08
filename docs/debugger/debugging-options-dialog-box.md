@@ -1,4 +1,4 @@
----
+﻿---
 title: デバッグ オプション ダイアログ ボックス |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference

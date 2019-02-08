@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :マシンに接続できません&lt;名前&gt;します。 ネットワーク上にコンピューターが見つかりません。 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

@@ -1,4 +1,4 @@
----
+﻿---
 title: エラー :混合モードの x64 プロセスがサポートされるは、Microsoft .NET Framework 4 を使用している場合にのみデバッグ以上 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting

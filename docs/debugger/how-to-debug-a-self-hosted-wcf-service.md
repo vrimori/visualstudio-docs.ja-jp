@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: 自己ホスト型 WCF サービスのデバッグ |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual

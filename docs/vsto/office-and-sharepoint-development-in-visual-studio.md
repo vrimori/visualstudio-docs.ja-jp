@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio による Office および SharePoint 開発
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -90,7 +90,7 @@ ms.locfileid: "54872841"
   
  **詳細**  
   
-|目的|解決方法| 
+|目的|読み取り|  
 |--------|----------|  
 |Office のさまざまな拡張方法を比較し、VSTO アドインと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA のためのロードマップ](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|  
 |VSTO アドインを作成する。|[Visual Studio で作成した VSTO アドイン](create-vsto-add-ins-for-office-by-using-visual-studio.md)|  
