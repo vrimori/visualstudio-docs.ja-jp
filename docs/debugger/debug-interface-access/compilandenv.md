@@ -34,6 +34,6 @@ ms.locfileid: "55023695"
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|返します`SymTagCompilandEnv`(の 1 つ、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)値)。|  
 |[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|`VARIANT`|変数の内容を文字列値 (`VT_BSTR`)。|  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>関連項目
  [コンパイル単位](../../debugger/debug-interface-access/compiland.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
