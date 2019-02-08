@@ -21,7 +21,7 @@ ms.locfileid: "54871261"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>チュートリアル: プロジェクト タスク リスト定義を展開します。
 
-このチュートリアルは、使用する方法を示します[!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]を作成、カスタマイズ、デバッグ、およびプロジェクトのタスクを追跡するために SharePoint リストを展開します。
+このチュートリアルでは、プロジェクトのタスクを追跡するための SharePoint リストを [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] により作成、カスタマイズ、デバッグ、およびデプロイする際の仕様方法をご紹介いたします。
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
